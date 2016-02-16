@@ -32,6 +32,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Slim 
+gem "slim-rails"
+# https://rubygems.org/gems/refinerycms
+gem 'refinerycms', '~> 3.0', '>= 3.0.1'
+# https://rubygems.org/gems/activemerchant
+gem 'activemerchant', '~> 1.57'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
