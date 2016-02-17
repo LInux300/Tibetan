@@ -14,7 +14,14 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  # add by Refinery
+  if config.respond_to?(:action_mailer)
+  if config.respond_to?(:action_mailer)
+  if config.respond_to?(:action_mailer)
+        config.action_mailer.raise_delivery_errors = false
+  end
+  end
+  end
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
