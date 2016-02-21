@@ -53,7 +53,7 @@ Refinery::Core.configure do |config|
 
   # Specify a different Refinery::Core::Engine mount path than the default of "/".
   # Make sure you clear the `tmp/cache` directory after changing this setting.
-  config.mounted_path = '/medicin'
+  config.mounted_path = '/medicine'
   config.site_name = 'Tibetan'
 
   # Specify the order Refinery plugins appear in the admin view.

@@ -21,3 +21,15 @@
 
 en:
   hello: "Hello world"
+  view:
+    main:
+      medicine:
+        header: The Tibetan Medicine
+        body: Tibetan medicine is primarily a form of Ayurveda, which was not only the traditional natural healing system of India but through history influenced surrounding cultures from Greece to China.
+        link:
+          text: Tibetan Medicine
+      prayers:
+        header: The Tibetan Prayers
+        body: Tibetan Prayers are
+        link:
+          text: Tibetan Prayers

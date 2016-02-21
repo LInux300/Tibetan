@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require foundation/js/foundation
+//= require motion-ui/motion-ui
+//= require welcome
+//= require amcharts3/amcharts/amcharts
+//= require ammap3/ammap/ammap
 //= require_tree .
+
+// $(document).foundation()
+// $(function(){ $(document).foundation(); });

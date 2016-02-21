@@ -1,2 +1,58 @@
-h1 Tibetan.name
-p The Tibetan
+
+div class="row"
+  div class="small-12 columns"
+    h1 =link_to Refinery::Core.site_name, refinery.root_path
+    /  p class="lead" Thanks for trying out Motion UI! Here are all of the pre-set transitions to get you started.
+    
+    hr
+
+    div class="row"
+      div class="medium-8 medium-push-4 columns"
+        = link_to image_tag( "medicine-master.jpg" ),
+          refinery.root_path, 
+          width: 100,
+          height: 75,
+          alt: t('view.main.medicine.header')
+      div class="medium-4 medium-pull-8 columns"
+        select id="transitionList"
+          option value="slide-in-up" slide-in-up
+          option value="slide-in-right" slide-in-right
+          opption value="slide-in-down" slide-in-down
+          option value="slide-in-left" slide-in-left
+          / <option value="fade-in">fade-in
+          / <option value="spin-in">spin-in</option>
+          / <option value="spin-in-ccw">spin-in-ccw</option>
+          / <option value="scale-in-up">scale-in-up</option>
+          / <option value="scale-in-down">scale-in-down</option>
+          / <option value="hinge-in-from-top">hinge-in-from-top</option>
+          / <option value="hinge-in-from-right">hinge-in-from-right</option>
+          / <option value="hinge-in-from-bottom">hinge-in-from-bottom</option>
+          / <option value="hinge-in-from-left">hinge-in-from-left</option>
+          / <option value="hinge-in-from-middle-x">hinge-in-from-middle-x</option>
+          / <option value="hinge-in-from-middle-y">hinge-in-from-middle-y</option>
+
+        button id="transitioner" Transition!
+
+        hr
+
+        section
+          h4 =t('view.main.medicine.header')
+          p =t('view.main.medicine.body')
+          a href='medicine/' =t('view.main.medicine.link.text')
+          
+        hr
+
+        section
+          h4 =t('view.main.prayers.header')
+          p =t('view.main.prayers.body')
+
+
+= javascript_include_tag 'jquery/dist/jquery'
+= javascript_include_tag 'motion-ui/dist/motion-ui'
+= javascript_include_tag 'foundation/js/foundation'
+= javascript_include_tag 'application'
+
+/ script src="jquery.js"
+/ script src="motion-ui/dist/motion-ui"
+/ script src="js/foundation.min.js"
+/ script src="js/script.js"

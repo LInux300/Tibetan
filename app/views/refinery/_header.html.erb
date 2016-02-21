@@ -1,0 +1,16 @@
+
+<div class="row">
+  <div class="columns large-12">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <%#= link_to image_tag( "logo.jpg" ), refinery.root_path, width: 100, height: 75 %>
+        </li>
+      </ul>
+      <%# menu = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self) %>
+      <% menu = FoundationMenu.new(refinery_menu_pages, self) %>
+      <% menu.max_depth = 1 %>
+      <%= menu.to_html %>
+    </nav>
+  </div>
+</div>

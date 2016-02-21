@@ -69,6 +69,9 @@ Refinery::Pages.configure do |config|
 
 
   # add by
-  config.layout_template_whitelist = [:application, :medicin]
+  config.layout_template_whitelist = [:application, :twelve_grid]
   config.use_layout_templates = true
+
+  config.default_parts = [{ title: "Body", slug: "body" }, { title: "Side Body", slug: "side_body" }]
+  # config.default_parts = ["Left Body", "Middle Body", "Right Body"]
 end
