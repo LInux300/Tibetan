@@ -38,6 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "slim-rails"
 # https://rubygems.org/gems/refinerycms
 gem 'refinerycms', '~> 3.0', '>= 3.0.1'
+
 # https://rubygems.org/gems/activemerchant
 gem 'activemerchant', '~> 1.57'
 

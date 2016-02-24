@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  title: Tibetan
   hello: "Hello world"
   view:
     main:
