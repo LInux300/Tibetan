@@ -14,6 +14,7 @@ html.no-js lang="en"
     = site_bar
     br
     div id="page_container"
+      = render "welcome/slider_top"
       header id="header"
         = render "/refinery/header"
       section id="pagess"
@@ -29,4 +30,3 @@ html.no-js lang="en"
         = render "/refinery/footer"
     
     = render "/refinery/javascripts"
-    / = $(document).foundation()

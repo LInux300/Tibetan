@@ -20,5 +20,6 @@
 //= require ammap3/ammap/ammap
 //= require_tree .
 
+// $(document).ready(function(){});
 // $(document).foundation()
 // $(function(){ $(document).foundation(); });

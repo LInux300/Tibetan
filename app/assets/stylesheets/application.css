@@ -14,10 +14,11 @@
  *= require refinery/formatting
  *= require refinery/theme
  *= require jquery-ui
- *= require welcome
  *= require foundation/scss/foundation
  *= require foundation/scss/normalize
+ *= require slick-carousel/slick/slick
+ *= require slick-carousel/slick/slick-theme
  *= require motion-ui/dist/motion-ui.css
+ *= require slider
  *= require_self
-
  */
