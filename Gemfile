@@ -49,6 +49,9 @@ gem 'refinerycms', '~> 3.0', '>= 3.0.1'
 # https://rubygems.org/gems/activemerchant
 gem 'activemerchant', '~> 1.57'
 
+# Devise
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

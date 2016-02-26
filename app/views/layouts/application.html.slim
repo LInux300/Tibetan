@@ -18,6 +18,8 @@ html.no-js lang="en"
       header id="header"
         = render "/refinery/header"
       section id="pagess"
+        p class="notice" = notice
+        p class="alert" = alert  
         - if @page 
           div class="row"
             div class="large-3 columns"
