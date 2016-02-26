@@ -14,125 +14,125 @@
 ActiveRecord::Schema.define(version: 20160216190120) do
 
   create_table "refinery_image_translations", force: :cascade do |t|
-    t.integer  "refinery_image_id", null: false
-    t.string   "locale",            null: false
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.string   "image_alt"
-    t.string   "image_title"
+    t.integer  "refinery_image_id", limit: 4,   null: false
+    t.string   "locale",            limit: 255, null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "image_alt",         limit: 255
+    t.string   "image_title",       limit: 255
   end
 
-  add_index "refinery_image_translations", ["locale"], name: "index_refinery_image_translations_on_locale"
-  add_index "refinery_image_translations", ["refinery_image_id"], name: "index_refinery_image_translations_on_refinery_image_id"
+  add_index "refinery_image_translations", ["locale"], name: "index_refinery_image_translations_on_locale", using: :btree
+  add_index "refinery_image_translations", ["refinery_image_id"], name: "index_refinery_image_translations_on_refinery_image_id", using: :btree
 
   create_table "refinery_images", force: :cascade do |t|
-    t.string   "image_mime_type"
-    t.string   "image_name"
-    t.integer  "image_size"
-    t.integer  "image_width"
-    t.integer  "image_height"
-    t.string   "image_uid"
+    t.string   "image_mime_type", limit: 255
+    t.string   "image_name",      limit: 255
+    t.integer  "image_size",      limit: 4
+    t.integer  "image_width",     limit: 4
+    t.integer  "image_height",    limit: 4
+    t.string   "image_uid",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_title"
-    t.string   "image_alt"
+    t.string   "image_title",     limit: 255
+    t.string   "image_alt",       limit: 255
   end
 
   create_table "refinery_page_part_translations", force: :cascade do |t|
-    t.integer  "refinery_page_part_id", null: false
-    t.string   "locale",                null: false
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.text     "body"
+    t.integer  "refinery_page_part_id", limit: 4,     null: false
+    t.string   "locale",                limit: 255,   null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.text     "body",                  limit: 65535
   end
 
-  add_index "refinery_page_part_translations", ["locale"], name: "index_refinery_page_part_translations_on_locale"
-  add_index "refinery_page_part_translations", ["refinery_page_part_id"], name: "index_refinery_page_part_translations_on_refinery_page_part_id"
+  add_index "refinery_page_part_translations", ["locale"], name: "index_refinery_page_part_translations_on_locale", using: :btree
+  add_index "refinery_page_part_translations", ["refinery_page_part_id"], name: "index_refinery_page_part_translations_on_refinery_page_part_id", using: :btree
 
   create_table "refinery_page_parts", force: :cascade do |t|
-    t.integer  "refinery_page_id"
-    t.string   "slug"
-    t.text     "body"
-    t.integer  "position"
+    t.integer  "refinery_page_id", limit: 4
+    t.string   "slug",             limit: 255
+    t.text     "body",             limit: 65535
+    t.integer  "position",         limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title"
+    t.string   "title",            limit: 255
   end
 
-  add_index "refinery_page_parts", ["id"], name: "index_refinery_page_parts_on_id"
-  add_index "refinery_page_parts", ["refinery_page_id"], name: "index_refinery_page_parts_on_refinery_page_id"
+  add_index "refinery_page_parts", ["id"], name: "index_refinery_page_parts_on_id", using: :btree
+  add_index "refinery_page_parts", ["refinery_page_id"], name: "index_refinery_page_parts_on_refinery_page_id", using: :btree
 
   create_table "refinery_page_translations", force: :cascade do |t|
-    t.integer  "refinery_page_id", null: false
-    t.string   "locale",           null: false
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.string   "title"
-    t.string   "custom_slug"
-    t.string   "menu_title"
-    t.string   "slug"
+    t.integer  "refinery_page_id", limit: 4,   null: false
+    t.string   "locale",           limit: 255, null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.string   "title",            limit: 255
+    t.string   "custom_slug",      limit: 255
+    t.string   "menu_title",       limit: 255
+    t.string   "slug",             limit: 255
   end
 
-  add_index "refinery_page_translations", ["locale"], name: "index_refinery_page_translations_on_locale"
-  add_index "refinery_page_translations", ["refinery_page_id"], name: "index_refinery_page_translations_on_refinery_page_id"
+  add_index "refinery_page_translations", ["locale"], name: "index_refinery_page_translations_on_locale", using: :btree
+  add_index "refinery_page_translations", ["refinery_page_id"], name: "index_refinery_page_translations_on_refinery_page_id", using: :btree
 
   create_table "refinery_pages", force: :cascade do |t|
-    t.integer  "parent_id"
-    t.string   "path"
-    t.string   "slug"
-    t.string   "custom_slug"
-    t.boolean  "show_in_menu",        default: true
-    t.string   "link_url"
-    t.string   "menu_match"
-    t.boolean  "deletable",           default: true
-    t.boolean  "draft",               default: false
-    t.boolean  "skip_to_first_child", default: false
-    t.integer  "lft"
-    t.integer  "rgt"
-    t.integer  "depth"
-    t.string   "view_template"
-    t.string   "layout_template"
+    t.integer  "parent_id",           limit: 4
+    t.string   "path",                limit: 255
+    t.string   "slug",                limit: 255
+    t.string   "custom_slug",         limit: 255
+    t.boolean  "show_in_menu",                    default: true
+    t.string   "link_url",            limit: 255
+    t.string   "menu_match",          limit: 255
+    t.boolean  "deletable",                       default: true
+    t.boolean  "draft",                           default: false
+    t.boolean  "skip_to_first_child",             default: false
+    t.integer  "lft",                 limit: 4
+    t.integer  "rgt",                 limit: 4
+    t.integer  "depth",               limit: 4
+    t.string   "view_template",       limit: 255
+    t.string   "layout_template",     limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "refinery_pages", ["depth"], name: "index_refinery_pages_on_depth"
-  add_index "refinery_pages", ["id"], name: "index_refinery_pages_on_id"
-  add_index "refinery_pages", ["lft"], name: "index_refinery_pages_on_lft"
-  add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id"
-  add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt"
+  add_index "refinery_pages", ["depth"], name: "index_refinery_pages_on_depth", using: :btree
+  add_index "refinery_pages", ["id"], name: "index_refinery_pages_on_id", using: :btree
+  add_index "refinery_pages", ["lft"], name: "index_refinery_pages_on_lft", using: :btree
+  add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id", using: :btree
+  add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt", using: :btree
 
   create_table "refinery_resource_translations", force: :cascade do |t|
-    t.integer  "refinery_resource_id", null: false
-    t.string   "locale",               null: false
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.string   "resource_title"
+    t.integer  "refinery_resource_id", limit: 4,   null: false
+    t.string   "locale",               limit: 255, null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "resource_title",       limit: 255
   end
 
-  add_index "refinery_resource_translations", ["locale"], name: "index_refinery_resource_translations_on_locale"
-  add_index "refinery_resource_translations", ["refinery_resource_id"], name: "index_refinery_resource_translations_on_refinery_resource_id"
+  add_index "refinery_resource_translations", ["locale"], name: "index_refinery_resource_translations_on_locale", using: :btree
+  add_index "refinery_resource_translations", ["refinery_resource_id"], name: "index_refinery_resource_translations_on_refinery_resource_id", using: :btree
 
   create_table "refinery_resources", force: :cascade do |t|
-    t.string   "file_mime_type"
-    t.string   "file_name"
-    t.integer  "file_size"
-    t.string   "file_uid"
-    t.string   "file_ext"
+    t.string   "file_mime_type", limit: 255
+    t.string   "file_name",      limit: 255
+    t.integer  "file_size",      limit: 4
+    t.string   "file_uid",       limit: 255
+    t.string   "file_ext",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "seo_meta", force: :cascade do |t|
-    t.integer  "seo_meta_id"
-    t.string   "seo_meta_type"
-    t.string   "browser_title"
-    t.text     "meta_description"
+    t.integer  "seo_meta_id",      limit: 4
+    t.string   "seo_meta_type",    limit: 255
+    t.string   "browser_title",    limit: 255
+    t.text     "meta_description", limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "seo_meta", ["id"], name: "index_seo_meta_on_id"
-  add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], name: "id_type_index_on_seo_meta"
+  add_index "seo_meta", ["id"], name: "index_seo_meta_on_id", using: :btree
+  add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], name: "id_type_index_on_seo_meta", using: :btree
 
 end
