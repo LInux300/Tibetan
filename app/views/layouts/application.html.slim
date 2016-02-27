@@ -18,13 +18,13 @@ html.no-js lang="en"
       header id="header"
         = render "/refinery/header"
       section id="pagess"
-        p class="notice" = notice
-        p class="alert" = alert  
         - if @page 
           div class="row"
-            div class="large-3 columns"
+            div class="large-6 columns"
               = raw @page.content_for(:side_body)
-            div class="large-9 columns"
+            div class="large-6 columns"
+              p class="notice" = notice
+              p class="alert" = alert
               = raw @page.content_for(:body)
         - else      
           == yield
