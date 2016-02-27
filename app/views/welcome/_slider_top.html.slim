@@ -1,58 +1,82 @@
 .row
   nav.top-bar data-topbar="" role="navigation"
-    ul.title-area
-      li.name
-        h1
-          a href="#"  = t('title')
-      /! Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
-      li.toggle-topbar.menu-icon
-        a href="#"
-          span Menu
     section.top-bar-section
-      /! Right Nav Section
       ul.left
+        li.name
+          h1
+            a href="/" = t('title')
         li.active
-          a href="#"  Right Button Active
-        li.has-dropdown
-          a href="#"  Right Button Dropdown
-          ul.dropdown
-            li
-              a href="#"  First link in dropdown
-            li.active
-              a href="#"  Active link in dropdown
-      /! Left Nav Section
+          a href="#" = t('view.top_nav.first')
+        / li.has-dropdown
+        /   a href="#"  Right Button Dropdown
+        /   ul.dropdown
+        /     li
+        /       a href="#"  First link in dropdown
+        /     li.active
+        /       a href="#"  Active link in dropdown
       ul.right
         li
-          a href="#"  Login
+          -if user_signed_in?
+            a href="/sign_out" = t('devise.sign_out')
+          -else
+            a href="/sign_in" = t('devise.sign_in')
+
 
 .row.text-center.slick-multislider
-  .large-4.small-12.columns
-    img alt="" src="http://placehold.it/700x300" /
-    h5.h5-title-margin-top Image Title 1
-    .title-blue-line-content
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
-  .large-4.small-12.columns
-    img alt="" src="http://placehold.it/700x300" /
-    h5.h5-title-margin-top Image Title 2
-    .title-blue-line-content
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
-  .large-4.small-12.columns
-    img alt="" src="http://placehold.it/700x300" /
-    h5.h5-title-margin-top Image Title 3
-    .title-blue-line-content
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
-  .large-4.columns
-    img alt="" src="http://placehold.it/700x300" /
-    h5.h5-title-margin-top Image Title 4
-    .title-blue-line-content
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
-  .large-4.columns
-    img alt="" src="http://placehold.it/700x300" /
-    h5.h5-title-margin-top Image Title 5
-    .title-blue-line-content
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
-  .large-4.columns
-    img alt="" src="http://placehold.it/700x300" /
-    h5.h5-title-margin-top Image Title 6
-    .title-blue-line-content
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+  .small-4.columns
+    .image-wrapper.overlay-fade-in
+      img src="" /
+      .image-overlay-content
+        h2 .overlay-fade-in
+        p.price =t('view.view.first_topic.header')
+        a.button href="#"  Get it
+  .small-4.columns
+    .image-wrapper.overlay-slide-in-left
+      img src="" /
+      .image-overlay-content
+        h2 .overlay-slide-in-left
+        p.price =t('view.view.second_topic.header')
+        a.button href="#"  Buy Me
+  .small-4.columns
+    .image-wrapper.overlay-fade-in-new-background
+      img src="" /
+      .image-overlay-content
+        h2 .overlay-fade-in-new-background
+        p.price =t('view.view.third_topic.header')
+        a.button href="#"  Want!
+        
+        
+/ .row.text-center.slick-multislider
+/   .large-4.small-12.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 1
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.small-12.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 2
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.small-12.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 3
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 4
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 5
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 6
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+
+.row
+   = render "/refinery/header"

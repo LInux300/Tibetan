@@ -19,6 +19,7 @@
  *= require slick-carousel/slick/slick
  *= require slick-carousel/slick/slick-theme
  *= require motion-ui/dist/motion-ui.css
+ *= require custom
  *= require slider
  *= require_self
  */

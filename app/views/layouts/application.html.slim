@@ -11,24 +11,29 @@ html.no-js lang="en"
     = render "/refinery/head"
     
   body id="<%= canonical_id @page %>"
-    = site_bar
+    -if admin_signed_in?
+      = site_bar
     br
     div id="page_container"
-      = render "welcome/slider_top"
       header id="header"
-        = render "/refinery/header"
+        = render "welcome/slider_top"
       section id="pagess"
+        .row
+          -if notice.present?
+            .alert-box.notice.radius = notice
+              a href="#" class="close" &times;
+          -if alert.present?
+            .alert-box.alert.radius = alert
+              a href="#" class="close" &times;
         - if @page 
-          div class="row"
+          .row
             div class="large-6 columns"
               = raw @page.content_for(:side_body)
             div class="large-6 columns"
-              p class="notice" = notice
-              p class="alert" = alert
               = raw @page.content_for(:body)
         - else      
           == yield
-      footer
+      footer.footer
         = render "/refinery/footer"
     
     = render "/refinery/javascripts"
