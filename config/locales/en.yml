@@ -21,17 +21,24 @@
 
 en:
   title: Tibetan
-  hello: "Hello world"
   view:
     top_nav:
       first: Survey
     first_topic:
-      header: The Tibetan Medicine
       body: Tibetan medicine is primarily a form of Ayurveda, which was not only the traditional natural healing system of India but through history influenced surrounding cultures from Greece to China.
-      link:
-        text: Tibetan Medicine
+      button: The TM
+      header: The Tibetan Medicine
+      href: '/medicine/tibetan-medicine'
+      short_body: Tibetan medicine is also self healing.
     second_topic:
+      body: Tibetan Prayers are prayers performed by monks.
+      button: The TP
       header: The Tibetan Prayers
-      body: Tibetan Prayers are
-      link:
-        text: Tibetan Prayers
+      href: '/medicine/prayers'
+      short_body: Tibetan Prayers are prayers performed by monks.
+    third_topic:
+      body: Informatic Tibetans ( IT ) are all kind of info about Worlds, Cultures and People.
+      button: The IT
+      header: Informatic Tibetans
+      href: '/medicine/tibetan-informatics'
+      short_body: The IT are all kind of infos about Worlds, Cultures and People.

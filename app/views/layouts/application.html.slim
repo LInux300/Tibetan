@@ -1,6 +1,7 @@
 html.no-js lang="en"
   = render "/refinery/html_tag"
-  - site_bar = render('/refinery/site_bar', :head => true)
+  -if admin_signed_in?
+    - site_bar = render('/refinery/site_bar', :head => true)
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
