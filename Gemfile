@@ -52,6 +52,14 @@ gem 'activemerchant', '~> 1.57'
 # Devise
 gem 'devise'
 
+# gem 'surveyor', :github => "NUBIC/surveyor", :branch => "master"
+gem 'surveyor', github: 'NUBIC/surveyor'
+
+# https://github.com/kjayma/surveyor_gui
+# gem 'surveyor_gui'
+# https://github.com/cowboyd/therubyracer
+# gem "therubyracer"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

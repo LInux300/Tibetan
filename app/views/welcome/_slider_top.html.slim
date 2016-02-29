@@ -6,7 +6,8 @@
           h1
             a href="/" = t('title')
         li.active
-          a href="#" = t('view.top_nav.first')
+          a href='/surveys' = t('view.top_nav.first')
+          / a href= available_surveys_url = t('view.top_nav.first')
         / li.has-dropdown
         /   a href="#"  Right Button Dropdown
         /   ul.dropdown
@@ -22,7 +23,7 @@
             a href="/sign_in" = t('devise.sign_in')
 
 
-.row.text-center.slick-multislider
+.row.text-center.max-height-multislider
   .small-4.columns
     .image-wrapper.overlay-fade-in
       img src="" /

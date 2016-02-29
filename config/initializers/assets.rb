@@ -14,3 +14,7 @@ Rails.application.config.assets.version = '1.0'
 # add by
 # Rails.application.config.assets.precompile += %w( slider.js )
 #Rails.application.config.assets.precompile += %w( .js .css .scss .svg .eot .woff .ttf)
+
+# surveyor
+Rails.application.config.assets.precompile += %w( surveyor_all.css )
+Rails.application.config.assets.precompile += %w( surveyor_all.js )

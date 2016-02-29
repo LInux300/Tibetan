@@ -2,45 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$blue: #1B6AA5;
-$green: #009A31;
-$red: #E8110F;
-$yellow: #FBC723;
-// *Style Hover Color #27ae60*/
-/* Style Success Color #2980b9 */
-/* Style Info Color #f1c40f */
-/* Style Danger Color #e74c3c */
-/* Style Warning Color #9b59b6 */
-
-
-.top-bar-section {
-  background-color: $red !important;
-
-}
-
-.slick-multislider, .slick-slide  {
+.max-height-multislider {
   max-height:450px;
   overflow: hidden;
   background-color: white;
 }
 
-.index-multislider {
-  max-height:260px;
-}
-
-.slick-slider {
-  margin-bottom: 0px !important;
-  // border-right-style: solid;
-  // border-left-style: solid;
-  // border-color: black;
-  // background-color: #FBC723;
-}
-
-#header {
-  background-color: $yellow;
-}
-
-#pagess {
-  margin-bottom: 0px !important;
-  // background-color: #E74C3C;
-}
+// .slick-multislider, .slick-slide  {
+//   max-height:450px;
+//   overflow: hidden;
+//   background-color: white;
+// }
+// .slick-slider {
+//   margin-bottom: 0px !important;
+//   // border-right-style: solid;
+//   // border-left-style: solid;
+//   // border-color: black;
+//   // background-color: #FBC723;
+// }

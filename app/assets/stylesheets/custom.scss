@@ -1,19 +1,35 @@
-.top-bar-section {
-}
+// $blue: #2980b9;
+$blue: #1B6AA5;
+$green: #009A31;
+$red: #E8110F;
+$yellow: #FBC723;
+$text-color: #fff;
+$white: white;
 
+.top-bar-section {
+  background-color: $red !important;
+
+}
 
 .full-width {
   max-width: 1400px;
 }
 
-$text-color: #fff;
+#header {
+  background-color: $white;
+}
+
+#pagess {
+  margin-bottom: 0px !important;
+  // background-color: #E74C3C;
+}
+
 
 // footer CSS
 
 .footer {
-  // background-color: #2980b9;
-  // background-color: #1B6AA5;
-  background-color: #009A31;
+
+  background-color: $blue;
   padding: 2rem 4rem;
   text-align: center;
   color: $text-color;
