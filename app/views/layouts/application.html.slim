@@ -32,8 +32,9 @@ html.no-js lang="en"
               = raw @page.content_for(:side_body)
             div class="large-6 columns"
               = raw @page.content_for(:body)
-        - else      
-          == yield
+        - else
+          .row   
+            == yield
       footer.footer
         = render "/refinery/footer"
     

@@ -12,12 +12,12 @@ $white: white;
 
 }
 
-.full-width {
-  max-width: 1400px;
+#header, #page_container {
+  background-color: $white !important;
 }
 
-#header {
-  background-color: $white;
+.full-width {
+  max-width: 1400px;
 }
 
 #pagess {
@@ -25,11 +25,8 @@ $white: white;
   // background-color: #E74C3C;
 }
 
-
 // footer CSS
-
 .footer {
-
   background-color: $blue;
   padding: 2rem 4rem;
   text-align: center;
@@ -38,7 +35,6 @@ $white: white;
     font-size: 100px;
   }
 }
-
 .footer {
   h4 {
     color: $text-color;
@@ -54,7 +50,6 @@ $white: white;
     color: $text-color;
   }
 }
-
 @media only screen and (min-width: 40.063em) {
 .footer {
   .columns:nth-child(n+2) {
@@ -63,7 +58,6 @@ $white: white;
   }
  }
 }
-
 .footer-links {
   list-style-type: none;
   li {
