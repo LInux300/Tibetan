@@ -42,3 +42,616 @@ en:
       header: Informatic Tibetans
       href: '/medicine/tibetan-informatics'
       short_body: The IT are all kind of infos about Worlds, Cultures and People.
+  survey:
+    001_question:
+      title: How old are you?
+      name: 1
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: 5-25
+      02_choice_value: F
+      02_choice_text: 25-60
+      03_choice_value: W
+      03_choice_text: 60+
+      04_choice_value: A
+      04_choice_text: 0-5
+    002_question:
+      title: Which body type fits you most closely?
+      name: 2
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Ectomorph
+      02_choice_value: F
+      02_choice_text: Mesomorph
+      03_choice_value: W
+      03_choice_text: Endomorph
+    003_question:
+      title: Which of the following climates generally does not agree with your health?
+      name: 3
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Cool and Dry
+      02_choice_value: F
+      02_choice_text: Hot and Dry
+      03_choice_value: W
+      03_choice_text: Cold and Wet
+    004_question:
+      title: Which of the following environments or climates agrees with your health?
+      name: 4
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Hot and Moderately Dry
+      02_choice_value: F
+      02_choice_text: Cold and Wet
+      03_choice_value: W
+      03_choice_text: Cool and Dry
+    005_question:
+      title: Which of the following seasons agrees with your health?
+      name: 5
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Autumn
+      02_choice_value: F
+      02_choice_text: Winter and Spring
+      03_choice_value: W
+      03_choice_text: Summer
+    006_question:
+      title: Which of the following does not agree with your health?
+      name: 6
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Summer
+      02_choice_value: F
+      02_choice_text: Autumn
+      03_choice_value: W
+      03_choice_text: Winter and Spring
+    007_question:
+      title: During which part of the day do you feel best with your body, mind and energy?
+      name: 7
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: noon - 3pm and midnight - 2am
+      02_choice_value: F
+      02_choice_text: 8-11am and 8pm - midnight
+      03_choice_value: W
+      03_choice_text: before 7am and 5-8pm
+    008_question:
+      title: During which part of a day do you not feel good?
+      name: 8
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: before 7am and 5-8pm
+      02_choice_value: F
+      02_choice_text: afternoon - 3pm and mignight - 2am
+      03_choice_value: W
+      03_choice_text: 8-11am and 8pm - midnight
+    009_question:
+      title: When do you generally feel better?
+      name: 9
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Immediately after eating
+      02_choice_value: F
+      02_choice_text: From two to four hours after eating normal meal
+      03_choice_value: W
+      03_choice_text: On an empty stomach and after eating very small or light meals
+    010_question:
+      title: When do you generally feel worse?
+      name: 10
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: On an empty stomach
+      02_choice_value: F
+      02_choice_text: From two to four hours after eating normal meal
+      03_choice_value: W
+      03_choice_text: Immediately after eating
+    011_question:
+      title: Which part of your body feels weakest?
+      name: 11
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Lower part ( below the navel )
+      02_choice_value: F
+      02_choice_text: Middle part ( between heart and navel )
+      03_choice_value: W
+      03_choice_text: Upper part ( above the heart )
+    012_question:
+      title: Which part of your body is healthiest?
+      name: 12
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Middle part
+      02_choice_value: F
+      02_choice_text: Upper part
+      03_choice_value: W
+      03_choice_text: Lower part
+    013_question:
+      title: What type of exercise and how often do you exercise?
+      name: 13
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Light exercise, not done regularly
+      02_choice_value: F
+      02_choice_text: Competitive and strenuous exercise, done reqularly
+      03_choice_value: W
+      03_choice_text: None or very little
+    014_question:
+      title: What is your sleeping pattern like?
+      name: 14
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Disturbed sleep
+      02_choice_value: F
+      02_choice_text: Need little sleep
+      03_choice_value: W
+      03_choice_text: Heavy and prolonged
+    015_question:
+      title: Under stress, which of the following symptoms do you tend to experience?
+      name: 15
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: muscular tension, tension headache, ringing in ears, hyperventilation, gas, constipation
+      02_choice_value: F
+      02_choice_text: localized pain, migraine, nausea, heat in body, acidity, diarrhea
+      03_choice_value: W
+      03_choice_text: dullness & heaviness, sleepiness, cold hands & feet, sluggishness, fullness in stomach, poor digestion
+    016_question:
+      title: Which of the following prychological symptoms do you generally experience under stress?
+      name: 16
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: nervousness, restlessness, constant worry / brooding, thinking too much, grieving, easily upset, mood swings
+      02_choice_value: F
+      02_choice_text: anger, aggression, irritability, harsh, violent, high-strung, jealous
+      03_choice_value: W
+      03_choice_text: resustabcem denial, procrastination, withdrawn, silent, closed-minded, confused, forgetful
+    017_question:
+      title: Emotional symptoms you generally experience
+      name: 17
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: excitement, greed, pretension
+      02_choice_value: F
+      02_choice_text: aggression, vengeance, envy
+      03_choice_value: W
+      03_choice_text: stable and sedating, concealment, indifference
+    018_question:
+      title: Which of the belief systems do you generally follow?
+      name: 18
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Abstract, emotional and intense
+      02_choice_value: F
+      02_choice_text: Concrete, materially oriented
+      03_choice_value: W
+      03_choice_text: Generic or none
+    019_question:
+      title: How are your concentration skills?
+      name: 19
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Easily distracted and cannot concentrate on an object for a long time
+      02_choice_value: F
+      02_choice_text: Focused, good concentration, primarily on materially oriented objects and goals
+      03_choice_value: W
+      03_choice_text: Poor concentration due to dullness and indifference
+    020_question:
+      title: What is your spiritual practice?
+      name: 20
+      otherText: The Tibetan Constitutional Typology Test
+      01_choice_value: A
+      01_choice_text: Very important to you
+      02_choice_value: F
+      02_choice_text: Not absolutely essential
+      03_choice_value: W
+      03_choice_text: You recognize its importance but don't really practice
+    021_question:
+      title: How does your body looks like?
+      name: 21
+      otherText: Constitutional Typology
+      01_choice_value: A
+      01_choice_text: Tall, lean physique with a short trunk, long extremities
+      02_choice_value: F
+      02_choice_text: Strong and muscular, medium height
+      03_choice_value: W
+      03_choice_text: Weak muscles, strong bones of medium tone, short physique tending to retain fluid and fat
+    022_question:
+      title: How does your face looks like?
+      name: 22
+      otherText: Constitutional Typology
+      01_choice_value: A
+      01_choice_text: Small, elongated skull, narrow forehead, sharp nose , thin and soft hair
+      02_choice_value: F
+      02_choice_text: Short skull with wide forehead, round nose, coarse hair, protruding eyebrows
+      03_choice_value: W
+      03_choice_text: Large, elongated head with narrow forehead, small eyes, thick eyelids, wide nose and thick lips, short and heavy neck
+    023_question:
+      title: How does your chest looks like?
+      name: 23
+      otherText: Constitutional Typology
+      01_choice_value: A
+      01_choice_text: Narrow and drooping shoulders, narrow depressed chest with prominent scapulae
+      02_choice_value: F
+      02_choice_text: Well developed and proportioned
+      03_choice_value: W
+      03_choice_text: Round and soft shoulders
+    024_question:
+      title: How does your abdomen looks like?
+      name: 24
+      otherText: Constitutional Typology
+      01_choice_value: A
+      01_choice_text: Small, flat and hard
+      02_choice_value: F
+      02_choice_text: Small and muscular
+      03_choice_value: W
+      03_choice_text: Large and soft
+    025_question:
+      title: How does your extremities look like?
+      name: 25
+      otherText: Constitutional Typology
+      01_choice_value: A
+      01_choice_text: long and thin
+      02_choice_value: F
+      02_choice_text: proportioned and strong
+      03_choice_value: W
+      03_choice_text: Thick and short
+    026_question:
+      title: How does your genitals look like?
+      name: 26
+      otherText: Constitutional Typology
+      01_choice_value: A
+      01_choice_text: Long, thin penis and elongated scrotum, poorly developed vagina, small breasts, irregular and prolonged menstrual problems
+      02_choice_value: F
+      02_choice_text: Thick and developed penis, contracted and hard scrotum, female organs are strong and of medium size
+      03_choice_value: W
+      03_choice_text: Thick and short penis, heavy and thick scrotum, female organs are well developed, tendency to heavy menstruation
+    027_question:
+      title: How does your muscles look like?
+      name: 27
+      otherText: Constitutional Typology
+      01_choice_value: A
+      01_choice_text: Generally weak, with poor circulation
+      02_choice_value: F
+      02_choice_text: Compact and strong, with good circulation
+      03_choice_value: W
+      03_choice_text: Soft and flabby, with poor circulation
+    028_question:
+      title: How does your skin looks like?
+      name: 28
+      otherText: Constitutional Typology
+      01_choice_value: A
+      01_choice_text: Drym rough and discolored
+      02_choice_value: F
+      02_choice_text: Elastic, thick and of olive complexion
+      03_choice_value: W
+      03_choice_text: Pale and soft
+    029_question:
+      title: How does your body functions look like?
+      name: 29
+      otherText: Constitutional Typology
+      01_choice_value: A
+      1_choice_text: Sensory responses to stimulation are rapid but short-lived; The body is prone to rapid exhaustion and low resistance.
+      02_choice_value: F
+      02_choice_text: Sensory responses to stimulation are rapid and lasting; Resisance is good.
+      03_choice_value: W
+      03_choice_text: Sensory responses to stimulation are slow and lethargic; Resistance is moderate.
+    030_question:
+      title: What is your mood?
+      name: 30
+      otherText: Psychological profile
+      01_choice_value: A
+      01_choice_text: Depressive, anxious, moods change from one side to another, from love to hate
+      02_choice_value: F
+      02_choice_text: Impulsive, materialistic, practical, aggressive
+      03_choice_value: W
+      03_choice_text: Stable, easy-going, carefree, warm-hearted
+    031_question:
+      title: What is your will?
+      name: 31
+      otherText: Psychological profile
+      01_choice_value: A
+      01_choice_text: Rarely carries a task to completion, often because of a lack of confidence. Emotionally unstable
+      02_choice_value: F
+      02_choice_text: Optimistic, Strong will, controlling the situations
+      03_choice_value: W
+      03_choice_text: Weak and leisure-oriented, resistant to change ideas into action
+    032_question:
+      title: What is your ego?
+      name: 32
+      otherText: Psychological profile
+      01_choice_value: A
+      01_choice_text: Often feature of psychological make-up, to protect against threat from others, whom he she or he may envy and considered stronger and more mature
+      02_choice_value: F
+      02_choice_text: Strong sense of the self which is fortified by power, sex and wealth. Avoids spiritual issues or dismisses them as silly.
+      03_choice_value: W
+      03_choice_text: No dominant features, self in comfort and peaceful surroundings
+    033_question:
+      title: What is your intelligence?
+      name: 33
+      otherText: Psychological profile
+      01_choice_value: A
+      01_choice_text: Quick to learn, highly intelligent, but impractical
+      02_choice_value: F
+      02_choice_text: Scheming and compulsive, thinks in terms of ends and means. Constantly searching for a model, a point of reference to measure against as well as to reassure
+      03_choice_value: W
+      03_choice_text: Average, lacks great aspirations
+    034_question:
+      title: What is your emotion?
+      name: 34
+      otherText: Psychological profile
+      01_choice_value: A
+      01_choice_text: Desirous and grasping, often frustration or fear. Pleasure and pain are the chief sensation preoccupations
+      02_choice_value: F
+      02_choice_text: Envy and jealousy are deep-rooted. A poor loser can manifest aggressive bahavior when her or his view is threatened.
+      03_choice_value: W
+      03_choice_text: Resistant to any major change in life situation.
+    035_question:
+      title: What is your deviations?
+      name: 35
+      otherText: Psychological profile
+      01_choice_value: A
+      01_choice_text: Fear and complexes about sex and the opposite sex. often resulting in deviations. Women usually lack maternal feeling.
+      02_choice_value: F
+      02_choice_text: Sadistic, raging narcissism, self-centered behavior
+      03_choice_value: W
+      03_choice_text: Fun and pleasure, over-indulgence in food, most minimal sexual deviations
+    036_question:
+      title: Examination of the five sensory organs
+      name: 36
+      otherText: Physical Examination
+      01_choice_value: Tongue
+      01_choice_text: Tongue
+      02_choice_value: Eyes
+      02_choice_text: Eyes
+      03_choice_value: Ears
+      03_choice_text: Ears
+      04_choice_value: Nose and lips
+      04_choice_text: Nose and lips
+      05_choice_value: Skin
+      05_choice_text: Skin
+    037_question:
+      title: Functional relationship between fhte five sense and their objects
+      name: 37
+      otherText: Physical Examination
+      01_choice_value: Taste
+      01_choice_text: Taste
+      02_choice_value: Shapes and colors
+      02_choice_text: Shapes and colors
+      03_choice_value: Sounds
+      03_choice_text: Sounds
+      04_choice_value: Odors
+      04_choice_text: Odors
+      05_choice_value: Sensations
+      05_choice_text: Sensations
+    038_question:
+      title: Examination of the five excretory matters
+      name: 38
+      otherText: Physical Examination
+      01_choice_value: Sputum
+      01_choice_text: Sputum
+      02_choice_value: Vomit
+      02_choice_text: Vomit
+      03_choice_value: Urine
+      03_choice_text: Urine
+      04_choice_value: Blood composition
+      04_choice_text: Blood composition
+      05_choice_value: Feces
+      05_choice_text: Feces
+    039_question:
+      title: Examination of the abdomen and acupressure points
+      name: 39
+      otherText: Physical Examination
+      01_choice_value: Palpating the abdomen
+      01_choice_text: Palpating the abdomen
+      02_choice_value: Feeling acupressure points
+      02_choice_text: Feeling acupressure points
+    040_question:
+      title: Which kind of food do you eat often?
+      name: 40
+      otherText: Food
+      01_choice_value: A
+      01_choice_text: Light, mobile, dry and bitter tasting foods
+      02_choice_value: T
+      02_choice_text: Heavy, wet, stagnating, sweet foods
+      03_choice_value: W
+      03_choice_text: Hot, oily, sharp, sour, acidic, fermented foods
+    041_question:
+      title: What is color of your urine?
+      name: 41
+      otherText: Examination of your Urine
+      01_choice_value: A
+      01_choice_text: Bluish water, transparent
+      02_choice_value: F
+      02_choice_text: Yellow, orangeish, reddish and turbid
+      03_choice_value: W
+      03_choice_text: White
+    042_question:
+      title: What is odor of your urine?
+      name: 42
+      otherText: Examination of your Urine
+      01_choice_value: A
+      01_choice_text: Minimal or none
+      02_choice_value: F
+      02_choice_text: Malodorous, pungent, foul
+      03_choice_value: W
+      03_choice_text: Minimal or none
+    043_question:
+      title: What are the bubbles of your urine?
+      name: 43
+      otherText: Examination of your Urine
+      01_choice_value: A
+      01_choice_text: Large, appearing erratically on the surface of the urine
+      02_choice_value: F
+      02_choice_text: Small bubbles that disappear instantly after stirring
+      03_choice_value: W
+      03_choice_text: Small, congested, profuse, sticky, standing for a long time after stirring
+    044_question:
+      title: Do your urine forms cloudy formation?
+      name: 44
+      otherText: Examination of your Urine
+      01_choice_value: A
+      01_choice_text: None
+      02_choice_value: F
+      02_choice_text: Thick, abundant
+      03_choice_value: W
+      03_choice_text: Minimal or none
+    045_question:
+      title: Do your urine forms stringy formation?
+      name: 45
+      otherText: Examination of your Urine
+      01_choice_value: A
+      01_choice_text: Minimal, thin, or oily cream. None at all on the surface ot the urine
+      02_choice_value: F
+      02_choice_text: Thick, single units in the center and on the surface of the urine
+      03_choice_value: W
+      03_choice_text: Minimal or none
+    046_question:
+      title: What is the rate of disoloration of your urine?
+      name: 46
+      otherText: Examination of your Urine
+      01_choice_value: A
+      01_choice_text: After urine cools. it dilutes and turns watery
+      02_choice_value: F
+      02_choice_text: Before urine turns cold
+      03_choice_value: W
+      03_choice_text: Much after urine is cold
+    047_question:
+      title: What kind of way change takes place?
+      name: 47
+      otherText: Examination of your Urine
+      01_choice_value: A
+      01_choice_text: Erratic and irregular
+      02_choice_value: F
+      02_choice_text: From the lower level towards the surface
+      03_choice_value: W
+      03_choice_text: From the outside towards the center
+    048_question:
+      title: What is the characteristics of your urine when is cold?
+      name: 48
+      otherText: Examination of your Urine
+      01_choice_value: A
+      01_choice_text: Diluted and watery, with large bubbles that disappear slowly
+      02_choice_value: F
+      02_choice_text: Turbid and reddish-yellow, with small bubbles that disappear instantly after stirring
+      03_choice_value: W
+      03_choice_text: White, generally clear, congested, with increasing bubbles that persist or surface
+    049_question:
+      title: Does your Urine contains sediments?
+      name: 49
+      otherText: Examination of your Urine
+      01_choice_value: A
+      01_choice_text: Minimal to moderate deposits, shaped like strands of hair
+      02_choice_value: F
+      02_choice_text: Urine is murky, turbid and often has a cloudy deposit
+      03_choice_value: W
+      03_choice_text: Minimal or sometimes sand-like in kidney or metabolic disorders
+    050_question:
+      title: What is color of your tongue?
+      name: 50
+      otherText: Examination of your Tongue
+      01_choice_value: A
+      01_choice_text: Reddish
+      02_choice_value: F
+      02_choice_text: Yellowish (especially the fur)
+      03_choice_value: W
+      03_choice_text: White, pale
+    051_question:
+      title: Are ther deposits of fur or coating on your Tongue?
+      name: 51
+      otherText: Examination of your Tongue
+      01_choice_value: A
+      01_choice_text: Normally clear, sometimes a little fur near the back ot the tongue
+      02_choice_value: F
+      02_choice_text: Yellowish, thick fur over most of the tongue
+      03_choice_value: W
+      03_choice_text: Thick white fur
+    052_question:
+      title: What is dryness of your tongue?
+      name: 52
+      otherText: Examination of your Tongue
+      01_choice_value: A
+      01_choice_text: Dry and rough
+      02_choice_value: F
+      02_choice_text: Dry
+      03_choice_value: W
+      03_choice_text: Moist and smooth
+    053_question:
+      title: Is there presence of pips or pimple-like dots on your tongue?
+      name: 53
+      otherText: Examination of your Tongue
+      01_choice_value: A
+      01_choice_text: None
+      02_choice_value: F
+      02_choice_text: Occasional pips on the sides of the tongue, but generally clear
+      03_choice_value: W
+      03_choice_text: None
+    054_question:
+      title:
+      name: 54
+      otherText: Examination of your Eyes
+      01_choice_value: A
+      01_choice_text: Eyes tend to be small, with a dry look, especially the eyelashes, which are usuallyscanty
+      02_choice_value: F
+      02_choice_text: Eyes are generally moderate in size, sharp and lustrous. The lashes are scanty but oily. The black part of the eye may be yellowish
+      03_choice_value: W
+      03_choice_text: Eyes are large and beautiful, moist, with long, thick oily lashes
+    055_question:
+      title:
+      name: 55
+      otherText:
+      01_choice_value:
+      01_choice_text:
+      02_choice_value:
+      02_choice_text:
+      03_choice_value:
+      03_choice_text:
+    056_question:
+      title:
+      name: 56
+      otherText:
+      01_choice_value:
+      01_choice_text:
+      02_choice_value:
+      02_choice_text:
+      03_choice_value:
+      03_choice_text:
+    057_question:
+      title:
+      name: 57
+      otherText:
+      01_choice_value:
+      01_choice_text:
+      02_choice_value:
+      02_choice_text:
+      03_choice_value:
+      03_choice_text:
+    058_question:
+      title:
+      name: 58
+      otherText:
+      01_choice_value:
+      01_choice_text:
+      02_choice_value:
+      02_choice_text:
+      03_choice_value:
+      03_choice_text:
+    059_question:
+      title:
+      name: 59
+      otherText:
+      01_choice_value:
+      01_choice_text:
+      02_choice_value:
+      02_choice_text:
+      03_choice_value:
+      03_choice_text:
+    060_question:
+      title:
+      name: 60
+      otherText:
+      01_choice_value:
+      01_choice_text:
+      02_choice_value:
+      02_choice_text:
+      03_choice_value:
+      03_choice_text:

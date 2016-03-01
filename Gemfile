@@ -41,6 +41,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Slim
 gem "slim-rails"
+
+# git: 'https://github.com/fnando/i18n-js.git'
+gem "i18n-js", ">= 3.0.0.rc11"
+
 # https://rubygems.org/gems/refinerycms
 gem 'refinerycms', '~> 3.0', '>= 3.0.1'
 

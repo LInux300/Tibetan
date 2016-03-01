@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require i18n/translations
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
@@ -18,6 +19,9 @@
 //= require welcome
 //= require amcharts3/amcharts/amcharts
 //= require ammap3/ammap/ammap
+
+//= require knockout-min
+//= require survey
 
 //= require_tree .
 
