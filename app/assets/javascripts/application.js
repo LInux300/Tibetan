@@ -15,15 +15,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require foundation/js/foundation
-//= require motion-ui/motion-ui
-//= require welcome
-//= require amcharts3/amcharts/amcharts
-//= require ammap3/ammap/ammap
-
 //= require knockout-min
 //= require survey
-
+//= require custom
+//= require examination
 //= require_tree .
+
+////= require welcome
+////= require motion-ui/motion-ui
+////= require amcharts3/amcharts/amcharts
+////= require ammap3/ammap/ammap
 
 // $(document).ready(function(){});
 // $(document).foundation()

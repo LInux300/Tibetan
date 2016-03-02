@@ -21,7 +21,7 @@
  *= require motion-ui/dist/motion-ui.css
  *= require slider
  *= require survey
-
+ *= require examination
  *= require custom
  *= require_self
  */

@@ -1,0 +1,44 @@
+.row
+  div class="small-12 columns"
+    h1 = t('view.fourth_topic.header')
+    p = t('view.fourth_topic.body')
+    p = t('view.fourth_topic.p1')
+
+.row
+  div class="small-12 columns"
+   -if user_signed_in?
+     .tabs.effect-1
+       input#tab-1 checked="checked" name="tab" type="radio" /
+       span href="#tab-item-1"  = t('survey.1_survey.title')
+       input#tab-2 name="tab" type="radio" /
+       span href="#tab-item-2"   = t('survey.2_survey.title')
+       input#tab-3 name="tab" type="radio" /
+       span href="#tab-item-3"   = t('survey.3_survey.title')
+       input#tab-4 name="tab" type="radio" /
+       span href="#tab-item-4"   = t('survey.4_survey.title')
+       input#tab-5 name="tab" type="radio" /
+       span href="#tab-item-5"   = t('survey.5_survey.title')
+       .tab-content
+         section#tab-item-1
+           h3  = t('survey.1_survey.short_body_0')
+           div id="1_survey_0"
+         section#tab-item-2
+           h3  = t('survey.2_survey.short_body_0')
+           div id="2_survey_0"
+         section#tab-item-3
+           h3  = t('survey.3_survey.short_body_0')
+           div id="3_survey_0"
+           br
+           h3  = t('survey.3_survey.short_body_1')
+           div id="3_survey_1"
+           br
+           h3  = t('survey.3_survey.short_body_2')
+           div id="3_survey_2"
+         section#tab-item-4
+           h3  = t('survey.4_survey.short_body_0')
+           div id="4_survey_0"
+         section#tab-item-5
+           h3  = t('survey.5_survey.short_body_0')
+           div id="5_survey_0"
+   -else
+      div id="5_survey_1"

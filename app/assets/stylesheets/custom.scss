@@ -6,24 +6,71 @@ $red: #E8110F;
 $yellow: #FBC723;
 $text-color: #fff;
 $white: white;
+$grey: #f7f7f7;
 
 .top-bar-section {
-  background-color: $red !important;
+  background-color: $grey;
 
 }
 
-#header, #page_container {
-  background-color: $white !important;
-}
-
-.full-width {
-  max-width: 1400px;
-}
+// #header, #page_container {
+//   background-color: $white;
+// }
+//
+// .full-width {
+//   max-width: 1400px;
+// }
 
 #pagess {
   margin-bottom: 0px !important;
-  // background-color: #E74C3C;
 }
+
+.alert-box {
+  margin-top: 5px !important;
+  background: $grey !important;
+  color: black !important;
+  border: none;
+  border-left: 6px solid $blue !important;
+  box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+  &.success {
+    background: $grey;
+    color: black;
+  }
+  &.alert {
+    background: $grey;
+    color: black;
+  }
+  &.warning {
+    background: $grey;
+    color: black;
+  }
+  &.info {
+    background: $grey;
+    color: black;
+  }
+  &.small {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem;
+    .close {
+      font-size: 1.5rem;
+    }
+  }
+  &.large {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+
+    .close {
+      font-size: 3rem;
+    }
+  }
+  .close {
+    font-size: 2rem;
+    line-height: 1.25rem;
+  }
+}
+
 
 // footer CSS
 .footer {
