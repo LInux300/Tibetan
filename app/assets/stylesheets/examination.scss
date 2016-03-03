@@ -6,6 +6,10 @@ $blue: #008CBA;
 $grey: #f7f7f7;
 $green: #009A31;
 
+// ----------------------------------------------------------------------------
+//  questions
+// ----------------------------------------------------------------------------
+
 .sv_qcbc {
 }
 
@@ -34,9 +38,32 @@ $green: #009A31;
   padding-top: 10px;
 }
 
-
-
-
+// ----------------------------------------------------------------------------
+//  Buttons
+// ----------------------------------------------------------------------------
+.sv_nav > input[type="button"] {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.sv_nav > input[type="button"]:hover {
+	text-decoration: none;
+}
+.sv_nav > input[type="button"]:active {
+	position: relative;
+	top: 1px;
+}
 // ----------------------------------------------------------------------------
 // Tabs
 // ----------------------------------------------------------------------------
@@ -155,3 +182,6 @@ $green: #009A31;
 #tab-5:checked ~ .tab-content #tab-item-5  {
   display: block;
 }
+// ----------------------------------------------------------------------------
+//
+// ----------------------------------------------------------------------------

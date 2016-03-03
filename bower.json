@@ -1,0 +1,42 @@
+{
+  "name": "tibetan",
+  "homepage": "https://github.com/rudolfvavra/tibetan",
+  "authors": [
+    "rudolfvavra <rudolfvavra@gmail.com>"
+  ],
+  "description": "The Tibetan",
+  "main": "README",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "The",
+    "tibetan",
+    "name",
+    "prayers",
+    "medicin",
+    "info",
+    "Bon"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "amcharts3": "^3.19.2",
+    "ammap3": "^3.19.2",
+    "motion-ui": "^1.2.1",
+    "foundation": "^5.5.3",
+    "slick-carousel": "^1.5.9",
+    "foundation-icon-fonts": "*"
+  }
+}

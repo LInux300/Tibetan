@@ -50,6 +50,7 @@ en:
       header: Physical Examinations
       href: '/examination/index'
       short_body: Physical and mental checks
+      please_login: This is only one of many examinations, for all please login
   survey:
     result: The survey result
     1_survey:

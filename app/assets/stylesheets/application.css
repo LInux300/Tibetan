@@ -15,6 +15,7 @@
  *= require refinery/theme
  *= require jquery-ui
  *= require foundation/scss/foundation
+ *= require foundation-icon-fonts/foundation-icons
  *= require slider
  *= require examination
  *= require custom
