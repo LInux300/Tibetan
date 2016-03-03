@@ -1,6 +1,3 @@
-//= require slick-carousel/slick/slick
-
-$(document).foundation();
 
 // SLick Slider Code
 var windowWidth=$(window).width();

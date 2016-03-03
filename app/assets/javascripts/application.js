@@ -10,21 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require i18n/translations
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require foundation/js/foundation
-//= require knockout-min
-//= require survey
+//= require i18n/translations
+//= require foundation/js/foundation.min
+//= require library/knockout-min
+//= require library/survey.min
 //= require custom
 //= require examination
 //= require_tree .
-
-////= require welcome
-////= require motion-ui/motion-ui
-////= require amcharts3/amcharts/amcharts
-////= require ammap3/ammap/ammap
 
 // $(document).ready(function(){});
 // $(document).foundation()
