@@ -89,31 +89,35 @@
 
 //  TODO questions 36-39
 var surveys = [
-  ['1_survey', [[2, 20, '']]],
-  ['2_survey', [[21, 29, '']]],
-  ['3_survey', [
+  ['0_survey', [[2, 20, '']]],
+  ['1_survey', [[21, 29, '']]],
+  ['2_survey', [
                  [41, 49, 'Urine Checks'],
                  [50, 53, 'Tongue Checks'],
                  [54, 54, 'Eyes Checks']
   ]],
-  ['4_survey', [[30, 35, '']]],
-  ['5_survey', [[40, 40, '']]]
+  ['3_survey', [[30, 35, '']]],
+  ['4_survey', [[40, 40, '']]]
 ];
 
 $.each(surveys, function(i, survey) {
-  $.each(survey[1], function(index2, questions_sets) {
-    var questions = new Array;
-    var survey_from = questions_sets[0];
-    var survey_to = questions_sets[1];
-    var div_id = survey[0] + '_' + index2;
-    questions = groupQuestions(div_id, questions, survey_from, survey_to);
-    var survey_render = surveyRender(questions, div_id);
-    surveyOnComplete(survey_render, div_id);
+  $.each(survey[1], function(index2, questions_from_to) {
+    createSurvey(survey[0], index2, questions_from_to)
   });
 });
 
+function createSurvey(survey, index, questions_from_to) {
+  var questions = new Array,
+      survey_from = questions_from_to[0],
+      survey_to = questions_from_to[1],
+      div_id = survey + '_' + index;
+  questions = groupQuestions(div_id, questions, survey_from, survey_to);
+  var survey_render = surveyRender(questions, div_id);
+  surveyOnComplete(survey_render, div_id);
+}
+
 function groupQuestions(div_id, questions, survey_from, survey_to) {
-  if (div_id == '1_survey_0') {
+  if (div_id == '0_survey_0') {
     questions = questionsRadioGroup(questions);
   }
   questions = questionsCheckBox(questions, survey_from, survey_to);
@@ -175,9 +179,44 @@ function surveyOnComplete(survey, div_id) {
     // alert("The results are:" + JSON.stringify(s.data));
     document.getElementById(div_id)
       .innerHTML = I18n.t('survey.result') + JSON.stringify(s.data);
+    // pieChart(div_id, JSON.stringify(s.data));
+    donutChart(div_id, JSON.stringify(s.data));
+    addSurveyMenu(div_id);
+var htmlObject = $(s); // jquery call
+    // {"1":"F","2":["W","A"],"3":["A"],"4":["F","A"],"5":["A","F","W"],"8":["W"],"9":["A","W"],"10":["A"],"18":["W"]}
     // s.sendResult('e544a02f-7fff-4ffb-b62d-6a9aa16efd7c');
   });
 }
+
+function addSurveyMenu(div_id) {
+    var div = document.createElement('div');
+
+    div.className = 'row';
+
+    div.innerHTML = '\
+      <input type="button" class="openSegmentBtn" data-index="0" value="Air" />\
+      <input type="button" class="openSegmentBtn" data-index="1" value="Fire" />\
+      <input type="button" class="openSegmentBtn" data-index="2" value="Wather" />\
+      <input type="button" value="-" onclick="removeRow(this)">\
+    ';
+     document.getElementById(div_id).appendChild(div);
+}
+// function addSurveyMenu(div_id) {
+//   var s = '\
+//     <input type="button" class="openSegmentBtn" data-index="0" value="Air" />\
+//     <input type="button" class="openSegmentBtn" data-index="1" value="Fire" />\
+//     <input type="button" class="openSegmentBtn" data-index="2" value="Water" />\
+//     <input type="button" value="-" onclick="removeRow(this)">\
+//   ';
+//   var htmlObj = $(s);
+//   htmlObj.appendChild(div_id).html();
+// }
+function removeSurveyMenu(input) {
+    document.getElementById(div_id).removeChild( input.parentNode );
+}
+
+
+
 
 function surveyOnSendResult(survey) {
   survey.onSendResult.add(function(s, options) {
@@ -192,5 +231,309 @@ function surveyOnGetResult(survey) {
     if(options.success) {
       showChart(options.dataList);
     }
+  });
+}
+
+$(function() {
+	// pieChart();
+	// assign event handlers for the demo
+	$("#destroyBtn").on("click", function(e) {
+		if (pie !== null) {
+			pie.destroy();
+			pie = null;
+		}
+	});
+	$("#recreateBtn").on("click", function(e) {
+		createSurvey('4_survey', 8, [40, 40, '']);
+	});
+	$("#refreshBtn").on("click", function(e) {
+		pie.redraw();
+	});
+
+  $(".openSegmentBtn").on("click", function(e) {
+		var index = parseInt($(e.target).data("index"), 10);
+		pie.openSegment(index);
+	});
+});
+
+
+function pieChartDefault(div_id, dataSet) {
+  var pie = new d3pie(div_id, {
+  	header: {
+  		title: {
+  			text:    "",
+  			color:    "#333333",
+  			fontSize: 18,
+  			font:     "arial"
+  		},
+  		subtitle: {
+  			color:    "#666666",
+  			fontSize: 14,
+  			font:     "arial"
+  		},
+  		location: "top-center",
+  		titleSubtitlePadding: 8
+  	},
+  	footer: {
+  		text: 	  "",
+  		color:    "#666666",
+  		fontSize: 14,
+  		font:     "arial",
+  		location: "left"
+  	},
+  	size: {
+  		canvasHeight: 500,
+  		canvasWidth: 500,
+  		pieInnerRadius: 0,
+  		pieOuterRadius: null
+  	},
+  	data: {
+  		sortOrder: "none",
+  		smallSegmentGrouping: {
+  			enabled: false,
+  			value: 1,
+  			valueType: "percentage",
+  			label: "Other",
+  			color: "#cccccc"
+  		},
+
+  		// REQUIRED! This is where you enter your pie data; it needs to be an array of objects
+  		// of this form: { label: "label", value: 1.5, color: "#000000" } - color is optional
+  		content: []
+  	},
+  	labels: {
+  		outer: {
+  			format: "label",
+  			hideWhenLessThanPercentage: null,
+  			pieDistance: 30
+  		},
+  		inner: {
+  			format: "percentage",
+  			hideWhenLessThanPercentage: null
+  		},
+  		mainLabel: {
+  			color: "#333333",
+  			font: "arial",
+  			fontSize: 10
+  		},
+  		percentage: {
+  			color: "#dddddd",
+  			font: "arial",
+  			fontSize: 10,
+  			decimalPlaces: 0
+  		},
+  		value: {
+  			color: "#cccc44",
+  			font: "arial",
+  			fontSize: 10
+  		},
+  		lines: {
+  			enabled: true,
+  			style: "curved",
+  			color: "segment" // "segment" or a hex color
+  		}
+  	},
+  	effects: {
+  		load: {
+  			effect: "default", // none / default
+  			speed: 1000
+  		},
+  		pullOutSegmentOnClick: {
+  			effect: "bounce", // none / linear / bounce / elastic / back
+  			speed: 300,
+  			size: 10
+  		},
+  		highlightSegmentOnMouseover: true,
+  		highlightLuminosity: -0.2
+  	},
+  	tooltips: {
+  		enabled: false,
+  		type: "placeholder", // caption|placeholder
+  		string: "",
+  		placeholderParser: null,
+  		styles: {
+  			fadeInSpeed: 250,
+  			backgroundColor: "#000000",
+  			backgroundOpacity: 0.5,
+  			color: "#efefef",
+  			borderRadius: 2,
+  			font: "arial",
+  			fontSize: 10,
+  			padding: 4
+  		}
+  	},
+
+  	misc: {
+  		colors: {
+  			background: null, // transparent
+  			segments: [
+  				"#2484c1", "#65a620", "#7b6888", "#a05d56", "#961a1a",
+  				"#d8d23a", "#e98125", "#d0743c", "#635222", "#6ada6a",
+  				"#0c6197", "#7d9058", "#207f33", "#44b9b0", "#bca44a",
+  				"#e4a14b", "#a3acb2", "#8cc3e9", "#69a6f9", "#5b388f",
+  				"#546e91", "#8bde95", "#d2ab58", "#273c71", "#98bf6e",
+  				"#4daa4b", "#98abc5", "#cc1010", "#31383b", "#006391",
+  				"#c2643f", "#b0a474", "#a5a39c", "#a9c2bc", "#22af8c",
+  				"#7fcecf", "#987ac6", "#3d3b87", "#b77b1c", "#c9c2b6",
+  				"#807ece", "#8db27c", "#be66a2", "#9ed3c6", "#00644b",
+  				"#005064", "#77979f", "#77e079", "#9c73ab", "#1f79a7"
+  			],
+  			segmentStroke: "#ffffff"
+  		},
+  		gradient: {
+  			enabled: false,
+  			percentage: 95,
+  			color: "#000000"
+  		},
+  		canvasPadding: {
+  			top: 5,
+  			right: 5,
+  			bottom: 5,
+  			left: 5
+  		},
+  		pieCenterOffset: {
+  			x: 0,
+  			y: 0
+  		},
+  		cssPrefix: null
+  	},
+  	callbacks: {
+  		onload: null,
+  		onMouseoverSegment: null,
+  		onMouseoutSegment: null,
+  		onClickSegment: null
+  	}
+  });
+}
+
+function pieChart(div_id, dataSet) {
+  var pie = new d3pie(div_id, {
+  	header: {
+  		title: {
+  			text: "Another Pie"
+  		}
+  	},
+  	data: {
+  		content: [
+  			{ label: "One", value: 264131 },
+  			{ label: "Two", value: 218812 },
+  			{ label: "Three", value: 157618}
+  		]
+  	},
+  	callbacks: {
+  		onClickSegment: function(a) {
+  			alert("Segment clicked! See the console for all data passed to the click handler.");
+  			console.log(a);
+  		},
+      onMouseoverSegment: function(info) {
+  			console.log("mouseover:", info);
+  		},
+  		onMouseoutSegment: function(info) {
+  			console.log("mouseout:", info);
+  		}
+  	}
+  });
+}
+
+function donutChart(div_id, dataSet) {
+  var pie = new d3pie(div_id, {
+    "header": {
+      "title": {
+        "text": "Last Constitutional Typology",
+        "fontSize": 22,
+        "font": "verdana"
+      },
+      "subtitle": {
+        "text": "Constitutional Typology, Tibetan typology",
+        "color": "#999999",
+        "fontSize": 10,
+        "font": "verdana"
+      },
+      "titleSubtitlePadding": 12
+    },
+    "footer": {
+      "text": "Test again",
+      "color": "#999999",
+      "fontSize": 11,
+      "font": "open sans",
+      "location": "bottom-center"
+    },
+    "size": {
+      "canvasHeight": 400,
+      "canvasWidth": 590,
+      "pieInnerRadius": "44%",
+      "pieOuterRadius": "100%"
+    },
+    "data": {
+      "sortOrder": "random",
+      "smallSegmentGrouping": {
+        "enabled": true
+      },
+      "content": [
+        {
+          "label": "Air - Lung",
+          "value": 8,
+          "color": "#2383c1"
+        },
+        {
+          "label": "Fire - Tripa",
+          "value": 5,
+          "color": "#64a61f"
+        },
+        {
+          "label": "Wather - Bagan",
+          "value": 2,
+          "color": "#df1212"
+        }
+      ]
+    },
+    "labels": {
+      "outer": {
+        "pieDistance": 32
+      },
+      "mainLabel": {
+        "color": "#000000",
+        "font": "verdana"
+      },
+      "percentage": {
+        "color": "#ffffff",
+        "font": "verdana",
+        "decimalPlaces": 1
+      },
+      "value": {
+        "color": "#000000",
+        "font": "verdana"
+      },
+      "lines": {
+        "enabled": true
+      },
+      "truncation": {
+        "enabled": true
+      }
+    },
+    "tooltips": {
+      "enabled": true,
+      "type": "placeholder",
+      "string": "{label}: {value}, {percentage}%",
+      "styles": {
+        "fadeInSpeed": 485
+      }
+    },
+    "effects": {
+      "load": {
+        "speed": 1500
+      },
+      "pullOutSegmentOnClick": {
+        "effect": "linear",
+        "speed": 400,
+        "size": 8
+      }
+    },
+    "misc": {
+      "pieCenterOffset": {
+      "y": 20
+      }
+    },
+    "callbacks": {}
   });
 }

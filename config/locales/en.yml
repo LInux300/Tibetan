@@ -51,27 +51,33 @@ en:
       href: '/examination/index'
       short_body: Physical and mental checks
       please_login: This is only one of many examinations, for all please login
+    5_topic:
+      body: For good health is important proper nutrition.
+      button: Nutrition
+      header: Nutrition
+      href: '/nutrition/index'
+      short_body: For good health is important proper nutrition.
   survey:
     result: The survey result
-    1_survey:
+    0_survey:
       title: Typology Test
       short_body_0: The Tibetan Constitutional Typology Test
       id: 1
-    2_survey:
+    1_survey:
       title: Constitutional Typology
       short_body_0: Constitutional Typology
       id: 2
-    3_survey:
+    2_survey:
       title: Physical
       short_body_0: Urina Check
       short_body_1: Tongue Check
       short_body_2: Eyes Check
       id: 3
-    4_survey:
+    3_survey:
       title: Psychological
       short_body_0: Psychological diagnose
       id: 4
-    5_survey:
+    4_survey:
       title: Food
       short_body_0: Food check
       id: 5

@@ -17,8 +17,8 @@
 //= require foundation/js/foundation.min
 //= require library/knockout-min
 //= require library/survey.min
-//= require custom
-//= require examination
+//= require d3/d3.min
+//= require d3pie/d3pie/d3pie.min
 //= require_tree .
 
 // $(document).ready(function(){});

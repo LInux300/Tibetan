@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get  'examination/index'
+  get 'nutrition/index'
+  get 'examination/index'
 
   devise_for :admins
   devise_for :users

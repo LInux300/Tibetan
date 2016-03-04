@@ -37,6 +37,8 @@
     "motion-ui": "^1.2.1",
     "foundation": "^5.5.3",
     "slick-carousel": "^1.5.9",
-    "foundation-icon-fonts": "*"
+    "foundation-icon-fonts": "*",
+    "d3": "^3.5.16",
+    "d3pie": "^0.1.9"
   }
 }
