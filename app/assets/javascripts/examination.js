@@ -85,19 +85,24 @@
 //  });
 // //surveyWindow.title = "My Survey Window Title."; //By default Survey.title is used.
 // surveyWindow.show();
+$(document).ready(function() {
+
+var green = '#009A31',
+    blue = '#008CBA',
+    red = '#E8110F';
 
 
 //  TODO questions 36-39
 var surveys = [
-  ['0_survey', [[2, 20, '']]],
-  ['1_survey', [[21, 29, '']]],
+  ['0_survey', [[2, 20]]],
+  ['1_survey', [[21, 29]]],
   ['2_survey', [
-                 [41, 49, 'Urine Checks'],
-                 [50, 53, 'Tongue Checks'],
-                 [54, 54, 'Eyes Checks']
+                 [41, 49],
+                 [50, 53],
+                 [54, 54]
   ]],
-  ['3_survey', [[30, 35, '']]],
-  ['4_survey', [[40, 40, '']]]
+  ['3_survey', [[30, 35]]],
+  ['4_survey', [[40, 40]]]
 ];
 
 $.each(surveys, function(i, survey) {
@@ -107,21 +112,23 @@ $.each(surveys, function(i, survey) {
 });
 
 function createSurvey(survey, index, questions_from_to) {
-  var questions = new Array,
+  var question_ids = new Array,
       survey_from = questions_from_to[0],
       survey_to = questions_from_to[1],
       div_id = survey + '_' + index;
-  questions = groupQuestions(div_id, questions, survey_from, survey_to);
-  var survey_render = surveyRender(questions, div_id);
+  var survey_render = surveyRender(
+    groupQuestions(div_id, question_ids, survey_from, survey_to),
+    div_id
+  );
   surveyOnComplete(survey_render, div_id);
 }
 
 function groupQuestions(div_id, questions, survey_from, survey_to) {
   if (div_id == '0_survey_0') {
     questions = questionsRadioGroup(questions);
-  }
+  };
   questions = questionsCheckBox(questions, survey_from, survey_to);
-  return questions
+  return questions;
 };
 
 function questionsRadioGroup(surveys) {
@@ -141,30 +148,31 @@ function questionsRadioGroup(surveys) {
       title: I18n.t('survey.1_question.title'),
       isRequired:false,
       otherText: I18n.t('survey.1_question.otherText')}
-  )
-  return surveys
-}
+  );
+  return surveys;
+};
 
+// TODO surveys ids get array of ids instead of from to
 function questionsCheckBox(surveys, survey_from, survey_to) {
   for (i = survey_from; i <= survey_to; i++) {
     var name = 'survey.' + i;
-    surveys.push(
-      {type:"checkbox",choices:[
+    surveys.push({
+      type:"checkbox",choices:[
         { value: I18n.t(name + '_question.01_choice_value'),
           text: I18n.t(name + '_question.01_choice_text')},
         { value: I18n.t(name + "_question.02_choice_value"),
           text: I18n.t(name + "_question.02_choice_text")},
         { value: I18n.t(name + "_question.03_choice_value"),
           text: I18n.t(name + "_question.03_choice_text")}],
-      choicesOrder:"random",
+        choicesOrder:"random",
       colCount:3,
       name: I18n.t(name + "_question.name"),
       title: I18n.t(name + "_question.title"),
-      otherText: I18n.t(name + "_question.other_text") }
-    )
-  }
-  return surveys
-}
+      otherText: I18n.t(name + "_question.other_text")
+    });
+  };
+  return surveys;
+};
 
 function surveyRender(my_questions, survey_div_id) {
   var survey = new Survey.Survey(
@@ -172,31 +180,81 @@ function surveyRender(my_questions, survey_div_id) {
   );
   survey.render(survey_div_id);
   return survey;
-}
+};
+
+function goToByScroll(id) {
+      // Remove "link" from the ID
+    id = id.replace("link", "");
+      // Scroll
+    $('html,body').animate({
+        scrollTop: $("#"+id).offset().top},
+        'slow');
+};
 
 function surveyOnComplete(survey, div_id) {
   survey.onComplete.add(function (s) {
-    // alert("The results are:" + JSON.stringify(s.data));
-    document.getElementById(div_id)
-      .innerHTML = I18n.t('survey.result') + JSON.stringify(s.data);
-    // pieChart(div_id, JSON.stringify(s.data));
-    donutChart(div_id, JSON.stringify(s.data));
-    addSurveyMenu(div_id);
-var htmlObject = $(s); // jquery call
-    // {"1":"F","2":["W","A"],"3":["A"],"4":["F","A"],"5":["A","F","W"],"8":["W"],"9":["A","W"],"10":["A"],"18":["W"]}
-    // s.sendResult('e544a02f-7fff-4ffb-b62d-6a9aa16efd7c');
+
+    multi_answers = $.parseJSON(JSON.stringify(s.data));
+
+    if ( $.isEmptyObject(multi_answers) == true ) {
+      return alert(I18n.t('survey.please_answer_questions'));
+    } else {
+      document.getElementById(div_id).innerHTML = '';
+
+      goToByScroll(div_id);
+
+      console.log("multi ans"+multi_answers);
+      counter = countAnswers(multi_answers);
+      // create_type_divs = createTypeDivs(div_id, counter);
+
+      // pieChart(div_id, JSON.stringify(s.data));
+      donutChart(div_id, counter);
+      addSurveyMenu(div_id);
+
+      // s.sendResult('e544a02f-7fff-4ffb-b62d-6a9aa16efd7c');
+    };
   });
-}
+};
+
+function countAnswers(multi_answers) {
+  var counter = {};
+
+  // mix_answer is "F" or ["F"]
+  $.each(multi_answers, function(answer_id, mix_answer) {
+    if ($.isArray(mix_answer)) {
+      $.each(mix_answer, function(i2, answer_type) {
+        counter[answer_type] = counter[answer_type] ? ++counter[answer_type] : 1;
+        // create_type_divs = createTypeDivs(answer, i);
+        create_type_divs = createTypeDivs(answer_id, answer_type);
+      });
+    } else if ($.type(mix_answer) === "string") {
+      counter[mix_answer] = counter[mix_answer] ? ++counter[mix_answer] : 1;
+      create_type_divs = createTypeDivs(answer_id, mix_answer);
+    };
+  });
+
+  return counter;
+};
+
+
+function createTypeDivs(answer_id, answer_type) {
+  console.log("answer_type"+answer_type);
+  console.log("answer id"+answer_id);
+  var div = document.createElement('div');
+
+};
 
 function addSurveyMenu(div_id) {
     var div = document.createElement('div');
 
-    div.className = 'row';
-
+    div.className = 'sv_nav';
     div.innerHTML = '\
-      <input type="button" class="openSegmentBtn" data-index="0" value="Air" />\
-      <input type="button" class="openSegmentBtn" data-index="1" value="Fire" />\
-      <input type="button" class="openSegmentBtn" data-index="2" value="Wather" />\
+      <input type="button" class="" data-index="0" onclick="showAnswers(this)" value="'+
+        I18n.t("survey.0_answers_0.0_data_content_label") +'" />\
+      <input type="button" class="" data-index="1" value="'+
+        I18n.t("survey.0_answers_0.1_data_content_label") +'" />\
+      <input type="button" class="" data-index="2" value="'+
+        I18n.t("survey.0_answers_0.2_data_content_label") +'" />\
       <input type="button" value="-" onclick="removeRow(this)">\
     ';
      document.getElementById(div_id).appendChild(div);
@@ -211,12 +269,10 @@ function addSurveyMenu(div_id) {
 //   var htmlObj = $(s);
 //   htmlObj.appendChild(div_id).html();
 // }
+
 function removeSurveyMenu(input) {
     document.getElementById(div_id).removeChild( input.parentNode );
 }
-
-
-
 
 function surveyOnSendResult(survey) {
   survey.onSendResult.add(function(s, options) {
@@ -244,10 +300,10 @@ $(function() {
 		}
 	});
 	$("#recreateBtn").on("click", function(e) {
-		createSurvey('4_survey', 8, [40, 40, '']);
+		// createSurvey('4_survey', 8, [40, 40, '']);
 	});
 	$("#refreshBtn").on("click", function(e) {
-		pie.redraw();
+		// pie.redraw();
 	});
 
   $(".openSegmentBtn").on("click", function(e) {
@@ -255,156 +311,6 @@ $(function() {
 		pie.openSegment(index);
 	});
 });
-
-
-function pieChartDefault(div_id, dataSet) {
-  var pie = new d3pie(div_id, {
-  	header: {
-  		title: {
-  			text:    "",
-  			color:    "#333333",
-  			fontSize: 18,
-  			font:     "arial"
-  		},
-  		subtitle: {
-  			color:    "#666666",
-  			fontSize: 14,
-  			font:     "arial"
-  		},
-  		location: "top-center",
-  		titleSubtitlePadding: 8
-  	},
-  	footer: {
-  		text: 	  "",
-  		color:    "#666666",
-  		fontSize: 14,
-  		font:     "arial",
-  		location: "left"
-  	},
-  	size: {
-  		canvasHeight: 500,
-  		canvasWidth: 500,
-  		pieInnerRadius: 0,
-  		pieOuterRadius: null
-  	},
-  	data: {
-  		sortOrder: "none",
-  		smallSegmentGrouping: {
-  			enabled: false,
-  			value: 1,
-  			valueType: "percentage",
-  			label: "Other",
-  			color: "#cccccc"
-  		},
-
-  		// REQUIRED! This is where you enter your pie data; it needs to be an array of objects
-  		// of this form: { label: "label", value: 1.5, color: "#000000" } - color is optional
-  		content: []
-  	},
-  	labels: {
-  		outer: {
-  			format: "label",
-  			hideWhenLessThanPercentage: null,
-  			pieDistance: 30
-  		},
-  		inner: {
-  			format: "percentage",
-  			hideWhenLessThanPercentage: null
-  		},
-  		mainLabel: {
-  			color: "#333333",
-  			font: "arial",
-  			fontSize: 10
-  		},
-  		percentage: {
-  			color: "#dddddd",
-  			font: "arial",
-  			fontSize: 10,
-  			decimalPlaces: 0
-  		},
-  		value: {
-  			color: "#cccc44",
-  			font: "arial",
-  			fontSize: 10
-  		},
-  		lines: {
-  			enabled: true,
-  			style: "curved",
-  			color: "segment" // "segment" or a hex color
-  		}
-  	},
-  	effects: {
-  		load: {
-  			effect: "default", // none / default
-  			speed: 1000
-  		},
-  		pullOutSegmentOnClick: {
-  			effect: "bounce", // none / linear / bounce / elastic / back
-  			speed: 300,
-  			size: 10
-  		},
-  		highlightSegmentOnMouseover: true,
-  		highlightLuminosity: -0.2
-  	},
-  	tooltips: {
-  		enabled: false,
-  		type: "placeholder", // caption|placeholder
-  		string: "",
-  		placeholderParser: null,
-  		styles: {
-  			fadeInSpeed: 250,
-  			backgroundColor: "#000000",
-  			backgroundOpacity: 0.5,
-  			color: "#efefef",
-  			borderRadius: 2,
-  			font: "arial",
-  			fontSize: 10,
-  			padding: 4
-  		}
-  	},
-
-  	misc: {
-  		colors: {
-  			background: null, // transparent
-  			segments: [
-  				"#2484c1", "#65a620", "#7b6888", "#a05d56", "#961a1a",
-  				"#d8d23a", "#e98125", "#d0743c", "#635222", "#6ada6a",
-  				"#0c6197", "#7d9058", "#207f33", "#44b9b0", "#bca44a",
-  				"#e4a14b", "#a3acb2", "#8cc3e9", "#69a6f9", "#5b388f",
-  				"#546e91", "#8bde95", "#d2ab58", "#273c71", "#98bf6e",
-  				"#4daa4b", "#98abc5", "#cc1010", "#31383b", "#006391",
-  				"#c2643f", "#b0a474", "#a5a39c", "#a9c2bc", "#22af8c",
-  				"#7fcecf", "#987ac6", "#3d3b87", "#b77b1c", "#c9c2b6",
-  				"#807ece", "#8db27c", "#be66a2", "#9ed3c6", "#00644b",
-  				"#005064", "#77979f", "#77e079", "#9c73ab", "#1f79a7"
-  			],
-  			segmentStroke: "#ffffff"
-  		},
-  		gradient: {
-  			enabled: false,
-  			percentage: 95,
-  			color: "#000000"
-  		},
-  		canvasPadding: {
-  			top: 5,
-  			right: 5,
-  			bottom: 5,
-  			left: 5
-  		},
-  		pieCenterOffset: {
-  			x: 0,
-  			y: 0
-  		},
-  		cssPrefix: null
-  	},
-  	callbacks: {
-  		onload: null,
-  		onMouseoverSegment: null,
-  		onMouseoutSegment: null,
-  		onClickSegment: null
-  	}
-  });
-}
 
 function pieChart(div_id, dataSet) {
   var pie = new d3pie(div_id, {
@@ -435,80 +341,89 @@ function pieChart(div_id, dataSet) {
   });
 }
 
-function donutChart(div_id, dataSet) {
+function donutChart(div_id, counter) {
   var pie = new d3pie(div_id, {
     "header": {
       "title": {
-        "text": "Last Constitutional Typology",
+        "text": I18n.t('survey.'+div_id+'.topic'),
         "fontSize": 22,
         "font": "verdana"
       },
       "subtitle": {
-        "text": "Constitutional Typology, Tibetan typology",
+        "text": I18n.t('survey.'+div_id+'.subtitle'),
         "color": "#999999",
-        "fontSize": 10,
+        "fontSize": 12,
         "font": "verdana"
       },
-      "titleSubtitlePadding": 12
+      "titleSubtitlePadding": 6
     },
     "footer": {
-      "text": "Test again",
+      "text":  I18n.t('survey.'+div_id+'.footer'),
       "color": "#999999",
-      "fontSize": 11,
+      "fontSize": 12,
       "font": "open sans",
-      "location": "bottom-center"
+      "location": "bottom-left"
     },
     "size": {
-      "canvasHeight": 400,
-      "canvasWidth": 590,
-      "pieInnerRadius": "44%",
-      "pieOuterRadius": "100%"
+      "canvasHeight": 450,
+      "canvasWidth": 875,
+      "pieInnerRadius": "30%",
+      "pieOuterRadius": "80%"
     },
     "data": {
-      "sortOrder": "random",
+      "sortOrder": "label-desc",
       "smallSegmentGrouping": {
         "enabled": true
       },
       "content": [
         {
-          "label": "Air - Lung",
-          "value": 8,
-          "color": "#2383c1"
+          "label": I18n.t('survey.0_answers_0.0_data_content_label'),
+          "value": counter['A'],
+          "color": green
         },
         {
-          "label": "Fire - Tripa",
-          "value": 5,
-          "color": "#64a61f"
+          "label": I18n.t('survey.0_answers_0.1_data_content_label'),
+          "value": counter['F'],
+          "color": red
         },
         {
-          "label": "Wather - Bagan",
-          "value": 2,
-          "color": "#df1212"
+          "label": I18n.t('survey.0_answers_0.2_data_content_label'),
+          "value": counter['W'],
+          "color": blue
         }
       ]
     },
     "labels": {
       "outer": {
-        "pieDistance": 32
+        "pieDistance": 15
+      },
+      "inner": {
+        "format": "none",
+        "hideWhenLessThanPercentage": 3
       },
       "mainLabel": {
+        "fontSize": 12,
         "color": "#000000",
         "font": "verdana"
       },
       "percentage": {
+        "fontSize": 12,
         "color": "#ffffff",
         "font": "verdana",
         "decimalPlaces": 1
       },
       "value": {
+        "fontSize": 12,
         "color": "#000000",
         "font": "verdana"
       },
       "lines": {
-        "enabled": true
+        "enabled": true,
+        "style": "straight"
       },
       "truncation": {
-        "enabled": true
+        "enabled": true,
+        "truncateLength": 20
       }
     },
     "tooltips": {
@@ -516,7 +431,11 @@ function donutChart(div_id, dataSet) {
       "type": "placeholder",
       "string": "{label}: {value}, {percentage}%",
       "styles": {
-        "fadeInSpeed": 485
+        "fadeInSpeed": 500,
+        "backgroundOpacity": 0.4,
+        "borderRadius": 5,
+        "fontSize": 14,
+        "padding": 6
       }
     },
     "effects": {
@@ -525,15 +444,22 @@ function donutChart(div_id, dataSet) {
       },
       "pullOutSegmentOnClick": {
         "effect": "linear",
-        "speed": 400,
+        "speed": 500,
         "size": 8
       }
     },
     "misc": {
       "pieCenterOffset": {
-      "y": 20
       }
     },
-    "callbacks": {}
+    "callbacks": {
+      'onload': null,
+      'onMouseoverSegment': null,
+      'onMouseoutSegment': null,
+      'onClickSegment': null
+    }
   });
 }
+
+
+});

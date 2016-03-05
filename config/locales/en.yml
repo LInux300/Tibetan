@@ -59,28 +59,54 @@ en:
       short_body: For good health is important proper nutrition.
   survey:
     result: The survey result
-    0_survey:
+    please_answer_questions: Please answer the questions
+    0_survey_0:
       title: Typology Test
       short_body_0: The Tibetan Constitutional Typology Test
+      topic: Typology Test
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
       id: 1
-    1_survey:
+    1_survey_0:
       title: Constitutional Typology
       short_body_0: Constitutional Typology
+      topic: Constitutional Typology
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
       id: 2
-    2_survey:
+    2_survey_0:
       title: Physical
-      short_body_0: Urina Check
-      short_body_1: Tongue Check
-      short_body_2: Eyes Check
+      short_body_0: Physical examinations contain more checks, you can answer one or more.
+      topic: Urina Check
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
+    2_survey_1:
+      topic: Tongue Check
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
+    2_survey_2:
+      topic: Eyes Check
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
       id: 3
-    3_survey:
+    3_survey_0:
       title: Psychological
+      topic: Psychological
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
       short_body_0: Psychological diagnose
       id: 4
-    4_survey:
+    4_survey_0:
       title: Food
+      topic: Food
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
       short_body_0: Food check
       id: 5
+    0_answers_0:
+      0_data_content_label: Air - Lung
+      1_data_content_label: Fire - Tripa
+      2_data_content_label: Wather - Bagan
     1_question:
       title: How old are you?
       name: 1
@@ -91,7 +117,7 @@ en:
       02_choice_text: 25-60
       03_choice_value: W
       03_choice_text: 60+
-      04_choice_value: ''
+      04_choice_value: N
       04_choice_text: 0-5
     2_question:
       title: Which body type fits you most closely?
@@ -148,21 +174,21 @@ en:
       name: 7
       otherText: 1
       01_choice_value: A
-      01_choice_text: noon - 3pm and midnight - 2am
+      01_choice_text: Noon - 3pm and Midnight - 2am
       02_choice_value: F
-      02_choice_text: 8-11am and 8pm - midnight
+      02_choice_text: 8-11am and 8pm - Midnight
       03_choice_value: W
-      03_choice_text: before 7am and 5-8pm
+      03_choice_text: Before 7am and 5-8pm
     8_question:
       title: During which part of a day do you not feel good?
       name: 8
       otherText: 1
       01_choice_value: A
-      01_choice_text: before 7am and 5-8pm
+      01_choice_text: Before 7am and 5-8pm
       02_choice_value: F
-      02_choice_text: afternoon - 3pm and mignight - 2am
+      02_choice_text: Afternoon - 3pm and Mignight - 2am
       03_choice_value: W
-      03_choice_text: 8-11am and 8pm - midnight
+      03_choice_text: 8-11am and 8pm - Midnight
     9_question:
       title: When do you generally feel better?
       name: 9
@@ -228,31 +254,31 @@ en:
       name: 15
       otherText: 1
       01_choice_value: A
-      01_choice_text: muscular tension, tension headache, ringing in ears, hyperventilation, gas, constipation
+      01_choice_text: Muscular tension, tension headache, ringing in ears, hyperventilation, gas, constipation
       02_choice_value: F
-      02_choice_text: localized pain, migraine, nausea, heat in body, acidity, diarrhea
+      02_choice_text: Localized pain, migraine, nausea, heat in body, acidity, diarrhea
       03_choice_value: W
-      03_choice_text: dullness & heaviness, sleepiness, cold hands & feet, sluggishness, fullness in stomach, poor digestion
+      03_choice_text: Dullness & heaviness, sleepiness, cold hands & feet, sluggishness, fullness in stomach, poor digestion
     16_question:
       title: Which of the following prychological symptoms do you generally experience under stress?
       name: 16
       otherText: 1
       01_choice_value: A
-      01_choice_text: nervousness, restlessness, constant worry / brooding, thinking too much, grieving, easily upset, mood swings
+      01_choice_text: Nervousness, restlessness, constant worry / brooding, thinking too much, grieving, easily upset, mood swings
       02_choice_value: F
-      02_choice_text: anger, aggression, irritability, harsh, violent, high-strung, jealous
+      02_choice_text: Anger, aggression, irritability, harsh, violent, high-strung, jealous
       03_choice_value: W
-      03_choice_text: resustabcem denial, procrastination, withdrawn, silent, closed-minded, confused, forgetful
+      03_choice_text: Resustabcem denial, procrastination, withdrawn, silent, closed-minded, confused, forgetful
     17_question:
       title: Emotional symptoms you generally experience
       name: 17
       otherText: 1
       01_choice_value: A
-      01_choice_text: excitement, greed, pretension
+      01_choice_text: Excitement, greed, pretension
       02_choice_value: F
-      02_choice_text: aggression, vengeance, envy
+      02_choice_text: Aggression, vengeance, envy
       03_choice_value: W
-      03_choice_text: stable and sedating, concealment, indifference
+      03_choice_text: Stable and sedating, concealment, indifference
     18_question:
       title: Which of the belief systems do you generally follow?
       name: 18
@@ -328,9 +354,9 @@ en:
       name: 25
       otherText: 2
       01_choice_value: A
-      01_choice_text: long and thin
+      01_choice_text: Long and thin
       02_choice_value: F
-      02_choice_text: proportioned and strong
+      02_choice_text: Proportioned and strong
       03_choice_value: W
       03_choice_text: Thick and short
     26_question:
@@ -489,7 +515,7 @@ en:
       otherText: 5
       01_choice_value: A
       01_choice_text: Light, mobile, dry and bitter tasting foods
-      02_choice_value: T
+      02_choice_value: F
       02_choice_text: Heavy, wet, stagnating, sweet foods
       03_choice_value: W
       03_choice_text: Hot, oily, sharp, sour, acidic, fermented foods

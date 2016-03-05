@@ -1,3 +1,6 @@
+$(document).ready(function() {
+});
+
 var dendrogram_data = {
  "name": "flare",
  "children": [
