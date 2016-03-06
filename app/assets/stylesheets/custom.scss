@@ -6,25 +6,32 @@ $red: #E8110F;
 $yellow: #FBC723;
 $text-color: #fff;
 $white: white;
+$black: black;
 $grey: #f7f7f7;
 
-.top-bar-section {
-  background-color: $grey;
-
-}
-
-// #header, #page_container {
-//   background-color: $white;
-// }
-//
-// .full-width {
-//   max-width: 1400px;
-// }
-
+//------------------------------------------------------------------------------
+// refinery
+//------------------------------------------------------------------------------
 #pagess {
   margin-bottom: 0px !important;
 }
 
+
+//------------------------------------------------------------------------------
+// header
+//------------------------------------------------------------------------------
+
+.top-bar-section, #header {
+  background-color: $grey;
+}
+
+.full-page-width, .top-bar-section {
+  background-color: $blue;
+}
+
+//------------------------------------------------------------------------------
+// main
+//------------------------------------------------------------------------------
 .alert-box {
   margin-top: 5px !important;
   background: $grey !important;
@@ -71,8 +78,9 @@ $grey: #f7f7f7;
   }
 }
 
-
-// footer CSS
+//------------------------------------------------------------------------------
+// footer
+//------------------------------------------------------------------------------
 .footer {
   background-color: $blue;
   padding: 2rem 4rem;
@@ -109,5 +117,11 @@ $grey: #f7f7f7;
   list-style-type: none;
   li {
     margin-top: .5em;
+    color: $black;
   }
 }
+#page_container > footer > div > div > ul.footer-links > li > a:hover {
+  color: $white;
+}
+
+//------------------------------------------------------------------------------

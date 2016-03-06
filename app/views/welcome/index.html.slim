@@ -1,3 +1,29 @@
+.row.text-center.max-height-multislider
+  .small-4.columns
+    .image-wrapper.overlay-slide-in-left
+  /     img src="/assets/pattern_01.gif" /
+  /     .image-overlay-content
+  /       h2 =t('view.first_topic.header')
+  /       p.short_body =t('view.first_topic.short_body')
+  /       a.button href="#{t('view.first_topic.href')}"
+  /         = t('view.first_topic.button')
+  .small-4.columns
+    .image-wrapper.overlay-fade-in
+      img src="/assets/pattern_02.jpg" /
+      .image-overlay-content
+        h2 =t('view.second_topic.header')
+        p.short_body =t('view.second_topic.short_body')
+        a.button href="#{t('view.second_topic.href')}"
+          = t('view.second_topic.button')
+  .small-4.columns
+    .image-wrapper.overlay-fade-in-new-background
+  /     img src="/assets/pattern_03.jpg" /
+  /     .image-overlay-content
+  /       h2 =t('view.third_topic.header')
+  /       p.short_body =t('view.third_topic.short_body')
+  /       a.button href="#{t('view.third_topic.href')}"
+  /         = t('view.third_topic.button')
+
 .row
   div class="small-12 columns"
     h1 = t('title')

@@ -21,43 +21,30 @@
        .tab-content
          hr
          section#tab-item-1
-           h3  = t('survey.0_survey_0.topic')
+           h2  = t('survey.0_survey_0.topic')
            div id="0_survey_0"
-           /  div id="0_pieChart_0"
          section#tab-item-2
-           h3  = t('survey.1_survey_0.topic')
+           h2  = t('survey.1_survey_0.topic')
            div id="1_survey_0"
-           /  div id="1_pieChart_0"
          section#tab-item-3
            p = t('survey.2_survey_0.short_body_0')
-           h3  = t('survey.2_survey_0.topic')
+           h2  = t('survey.2_survey_0.topic')
            div id="2_survey_0"
-           /  div id="2_pieChart_0"
-           br
-           h3  = t('survey.2_survey_1.topic')
+           hr
+           h2  = t('survey.2_survey_1.topic')
            div id="2_survey_1"
-           /  div id="2_pieChart_1"
-           br
-           h3  = t('survey.2_survey_2.topic')
+           hr
+           h2  = t('survey.2_survey_2.topic')
            div id="2_survey_2"
-           /  div id="2_pieChart_2"
          section#tab-item-4
-           h3  = t('survey.3_survey_0.topic')
+           h2  = t('survey.3_survey_0.topic')
            div id="3_survey_0"
-           /  div id="3_pieChart_0"
          section#tab-item-5
-           h3  = t('survey.4_survey_0.topic')
+           h2  = t('survey.4_survey_0.topic')
            div id="4_survey_0"
            hr
-            /  div id="4_pieChart_0"
-            /  input type="button" value="Recreate" id="recreateBtn"
-            /  input type="button" value="Destroy" id="destroyBtn"
-            /  input type="button" class="openSegmentBtn" data-index="0" value="Open Segment #1"
-            /  input type="button" class="openSegmentBtn" data-index="1" value="Open Segment #2"
-            /  input type="button" class="openSegmentBtn" data-index="2" value="Open Segment #3"
    -else
       p =t('view.fourth_topic.please_login')
       hr
-      h3  = t('survey.1_survey_0.topic')
+      h2  = t('survey.1_survey_0.topic')
       div id="1_survey_0"
-      /  div id="2_pieChart_0"

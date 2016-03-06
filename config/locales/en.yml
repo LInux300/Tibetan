@@ -64,6 +64,7 @@ en:
       title: Typology Test
       short_body_0: The Tibetan Constitutional Typology Test
       topic: Typology Test
+      topic_graph: Typology Test Result
       subtitle: Your Typology according Tibetan Medicin
       footer: Tibetan Medicin
       id: 1
@@ -71,6 +72,7 @@ en:
       title: Constitutional Typology
       short_body_0: Constitutional Typology
       topic: Constitutional Typology
+      topic_graph: Constitutional Typology Result
       subtitle: Your Typology according Tibetan Medicin
       footer: Tibetan Medicin
       id: 2
@@ -78,20 +80,24 @@ en:
       title: Physical
       short_body_0: Physical examinations contain more checks, you can answer one or more.
       topic: Urina Check
+      topic_graph: Urina Check Result
       subtitle: Your Typology according Tibetan Medicin
       footer: Tibetan Medicin
     2_survey_1:
       topic: Tongue Check
+      topic_graph: Tongue Check Result
       subtitle: Your Typology according Tibetan Medicin
       footer: Tibetan Medicin
     2_survey_2:
       topic: Eyes Check
+      topic_graph: Eyes Check Result
       subtitle: Your Typology according Tibetan Medicin
       footer: Tibetan Medicin
       id: 3
     3_survey_0:
       title: Psychological
       topic: Psychological
+      topic_graph: Psychological Result
       subtitle: Your Typology according Tibetan Medicin
       footer: Tibetan Medicin
       short_body_0: Psychological diagnose
@@ -99,376 +105,381 @@ en:
     4_survey_0:
       title: Food
       topic: Food
+      topic_graph: Food Result
       subtitle: Your Typology according Tibetan Medicin
       footer: Tibetan Medicin
       short_body_0: Food check
       id: 5
+    repeat_survey: Repeat survey
     0_answers_0:
-      0_data_content_label: Air - Lung
-      1_data_content_label: Fire - Tripa
-      2_data_content_label: Wather - Bagan
+      1_data_content_label: Air - Lung
+      1_color: 009A31
+      2_data_content_label: Fire - Tripa
+      2_color: E8110F
+      3_data_content_label: Wather - Bagan
+      3_color: 008CBA
     1_question:
       title: How old are you?
       name: 1
       otherText: 1
-      01_choice_value: A
-      01_choice_text: 5-25
-      02_choice_value: F
-      02_choice_text: 25-60
-      03_choice_value: W
-      03_choice_text: 60+
-      04_choice_value: N
-      04_choice_text: 0-5
+      1_choice_value: 1
+      1_choice_text: 5-25
+      2_choice_value: 2
+      2_choice_text: 25-60
+      3_choice_value: 3
+      3_choice_text: 60+
+      4_choice_value: N
+      4_choice_text: 0-5
     2_question:
       title: Which body type fits you most closely?
       name: 2
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Ectomorph
-      02_choice_value: F
-      02_choice_text: Mesomorph
-      03_choice_value: W
-      03_choice_text: Endomorph
+      1_choice_value: 1
+      1_choice_text: Ectomorph
+      2_choice_value: 2
+      2_choice_text: Mesomorph
+      3_choice_value: 3
+      3_choice_text: Endomorph
     3_question:
       title: Which of the following climates generally does not agree with your health?
       name: 3
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Cool and Dry
-      02_choice_value: F
-      02_choice_text: Hot and Dry
-      03_choice_value: W
-      03_choice_text: Cold and Wet
+      1_choice_value: 1
+      1_choice_text: Cool and Dry
+      2_choice_value: 2
+      2_choice_text: Hot and Dry
+      3_choice_value: 3
+      3_choice_text: Cold and Wet
     4_question:
       title: Which of the following environments or climates agrees with your health?
       name: 4
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Hot and Moderately Dry
-      02_choice_value: F
-      02_choice_text: Cold and Wet
-      03_choice_value: W
-      03_choice_text: Cool and Dry
+      1_choice_value: 1
+      1_choice_text: Hot and Moderately Dry
+      2_choice_value: 2
+      2_choice_text: Cold and Wet
+      3_choice_value: 3
+      3_choice_text: Cool and Dry
     5_question:
       title: Which of the following seasons agrees with your health?
       name: 5
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Autumn
-      02_choice_value: F
-      02_choice_text: Winter and Spring
-      03_choice_value: W
-      03_choice_text: Summer
+      1_choice_value: 1
+      1_choice_text: Autumn
+      2_choice_value: 2
+      2_choice_text: Winter and Spring
+      3_choice_value: 3
+      3_choice_text: Summer
     6_question:
       title: Which of the following does not agree with your health?
       name: 6
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Summer
-      02_choice_value: F
-      02_choice_text: Autumn
-      03_choice_value: W
-      03_choice_text: Winter and Spring
+      1_choice_value: 1
+      1_choice_text: Summer
+      2_choice_value: 2
+      2_choice_text: Autumn
+      3_choice_value: 3
+      3_choice_text: Winter and Spring
     7_question:
       title: During which part of the day do you feel best with your body, mind and energy?
       name: 7
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Noon - 3pm and Midnight - 2am
-      02_choice_value: F
-      02_choice_text: 8-11am and 8pm - Midnight
-      03_choice_value: W
-      03_choice_text: Before 7am and 5-8pm
+      1_choice_value: 1
+      1_choice_text: Noon - 3pm and Midnight - 2am
+      2_choice_value: 2
+      2_choice_text: 8-11am and 8pm - Midnight
+      3_choice_value: 3
+      3_choice_text: Before 7am and 5-8pm
     8_question:
       title: During which part of a day do you not feel good?
       name: 8
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Before 7am and 5-8pm
-      02_choice_value: F
-      02_choice_text: Afternoon - 3pm and Mignight - 2am
-      03_choice_value: W
-      03_choice_text: 8-11am and 8pm - Midnight
+      1_choice_value: 1
+      1_choice_text: Before 7am and 5-8pm
+      2_choice_value: 2
+      2_choice_text: Afternoon - 3pm and Mignight - 2am
+      3_choice_value: 3
+      3_choice_text: 8-11am and 8pm - Midnight
     9_question:
       title: When do you generally feel better?
       name: 9
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Immediately after eating
-      02_choice_value: F
-      02_choice_text: From two to four hours after eating normal meal
-      03_choice_value: W
-      03_choice_text: On an empty stomach and after eating very small or light meals
+      1_choice_value: 1
+      1_choice_text: Immediately after eating
+      2_choice_value: 2
+      2_choice_text: From two to four hours after eating normal meal
+      3_choice_value: 3
+      3_choice_text: On an empty stomach and after eating very small or light meals
     10_question:
       title: When do you generally feel worse?
       name: 10
       otherText: 1
-      01_choice_value: A
-      01_choice_text: On an empty stomach
-      02_choice_value: F
-      02_choice_text: From two to four hours after eating normal meal
-      03_choice_value: W
-      03_choice_text: Immediately after eating
+      1_choice_value: 1
+      1_choice_text: On an empty stomach
+      2_choice_value: 2
+      2_choice_text: From two to four hours after eating normal meal
+      3_choice_value: 3
+      3_choice_text: Immediately after eating
     11_question:
       title: Which part of your body feels weakest?
       name: 11
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Lower part ( below the navel )
-      02_choice_value: F
-      02_choice_text: Middle part ( between heart and navel )
-      03_choice_value: W
-      03_choice_text: Upper part ( above the heart )
+      1_choice_value: 1
+      1_choice_text: Lower part ( below the navel )
+      2_choice_value: 2
+      2_choice_text: Middle part ( between heart and navel )
+      3_choice_value: 3
+      3_choice_text: Upper part ( above the heart )
     12_question:
       title: Which part of your body is healthiest?
       name: 12
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Middle part
-      02_choice_value: F
-      02_choice_text: Upper part
-      03_choice_value: W
-      03_choice_text: Lower part
+      1_choice_value: 1
+      1_choice_text: Middle part
+      2_choice_value: 2
+      2_choice_text: Upper part
+      3_choice_value: 3
+      3_choice_text: Lower part
     13_question:
       title: What type of exercise and how often do you exercise?
       name: 13
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Light exercise, not done regularly
-      02_choice_value: F
-      02_choice_text: Competitive and strenuous exercise, done reqularly
-      03_choice_value: W
-      03_choice_text: None or very little
+      1_choice_value: 1
+      1_choice_text: Light exercise, not done regularly
+      2_choice_value: 2
+      2_choice_text: Competitive and strenuous exercise, done reqularly
+      3_choice_value: 3
+      3_choice_text: None or very little
     14_question:
       title: What is your sleeping pattern like?
       name: 14
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Disturbed sleep
-      02_choice_value: F
-      02_choice_text: Need little sleep
-      03_choice_value: W
-      03_choice_text: Heavy and prolonged
+      1_choice_value: 1
+      1_choice_text: Disturbed sleep
+      2_choice_value: 2
+      2_choice_text: Need little sleep
+      3_choice_value: 3
+      3_choice_text: Heavy and prolonged
     15_question:
       title: Under stress, which of the following symptoms do you tend to experience?
       name: 15
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Muscular tension, tension headache, ringing in ears, hyperventilation, gas, constipation
-      02_choice_value: F
-      02_choice_text: Localized pain, migraine, nausea, heat in body, acidity, diarrhea
-      03_choice_value: W
-      03_choice_text: Dullness & heaviness, sleepiness, cold hands & feet, sluggishness, fullness in stomach, poor digestion
+      1_choice_value: 1
+      1_choice_text: Muscular tension, tension headache, ringing in ears, hyperventilation, gas, constipation
+      2_choice_value: 2
+      2_choice_text: Localized pain, migraine, nausea, heat in body, acidity, diarrhea
+      3_choice_value: 3
+      3_choice_text: Dullness & heaviness, sleepiness, cold hands & feet, sluggishness, fullness in stomach, poor digestion
     16_question:
       title: Which of the following prychological symptoms do you generally experience under stress?
       name: 16
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Nervousness, restlessness, constant worry / brooding, thinking too much, grieving, easily upset, mood swings
-      02_choice_value: F
-      02_choice_text: Anger, aggression, irritability, harsh, violent, high-strung, jealous
-      03_choice_value: W
-      03_choice_text: Resustabcem denial, procrastination, withdrawn, silent, closed-minded, confused, forgetful
+      1_choice_value: 1
+      1_choice_text: Nervousness, restlessness, constant worry / brooding, thinking too much, grieving, easily upset, mood swings
+      2_choice_value: 2
+      2_choice_text: Anger, aggression, irritability, harsh, violent, high-strung, jealous
+      3_choice_value: 3
+      3_choice_text: Resustabcem denial, procrastination, withdrawn, silent, closed-minded, confused, forgetful
     17_question:
       title: Emotional symptoms you generally experience
       name: 17
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Excitement, greed, pretension
-      02_choice_value: F
-      02_choice_text: Aggression, vengeance, envy
-      03_choice_value: W
-      03_choice_text: Stable and sedating, concealment, indifference
+      1_choice_value: 1
+      1_choice_text: Excitement, greed, pretension
+      2_choice_value: 2
+      2_choice_text: Aggression, vengeance, envy
+      3_choice_value: 3
+      3_choice_text: Stable and sedating, concealment, indifference
     18_question:
       title: Which of the belief systems do you generally follow?
       name: 18
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Abstract, emotional and intense
-      02_choice_value: F
-      02_choice_text: Concrete, materially oriented
-      03_choice_value: W
-      03_choice_text: Generic or none
+      1_choice_value: 1
+      1_choice_text: Abstract, emotional and intense
+      2_choice_value: 2
+      2_choice_text: Concrete, materially oriented
+      3_choice_value: 3
+      3_choice_text: Generic or none
     19_question:
       title: How are your concentration skills?
       name: 19
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Easily distracted and cannot concentrate on an object for a long time
-      02_choice_value: F
-      02_choice_text: Focused, good concentration, primarily on materially oriented objects and goals
-      03_choice_value: W
-      03_choice_text: Poor concentration due to dullness and indifference
+      1_choice_value: 1
+      1_choice_text: Easily distracted and cannot concentrate on an object for a long time
+      2_choice_value: 2
+      2_choice_text: Focused, good concentration, primarily on materially oriented objects and goals
+      3_choice_value: 3
+      3_choice_text: Poor concentration due to dullness and indifference
     20_question:
       title: What is your spiritual practice?
       name: 20
       otherText: 1
-      01_choice_value: A
-      01_choice_text: Very important to you
-      02_choice_value: F
-      02_choice_text: Not absolutely essential
-      03_choice_value: W
-      03_choice_text: You recognize its importance but don't really practice
+      1_choice_value: 1
+      1_choice_text: Very important to you
+      2_choice_value: 2
+      2_choice_text: Not absolutely essential
+      3_choice_value: 3
+      3_choice_text: You recognize its importance but don't really practice
     21_question:
       title: How does your body looks like?
       name: 21
       otherText: 2
-      01_choice_value: A
-      01_choice_text: Tall, lean physique with a short trunk, long extremities
-      02_choice_value: F
-      02_choice_text: Strong and muscular, medium height
-      03_choice_value: W
-      03_choice_text: Weak muscles, strong bones of medium tone, short physique tending to retain fluid and fat
+      1_choice_value: 1
+      1_choice_text: Tall, lean physique with a short trunk, long extremities
+      2_choice_value: 2
+      2_choice_text: Strong and muscular, medium height
+      3_choice_value: 3
+      3_choice_text: Weak muscles, strong bones of medium tone, short physique tending to retain fluid and fat
     22_question:
       title: How does your face looks like?
       name: 22
       otherText: 2
-      01_choice_value: A
-      01_choice_text: Small, elongated skull, narrow forehead, sharp nose , thin and soft hair
-      02_choice_value: F
-      02_choice_text: Short skull with wide forehead, round nose, coarse hair, protruding eyebrows
-      03_choice_value: W
-      03_choice_text: Large, elongated head with narrow forehead, small eyes, thick eyelids, wide nose and thick lips, short and heavy neck
+      1_choice_value: 1
+      1_choice_text: Small, elongated skull, narrow forehead, sharp nose , thin and soft hair
+      2_choice_value: 2
+      2_choice_text: Short skull with wide forehead, round nose, coarse hair, protruding eyebrows
+      3_choice_value: 3
+      3_choice_text: Large, elongated head with narrow forehead, small eyes, thick eyelids, wide nose and thick lips, short and heavy neck
     23_question:
       title: How does your chest looks like?
       name: 23
       otherText: 2
-      01_choice_value: A
-      01_choice_text: Narrow and drooping shoulders, narrow depressed chest with prominent scapulae
-      02_choice_value: F
-      02_choice_text: Well developed and proportioned
-      03_choice_value: W
-      03_choice_text: Round and soft shoulders
+      1_choice_value: 1
+      1_choice_text: Narrow and drooping shoulders, narrow depressed chest with prominent scapulae
+      2_choice_value: 2
+      2_choice_text: Well developed and proportioned
+      3_choice_value: 3
+      3_choice_text: Round and soft shoulders
     24_question:
       title: How does your abdomen looks like?
       name: 24
       otherText: 2
-      01_choice_value: A
-      01_choice_text: Small, flat and hard
-      02_choice_value: F
-      02_choice_text: Small and muscular
-      03_choice_value: W
-      03_choice_text: Large and soft
+      1_choice_value: 1
+      1_choice_text: Small, flat and hard
+      2_choice_value: 2
+      2_choice_text: Small and muscular
+      3_choice_value: 3
+      3_choice_text: Large and soft
     25_question:
       title: How does your extremities look like?
       name: 25
       otherText: 2
-      01_choice_value: A
-      01_choice_text: Long and thin
-      02_choice_value: F
-      02_choice_text: Proportioned and strong
-      03_choice_value: W
-      03_choice_text: Thick and short
+      1_choice_value: 1
+      1_choice_text: Long and thin
+      2_choice_value: 2
+      2_choice_text: Proportioned and strong
+      3_choice_value: 3
+      3_choice_text: Thick and short
     26_question:
       title: How does your genitals look like?
       name: 26
       otherText: 2
-      01_choice_value: A
-      01_choice_text: Long, thin penis and elongated scrotum, poorly developed vagina, small breasts, irregular and prolonged menstrual problems
-      02_choice_value: F
-      02_choice_text: Thick and developed penis, contracted and hard scrotum, female organs are strong and of medium size
-      03_choice_value: W
-      03_choice_text: Thick and short penis, heavy and thick scrotum, female organs are well developed, tendency to heavy menstruation
+      1_choice_value: 1
+      1_choice_text: Long, thin penis and elongated scrotum, poorly developed vagina, small breasts, irregular and prolonged menstrual problems
+      2_choice_value: 2
+      2_choice_text: Thick and developed penis, contracted and hard scrotum, female organs are strong and of medium size
+      3_choice_value: 3
+      3_choice_text: Thick and short penis, heavy and thick scrotum, female organs are well developed, tendency to heavy menstruation
     27_question:
       title: How does your muscles look like?
       name: 27
       otherText: 2
-      01_choice_value: A
-      01_choice_text: Generally weak, with poor circulation
-      02_choice_value: F
-      02_choice_text: Compact and strong, with good circulation
-      03_choice_value: W
-      03_choice_text: Soft and flabby, with poor circulation
+      1_choice_value: 1
+      1_choice_text: Generally weak, with poor circulation
+      2_choice_value: 2
+      2_choice_text: Compact and strong, with good circulation
+      3_choice_value: 3
+      3_choice_text: Soft and flabby, with poor circulation
     28_question:
       title: How does your skin looks like?
       name: 28
       otherText: 2
-      01_choice_value: A
-      01_choice_text: Drym rough and discolored
-      02_choice_value: F
-      02_choice_text: Elastic, thick and of olive complexion
-      03_choice_value: W
-      03_choice_text: Pale and soft
+      1_choice_value: 1
+      1_choice_text: Drym rough and discolored
+      2_choice_value: 2
+      2_choice_text: Elastic, thick and of olive complexion
+      3_choice_value: 3
+      3_choice_text: Pale and soft
     29_question:
       title: How does your body functions look like?
       name: 29
       otherText: 2
-      01_choice_value: A
-      01_choice_text: Sensory responses to stimulation are rapid but short-lived; The body is prone to rapid exhaustion and low resistance.
-      02_choice_value: F
-      02_choice_text: Sensory responses to stimulation are rapid and lasting; Resisance is good.
-      03_choice_value: W
-      03_choice_text: Sensory responses to stimulation are slow and lethargic; Resistance is moderate.
+      1_choice_value: 1
+      1_choice_text: Sensory responses to stimulation are rapid but short-lived; The body is prone to rapid exhaustion and low resistance.
+      2_choice_value: 2
+      2_choice_text: Sensory responses to stimulation are rapid and lasting; Resisance is good.
+      3_choice_value: 3
+      3_choice_text: Sensory responses to stimulation are slow and lethargic; Resistance is moderate.
     30_question:
       title: What is your mood?
       name: 30
       otherText: 4
-      01_choice_value: A
-      01_choice_text: Depressive, anxious, moods change from one side to another, from love to hate
-      02_choice_value: F
-      02_choice_text: Impulsive, materialistic, practical, aggressive
-      03_choice_value: W
-      03_choice_text: Stable, easy-going, carefree, warm-hearted
+      1_choice_value: 1
+      1_choice_text: Depressive, anxious, moods change from one side to another, from love to hate
+      2_choice_value: 2
+      2_choice_text: Impulsive, materialistic, practical, aggressive
+      3_choice_value: 3
+      3_choice_text: Stable, easy-going, carefree, warm-hearted
     31_question:
       title: What is your will?
       name: 31
       otherText: 4
-      01_choice_value: A
-      01_choice_text: Rarely carries a task to completion, often because of a lack of confidence. Emotionally unstable
-      02_choice_value: F
-      02_choice_text: Optimistic, Strong will, controlling the situations
-      03_choice_value: W
-      03_choice_text: Weak and leisure-oriented, resistant to change ideas into action
+      1_choice_value: 1
+      1_choice_text: Rarely carries a task to completion, often because of a lack of confidence. Emotionally unstable
+      2_choice_value: 2
+      2_choice_text: Optimistic, Strong will, controlling the situations
+      3_choice_value: 3
+      3_choice_text: Weak and leisure-oriented, resistant to change ideas into action
     32_question:
       title: What is your ego?
       name: 32
       otherText: 4
-      01_choice_value: A
-      01_choice_text: Often feature of psychological make-up, to protect against threat from others, whom he she or he may envy and considered stronger and more mature
-      02_choice_value: F
-      02_choice_text: Strong sense of the self which is fortified by power, sex and wealth. Avoids spiritual issues or dismisses them as silly.
-      03_choice_value: W
-      03_choice_text: No dominant features, self in comfort and peaceful surroundings
+      1_choice_value: 1
+      1_choice_text: Often feature of psychological make-up, to protect against threat from others, whom he she or he may envy and considered stronger and more mature
+      2_choice_value: 2
+      2_choice_text: Strong sense of the self which is fortified by power, sex and wealth. Avoids spiritual issues or dismisses them as silly.
+      3_choice_value: 3
+      3_choice_text: No dominant features, self in comfort and peaceful surroundings
     33_question:
       title: What is your intelligence?
       name: 33
       otherText: 4
-      01_choice_value: A
-      01_choice_text: Quick to learn, highly intelligent, but impractical
-      02_choice_value: F
-      02_choice_text: Scheming and compulsive, thinks in terms of ends and means. Constantly searching for a model, a point of reference to measure against as well as to reassure
-      03_choice_value: W
-      03_choice_text: Average, lacks great aspirations
+      1_choice_value: 1
+      1_choice_text: Quick to learn, highly intelligent, but impractical
+      2_choice_value: 2
+      2_choice_text: Scheming and compulsive, thinks in terms of ends and means. Constantly searching for a model, a point of reference to measure against as well as to reassure
+      3_choice_value: 3
+      3_choice_text: Average, lacks great aspirations
     34_question:
       title: What is your emotion?
       name: 34
       otherText: 4
-      01_choice_value: A
-      01_choice_text: Desirous and grasping, often frustration or fear. Pleasure and pain are the chief sensation preoccupations
-      02_choice_value: F
-      02_choice_text: Envy and jealousy are deep-rooted. A poor loser can manifest aggressive bahavior when her or his view is threatened.
-      03_choice_value: W
-      03_choice_text: Resistant to any major change in life situation.
+      1_choice_value: 1
+      1_choice_text: Desirous and grasping, often frustration or fear. Pleasure and pain are the chief sensation preoccupations
+      2_choice_value: 2
+      2_choice_text: Envy and jealousy are deep-rooted. A poor loser can manifest aggressive bahavior when her or his view is threatened.
+      3_choice_value: 3
+      3_choice_text: Resistant to any major change in life situation.
     35_question:
       title: What is your deviations?
       name: 35
       otherText: 4
-      01_choice_value: A
-      01_choice_text: Fear and complexes about sex and the opposite sex. often resulting in deviations. Women usually lack maternal feeling.
-      02_choice_value: F
-      02_choice_text: Sadistic, raging narcissism, self-centered behavior
-      03_choice_value: W
-      03_choice_text: Fun and pleasure, over-indulgence in food, most minimal sexual deviations
+      1_choice_value: 1
+      1_choice_text: Fear and complexes about sex and the opposite sex. often resulting in deviations. Women usually lack maternal feeling.
+      2_choice_value: 2
+      2_choice_text: Sadistic, raging narcissism, self-centered behavior
+      3_choice_value: 3
+      3_choice_text: Fun and pleasure, over-indulgence in food, most minimal sexual deviations
     36_question:
       title: Examination of the five sensory organs
       name: 36
       otherText: 3
-      01_choice_value: Tongue
-      01_choice_text: Tongue
-      02_choice_value: Eyes
-      02_choice_text: Eyes
-      03_choice_value: Ears
-      03_choice_text: Ears
+      1_choice_value: Tongue
+      1_choice_text: Tongue
+      2_choice_value: Eyes
+      2_choice_text: Eyes
+      3_choice_value: Ears
+      3_choice_text: Ears
       04_choice_value: Nose and lips
       04_choice_text: Nose and lips
       05_choice_value: Skin
@@ -477,245 +488,245 @@ en:
       title: Functional relationship between fhte five sense and their objects
       name: 37
       otherText: 3
-      01_choice_value: Taste
-      01_choice_text: Taste
-      02_choice_value: Shapes and colors
-      02_choice_text: Shapes and colors
-      03_choice_value: Sounds
-      03_choice_text: Sounds
-      04_choice_value: Odors
-      04_choice_text: Odors
-      05_choice_value: Sensations
-      05_choice_text: Sensations
+      1_choice_value: 1
+      1_choice_text: Taste
+      2_choice_value: 2
+      2_choice_text: Shapes and colors
+      3_choice_value: 3
+      3_choice_text: Sounds
+      4_choice_value: 4
+      4_choice_text: Odors
+      5_choice_value: 5
+      5_choice_text: Sensations
     38_question:
       title: Examination of the five excretory matters
       name: 38
       otherText: 3
-      01_choice_value: Sputum
-      01_choice_text: Sputum
-      02_choice_value: Vomit
-      02_choice_text: Vomit
-      03_choice_value: Urine
-      03_choice_text: Urine
-      04_choice_value: Blood composition
-      04_choice_text: Blood composition
-      05_choice_value: Feces
-      05_choice_text: Feces
+      1_choice_value: 1
+      1_choice_text: Sputum
+      2_choice_value: 2
+      2_choice_text: Vomit
+      3_choice_value: 3
+      3_choice_text: Urine
+      4_choice_value: 4
+      4_choice_text: Blood composition
+      5_choice_value: 5
+      5_choice_text: Feces
     39_question:
       title: Examination of the abdomen and acupressure points
       name: 39
       otherText: 3
-      01_choice_value: Palpating the abdomen
-      01_choice_text: Palpating the abdomen
-      02_choice_value: Feeling acupressure points
-      02_choice_text: Feeling acupressure points
+      1_choice_value: 1
+      1_choice_text: Palpating the abdomen
+      2_choice_value: 2
+      2_choice_text: Feeling acupressure points
     40_question:
       title: Which kind of food do you eat often?
       name: 40
       otherText: 5
-      01_choice_value: A
-      01_choice_text: Light, mobile, dry and bitter tasting foods
-      02_choice_value: F
-      02_choice_text: Heavy, wet, stagnating, sweet foods
-      03_choice_value: W
-      03_choice_text: Hot, oily, sharp, sour, acidic, fermented foods
+      1_choice_value: 1
+      1_choice_text: Light, mobile, dry and bitter tasting foods
+      2_choice_value: 2
+      2_choice_text: Heavy, wet, stagnating, sweet foods
+      3_choice_value: 3
+      3_choice_text: Hot, oily, sharp, sour, acidic, fermented foods
     41_question:
       title: What is color of your urine?
       name: 41
       otherText: 3
-      01_choice_value: A
-      01_choice_text: Bluish water, transparent
-      02_choice_value: F
-      02_choice_text: Yellow, orangeish, reddish and turbid
-      03_choice_value: W
-      03_choice_text: White
+      1_choice_value: 1
+      1_choice_text: Bluish water, transparent
+      2_choice_value: 2
+      2_choice_text: Yellow, orangeish, reddish and turbid
+      3_choice_value: 3
+      3_choice_text: White
     42_question:
       title: What is odor of your urine?
       name: 42
       otherText: 3
-      01_choice_value: A
-      01_choice_text: Minimal or none
-      02_choice_value: F
-      02_choice_text: Malodorous, pungent, foul
-      03_choice_value: W
-      03_choice_text: Minimal or none
+      1_choice_value: 1
+      1_choice_text: Minimal or none
+      2_choice_value: 2
+      2_choice_text: Malodorous, pungent, foul
+      3_choice_value: 3
+      3_choice_text: Minimal or none
     43_question:
       title: What are the bubbles of your urine?
       name: 43
       otherText: 3
-      01_choice_value: A
-      01_choice_text: Large, appearing erratically on the surface of the urine
-      02_choice_value: F
-      02_choice_text: Small bubbles that disappear instantly after stirring
-      03_choice_value: W
-      03_choice_text: Small, congested, profuse, sticky, standing for a long time after stirring
+      1_choice_value: 1
+      1_choice_text: Large, appearing erratically on the surface of the urine
+      2_choice_value: 2
+      2_choice_text: Small bubbles that disappear instantly after stirring
+      3_choice_value: 3
+      3_choice_text: Small, congested, profuse, sticky, standing for a long time after stirring
     44_question:
       title: Do your urine forms cloudy formation?
       name: 44
       otherText: 3
-      01_choice_value: A
-      01_choice_text: None
-      02_choice_value: F
-      02_choice_text: Thick, abundant
-      03_choice_value: W
-      03_choice_text: Minimal or none
+      1_choice_value: 1
+      1_choice_text: None
+      2_choice_value: 2
+      2_choice_text: Thick, abundant
+      3_choice_value: 3
+      3_choice_text: Minimal or none
     45_question:
       title: Do your urine forms stringy formation?
       name: 45
       otherText: 3
-      01_choice_value: A
-      01_choice_text: Minimal, thin, or oily cream. None at all on the surface ot the urine
-      02_choice_value: F
-      02_choice_text: Thick, single units in the center and on the surface of the urine
-      03_choice_value: W
-      03_choice_text: Minimal or none
+      1_choice_value: 1
+      1_choice_text: Minimal, thin, or oily cream. None at all on the surface ot the urine
+      2_choice_value: 2
+      2_choice_text: Thick, single units in the center and on the surface of the urine
+      3_choice_value: 3
+      3_choice_text: Minimal or none
     46_question:
       title: What is the rate of disoloration of your urine?
       name: 46
       otherText: 3
-      01_choice_value: A
-      01_choice_text: After urine cools. it dilutes and turns watery
-      02_choice_value: F
-      02_choice_text: Before urine turns cold
-      03_choice_value: W
-      03_choice_text: Much after urine is cold
+      1_choice_value: 1
+      1_choice_text: After urine cools. it dilutes and turns watery
+      2_choice_value: 2
+      2_choice_text: Before urine turns cold
+      3_choice_value: 3
+      3_choice_text: Much after urine is cold
     47_question:
       title: What kind of way change takes place?
       name: 47
       otherText: 3
-      01_choice_value: A
-      01_choice_text: Erratic and irregular
-      02_choice_value: F
-      02_choice_text: From the lower level towards the surface
-      03_choice_value: W
-      03_choice_text: From the outside towards the center
+      1_choice_value: 1
+      1_choice_text: Erratic and irregular
+      2_choice_value: 2
+      2_choice_text: From the lower level towards the surface
+      3_choice_value: 3
+      3_choice_text: From the outside towards the center
     48_question:
       title: What is the characteristics of your urine when is cold?
       name: 48
       otherText: 3
-      01_choice_value: A
-      01_choice_text: Diluted and watery, with large bubbles that disappear slowly
-      02_choice_value: F
-      02_choice_text: Turbid and reddish-yellow, with small bubbles that disappear instantly after stirring
-      03_choice_value: W
-      03_choice_text: White, generally clear, congested, with increasing bubbles that persist or surface
+      1_choice_value: 1
+      1_choice_text: Diluted and watery, with large bubbles that disappear slowly
+      2_choice_value: 2
+      2_choice_text: Turbid and reddish-yellow, with small bubbles that disappear instantly after stirring
+      3_choice_value: 3
+      3_choice_text: White, generally clear, congested, with increasing bubbles that persist or surface
     49_question:
       title: Does your Urine contains sediments?
       name: 49
       otherText: 3
-      01_choice_value: A
-      01_choice_text: Minimal to moderate deposits, shaped like strands of hair
-      02_choice_value: F
-      02_choice_text: Urine is murky, turbid and often has a cloudy deposit
-      03_choice_value: W
-      03_choice_text: Minimal or sometimes sand-like in kidney or metabolic disorders
+      1_choice_value: 1
+      1_choice_text: Minimal to moderate deposits, shaped like strands of hair
+      2_choice_value: 2
+      2_choice_text: Urine is murky, turbid and often has a cloudy deposit
+      3_choice_value: 3
+      3_choice_text: Minimal or sometimes sand-like in kidney or metabolic disorders
     50_question:
       title: What is color of your tongue?
       name: 50
       otherText: Examination of your Tongue
-      01_choice_value: A
-      01_choice_text: Reddish
-      02_choice_value: F
-      02_choice_text: Yellowish (especially the fur)
-      03_choice_value: W
-      03_choice_text: White, pale
+      1_choice_value: 1
+      1_choice_text: Reddish
+      2_choice_value: 2
+      2_choice_text: Yellowish (especially the fur)
+      3_choice_value: 3
+      3_choice_text: White, pale
     51_question:
       title: Are ther deposits of fur or coating on your Tongue?
       name: 51
       otherText: Examination of your Tongue
-      01_choice_value: A
-      01_choice_text: Normally clear, sometimes a little fur near the back ot the tongue
-      02_choice_value: F
-      02_choice_text: Yellowish, thick fur over most of the tongue
-      03_choice_value: W
-      03_choice_text: Thick white fur
+      1_choice_value: 1
+      1_choice_text: Normally clear, sometimes a little fur near the back ot the tongue
+      2_choice_value: 2
+      2_choice_text: Yellowish, thick fur over most of the tongue
+      3_choice_value: 3
+      3_choice_text: Thick white fur
     52_question:
       title: What is dryness of your tongue?
       name: 52
       otherText: Examination of your Tongue
-      01_choice_value: A
-      01_choice_text: Dry and rough
-      02_choice_value: F
-      02_choice_text: Dry
-      03_choice_value: W
-      03_choice_text: Moist and smooth
+      1_choice_value: 1
+      1_choice_text: Dry and rough
+      2_choice_value: 2
+      2_choice_text: Dry
+      3_choice_value: 3
+      3_choice_text: Moist and smooth
     53_question:
       title: Is there presence of pips or pimple-like dots on your tongue?
       name: 53
       otherText: Examination of your Tongue
-      01_choice_value: A
-      01_choice_text: None
-      02_choice_value: F
-      02_choice_text: Occasional pips on the sides of the tongue, but generally clear
-      03_choice_value: W
-      03_choice_text: None
+      1_choice_value: 1
+      1_choice_text: None
+      2_choice_value: 2
+      2_choice_text: Occasional pips on the sides of the tongue, but generally clear
+      3_choice_value: 3
+      3_choice_text: None
     54_question:
       title: What are your eyes?
       name: 54
       otherText: Examination of your Eyes
-      01_choice_value: A
-      01_choice_text: Eyes tend to be small, with a dry look, especially the eyelashes, which are usuallyscanty
-      02_choice_value: F
-      02_choice_text: Eyes are generally moderate in size, sharp and lustrous. The lashes are scanty but oily. The black part of the eye may be yellowish
-      03_choice_value: W
-      03_choice_text: Eyes are large and beautiful, moist, with long, thick oily lashes
+      1_choice_value: 1
+      1_choice_text: Eyes tend to be small, with a dry look, especially the eyelashes, which are usuallyscanty
+      2_choice_value: 2
+      2_choice_text: Eyes are generally moderate in size, sharp and lustrous. The lashes are scanty but oily. The black part of the eye may be yellowish
+      3_choice_value: 3
+      3_choice_text: Eyes are large and beautiful, moist, with long, thick oily lashes
     55_question:
       title:
       name: 55
       otherText:
-      01_choice_value:
-      01_choice_text:
-      02_choice_value:
-      02_choice_text:
-      03_choice_value:
-      03_choice_text:
+      1_choice_value:
+      1_choice_text:
+      2_choice_value:
+      2_choice_text:
+      3_choice_value:
+      3_choice_text:
     56_question:
       title:
       name: 56
       otherText:
-      01_choice_value:
-      01_choice_text:
-      02_choice_value:
-      02_choice_text:
-      03_choice_value:
-      03_choice_text:
+      1_choice_value:
+      1_choice_text:
+      2_choice_value:
+      2_choice_text:
+      3_choice_value:
+      3_choice_text:
     57_question:
       title:
       name: 57
       otherText:
-      01_choice_value:
-      01_choice_text:
-      02_choice_value:
-      02_choice_text:
-      03_choice_value:
-      03_choice_text:
+      1_choice_value:
+      1_choice_text:
+      2_choice_value:
+      2_choice_text:
+      3_choice_value:
+      3_choice_text:
     58_question:
       title:
       name: 58
       otherText:
-      01_choice_value:
-      01_choice_text:
-      02_choice_value:
-      02_choice_text:
-      03_choice_value:
-      03_choice_text:
+      1_choice_value:
+      1_choice_text:
+      2_choice_value:
+      2_choice_text:
+      3_choice_value:
+      3_choice_text:
     59_question:
       title:
       name: 59
       otherText:
-      01_choice_value:
-      01_choice_text:
-      02_choice_value:
-      02_choice_text:
-      03_choice_value:
-      03_choice_text:
+      1_choice_value:
+      1_choice_text:
+      2_choice_value:
+      2_choice_text:
+      3_choice_value:
+      3_choice_text:
     60_question:
       title:
       name: 60
       otherText:
-      01_choice_value:
-      01_choice_text:
-      02_choice_value:
-      02_choice_text:
-      03_choice_value:
-      03_choice_text:
+      1_choice_value:
+      1_choice_text:
+      2_choice_value:
+      2_choice_text:
+      3_choice_value:
+      3_choice_text:

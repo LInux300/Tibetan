@@ -88,8 +88,8 @@
 $(document).ready(function() {
 
 var green = '#009A31',
-    blue = '#008CBA',
-    red = '#E8110F';
+    red = '#E8110F',
+    blue = '#008CBA';
 
 
 //  TODO questions 36-39
@@ -134,14 +134,14 @@ function groupQuestions(div_id, questions, survey_from, survey_to) {
 function questionsRadioGroup(surveys) {
   surveys.push(
     {type:"radiogroup",choices:[
-        {value: I18n.t('survey.1_question.04_choice_value'),
-          text: I18n.t('survey.1_question.04_choice_text')},
-        {value: I18n.t('survey.1_question.01_choice_value'),
-          text: I18n.t('survey.1_question.01_choice_text')},
-        {value: I18n.t('survey.1_question.02_choice_value'),
-          text: I18n.t('survey.1_question.02_choice_text')},
-        {value: I18n.t('survey.1_question.03_choice_value'),
-          text: I18n.t('survey.1_question.03_choice_text')}
+        {value: I18n.t('survey.1_question.4_choice_value'),
+          text: I18n.t('survey.1_question.4_choice_text')},
+        {value: I18n.t('survey.1_question.1_choice_value'),
+          text: I18n.t('survey.1_question.1_choice_text')},
+        {value: I18n.t('survey.1_question.2_choice_value'),
+          text: I18n.t('survey.1_question.2_choice_text')},
+        {value: I18n.t('survey.1_question.3_choice_value'),
+          text: I18n.t('survey.1_question.3_choice_text')}
       ],
       colCount:4,
       name: I18n.t('survey.1_question.name'),
@@ -158,12 +158,12 @@ function questionsCheckBox(surveys, survey_from, survey_to) {
     var name = 'survey.' + i;
     surveys.push({
       type:"checkbox",choices:[
-        { value: I18n.t(name + '_question.01_choice_value'),
-          text: I18n.t(name + '_question.01_choice_text')},
-        { value: I18n.t(name + "_question.02_choice_value"),
-          text: I18n.t(name + "_question.02_choice_text")},
-        { value: I18n.t(name + "_question.03_choice_value"),
-          text: I18n.t(name + "_question.03_choice_text")}],
+        { value: I18n.t(name + '_question.1_choice_value'),
+          text: I18n.t(name + '_question.1_choice_text')},
+        { value: I18n.t(name + "_question.2_choice_value"),
+          text: I18n.t(name + "_question.2_choice_text")},
+        { value: I18n.t(name + "_question.3_choice_value"),
+          text: I18n.t(name + "_question.3_choice_text")}],
         choicesOrder:"random",
       colCount:3,
       name: I18n.t(name + "_question.name"),
@@ -176,7 +176,10 @@ function questionsCheckBox(surveys, survey_from, survey_to) {
 
 function surveyRender(my_questions, survey_div_id) {
   var survey = new Survey.Survey(
-    {pages:[{name:"Tibetan",questions:my_questions, title:"" }]}
+    {pages:[{name: I18n.t('title'),
+            questions:my_questions,
+            title:""
+    }]}
   );
   survey.render(survey_div_id);
   return survey;
@@ -199,17 +202,16 @@ function surveyOnComplete(survey, div_id) {
     if ( $.isEmptyObject(multi_answers) == true ) {
       return alert(I18n.t('survey.please_answer_questions'));
     } else {
+      // remove submited survey from html
       document.getElementById(div_id).innerHTML = '';
-
       goToByScroll(div_id);
 
-      console.log("multi ans"+multi_answers);
-      counter = countAnswers(multi_answers);
-      // create_type_divs = createTypeDivs(div_id, counter);
+      count_answers = countAnswers(multi_answers);
 
       // pieChart(div_id, JSON.stringify(s.data));
-      donutChart(div_id, counter);
-      addSurveyMenu(div_id);
+      donutChart(div_id, count_answers.counter);
+      addSurveyMenu(div_id, count_answers.types_with_questions_ids);
+      createTypeDivs(count_answers.types_with_questions_ids, div_id);
 
       // s.sendResult('e544a02f-7fff-4ffb-b62d-6a9aa16efd7c');
     };
@@ -217,58 +219,93 @@ function surveyOnComplete(survey, div_id) {
 };
 
 function countAnswers(multi_answers) {
-  var counter = {};
+  var counter = {},
+      types_with_questions_ids = {};
 
   // mix_answer is "F" or ["F"]
   $.each(multi_answers, function(answer_id, mix_answer) {
     if ($.isArray(mix_answer)) {
       $.each(mix_answer, function(i2, answer_type) {
+
         counter[answer_type] = counter[answer_type] ? ++counter[answer_type] : 1;
-        // create_type_divs = createTypeDivs(answer, i);
-        create_type_divs = createTypeDivs(answer_id, answer_type);
+
+        types_with_questions_ids[answer_type] = types_with_questions_ids[answer_type]
+          ? types_with_questions_ids[answer_type] + ',' + answer_id
+          : answer_id;
       });
     } else if ($.type(mix_answer) === "string") {
+
       counter[mix_answer] = counter[mix_answer] ? ++counter[mix_answer] : 1;
-      create_type_divs = createTypeDivs(answer_id, mix_answer);
+
+      types_with_questions_ids[mix_answer] = types_with_questions_ids[mix_answer]
+        ? types_with_questions_ids[mix_answer] + ',' + answer_id
+        : answer_id;
     };
   });
-
-  return counter;
+  return {
+    counter: counter,
+    types_with_questions_ids: types_with_questions_ids
+  };
 };
 
-
-function createTypeDivs(answer_id, answer_type) {
-  console.log("answer_type"+answer_type);
-  console.log("answer id"+answer_id);
-  var div = document.createElement('div');
-
+function createTypeDivs(types_with_questions_ids, div_id) {
+  $.each(types_with_questions_ids, function( answer_type, question_ids ) {
+    var typeDiv = div_id + '_' + answer_type;
+    var div = document.createElement('ul');
+    div.id = typeDiv;
+    div.className = 'type_divs';
+    div.style = 'display: none;';
+    var inner_html = '';
+    $.each(question_ids.split(','), function(i, question_id) {
+      // inner_html += '<p  style="display: none;">'
+      inner_html += '<li style="color: #'
+                 + I18n.t('survey.0_answers_0.'
+                 + answer_type
+                 + '_color')
+                 + '" >'
+                 + I18n.t('survey.'
+                 + question_id
+                 + '_question.title')
+                 + ' <b>'
+                 + I18n.t('survey.'
+                 + question_id
+                 + '_question.'
+                 + answer_type
+                 +'_choice_text')
+                 + '</b></li>';
+    });
+    inner_html += '</ul>'
+    div.innerHTML = inner_html;
+    document.getElementById(div_id).appendChild(div);
+   });
 };
 
-function addSurveyMenu(div_id) {
+function addSurveyMenu(div_id, types_with_questions_ids) {
     var div = document.createElement('div');
-
+    div.id = div_id + "_menu";
     div.className = 'sv_nav';
-    div.innerHTML = '\
-      <input type="button" class="" data-index="0" onclick="showAnswers(this)" value="'+
-        I18n.t("survey.0_answers_0.0_data_content_label") +'" />\
-      <input type="button" class="" data-index="1" value="'+
-        I18n.t("survey.0_answers_0.1_data_content_label") +'" />\
-      <input type="button" class="" data-index="2" value="'+
-        I18n.t("survey.0_answers_0.2_data_content_label") +'" />\
-      <input type="button" value="-" onclick="removeRow(this)">\
-    ';
-     document.getElementById(div_id).appendChild(div);
+    var inner_html = '<hr>';
+    $.each(types_with_questions_ids, function(answer_type, value) {
+      inner_html += '<input type="button" style="background: #'
+                 + I18n.t('survey.0_answers_0.'
+                 + answer_type
+                 + '_color')
+                 + '" data-answer-type="'
+                 + div_id + '_' + answer_type
+                 + '" onclick="toggleAnswerTypeDivs(this)" value="'
+                 + I18n.t('survey.0_answers_0.'
+                 + answer_type
+                 +'_data_content_label')
+                 + '" />';
+    });
+    // inner_html += '<input type="button" value="'
+    //            + I18n.t("survey.repeat_survey")
+    //            + '" onclick="repeatSurvey('
+    //            + div_id
+    //            +')">';
+    div.innerHTML = inner_html;
+    document.getElementById(div_id).appendChild(div);
 }
-// function addSurveyMenu(div_id) {
-//   var s = '\
-//     <input type="button" class="openSegmentBtn" data-index="0" value="Air" />\
-//     <input type="button" class="openSegmentBtn" data-index="1" value="Fire" />\
-//     <input type="button" class="openSegmentBtn" data-index="2" value="Water" />\
-//     <input type="button" value="-" onclick="removeRow(this)">\
-//   ';
-//   var htmlObj = $(s);
-//   htmlObj.appendChild(div_id).html();
-// }
 
 function removeSurveyMenu(input) {
     document.getElementById(div_id).removeChild( input.parentNode );
@@ -282,35 +319,35 @@ function surveyOnSendResult(survey) {
   });
 }
 
-function surveyOnGetResult(survey) {
-  survey.onGetResult.add(function(s, options) {
-    if(options.success) {
-      showChart(options.dataList);
-    }
-  });
-}
+// function surveyOnGetResult(survey) {
+//   survey.onGetResult.add(function(s, options) {
+//     if(options.success) {
+//       showChart(options.dataList);
+//     }
+//   });
+// }
 
-$(function() {
-	// pieChart();
-	// assign event handlers for the demo
-	$("#destroyBtn").on("click", function(e) {
-		if (pie !== null) {
-			pie.destroy();
-			pie = null;
-		}
-	});
-	$("#recreateBtn").on("click", function(e) {
-		// createSurvey('4_survey', 8, [40, 40, '']);
-	});
-	$("#refreshBtn").on("click", function(e) {
-		// pie.redraw();
-	});
-
-  $(".openSegmentBtn").on("click", function(e) {
-		var index = parseInt($(e.target).data("index"), 10);
-		pie.openSegment(index);
-	});
-});
+// $(function() {
+// 	// pieChart();
+// 	// assign event handlers for the demo
+// 	$("#destroyBtn").on("click", function(e) {
+// 		if (pie !== null) {
+// 			pie.destroy();
+// 			pie = null;
+// 		}
+// 	});
+// 	$("#recreateBtn").on("click", function(e) {
+// 		// createSurvey('4_survey', 8, [40, 40, '']);
+// 	});
+// 	$("#refreshBtn").on("click", function(e) {
+// 		// pie.redraw();
+// 	});
+//
+//   $(".openSegmentBtn").on("click", function(e) {
+// 		var index = parseInt($(e.target).data("index"), 10);
+// 		pie.openSegment(index);
+// 	});
+// });
 
 function pieChart(div_id, dataSet) {
   var pie = new d3pie(div_id, {
@@ -345,7 +382,7 @@ function donutChart(div_id, counter) {
   var pie = new d3pie(div_id, {
     "header": {
       "title": {
-        "text": I18n.t('survey.'+div_id+'.topic'),
+        "text": I18n.t('survey.'+div_id+'.topic_graph'),
         "fontSize": 22,
         "font": "verdana"
       },
@@ -362,13 +399,13 @@ function donutChart(div_id, counter) {
       "color": "#999999",
       "fontSize": 12,
       "font": "open sans",
-      "location": "bottom-left"
+      "location": "bottom-center"
     },
     "size": {
       "canvasHeight": 450,
       "canvasWidth": 875,
       "pieInnerRadius": "30%",
-      "pieOuterRadius": "80%"
+      "pieOuterRadius": "90%"
     },
     "data": {
       "sortOrder": "label-desc",
@@ -377,25 +414,25 @@ function donutChart(div_id, counter) {
       },
       "content": [
         {
-          "label": I18n.t('survey.0_answers_0.0_data_content_label'),
-          "value": counter['A'],
+          "label": I18n.t('survey.0_answers_0.1_data_content_label'),
+          "value": counter['1'],
           "color": green
         },
         {
-          "label": I18n.t('survey.0_answers_0.1_data_content_label'),
-          "value": counter['F'],
+          "label": I18n.t('survey.0_answers_0.2_data_content_label'),
+          "value": counter['2'],
           "color": red
         },
         {
-          "label": I18n.t('survey.0_answers_0.2_data_content_label'),
-          "value": counter['W'],
+          "label": I18n.t('survey.0_answers_0.3_data_content_label'),
+          "value": counter['3'],
           "color": blue
         }
       ]
     },
     "labels": {
       "outer": {
-        "pieDistance": 15
+        "pieDistance": 25
       },
       "inner": {
         "format": "none",
@@ -461,5 +498,18 @@ function donutChart(div_id, counter) {
   });
 }
 
-
 });
+
+function toggleAnswerTypeDivs(type_div) {
+  var e = document.getElementById(type_div.dataset.answerType);
+  if (e.style.display == 'block' || e.style.display=='') {
+    e.style.display = 'none';
+  } else {
+    e.style.display = 'block';
+  }
+};
+
+
+function repeatSurvey(div_id) {
+  console.log(div_id);
+};

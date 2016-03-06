@@ -13,8 +13,7 @@ html.no-js lang="en"
   body id="<%= canonical_id @page %>"
     .row
       .medium-6.medium-centered.large-4.large-centered.columns
-        h1
-          a href="/"  = t('title')
+        h1 = t('title')
     .row
       .medium-6.medium-centered.large-4.large-centered.columns
         -if notice.present?
