@@ -1,13 +1,14 @@
 html.no-js lang="en"
   = render "/refinery/html_tag"
-  -if admin_signed_in?
+  / -if admin_signed_in?
+  -if 1 == 2
     - site_bar = render('/refinery/site_bar', :head => true)
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     title == content_for?(:title) ? yield(:title) : "Tibetan"
     = stylesheet_link_tag "application"
-    / = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tag
     / = render "/refinery/head"
     
@@ -38,6 +39,7 @@ html.no-js lang="en"
           div class="small-12 columns"
             hr
       footer.footer
-        = render "/refinery/footer"
+        = render "/welcome/footer"
     
-    = render "/refinery/javascripts"
+    = javascript_include_tag '/assets/welcome'
+    / = render "/refinery/javascripts"

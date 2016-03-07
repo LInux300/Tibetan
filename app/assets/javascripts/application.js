@@ -19,8 +19,10 @@
 //= require library/survey.min
 //= require d3/d3.min
 //= require d3pie/d3pie/d3pie.min
+//= require owl-carousel/owl-carousel/owl.carousel
 //= require_tree .
 
-// $(document).ready(function(){});
+$(document).ready(function() {
+});
 // $(document).foundation()
 // $(function(){ $(document).foundation(); });

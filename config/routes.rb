@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'dashboard/index'
   get 'nutrition/index'
   get 'examination/index'
 

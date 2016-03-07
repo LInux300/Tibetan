@@ -16,5 +16,7 @@
  *= require jquery-ui
  *= require foundation/scss/foundation
  *= require foundation-icon-fonts/foundation-icons
+ *= require owl-carousel/owl-carousel/owl.carousel
+ *= require owl-carousel/owl-carousel/owl.theme
  *= require_self
  */

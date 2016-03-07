@@ -21,6 +21,7 @@
 
 en:
   title: Tibetan
+  copyright: ' %{year} %{title}'
   view:
     index:
       p1: We are happy to see you here. We present the way how you can help yourself or your family, friends and others people.
@@ -57,6 +58,21 @@ en:
       header: Nutrition
       href: '/nutrition/index'
       short_body: For good health is important proper nutrition.
+    6_topic:
+      body: Overview over your examinations
+      button: Dashboard
+      header: Dashboard
+      short_body: Overview over your examinations
+  footer:
+    1_paragraph: For other contact information, see the %{title} contact page.
+    2_paragraph: If you would like to receive tips as soon as they're announced, subscribe to the %{title}-announce mailing list in dashboard.
+    follow_us: Follow us
+    contact_us: Contact us
+    events: Events
+    external_links: External links
+    faq: FAQ
+    what_we_do: What we do
+    work_with_us: Work with us
   survey:
     result: The survey result
     please_answer_questions: Please answer the questions

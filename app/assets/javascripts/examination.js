@@ -85,7 +85,7 @@
 //  });
 // //surveyWindow.title = "My Survey Window Title."; //By default Survey.title is used.
 // surveyWindow.show();
-$(document).ready(function() {
+// jQuery(function(){
 
 var green = '#009A31',
     red = '#E8110F',
@@ -498,7 +498,7 @@ function donutChart(div_id, counter) {
   });
 }
 
-});
+// });
 
 function toggleAnswerTypeDivs(type_div) {
   var e = document.getElementById(type_div.dataset.answerType);

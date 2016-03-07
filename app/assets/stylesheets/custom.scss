@@ -26,7 +26,7 @@ $grey: #f7f7f7;
 }
 
 .full-page-width, .top-bar-section {
-  background-color: $blue;
+  // background-color: $blue;
 }
 
 //------------------------------------------------------------------------------
@@ -117,11 +117,16 @@ $grey: #f7f7f7;
   list-style-type: none;
   li {
     margin-top: .5em;
-    color: $black;
+    color: $white;
   }
 }
-#page_container > footer > div > div > ul.footer-links > li > a:hover {
+
+.footer-links > li > a:hover,.footer-links > li > a:visited,.footer-links > li > a:active {
   color: $white;
+}
+
+.footer-links > li > a:hover {
+  text-decoration: underline;
 }
 
 //------------------------------------------------------------------------------
