@@ -23,6 +23,43 @@
 //= require_tree .
 
 $(document).ready(function() {
+
+  $("#contact_us_submit").click(function(){
+      console.log('fsdfs');
+      // $.ajax({url: "/contact/new", success: function(result){
+      $.ajax({url: "#", success: function(result){
+          $("#div1").html(result);
+      }});
+  });
+
+  // Foundation.Accordion.defaults.slideSpeed = 250;
+  // $.fn.foundation()
+  // $(document).foundation('equalizer');
+  // $(document).foundation().foundation('equalizer', 'dropdown');
+
+  // var options = {multiExpand: true, allowAllClosed: false};
+  // var accordion = new Foundation.Accordion($('#some-accordion'), options);
+  // $(document).foundation({
+  //   equalizer : {
+  //     // Specify if Equalizer should make elements equal height once they become stacked.
+  //     // equalize_on_stack: true
+  //     // Specify if Equalizer should make elements equal height once they become stacked.
+  //     equalize_on_stack: false,
+  //     // Allow equalizer to resize hidden elements
+  //     act_on_hidden_el: false
+  //   }
+  //
+  //   orbit: {
+  //     slide_number: false,
+  //     resume_on_mouseout: true,
+  //     next_on_click: false,
+  //     timer_speed: 3000,
+  //     animation_speed: 200
+  //   }
+  // });
+
 });
+
+// $(document).foundation();
 // $(document).foundation()
 // $(function(){ $(document).foundation(); });

@@ -1,6 +1,7 @@
 // $blue: #2980b9;
 // $blue: #1B6AA5;
 $blue: #008CBA;
+$royalblue: #1B6AA5;
 $green: #009A31;
 $red: #E8110F;
 $yellow: #FBC723;
@@ -8,6 +9,12 @@ $text-color: #fff;
 $white: white;
 $black: black;
 $grey: #f7f7f7;
+$lightgrey: #8f9296;
+
+//------------------------------------------------------------------------------
+// navigation top
+//------------------------------------------------------------------------------
+
 
 //------------------------------------------------------------------------------
 // refinery
@@ -15,7 +22,6 @@ $grey: #f7f7f7;
 #pagess {
   margin-bottom: 0px !important;
 }
-
 
 //------------------------------------------------------------------------------
 // header
@@ -25,12 +31,12 @@ $grey: #f7f7f7;
   background-color: $grey;
 }
 
-.full-page-width, .top-bar-section {
+.top-bar-section {
   // background-color: $blue;
 }
 
 //------------------------------------------------------------------------------
-// main
+// body main
 //------------------------------------------------------------------------------
 .alert-box {
   margin-top: 5px !important;
@@ -75,6 +81,111 @@ $grey: #f7f7f7;
   .close {
     font-size: 2rem;
     line-height: 1.25rem;
+  }
+}
+
+//------------------------------------------------------------------------------
+// footer contact
+//------------------------------------------------------------------------------
+
+.footer2 {
+  background-color: #292c2f;
+  // background-color: $royalblue;
+  text-align: center;
+  font-size: 3rem;
+  color: $lightgrey;
+  padding: 1rem;
+
+  .social a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #292c2f;
+    border-radius: 2px;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    margin: 0 6px 0 0;
+  }
+
+  .copywrite {
+    color: #8f9296;
+    font-size: 1rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .footer2-form {
+    textarea, input {
+      border-radius: 3px;
+      background-color: #1f2022;
+      // background-color: $blue;
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+      border: none;
+      resize: none;
+      font: inherit;
+      font-size: 0.875rem;
+      font-weight: normal;
+      color: #d1d2d2;
+      padding: 1.3rem;
+    }
+
+    label {
+      text-align: left;
+      color: #fff;
+      font-size: 1.2rem;
+      margin: 0 0 1rem 0;
+      font-weight: bold;
+    }
+
+    .submit {
+      border-radius: 3px;
+      padding: 1rem 3.5rem;
+      font-weight: bold;
+      float: right;
+      margin: 0 1rem 2rem 0;
+    }
+  }
+
+  .footer2-links a {
+    list-style: none;
+    font-weight: normal;
+    color: #fff;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    font-size: 1rem;
+
+    &::after {
+      content: "•";
+      padding: 0 0.2rem 0 0.4rem;
+    }
+
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 40.063em) {
+    padding: 4rem;
+
+    p {
+      text-align: left;
+    }
+
+    .social {
+      text-align: left;
+      margin: 0;
+    }
+
+    .footer2-form {
+      .contact {
+        position: absolute;
+        left: -45%;
+        top: 10%;
+      }
+    }
+
   }
 }
 

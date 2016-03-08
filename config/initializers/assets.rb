@@ -17,3 +17,4 @@ Rails.application.config.assets.version = '1.0'
 
 #
 # Rails.application.config.assets.precompile += %w( d3pie/d3pie/d3pie.min.js )
+# Rails.application.config.assets.precompile += %w( foundation/js/foundation/foundation.equalizer.js)

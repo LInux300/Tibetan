@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
 
-  get 'dashboard/index'
-  get 'nutrition/index'
-  get 'examination/index'
+  match '/dashboard',     to: 'dashboard#index',             via: 'post'
+  resources "dashboard", only: [:index]
+
+  match '/examination',     to: 'examination#index',             via: 'post'
+  resources "examination", only: [:index]
+
+  match '/nutrition',     to: 'nutrition#index',             via: 'post'
+  resources "nutrition", only: [:index]
+
+  # get 'dashboard/index'
+  # get 'nutrition/index'
+  # get 'examination/index'
+
+  # match '/contacts',     to: 'contacts#new',             via: 'get'
+  # resources "contacts", only: [:new, :create]
 
   devise_for :admins
   devise_for :users

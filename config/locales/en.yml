@@ -1,31 +1,88 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   title: Tibetan
   copyright: ' %{year} %{title}'
+  search: Search
+  # activerecord:
+  #   models:
+  #       admin/user: User
+  #   attributes:
+  #       admin/user:
+  #           email: Email
+  #           last_sign_in_at: Last Sign In at
+  #           current_sign_in_at: Current_Sign In at
+  #           current_sign_in_ip: Current Sign In IP
+  #           created_at: Created at
+  #           updated_at: Updated at
   view:
+    home: Home
+    coutact_us:
+      title: Contact Us
+      email_address: Email Address
+      message: Message
+      send: Send
     index:
-      p1: We are happy to see you here. We present the way how you can help yourself or your family, friends and others people.
-      p2: Main topics are
+      1_p: We are happy to see you here. We present the way how you can help yourself or your family, friends and others people.
+      2_p: Main topics are
+      1_row:
+        title: TIBETAN MEDICINE
+      2_row:
+        1_lead: Symptoms of Air disorder
+        2_lead: Symptoms of Fire disorder
+        3_lead: Symptoms of Water disorder
+        1_subheader: Frequent sighing, mental wandering distraction, dizziness, ringing in the ears, diffused pain, muscular tension, poor circulation, cold extremities, tremors, chills, stiffness and difficulty in movement, lethargy, pain in the joints, frequent pins and needles sensation, starry eyes, goose pimples, insomnia or disturbed sleep and dreams, pains in either the lower skull, chest or jaws, dry heaves, gas or a rumbling sound in the abdomen, and constipation.
+        2_subheader: Diarrhea, vomiting, itchy skin, intense thirst, bitter taste in the mouth,fever, sleeplessness, strong odor of the urine and stool, headaches, nausea, and discomfort in the liver and gail bladder regions.
+        3_subheader: pale complexion and gums, excess mucus, lethargy, poor appetite, low body temperature, indigestion, slow digestion, dicomfort in the lower back or kidney region, fluid retentiion and puffiness, sleepiness, and poor memory and dullness.
+      3_row:
+        1_title: Air Characteristics
+        1_body: "<strong>Cool, Dry, Hard, Light, Mobile, Subtle</strong>.\
+          <br>\
+          <ul style='color:green'>\
+            <li>Cool: chills</li>
+            <li>Dry: irritated skin, dry mouth</li>\
+            <li>Hard: stiff joints</li>\
+            <li>Light: forgetfulness, insomnia</li>\
+            <li>Mobile: hysteria, dizziness</li>\
+            <li>Subtle: blurred vision, ringing in the ears</li>\
+          </ul>"
+      4_row:
+        2_title: Fire characteristics
+        2_body: "<strong>Flowing, Hot, Malodorous, Oily, Purging, Sharp</strong>.
+          <br>
+          <ul style='color:red'>
+            <li>Flowing: diarrhea</li>
+            <li>Hot: thirst, overheating</li>
+            <li>Malodorous: body odor</li>
+            <li>Oily: oily complexion</li>
+            <li>Purging: excessive mucus</li>
+            <li>Sharp: localized pain</li>
+          </ul>"
+      5_row:
+        3_title: Wather characteristics
+        3_body: "<strong>Blunt, Cold, Heavy, Stable, Smooth, Sticky</strong>.
+          <br>
+          <ul style='color:blue'>
+            <li>Blunt: slowly developing</li>
+            <li>Cold: low body temperature</li>
+            <li>Heavy: lethargy, sleepiness, slow recovery</li>
+            <li>Stable: unchanging</li>
+            <li>Smooth: dull pains</li>
+            <li>Sticky: cohesive urine</li>
+          </ul>"
+      6_row:
+        title: Changing the World Through Tibetan Medicine
+        body: TM Is rich and complex and fundamental principles can be quickly understood.
+        1_button: Test Your type
+        2_button: Nutrition
+      7_row:
+        title: Three Nepas
+      8_row:
+        1_body: "<strong>TB is base on the Five Elements, the Three Nepas, the Twenty Attributes and the Seven Tissues.</strong>"
+        2_body: "The body is complex composition of what the Eastern Medical Systems call \
+        <strong>The Five Elements</strong>. Each element have a distinct function in the body. \
+        The Earth element provides stability and structure. Water provides smoothness and moisture. \
+        Fire element is connected with growth, development and the assimilation adn absorption of food. \
+        Because of the Air Element we are able to move our joints and muscles and to circulate blood and fluids. \
+        The Space element allows the other elements exist."
     first_topic:
       body: Tibetan medicine is primarily a form of Ayurveda, which was not only the traditional natural healing system of India but through history influenced surrounding cultures from Greece to China.
       button: The TM
@@ -49,32 +106,281 @@ en:
       p1: You can answer any number of questions, if you answer all questions your Tibetan type is more accurate.
       button: Examination
       header: Physical Examinations
-      href: '/examination/index'
+      href: '/examination'
       short_body: Physical and mental checks
       please_login: This is only one of many examinations, for all please login
     5_topic:
       body: For good health is important proper nutrition.
       button: Nutrition
       header: Nutrition
-      href: '/nutrition/index'
+      href: '/nutrition'
       short_body: For good health is important proper nutrition.
     6_topic:
       body: Overview over your examinations
       button: Dashboard
       header: Dashboard
       short_body: Overview over your examinations
+      href: '/dashboard'
+    7_topic:
+      body: Attributes
+      button: Attributes
+      header: Attributes
+      short_body: Overview over your examinations
+      href: '/#twenty_attributes'
+  attributes:
+    title: Twenty Attributes
+    subtitle: Effect on the Three Nepas
+    log_in_msg: "All Twenty Attributes are visible for Users. <a href='/sign_in' style='font-size: 20px'>Sign In</a>."
+    p: Efect can be "Very Litte", "Secondary", "Main"
+    0_header: Attribute
+    1_header: Air
+    2_header: Fire
+    3_header: Water
+    0_atr:
+      name: Hot
+      1_element: Air
+      1_effect: Secondary
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Very Little
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Main
+      3_movement: Decreasing
+    1_atr:
+      name: Cold
+      1_element: Air
+      1_effect: Secondary
+      1_movement: Increasing
+      2_element: Fire
+      2_effect: Very Little
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Main
+      3_movement: Increasing
+    2_atr:
+      name: Wet
+      1_element: Air
+      1_effect: Main
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Very Little
+      3_movement: Increasing
+    3_atr:
+      name: Dry
+      1_element: Air
+      1_effect: Main
+      1_movement: Increasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Very Little
+      3_movement: Decreasing
+    4_atr:
+      name: Light
+      1_element: Air
+      1_effect: Main
+      1_movement: Increasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Very Litte
+      3_movement: Decreasing
+    5_atr:
+      name: Heavy
+      1_element: Air
+      1_effect: Main
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Very Little
+      3_movement: Increasing
+    6_atr:
+      name: Mass
+      1_element: Air
+      1_effect: Main
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Very Litte
+      3_movement: Increasing
+    7_atr:
+      name: Subtle
+      1_element: Air
+      1_effect: Main
+      1_movement: Increasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Very Litte
+      3_movement: Decreasing
+    8_atr:
+      name: Dense
+      1_element: Air
+      1_effect: Main
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Very Little
+      3_movement: Increasing
+    9_atr:
+      name: Flowing
+      1_element: Air
+      1_effect: Main
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Very Little
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Secondary
+      3_movement: Decreasing
+    10_atr:
+      name: Mobile
+      1_element: Air
+      1_effect: Main
+      1_movement: Increasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Very Little
+      3_movement: Decreasing
+    11_atr:
+      name: Static
+      1_element: Air
+      1_effect: Main
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Very little
+      3_movement: Increasing
+    12_atr:
+      name: Dullness
+      1_element: Air
+      1_effect: Main
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Very Little
+      3_movement: Increasing
+    13_atr:
+      name: Sharp
+      1_element: Air
+      1_effect: Secondary
+      1_movement: Increasing
+      2_element: Fire
+      2_effect: Main
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Very little
+      3_movement: Decreasing
+    14_atr:
+      name: Smooth
+      1_element: Air
+      1_effect: Very little
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Main
+      3_movement: Increasing
+    15_atr:
+      name: Rough
+      1_element: Air
+      1_effect: Very Litte
+      1_movement: Increasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Main
+      3_movement: Decreasing
+    16_atr:
+      name: Clear
+      1_element: Air
+      1_effect: Main
+      1_movement: Increasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Very Little
+      3_movement: Decreasing
+    17_atr:
+      name: Cloudy
+      1_element: Air
+      1_effect: Main
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Very Little
+      3_movement: Increasing
+    18_atr:
+      name: Soft
+      1_element: Air
+      1_effect: Very Litte
+      1_movement: Decreasing
+      2_element: Fire
+      2_effect: Secondary
+      2_movement: Increasing
+      3_element: Water
+      3_effect: Main
+      3_movement: Increasing
+    19_atr:
+      name: Hard
+      1_element: Air
+      1_effect: Main
+      1_movement: Increasing
+      2_element: Fire
+      2_effect: Very Litte
+      2_movement: Decreasing
+      3_element: Water
+      3_effect: Secondary
+      3_movement: Decreasing
   footer:
     1_paragraph: For other contact information, see the %{title} contact page.
     2_paragraph: If you would like to receive tips as soon as they're announced, subscribe to the %{title}-announce mailing list in dashboard.
-    follow_us: Follow us
-    contact_us: Contact us
+    follow_us: Follow Us
+    contact_us: Contact Us
     events: Events
-    external_links: External links
+    external_links: External Links
     faq: FAQ
-    what_we_do: What we do
-    work_with_us: Work with us
+    #   1_h: Our Way
+    #     1_p: We like a feeling of One Big Family
+    #   2_h: Our Methods
+    #     1_p: Make it simpler, but not simple
+    # what_we_do: What we do
+    how_we_work: How We Work
+    #   1_h: Our Way
+    #     1_p: We like a feeling of One Big Family
+    #     2_p: We like to listen and understand first, and after we take an action
+    #     3_p: We like to cooperate with you, we like to help
+    #   2_h: Our Methods
+    #     1_p: Make it simpler, but not simple
+    #     2_p: Openness and Responsiveness
+    #     3_p: Connections
+    work_with_us: Work with Us
   survey:
-    result: The survey result
+    result: The Survey Result
     please_answer_questions: Please answer the questions
     0_survey_0:
       title: Typology Test

@@ -1,48 +1,114 @@
-.row.full-width
-  .small-12.medium-3.large-4.columns
-    i.fi-laptop
-    p = t('footer.1_paragraph', title: t('title'))
-  .small-12.medium-3.large-4.columns
-    i.fi-heart
-    p = t('footer.2_paragraph', title: t('title'))
-  .small-6.medium-3.large-2.columns
-    h4 = t('footer.what_we_do')
-    ul.footer-links
-      li 
-        a href="#footer_contact_us" id="contact_us" = t('footer.contact_us')
-      li
-        a href="#" = t('footer.events')
-      li
-        a href="#" = t('footer.external_links')
-      li
-        a href="#" = t('footer.faq')
-      li
-        a href="#" = t('footer.work_with_us')
-    ul
-  .small-6.medium-3.large-2.columns
-    h4 = t('footer.follow_us')
-    ul.footer-links
-      li
-        a href="#"  Facebook
-      li
-        a href="#"  Twitter
-      li
-        a href="#"  Instagram
-    ul
+footer.footer2
+  .row
+    .small-12.medium-6.medium-push-6.columns
 
-.row.full-width id='footer_contact_us' style='block: none'
-  p fjsdlfjsdlfjsdfl
-  
-.row.full-width id='footer-events'
-  p dddddddddddddd
+      form.footer2-form
+        .row
+          label = t('view.coutact_us.title')
+        .row
+          p
+        .row
+          input#email placeholder="#{t('view.coutact_us.email_address')}" type="email" /
+        .row
+          label
+            textarea#message placeholder="#{t('view.coutact_us.message')}" rows="5"
+        .row
+          button.submit id="contact_us_submit" type="submit" value="Submit" = t('view.coutact_us.send')
+    .small-12.medium-6.medium-pull-6.columns
+      p
+        i = t('title')
+      p.footer2-links
+        a href="#"  = t('view.home')
+        a href="#external_links"  = t('footer.external_links')
+        a href="#faq"  = t('footer.faq')
+        a href="#how_we_work"  = t('footer.how_we_work')
+      ul.inline-list.social
+        a href="#"
+          i.fi-social-facebook
+        a href="#"
+          i.fi-social-twitter
+        a href="#"
+          i.fi-social-pinterest
+      p.copywrite = "#{t('title')} © #{Time.now.year}"
 
-.row.full-width id='footer-external_links'
+  #external_links.row style="display: none;"
+    .small-12.medium-6.medium-push-6.columns
+      h3 = t('footer.external_links')
+  #faq.row style="display: none;"
+    .small-12.medium-6.medium-push-6.columns
+      h3 = t('footer.faq')
+  #work_with_us.row style="display: none;"
+    .small-12.medium-6.medium-push-6.columns
+      h2 = t('footer.how_we_work')
+      h3 = t('footer.how_we_work.1_h')
+      p = t('footer.how_we_work.1_h.1_p')
+      p = t('footer.how_we_work.1_h.2_p')
+      p = t('footer.how_we_work.1_h.3_p')
+      h3 = t('footer.how_we_work.2_h')
+      p = t('footer.how_we_work.2_h.1_p')
+      p = t('footer.how_we_work.2_h.2_p')
+      p = t('footer.how_we_work.2_h.3_p')
 
-.row.full-width id='footer-faq'
-
-.row.full-width id='footer-work_with_us'
-
-.row.full-width
-    p
-      img src="/assets/copyright.png" style="width:15px;height:15px;"
-      = t('copyright', year: Time.now.year, title: t('title'))
+/ footer.footer
+/   .row.full-width
+/     .small-12.medium-3.large-4.columns
+/       i.fi-laptop
+/       p = t('footer.1_paragraph', title: t('title'))
+/     .small-12.medium-3.large-4.columns
+/       i.fi-heart
+/       p = t('footer.2_paragraph', title: t('title'))
+/     .small-6.medium-3.large-2.columns
+/       h4 = t('footer.what_we_do')
+/       ul.footer-links
+/         li 
+/           a href="#footer_contact_us" id="contact_us" = t('footer.contact_us')
+/         li
+/           a href="#" = t('footer.events')
+/         li
+/           a href="#" = t('footer.external_links')
+/         li
+/           a href="#" = t('footer.faq')
+/         li
+/           a href="#" = t('footer.work_with_us')
+/       ul
+/     .small-6.medium-3.large-2.columns
+/       / h4 = t('footer.follow_us')
+/       / ul.footer-links
+/       /   li
+/       /     a href="#"  Facebook
+/       /   li
+/       /     a href="#"  Twitter
+/       /   li
+/       /     a href="#"  Instagram
+/       / ul
+/       /
+/       / p.lead Contact
+/       ul.footer-links
+/         li
+/           a href="#"
+/             i.fi-social-twitter
+/         li
+/           a href="#"
+/             i.fi-social-facebook
+/         / li
+/         /   a href="#"
+/         /     i.fi-social-instagram
+/         li
+/           a href="#"
+/             i.fi-social-pinterest
+/
+/   .row.full-width id='footer_contact_us' style='block: none'
+/     p fjsdlfjsdlfjsdfl
+/
+/   .row.full-width id='footer-events'
+/     p dddddddddddddd
+/
+/   .row.full-width id='footer-external_links'
+/
+/   .row.full-width id='footer-faq'
+/
+/   .row.full-width id='footer-work_with_us'
+/
+/   .row.full-width
+/       p ©
+/         = t('copyright', year: Time.now.year, title: t('title'))

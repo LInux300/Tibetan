@@ -11,7 +11,7 @@ html.no-js lang="en"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tag
     / = render "/refinery/head"
-    
+
   body id="<%= canonical_id @page %>"
     -if admin_signed_in?
       = site_bar
@@ -38,8 +38,13 @@ html.no-js lang="en"
         .row
           div class="small-12 columns"
             hr
-      footer.footer
-        = render "/welcome/footer"
-    
-    = javascript_include_tag '/assets/welcome'
-    / = render "/refinery/javascripts"
+
+      = render "/welcome/footer"          
+
+
+
+  / = javascript_include_tag 'foundation/js/foundation'
+  / = javascript_include_tag 'foundation/js/foundation/foundation.equalizer'
+  / = javascript_include_tag 'motion-ui/dist/motion-ui'
+  / = javascript_include_tag 'foundation/js/foundation'
+  = javascript_include_tag '/assets/welcome'
