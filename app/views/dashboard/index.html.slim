@@ -1,4 +1,62 @@
 .row
-  div class="small-12 columns"
+  .small-12.columns
     h1 = t('view.6_topic.header')
     p = t('view.6_topic.body')
+  hr
+  
+#results.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+    h3
+      i.fi-graph-bar
+      = t('view.6_topic.1_subtopic.title').html_safe
+    p = t('view.6_topic.1_subtopic.info').html_safe
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    h3
+      i.fi-graph-trend
+      = t('view.6_topic.2_subtopic.title').html_safe
+    p = t('view.6_topic.2_subtopic.info').html_safe
+    
+    hr
+
+#results_elements.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+    h3
+      i.fi-arrows-in
+      = t('view.6_topic.3_subtopic.title').html_safe
+    p = t('view.6_topic.3_subtopic.info').html_safe
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    h3
+      i.fi-arrows-out
+      = t('view.6_topic.4_subtopic.title').html_safe
+    p = t('view.6_topic.4_subtopic.info').html_safe
+    hr
+
+#timeline.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+    h3
+      i.fi-clock
+      = t('view.6_topic.5_subtopic.title').html_safe
+    p = t('view.6_topic.5_subtopic.info').html_safe
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    h3
+      i.fi-calendar
+      = t('view.6_topic.6_subtopic.title').html_safe
+    p = t('view.6_topic.6_subtopic.info').html_safe
+    hr
+
+#hints.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+    h3
+      i.fi-trees
+      = t('view.6_topic.7_subtopic.title').html_safe
+    p = t('view.6_topic.7_subtopic.info').html_safe
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    h3
+      i.fi-results
+      = t('view.6_topic.8_subtopic.title').html_safe
+    p = t('view.6_topic.8_subtopic.info').html_safe
+    hr

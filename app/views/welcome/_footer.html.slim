@@ -1,3 +1,71 @@
+#external_links.row style="display: none;"
+  .small-12.medium-6.medium-push-6.columns
+    h2
+      i.fi-page-multiple
+      = t('view.footer.external_links.1_h.title')
+    p = t('view.footer.external_links.1_h.1_p').html_safe
+    p = t('view.footer.external_links.1_h.2_p').html_safe
+    p = t('view.footer.external_links.1_h.3_p').html_safe
+  .small-12.medium-6.medium-pull-6.columns
+    h2
+      i.fi-address-book
+      = t('view.footer.external_links.2_h.title')
+    p = t('view.footer.external_links.2_h.1_p')
+    p = t('view.footer.external_links.2_h.2_p')
+    p = t('view.footer.external_links.2_h.3_p')
+  hr
+
+#faq.row style="display: none;"
+  .small-12.medium-6.medium-push-6.columns
+    h2
+      i.fi-clipboard-notes
+      = t('view.footer.faq.1_h.title')
+    p = t('view.footer.faq.1_h.1_p').html_safe
+    p = t('view.footer.faq.1_h.2_p').html_safe
+    p = t('view.footer.faq.1_h.3_p').html_safe
+  .small-12.medium-6.medium-pull-6.columns
+    h2
+      i.fi-info
+      = t('view.footer.faq.2_h.title')
+    p = t('view.footer.faq.2_h.1_p')
+    p = t('view.footer.faq.2_h.2_p')
+    p = t('view.footer.faq.2_h.3_p')
+  hr
+
+#info.row style="display: none;"
+  .small-12.medium-6.medium-push-6.columns
+    h2
+      i.fi-compass
+      = t('view.footer.info.1_h.title')
+    p = t('view.footer.info.1_h.1_p').html_safe
+    p = t('view.footer.info.1_h.2_p').html_safe
+    p = t('view.footer.info.1_h.3_p').html_safe
+  .small-12.medium-6.medium-pull-6.columns
+    h2
+      i.fi-wrench
+      = t('view.footer.info.2_h.title')
+    p = t('view.footer.info.2_h.1_p').html_safe
+    p = t('view.footer.info.2_h.2_p').html_safe
+    p = t('view.footer.info.2_h.3_p').html_safe
+  hr
+
+#how_we_work.row style="display: none;"
+  .small-12.medium-6.medium-push-6.columns
+    h2
+      i.fi-universal-access
+      = t('view.footer.how_we_work.1_h.title')
+    p = t('view.footer.how_we_work.1_h.1_p')
+    p = t('view.footer.how_we_work.1_h.2_p')
+    p = t('view.footer.how_we_work.1_h.3_p')
+  .small-12.medium-6.medium-pull-6.columns
+    h2
+      i.fi-loop
+      = t('view.footer.how_we_work.2_h.title')
+    p = t('view.footer.how_we_work.2_h.1_p')
+    p = t('view.footer.how_we_work.2_h.2_p')
+    p = t('view.footer.how_we_work.2_h.3_p')
+  hr
+
 footer.footer2
   .row
     .small-12.medium-6.medium-push-6.columns
@@ -18,10 +86,11 @@ footer.footer2
       p
         i = t('title')
       p.footer2-links
-        a href="#"  = t('view.home')
-        a href="#external_links"  = t('footer.external_links')
-        a href="#faq"  = t('footer.faq')
-        a href="#how_we_work"  = t('footer.how_we_work')
+        a href="#" = t('view.home')
+        a href="#external_links" id="f_external_links" = t('view.footer.external_links.title')
+        a href="#faq" id="f_faq" = t('view.footer.faq.title')
+        a href="#info" id="f_info" = t('view.footer.info.title')
+        a href="#how_we_work" id="f_how_we_work" = t('view.footer.how_we_work.title')
       ul.inline-list.social
         a href="#"
           i.fi-social-facebook
@@ -30,24 +99,6 @@ footer.footer2
         a href="#"
           i.fi-social-pinterest
       p.copywrite = "#{t('title')} © #{Time.now.year}"
-
-  #external_links.row style="display: none;"
-    .small-12.medium-6.medium-push-6.columns
-      h3 = t('footer.external_links')
-  #faq.row style="display: none;"
-    .small-12.medium-6.medium-push-6.columns
-      h3 = t('footer.faq')
-  #work_with_us.row style="display: none;"
-    .small-12.medium-6.medium-push-6.columns
-      h2 = t('footer.how_we_work')
-      h3 = t('footer.how_we_work.1_h')
-      p = t('footer.how_we_work.1_h.1_p')
-      p = t('footer.how_we_work.1_h.2_p')
-      p = t('footer.how_we_work.1_h.3_p')
-      h3 = t('footer.how_we_work.2_h')
-      p = t('footer.how_we_work.2_h.1_p')
-      p = t('footer.how_we_work.2_h.2_p')
-      p = t('footer.how_we_work.2_h.3_p')
 
 / footer.footer
 /   .row.full-width

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :survey_answers
   match '/dashboard',     to: 'dashboard#index',             via: 'post'
   resources "dashboard", only: [:index]
 

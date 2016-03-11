@@ -14,6 +14,9 @@ en:
   #           created_at: Created at
   #           updated_at: Updated at
   view:
+    email:
+      title: Email
+      email_from: info@
     home: Home
     coutact_us:
       title: Contact Us
@@ -119,266 +122,322 @@ en:
       body: Overview over your examinations
       button: Dashboard
       header: Dashboard
-      short_body: Overview over your examinations
+      short_body: Overview over your examinations, Nutrition, Diet
       href: '/dashboard'
+      1_subtopic:
+        title: Last Result
+        info: Your last Examination check
+      2_subtopic:
+        title: Top 20
+        info: Twenty Latest Results
+      3_subtopic:
+        title: Smaller
+        info: This Element needs to be Compressed, Smaller
+      4_subtopic:
+        title: Stronger
+        info: This Element needs to be Expanded. Become or Make Larger or More Extensive.
+      5_subtopic:
+        title: TimeLine
+        info: Results over period of time
+      6_subtopic:
+        title: DateLine
+        info: Food, Exacise, Hints and Tips four <strong>Your Day</strong>
+      7_subtopic:
+        title: Nutrition
+        info: What kind of <strong>Food, Herbs, Exercises</strong> is good for You
+      8_subtopic:
+        title: Your Attribute
+        info: Preferred attributes for You
     7_topic:
       body: Attributes
       button: Attributes
       header: Attributes
       short_body: Overview over your examinations
       href: '/#twenty_attributes'
-  attributes:
-    title: Twenty Attributes
-    subtitle: Effect on the Three Nepas
-    log_in_msg: "All Twenty Attributes are visible for Users. <a href='/sign_in' style='font-size: 20px'>Sign In</a>."
-    p: Efect can be "Very Litte", "Secondary", "Main"
-    0_header: Attribute
-    1_header: Air
-    2_header: Fire
-    3_header: Water
-    0_atr:
-      name: Hot
-      1_element: Air
-      1_effect: Secondary
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Very Little
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Main
-      3_movement: Decreasing
-    1_atr:
-      name: Cold
-      1_element: Air
-      1_effect: Secondary
-      1_movement: Increasing
-      2_element: Fire
-      2_effect: Very Little
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Main
-      3_movement: Increasing
-    2_atr:
-      name: Wet
-      1_element: Air
-      1_effect: Main
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Very Little
-      3_movement: Increasing
-    3_atr:
-      name: Dry
-      1_element: Air
-      1_effect: Main
-      1_movement: Increasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Very Little
-      3_movement: Decreasing
-    4_atr:
-      name: Light
-      1_element: Air
-      1_effect: Main
-      1_movement: Increasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Very Litte
-      3_movement: Decreasing
-    5_atr:
-      name: Heavy
-      1_element: Air
-      1_effect: Main
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Very Little
-      3_movement: Increasing
-    6_atr:
-      name: Mass
-      1_element: Air
-      1_effect: Main
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Very Litte
-      3_movement: Increasing
-    7_atr:
-      name: Subtle
-      1_element: Air
-      1_effect: Main
-      1_movement: Increasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Very Litte
-      3_movement: Decreasing
-    8_atr:
-      name: Dense
-      1_element: Air
-      1_effect: Main
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Very Little
-      3_movement: Increasing
-    9_atr:
-      name: Flowing
-      1_element: Air
-      1_effect: Main
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Very Little
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Secondary
-      3_movement: Decreasing
-    10_atr:
-      name: Mobile
-      1_element: Air
-      1_effect: Main
-      1_movement: Increasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Very Little
-      3_movement: Decreasing
-    11_atr:
-      name: Static
-      1_element: Air
-      1_effect: Main
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Very little
-      3_movement: Increasing
-    12_atr:
-      name: Dullness
-      1_element: Air
-      1_effect: Main
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Very Little
-      3_movement: Increasing
-    13_atr:
-      name: Sharp
-      1_element: Air
-      1_effect: Secondary
-      1_movement: Increasing
-      2_element: Fire
-      2_effect: Main
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Very little
-      3_movement: Decreasing
-    14_atr:
-      name: Smooth
-      1_element: Air
-      1_effect: Very little
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Main
-      3_movement: Increasing
-    15_atr:
-      name: Rough
-      1_element: Air
-      1_effect: Very Litte
-      1_movement: Increasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Main
-      3_movement: Decreasing
-    16_atr:
-      name: Clear
-      1_element: Air
-      1_effect: Main
-      1_movement: Increasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Very Little
-      3_movement: Decreasing
-    17_atr:
-      name: Cloudy
-      1_element: Air
-      1_effect: Main
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Very Little
-      3_movement: Increasing
-    18_atr:
-      name: Soft
-      1_element: Air
-      1_effect: Very Litte
-      1_movement: Decreasing
-      2_element: Fire
-      2_effect: Secondary
-      2_movement: Increasing
-      3_element: Water
-      3_effect: Main
-      3_movement: Increasing
-    19_atr:
-      name: Hard
-      1_element: Air
-      1_effect: Main
-      1_movement: Increasing
-      2_element: Fire
-      2_effect: Very Litte
-      2_movement: Decreasing
-      3_element: Water
-      3_effect: Secondary
-      3_movement: Decreasing
-  footer:
-    1_paragraph: For other contact information, see the %{title} contact page.
-    2_paragraph: If you would like to receive tips as soon as they're announced, subscribe to the %{title}-announce mailing list in dashboard.
-    follow_us: Follow Us
-    contact_us: Contact Us
-    events: Events
-    external_links: External Links
-    faq: FAQ
-    #   1_h: Our Way
-    #     1_p: We like a feeling of One Big Family
-    #   2_h: Our Methods
-    #     1_p: Make it simpler, but not simple
-    # what_we_do: What we do
-    how_we_work: How We Work
-    #   1_h: Our Way
-    #     1_p: We like a feeling of One Big Family
-    #     2_p: We like to listen and understand first, and after we take an action
-    #     3_p: We like to cooperate with you, we like to help
-    #   2_h: Our Methods
-    #     1_p: Make it simpler, but not simple
-    #     2_p: Openness and Responsiveness
-    #     3_p: Connections
-    work_with_us: Work with Us
+    attributes:
+      title: Twenty Attributes
+      subtitle: Effect on the Three Nepas
+      log_in_msg: "All Twenty Attributes are visible for Users. <a href='/sign_in' style='font-size: 20px'>Sign In</a>."
+      p: Efect can be "Very Litte", "Secondary", "Main"
+      0_header: Attribute
+      1_header: Air
+      2_header: Fire
+      3_header: Water
+      0_atr:
+        name: Hot
+        1_element: Air
+        1_effect: Secondary
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Very Little
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Decreasing
+      1_atr:
+        name: Cold
+        1_element: Air
+        1_effect: Secondary
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Very Little
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Increasing
+      2_atr:
+        name: Wet
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      3_atr:
+        name: Dry
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Decreasing
+      4_atr:
+        name: Light
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Litte
+        3_movement: Decreasing
+      5_atr:
+        name: Heavy
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      6_atr:
+        name: Mass
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Litte
+        3_movement: Increasing
+      7_atr:
+        name: Subtle
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Litte
+        3_movement: Decreasing
+      8_atr:
+        name: Dense
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      9_atr:
+        name: Flowing
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Very Little
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Secondary
+        3_movement: Decreasing
+      10_atr:
+        name: Mobile
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Decreasing
+      11_atr:
+        name: Static
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very little
+        3_movement: Increasing
+      12_atr:
+        name: Dullness
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      13_atr:
+        name: Sharp
+        1_element: Air
+        1_effect: Secondary
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Main
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very little
+        3_movement: Decreasing
+      14_atr:
+        name: Smooth
+        1_element: Air
+        1_effect: Very little
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Increasing
+      15_atr:
+        name: Rough
+        1_element: Air
+        1_effect: Very Litte
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Decreasing
+      16_atr:
+        name: Clear
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Decreasing
+      17_atr:
+        name: Cloudy
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      18_atr:
+        name: Soft
+        1_element: Air
+        1_effect: Very Litte
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Increasing
+      19_atr:
+        name: Hard
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Very Litte
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Secondary
+        3_movement: Decreasing
+    footer:
+      1_paragraph: For other contact information, see the %{title} contact page.
+      2_paragraph: If you would like to receive tips as soon as they're announced, subscribe to the %{title}-announce mailing list in dashboard.
+      follow_us: Follow Us
+      contact_us: Contact Us
+      events: Events
+      external_links:
+        title: External Links
+        1_h:
+          title: External Links
+          1_p: '<a href="https://en.wikipedia.org/wiki/Bon">Bon</a>'
+          2_p: '<a href="https://en.wikipedia.org/wiki/Bon">Bon</a>'
+          3_p: '<a href="https://en.wikipedia.org/wiki/Bon">Bon</a>'
+        2_h:
+          title: Events
+          1_p: Make it simpler, but not simple
+          2_p: Openness and Responsiveness
+          3_p: Connections
+      faq:
+        title: FAQ
+        1_h:
+          title: FAQ
+          1_p: '<strong>Why are there the Examinations?</strong> Only for diagnostic of your Typology.'
+          2_p: '<strong>Why are there the Examinations?</strong> Only for diagnostic of your Typology.'
+          3_p: '<strong>Why are there the Examinations?</strong> Only for diagnostic of your Typology.'
+        2_h:
+          title: Help
+          1_p: We give donations to Tibetan People
+          2_p: We support Monks
+          3_p: We help people in need
+      info:
+        title: Info
+        1_h:
+          title: Info
+          1_p: Examinations
+          2_p: Nutritions & Attributes
+          3_p: Be Fit
+        2_h:
+          title: Tools
+          1_p: '<a href="/examination">Examinations</a>.'
+          2_p: '<a href="/nutrition">Nutritions, Attributes/<a>'
+          3_p: '<a href="/dashboard">Be Fit</a>'
+      how_we_work:
+        title: How We Work
+        1_h:
+          title: Our Way
+          1_p: We like a feeling of One Big Family
+          2_p: We like to listen and understand first, and after we take an action
+          3_p: We like to cooperate with you, we like to help
+        2_h:
+          title: Our Methods
+          1_p: Make it simpler, but not simple
+          2_p: Openness and Responsiveness
+          3_p: Connections
+      work_with_us: Work with Us
   survey:
     result: The Survey Result
     please_answer_questions: Please answer the questions

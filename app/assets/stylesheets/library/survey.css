@@ -87,10 +87,12 @@
 
 .sv_qcbc {
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .sv_q_checkbox {
-  padding: 10px; }
+  padding: 10px;
+}
 
 .sv_q_radiogroup {
   padding: 10px; }

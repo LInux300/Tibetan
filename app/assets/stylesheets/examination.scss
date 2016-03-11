@@ -91,16 +91,20 @@ $green: #009A31;
   margin: 10px;
 }
 // ----------------------------------------------------------------------------
+// General Main
+// ----------------------------------------------------------------------------
+// * {
+//   padding: 5;
+//   margin: 0;
+//   list-style: none;
+//   box-sizing: border-box;
+//   outline: none;
+//   font-weight: normal;
+// }
+
+// ----------------------------------------------------------------------------
 // Tabs
 // ----------------------------------------------------------------------------
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  box-sizing: border-box;
-  outline: none;
-  font-weight: normal;
-}
 
 .tabs {
   border: none !important;

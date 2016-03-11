@@ -18,15 +18,19 @@
         li
           a href=t('view.6_topic.href') = t('view.6_topic.button')
     .top-bar-right
-      ul.menu
-        li
-          input placeholder="Search" type="search" /
-        li
-          button.button type="button" =('search')
-        li
-          -if user_signed_in?
+      / ul.menu
+      /   li
+      /     input placeholder="Search" type="search" /
+      /   li
+      /     button.button type="button" =('search')
+      ul.dropdown.menu data-dropdown-menu=""
+        -if user_signed_in?
+          li.menu-text
+            a href="/dashboard" = current_user.email
+          li.menu-text
             a href="/sign_out" = t('devise.sign_out')
-          -else
+        -else
+          li.menu-text
             a href="/sign_in" = t('devise.sign_in')
 
 #owl-example.owl-carousel

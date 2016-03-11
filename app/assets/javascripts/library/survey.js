@@ -198,7 +198,6 @@ var Survey;
             };
             xhr.send();
         };
-        // dxSurveyService.serviceUrl = "https://dxsurvey.azurewebsites.net/api/Survey";
         dxSurveyService.serviceUrl = "todo.html";
         return dxSurveyService;
     })();

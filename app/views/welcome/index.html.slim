@@ -4,7 +4,7 @@ hr/
   .medium-4.columns
     img alt=t('title')  src="http://placehold.it/450x183&text=LOGO" /
   .medium-8.columns
-    img alt=t('title') src=("http://placehold.it/900x175&text=Responsive Ads - ZURB Playground/333") /
+    img alt=t('title') src=("http://placehold.it/900x175&text=Hello, Our Examination and Nutrition/333") /
 
 hr/
 
@@ -111,41 +111,41 @@ hr
 
   #twenty_attributes.row.column
     .callout.primary
-      h3 = t('attributes.title')
-    h3 = t('attributes.subtitle')
+      h3 = t('view.attributes.title')
+    h3 = t('view.attributes.subtitle')
 
     - if user_signed_in?
       - n = 19
     - else
       - n = 5
-      p =t('attributes.log_in_msg').html_safe
+      p =t('view.attributes.log_in_msg').html_safe
     
     .expanded.button-group
-      a.button.button_group_0.hollow style='font-size:22px;' href="#twenty_attributes" = t('attributes.0_header')
-      a.button.button_group_0.first_color style='font-size:22px;' href="#twenty_attributes" = t('attributes.1_header')
-      a.button.button_group_0.second_color style='font-size:22px;' href="#twenty_attributes" = t('attributes.2_header')
-      a.button.button_group_0.third_color style='font-size:22px;' href="#twenty_attributes" = t('attributes.3_header')
+      a.button.button_group_0.hollow style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.0_header')
+      a.button.button_group_0.first_color style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.1_header')
+      a.button.button_group_0.second_color style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.2_header')
+      a.button.button_group_0.third_color style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.3_header')
     - for i in 0..n
       .expanded.button-group.button-row-body style='font-size: 16px'
-        a.button.hollow = t("attributes.#{i}_atr.name")
+        a.button.hollow = t("view.attributes.#{i}_atr.name")
         a.button.first_color href="#8_row"
-          - if t("attributes.#{i}_atr.1_movement") == 'Increasing'
+          - if t("view.attributes.#{i}_atr.1_movement") == 'Increasing'
             i.fi-arrow-up
           - else
             i.fi-arrow-down
-          = ' ' + t("attributes.#{i}_atr.1_effect")
+          = ' ' + t("view.attributes.#{i}_atr.1_effect")
         a.button.second_color href="#9_row"
-          - if t("attributes.#{i}_atr.2_movement") == 'Increasing'
+          - if t("view.attributes.#{i}_atr.2_movement") == 'Increasing'
             i.fi-arrow-up
           - else
             i.fi-arrow-down
-          = ' ' + t("attributes.#{i}_atr.2_effect")
+          = ' ' + t("view.attributes.#{i}_atr.2_effect")
         a.button.third_color href="#10_row"
-          - if t("attributes.#{i}_atr.3_movement") == 'Increasing'
+          - if t("view.attributes.#{i}_atr.3_movement") == 'Increasing'
             i.fi-arrow-up
           - else
             i.fi-arrow-down
-          = ' ' + t("attributes.#{i}_atr.3_effect")
+          = ' ' + t("view.attributes.#{i}_atr.3_effect")
 
     /
     / .sections

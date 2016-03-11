@@ -94,15 +94,19 @@ var green = '#009A31',
 
 //  TODO questions 36-39
 var surveys = [
-  ['0_survey', [[2, 20]]],
-  ['1_survey', [[21, 29]]],
+  ['0_survey', [[2, 20]], [I18n.t('survey.0_survey_0.title')]],
+  ['1_survey', [[21, 29]], [I18n.t('survey.1_survey_0.title')]],
   ['2_survey', [
                  [41, 49],
                  [50, 53],
                  [54, 54]
+               ],[
+                 I18n.t('survey.2_survey_0.title'),
+                 I18n.t('survey.2_survey_1.title'),
+                 I18n.t('survey.2_survey_2.title')
   ]],
-  ['3_survey', [[30, 35]]],
-  ['4_survey', [[40, 40]]]
+  ['3_survey', [[30, 35]], [I18n.t('survey.3_survey_0.title')]],
+  ['4_survey', [[40, 40]], [I18n.t('survey.4_survey_0.title')]]
 ];
 
 $.each(surveys, function(i, survey) {
@@ -178,7 +182,7 @@ function surveyRender(my_questions, survey_div_id) {
   var survey = new Survey.Survey(
     {pages:[{name: I18n.t('title'),
             questions:my_questions,
-            title:""
+            title:''
     }]}
   );
   survey.render(survey_div_id);
@@ -213,9 +217,36 @@ function surveyOnComplete(survey, div_id) {
       addSurveyMenu(div_id, count_answers.types_with_questions_ids);
       createTypeDivs(count_answers.types_with_questions_ids, div_id);
 
-      // s.sendResult('e544a02f-7fff-4ffb-b62d-6a9aa16efd7c');
+      // s.sendResult(multi_answers);
+      sendResult(
+        JSON.stringify(s.data),
+        JSON.stringify(count_answers.counter),
+        JSON.stringify(count_answers.types_with_questions_ids)
+      );
+
     };
   });
+};
+
+function sendResult(multi_answers, counter, types_with_questions) {
+  url = '/survey_answers';
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: {
+      'multi_answers': multi_answers,
+      'survey': getSurveyName(),
+      'counter': counter,
+      'types': types_with_questions
+    },
+    // success: success,
+    // dataType: dataType
+  });
+
+};
+
+function getSurveyName() {
+
 };
 
 function countAnswers(multi_answers) {

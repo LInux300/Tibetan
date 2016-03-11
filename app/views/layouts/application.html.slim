@@ -18,26 +18,28 @@ html.no-js lang="en"
     div id="page_container"
       header id="header"
         = render "welcome/header"
-      section id="pagess"
-        .row
-          div class="large-12 columns"
-            -if notice.present?
-              .alert-box = notice
-                a href="#" class="close" &times;
-            -if alert.present?
-              .alert-box = alert
-                a href="#" class="close" &times;
-        - if @page 
+
+      .row
+        div class="large-12 columns"
+          -if notice.present?
+            .alert-box = notice
+              a href="#" class="close" &times;
+          -if alert.present?
+            .alert-box = alert
+              a href="#" class="close" &times;
+      - if @page
+        section id="pagess"
           .row
             div class="large-6 columns"
               = raw @page.content_for(:side_body)
             div class="large-6 columns"
               = raw @page.content_for(:body)
-        - else
+      - else
+        section id="topics"
           == yield
-        .row
-          div class="small-12 columns"
-            hr
+      .row
+        div class="small-12 columns"
+          hr
 
       = render "/welcome/footer"          
 
@@ -47,4 +49,4 @@ html.no-js lang="en"
   / = javascript_include_tag 'foundation/js/foundation/foundation.equalizer'
   / = javascript_include_tag 'motion-ui/dist/motion-ui'
   / = javascript_include_tag 'foundation/js/foundation'
-  = javascript_include_tag '/assets/welcome'
+  = javascript_include_tag '/assets/custom'
