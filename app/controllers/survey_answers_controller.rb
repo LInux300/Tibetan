@@ -27,7 +27,23 @@ class SurveyAnswersController < ApplicationController
       params['survey_answer']['topic'] = params['topic'].to_s
       params['survey_answer']['answer'] = params['multi_answers'].to_s
       params['survey_answer']['counter'] = params['counter'].to_s
+      # counter_all  default value is for last_answer
+      params['survey_answer']['counter_all'] = params['counter'].to_s
       params['survey_answer']['type_questions'] = params['types'].to_s
+    end
+
+    user_id = current_user ? current_user.id : nil
+    last_answer = SurveyAnswer.where(:user_id => user_id).last
+    if last_answer
+      last = JSON.parse(last_answer.counter_all.to_s)
+      current = JSON.parse(params['counter'])
+
+      (current).each do |key, value|
+        last[key] = value + last[key]
+      end
+
+      db_string = "{\"1\":#{last["1"]},\"2\":#{last["2"]},\"3\":#{last["3"]}}"
+      params['survey_answer']['counter_all'] = db_string
     end
   end
 
@@ -44,14 +60,6 @@ class SurveyAnswersController < ApplicationController
       }
 
       send_response
-      # from ajax post
-      # if params['multi_answers']
-      #   params['survey_answer']['title'] = params['title'].to_s
-      #   params['survey_answer']['topic'] = params['topic'].to_s
-      #   params['survey_answer']['answer'] = params['multi_answers'].to_s
-      #   params['survey_answer']['counter'] = params['counter'].to_s
-      #   params['survey_answer']['type_questions'] = params['types'].to_s
-      # end
     end
 
     @survey_answer = SurveyAnswer.new(survey_answer_params)

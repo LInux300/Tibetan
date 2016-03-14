@@ -213,7 +213,7 @@ function surveyOnComplete(survey, div_id) {
       count_answers = countAnswers(multi_answers);
 
       // pieChart(div_id, JSON.stringify(s.data));
-      donutChart(div_id, count_answers.counter);
+      donutChart(div_id, count_answers.counter, 450, 875);
       addSurveyMenu(div_id, count_answers.types_with_questions_ids);
       createTypeDivs(count_answers.types_with_questions_ids, div_id);
 
@@ -280,7 +280,7 @@ function countAnswers(multi_answers) {
 };
 
 function createTypeDivs(types_with_questions_ids, div_id) {
-  $.each(types_with_questions_ids, function( answer_type, question_ids ) {
+  $.each(types_with_questions_ids, function(answer_type, question_ids) {
     var typeDiv = div_id + '_' + answer_type;
     var div = document.createElement('ul');
     div.id = typeDiv;
@@ -380,20 +380,59 @@ function surveyOnSendResult(survey) {
 // 	});
 // });
 
-function pieChart(div_id, dataSet) {
+function pieChartSingle(div_id, single, canvasHeight, canvasWidth) {
   var pie = new d3pie(div_id, {
-  	header: {
-  		title: {
-  			text: "Another Pie"
-  		}
-  	},
-  	data: {
-  		content: [
-  			{ label: "One", value: 264131 },
-  			{ label: "Two", value: 218812 },
-  			{ label: "Three", value: 157618}
-  		]
-  	},
+    header: {
+      title: {
+        text: I18n.t('survey.'+div_id+'.topic_graph'),
+      }
+    },
+    data: {
+      content: [
+        {
+          label: I18n.t('survey.0_answers_0.'+single['type']+'_data_content_label'),
+          value: single['value'],
+          color: I18n.t('survey.0_answers_0.'+single['type']+'_color')
+        }
+      ]
+    },
+    size: {
+      canvasHeight: canvasHeight,
+      canvasWidth: canvasWidth
+    }
+  });
+}
+
+function pieChart(div_id, counter, canvasHeight, canvasWidth) {
+  var pie = new d3pie(div_id, {
+    header: {
+      title: {
+        text: I18n.t('survey.'+div_id+'.topic_graph'),
+      }
+    },
+    data: {
+      content: [
+        {
+          label: I18n.t('survey.0_answers_0.1_data_content_label'),
+          value: counter['1'],
+          color: green
+        },
+        {
+          label: I18n.t('survey.0_answers_0.2_data_content_label'),
+          value: counter['2'],
+          color: red
+        },
+        {
+          label: I18n.t('survey.0_answers_0.3_data_content_label'),
+          value: counter['3'],
+          color: blue
+        }
+      ]
+    },
+    size: {
+      canvasHeight: canvasHeight,
+      canvasWidth: canvasWidth
+    },
   	callbacks: {
   		onClickSegment: function(a) {
   			alert("Segment clicked! See the console for all data passed to the click handler.");
@@ -409,7 +448,7 @@ function pieChart(div_id, dataSet) {
   });
 }
 
-function donutChart(div_id, counter) {
+function donutChart(div_id, counter, canvasHeight, canvasWidth) {
   var pie = new d3pie(div_id, {
     "header": {
       "title": {
@@ -433,8 +472,8 @@ function donutChart(div_id, counter) {
       "location": "bottom-center"
     },
     "size": {
-      "canvasHeight": 450,
-      "canvasWidth": 875,
+      "canvasHeight": canvasHeight,
+      "canvasWidth": canvasWidth,
       "pieInnerRadius": "30%",
       "pieOuterRadius": "90%"
     },

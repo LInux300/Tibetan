@@ -24,13 +24,13 @@
 
 $(document).ready(function() {
 
-  $("#contact_us_submit").click(function(){
-      console.log('fsdfs');
-      // $.ajax({url: "/contact/new", success: function(result){
-      $.ajax({url: "#", success: function(result){
-          $("#div1").html(result);
-      }});
-  });
+  // $("#contact_us_submit").click(function(){
+  //     console.log('fsdfs');
+  //     // $.ajax({url: "/contact/new", success: function(result){
+  //     $.ajax({url: "#", success: function(result){
+  //         $("#div1").html(result);
+  //     }});
+  // });
 
   // Foundation.Accordion.defaults.slideSpeed = 250;
   // $.fn.foundation()

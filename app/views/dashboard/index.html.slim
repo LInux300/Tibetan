@@ -1,3 +1,5 @@
+= include_gon
+
 .row
   .small-12.columns
     h1 = t('view.6_topic.header')
@@ -6,31 +8,48 @@
   
 #results.row style="display: block;"
   .small-12.medium-6.medium-push-6.columns
-    h3
-      i.fi-graph-bar
-      = t('view.6_topic.1_subtopic.title').html_safe
-    p = t('view.6_topic.1_subtopic.info').html_safe
-    hr
+      h3
+        i.fi-graph-bar
+        = t('view.6_topic.1_subtopic.title').html_safe
+      p = t('view.6_topic.1_subtopic.info').html_safe
+      / p = @last_answer.answer
+      #1_be_fit data-counter_last="#{}"
   .small-12.medium-6.medium-pull-6.columns
     h3
       i.fi-graph-trend
       = t('view.6_topic.2_subtopic.title').html_safe
     p = t('view.6_topic.2_subtopic.info').html_safe
-    
+    #2_be_fit data-counter_last="#{}"
+.row
+  .small-12.medium-6.medium-push-6.columns
     hr
+  .small-12.medium-6.medium-pull-6.columns
+    hr
+
 
 #results_elements.row style="display: block;"
   .small-12.medium-6.medium-push-6.columns
-    h3
-      i.fi-arrows-in
-      = t('view.6_topic.3_subtopic.title').html_safe
-    p = t('view.6_topic.3_subtopic.info').html_safe
+    .small-12.medium-6.medium-push-6.columns
+      #3_be_fit_a
+    .small-12.medium-6.medium-pull-6.columns
+      h3
+        i.fi-arrows-in
+        = t('view.6_topic.3_subtopic.title').html_safe
+      #3_be_fit data-counter_last="#{}"
+      / p = t('view.6_topic.3_subtopic.info').html_safe
+  .small-12.medium-6.medium-pull-6.columns
+    .small-12.medium-6.medium-push-6.columns
+      #4_be_fit_a
+    .small-12.medium-6.medium-pull-6.columns
+      h3
+        i.fi-arrows-out
+        = t('view.6_topic.4_subtopic.title').html_safe
+      #4_be_fit data-counter_last="#{}"
+      / p = t('view.6_topic.4_subtopic.info').html_safe
+.row
+  .small-12.medium-6.medium-push-6.columns
     hr
   .small-12.medium-6.medium-pull-6.columns
-    h3
-      i.fi-arrows-out
-      = t('view.6_topic.4_subtopic.title').html_safe
-    p = t('view.6_topic.4_subtopic.info').html_safe
     hr
 
 #timeline.row style="display: block;"
@@ -39,12 +58,17 @@
       i.fi-clock
       = t('view.6_topic.5_subtopic.title').html_safe
     p = t('view.6_topic.5_subtopic.info').html_safe
-    hr
+    #5_be_fit data-counter_last="#{}"
   .small-12.medium-6.medium-pull-6.columns
     h3
       i.fi-calendar
       = t('view.6_topic.6_subtopic.title').html_safe
     p = t('view.6_topic.6_subtopic.info').html_safe
+    #6_be_fit data-counter_last="#{}"
+.row
+  .small-12.medium-6.medium-push-6.columns
+    hr
+  .small-12.medium-6.medium-pull-6.columns
     hr
 
 #hints.row style="display: block;"
@@ -53,10 +77,17 @@
       i.fi-trees
       = t('view.6_topic.7_subtopic.title').html_safe
     p = t('view.6_topic.7_subtopic.info').html_safe
-    hr
+    #7_be_fit data-counter_last="#{}"
   .small-12.medium-6.medium-pull-6.columns
     h3
       i.fi-results
       = t('view.6_topic.8_subtopic.title').html_safe
     p = t('view.6_topic.8_subtopic.info').html_safe
+    #8_be_fit data-counter_last="#{}"
+.row
+  .small-12.medium-6.medium-push-6.columns
     hr
+  .small-12.medium-6.medium-pull-6.columns
+    hr
+
+= javascript_include_tag '/assets/dashboard'

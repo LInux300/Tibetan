@@ -54,6 +54,10 @@ gem 'activemerchant', '~> 1.57'
 # Devise
 gem 'devise'
 
+# js variable
+gem 'gon'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

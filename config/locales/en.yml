@@ -131,11 +131,11 @@ en:
         title: Top 20
         info: Twenty Latest Results
       3_subtopic:
-        title: Smaller
-        info: This Element needs to be Compressed, Smaller
+        title: To Small
+        info: This Element needs to be Expanded
       4_subtopic:
-        title: Stronger
-        info: This Element needs to be Expanded. Become or Make Larger or More Extensive.
+        title: To Big
+        info: This Element needs to be Compressed
       5_subtopic:
         title: TimeLine
         info: Results over period of time
@@ -163,6 +163,8 @@ en:
       1_header: Air
       2_header: Fire
       3_header: Water
+      helps_to_increase: 'Icreasing with:'
+      helps_to_decrease: 'Decreasing with:'
       0_atr:
         name: Hot
         1_element: Air
@@ -441,6 +443,70 @@ en:
   survey:
     result: The Survey Result
     please_answer_questions: Please answer the questions
+    1_be_fit:
+      title: Last Examination
+      short_body_0:
+      topic:  Last Examination
+      topic_graph:  Last Examination
+      subtitle: Your Typology
+      footer: Tibetan Medicin
+      id: 1
+    2_be_fit:
+      title: All Examinations
+      short_body_0:
+      topic: Your Type
+      topic_graph:  All Examinations
+      subtitle: Your Typology
+      footer: Statistic from all your examinations
+      id: 2
+    3_be_fit:
+      title: Make it Bigger
+      short_body_0:
+      topic: Make it Bigger
+      topic_graph: Make it Bigger
+      subtitle: Please make this element Bigger in your life
+      footer: Tibetan Medicine
+      id: 3
+    4_be_fit:
+      title: Make it Smaller
+      short_body_0:
+      topic: Make it Smaller
+      topic_graph:  Make it Smaller
+      subtitle: Please make this element Smaller in your life
+      footer: Tibetan Medicine
+      id: 4
+    5_be_fit:
+      title: Time Plan
+      short_body_0:
+      topic: Time
+      topic_graph: Time Plan
+      subtitle: Hours, Minutes - Tips, Hints, Tricks
+      footer: Tibetan Medicine
+      id: 5
+    6_be_fit:
+      title: Date Plan
+      short_body_0:
+      topic: Date Plan
+      topic_graph:  Date Plan
+      subtitle: Days, Weeks, Months - Tips, Hints, Tricks
+      footer: Tibetan Medicine
+      id: 6
+    7_be_fit:
+      title: Nutrition
+      short_body_0:
+      topic: Nutrition
+      topic_graph:  Nutrition
+      subtitle: Please make this element Bigger in your life
+      footer: Tibetan Medicine
+      id: 7
+    8_be_fit:
+      title: Your Element
+      short_body_0:
+      topic: Your Element
+      topic_graph:  Your Element
+      subtitle: Your Element
+      footer: Tibetan Medicine
+      id: 8
     0_survey_0:
       title: Typology Test
       short_body_0: The Tibetan Constitutional Typology Test
@@ -495,10 +561,13 @@ en:
     0_answers_0:
       1_data_content_label: Air - Lung
       1_color: 009A31
+      1_type_x: Air
       2_data_content_label: Fire - Tripa
       2_color: E8110F
-      3_data_content_label: Wather - Bagan
+      2_type_x: Fire
+      3_data_content_label: Water - Bagan
       3_color: 008CBA
+      3_type_x: Fire
     1_question:
       title: How old are you?
       name: 1
