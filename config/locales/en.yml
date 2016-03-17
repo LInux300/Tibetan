@@ -113,7 +113,11 @@ en:
       short_body: Physical and mental checks
       please_login: This is only one of many examinations, for all please login
     5_topic:
-      body: For good health is important proper nutrition.
+      p1: 'For good health is important proper nutrition. It means knowing the type of
+        diet which is best for you. Based on your examinations, metabolic profile
+        and immediate health profile you can choose healthy diet'
+      p2: 'We prepared Zoomable Nutrition according types. Please click on Zoomable
+        Nutrion, every circle shows different plunge'
       button: Nutrition
       header: Nutrition
       href: '/nutrition'
@@ -1180,3 +1184,1108 @@ en:
       2_choice_text:
       3_choice_value:
       3_choice_text:
+  nutrition:
+    name: Nutrition
+    zoom: Zoomable Nutrition
+    cyrcle: Cyrcle Nutrition
+    login: Sign In to see Your Nutrition
+    color: 'white'
+    0_children:
+      name: Air
+      color: '#009A31'
+      0_children:
+        name: Meat
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Fish
+          1_children:
+            name: Kidney
+          2_children:
+            name: Poultry
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Beef
+          1_children:
+            name: Duck
+          2_children:
+            name: Mutton
+          3_children:
+            name: Rabbit
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: Pork
+          1_children:
+            name: Goat
+      1_children:
+        name: From Animals
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Cow's cheese
+          1_children:
+            name: Eggs
+          2_children:
+            name: Old Cow's Butter
+          3_children:
+            name: Old Ghee
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Cow's milk
+          1_children:
+            name: Yogurt
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+      2_children:
+        name: Grains
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Amaranth
+          1_children:
+            name: Basmati
+          2_children:
+            name: Barley
+          3_children:
+            name: Brown Rice
+          4_children:
+            name: Cooked Oats
+          5_children:
+            name: Millet
+          6_children:
+            name: Quinoa
+          7_children:
+            name: Wheat
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Corn
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: Dry Oats
+          1_children:
+            name: Buckwheat
+          2_children:
+            name: White Rice
+          3_children:
+            name: White Bread
+      3_children:
+        name: Legumes
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Aduki
+          1_children:
+            name: Black Beans
+          2_children:
+            name: Dahl
+          3_children:
+            name: Garbanzo Beans
+          4_children:
+            name: Lima
+          5_children:
+            name: Mung
+          6_children:
+            name: Soy Beans
+          7_children:
+            name: Tempeh
+          8_children:
+            name: Tofu
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: None
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: Red Lentils
+          1_children:
+            name: Split Peas
+      4_children:
+        name: Vegetables
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Arrowroot
+          1_children:
+            name: Artichoke
+          2_children:
+            name: Brocolli
+          3_children:
+            name: Carrots
+          4_children:
+            name: Cilantro
+          5_children:
+            name: Corn
+          6_children:
+            name: Onios
+          7_children:
+            name: Peas
+          8_children:
+            name: Potatoes
+          9_children:
+            name: Red Cabbage
+          10_children:
+            name: Sea Vegetables
+          11_children:
+            name: Spinach
+          12_children:
+            name: Tomato
+          13_children:
+            name: Winter Squashes
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Lettuce
+          1_children:
+            name: Green Pepper
+          2_children:
+            name: Eggplants
+          3_children:
+            name: Mushrooms
+          4_children:
+            name: Leaf Cabbage
+          5_children:
+            name: Turnips
+          6_children:
+            name: Collard Greens
+          7_children:
+            name: Ginger
+          8_children:
+            name: Parsnips
+          9_children:
+            name: Beets
+          10_children:
+            name: Brussel Sprouts
+          11_children:
+            name: Mustard Greens
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+      5_children:
+        name: Nuts & Seeds
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Linseeds
+          1_children:
+            name: Walnuts
+          2_children:
+            name: Sesame
+          3_children:
+            name: Sun Flower
+          4_children:
+            name: Flaxseed
+          5_children:
+            name: Cashew
+          6_children:
+            name: Pumpkin
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Coconut
+          1_children:
+            name: Almond
+          2_children:
+            name: Hazelnut
+          3_children:
+            name: Chestnuts
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+      6_children:
+        name: Fruits
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Bananas
+          1_children:
+            name: Oranges
+          2_children:
+            name: Grapefruits
+          3_children:
+            name: Apples
+          4_children:
+            name: Pineapples
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Peaches
+          1_children:
+            name: Plums
+          2_children:
+            name: Grapes
+          3_children:
+            name: Strawberry
+          4_children:
+            name: Pears
+          5_children:
+            name: Blueberry
+          6_children:
+            name: Cherry
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: Cranberry
+          1_children:
+            name: Lemon
+          2_children:
+            name: Dried Fruits
+          3_children:
+            name: Watermelon
+          4_children:
+            name: Cantaloupe
+          5_children:
+            name: Apricot
+      7_children:
+        name: Oils & Salts
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Sesame Oil
+          1_children:
+            name: Peanut Oil
+          2_children:
+            name: Olive Oil
+          3_children:
+            name: Miso
+          4_children:
+            name: Tamari
+          5_children:
+            name: Salt
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Sunflower Oil
+          1_children:
+            name: Corn Oil
+          2_children:
+            name: Safflower Oil
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+      8_children:
+        name: Herbs & Spices
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Anise
+          1_children:
+            name: Asfoetida
+          2_children:
+            name: Cardamon
+          3_children:
+            name: Cinnamon
+          4_children:
+            name: Fenugreek
+          5_children:
+            name: Clove
+          6_children:
+            name: Cumin
+          7_children:
+            name: Fennel
+          8_children:
+            name: Garlic (heat)
+          9_children:
+            name: Ginger
+          10_children:
+            name: Jaggery
+          11_children:
+            name: Nutmeg
+          12_children:
+            name: Onion
+          13_children:
+            name: Sesame
+          14_children:
+            name: Solomon Seal
+          15_children:
+            name: Chebula
+          16_children:
+            name: Terminalia
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Chili
+          1_children:
+            name: Coriander
+          2_children:
+            name: Shataveri
+          3_children:
+            name: Pippali
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+
+
+    1_children:
+      name: Fire
+      0_children:
+        name: Meat
+        0_children:
+          name: Recommended
+          0_children:
+            name: Rabbit
+          1_children:
+            name: Herbivorous Animals
+        1_children:
+          name: Occasional
+          0_children:
+            name: Pork
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Beef
+          1_children:
+            name: Fish
+          2_children:
+            name: Lamb
+          3_children:
+            name: Mutton
+          4_children:
+            name: Poultry
+          5_children:
+            name: Shellfish
+      1_children:
+        name: From Animals
+        0_children:
+          name: Recommended
+          0_children:
+            name: Cow's Milk
+          1_children:
+            name: Goat's Milk
+          2_children:
+            name: Fresh Ghee
+        1_children:
+          name: Occasional
+          0_children:
+            name: Goat Butter
+          1_children:
+            name: Cow Butter
+          2_children:
+            name: New Butter
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: None
+      2_children:
+        name: Grains
+        0_children:
+          name: Recommended
+          0_children:
+            name: Corn
+          1_children:
+            name: White Basmati
+          2_children:
+            name: Noodles
+          3_children:
+            name: Millet
+          4_children:
+            name: Wheat
+          5_children:
+            name: White Rice
+          6_children:
+            name: Buckwheat
+          7_children:
+            name: Guinoa
+        1_children:
+          name: Occasional
+          0_children:
+            name: Toasted Barley
+          1_children:
+            name: Oats
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Rye
+          1_children:
+            name: Amaranth
+          2_children:
+            name: Brown Rice
+      3_children:
+        name: Legumes
+        0_children:
+          name: Recommended
+          0_children:
+            name: Adzukis Beans
+          1_children:
+            name: Black Beans
+          2_children:
+            name: Brown Lentils
+          3_children:
+            name: Dahl
+          4_children:
+            name: Mung
+          5_children:
+            name: Garbanzos
+          6_children:
+            name: Anasazi Beans
+        1_children:
+          name: Occasional
+          0_children:
+            name: Tofu
+          1_children:
+            name: Chickpea - chana
+          2_children:
+            name: Lima Bean - Butter Bean
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Chinese Red Beans
+          1_children:
+            name: Red Lentils
+          2_children:
+            name: Soy Beans
+          3_children:
+            name: Tempeh
+      4_children:
+        name: Vegetables
+        0_children:
+          name: Recommended
+          0_children:
+            name: Zucchini
+          1_children:
+            name: Yam Potatoe
+          2_children:
+            name: Cucumber
+          3_children:
+            name: Brocolli
+          4_children:
+            name: Cabbage
+          5_children:
+            name: Cauliflower
+          6_children:
+            name: Lettuce
+          7_children:
+            name: Celery
+          8_children:
+            name: Burdock
+          9_children:
+            name: Peas
+          10_children:
+            name: Green Beans
+          11_children:
+            name: Asparagus
+          12_children:
+            name: Carrot
+          13_children:
+            name: Potatoes
+          14_children:
+            name: Spinach
+          15_children:
+            name: Red Cabbage
+          16_children:
+            name: Parsley
+          17_children:
+            name: Winter Squashes
+          18_children:
+            name: Brussel Sprouts
+        1_children:
+          name: Occasional
+          0_children:
+            name: Raw Spinach
+          1_children:
+            name: Sea Vegetables
+          2_children:
+            name: Chard
+          3_children:
+            name: Bell Pepper
+          4_children:
+            name: Potatoes
+          5_children:
+            name: Sweet Corn
+          6_children:
+            name: Cilantro
+          7_children:
+            name: Beets
+          8_children:
+            name: Artichokes
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Ginger
+          1_children:
+            name: Radish
+          2_children:
+            name: Avocado
+          3_children:
+            name: Garlic
+          4_children:
+            name: Tomato
+          5_children:
+            name: Eggplant
+          6_children:
+            name: Chilis
+          7_children:
+            name: Hot Peppers
+          8_children:
+            name: Onions
+          9_children:
+            name: Mustard greens
+          10_children:
+            name: Sauerkraut
+          11_children:
+            name: Bamboo Shoots
+          12_children:
+            name: Mushrooms
+          13_children:
+            name: Turnip
+      5_children:
+        name: Nuts & Seeds
+        0_children:
+          name: Recommended
+          0_children:
+            name: None
+        1_children:
+          name: Occasional
+          0_children:
+            name: Pumpkin Seeds
+          1_children:
+            name: Sunflower Seeds
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Hazelnut
+          1_children:
+            name: Walnut
+          2_children:
+            name: Chestnut
+          3_children:
+            name: Flax Seed
+          4_children:
+            name: Sesame Seed
+          5_children:
+            name: Peanuts
+          6_children:
+            name: Almonds
+          7_children:
+            name: Coconut
+      6_children:
+        name: Fruits
+        0_children:
+          name: Recommended
+          0_children:
+            name: Melons
+          1_children:
+            name: Cantaloupe - Muskmelon
+          2_children:
+            name: Berberries
+          3_children:
+            name: Pears
+          4_children:
+            name: Peaches
+        1_children:
+          name: Occasional
+          0_children:
+            name: Grapefruits
+          1_children:
+            name: Grapes
+          2_children:
+            name: Apples
+          3_children:
+            name: Pineapple
+          4_children:
+            name: Strawberry
+          5_children:
+            name: Plums
+          6_children:
+            name: Raisins
+          7_children:
+            name: Blueberry
+          8_children:
+            name: Cherry
+          9_children:
+            name: Banana
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Lemon
+          1_children:
+            name: Lime
+          2_children:
+            name: Apricot
+          3_children:
+            name: Cranberry
+      7_children:
+        name: Oils & Condiments
+        0_children:
+          name: Recommended
+          0_children:
+            name: Fresh Butter
+          1_children:
+            name: Ghee
+        1_children:
+          name: Occasional
+          0_children:
+            name: Sunflower Oil
+          1_children:
+            name: Corn Oil
+          2_children:
+            name: Safflower Oil
+          3_children:
+            name: Sea Salt
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Miso
+          1_children:
+            name: Temari
+          2_children:
+            name: Black Salt
+          3_children:
+            name: Olive Oil
+          4_children:
+            name: Peanut Oil
+          5_children:
+            name: Sesame Oil
+          6_children:
+            name: Mustard Oil
+          7_children:
+            name: Butter
+      8_children:
+        name: Herbs & Spices
+        0_children:
+          name: Recommended
+          0_children:
+            name: Cucumber Seeds
+          1_children:
+            name: Dandelion
+          2_children:
+            name: Gentian
+          3_children:
+            name: Gotu Kola
+          4_children:
+            name: Guggul
+          5_children:
+            name: Licorice
+          6_children:
+            name: Hibiscus
+          7_children:
+            name: Sandalwood
+          8_children:
+            name: Safflower
+          9_children:
+            name: Raisings
+          10_children:
+            name: Rhododendron
+          11_children:
+            name: Terminalia Belerica
+          12_children:
+            name: Terminalia Chebula
+          13_children:
+            name: Curcuma
+          14_children:
+            name: Saffron
+        1_children:
+          name: Occasional
+          0_children:
+            name: Coriander
+          1_children:
+            name: Cinnamon
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: None
+
+
+
+
+
+
+    2_children:
+      name: Water
+      0_children:
+        name: Meat
+        0_children:
+          name: Recommended
+          0_children:
+            name: Rabbit
+          1_children:
+            name: Fish
+          2_children:
+            name: Poultry
+          3_children:
+            name: Sheep
+          4_children:
+            name: Herbivorous Animals
+        1_children:
+          name: Occasional
+          0_children:
+            name: Mutton
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Beef
+          1_children:
+            name: Goat
+          2_children:
+            name: Frozen, uncooked Meat
+          3_children:
+            name: Pork
+      1_children:
+        name: From Animals
+        0_children:
+          name: Recommended
+          0_children:
+            name: Cow's Cheese
+          1_children:
+            name: Cow's Butter
+          2_children:
+            name: Goat's Butter
+          3_children:
+            name: Sheep's Butter
+        1_children:
+          name: Occasional
+          0_children:
+            name: Yogurt
+          1_children:
+            name: Fresh Cheese
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: None
+      2_children:
+        name: Grains
+        0_children:
+          name: Recommended
+          0_children:
+            name: White Basmati
+          1_children:
+            name: Cooked Oats
+          2_children:
+            name: Dry Oats
+          3_children:
+            name: Toasted Barley
+          4_children:
+            name: Cooked Barley
+        1_children:
+          name: Occasional
+          0_children:
+            name: Wheat
+          1_children:
+            name: Brown Rice with ginger
+          2_children:
+            name: White Rice
+          3_children:
+            name: Toasted Millet
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Buckwheat
+          1_children:
+            name: Corn
+      3_children:
+        name: Legumes
+        0_children:
+          name: Recommended
+          0_children:
+            name: Peas
+          1_children:
+            name: Dahl
+        1_children:
+          name: Occasional
+          0_children:
+            name: Mung
+          1_children:
+            name: Brown Lentils
+          2_children:
+            name: Chana
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Tofu
+          1_children:
+            name: Kidney Bean
+          2_children:
+            name: Soy Bean
+          3_children:
+            name: Aduki
+          4_children:
+            name: Anasazi
+          5_children:
+            name: Lima
+          6_children:
+            name: Red Lentils
+      4_children:
+        name: Vegetables
+        0_children:
+          name: Recommended (cooked)
+          0_children:
+            name: Onion
+          1_children:
+            name: Garlic
+          2_children:
+            name: Radish
+          3_children:
+            name: Daikon
+          4_children:
+            name: Mushrooms
+          5_children:
+            name: Tomato
+          6_children:
+            name: Green Pepper
+          7_children:
+            name: Chili's
+          8_children:
+            name: Turnips
+          9_children:
+            name: Rutabaga
+          10_children:
+            name: Sorrel Leaves
+          11_children:
+            name: Rhubard
+          12_children:
+            name: Bamboo Shoots
+          13_children:
+            name: Celery
+        1_children:
+          name: Occasional (cooked)
+          0_children:
+            name: Eggplant
+          1_children:
+            name: Sauerkraut
+          2_children:
+            name: Water Chestnut
+          3_children:
+            name: Lettuce
+          4_children:
+            name: Spinach
+          5_children:
+            name: Artichoke
+          6_children:
+            name: Cilantro
+          7_children:
+            name: Burdock
+          8_children:
+            name: Dandelion
+          9_children:
+            name: Parsnips
+          10_children:
+            name: Bok Choy
+          11_children:
+            name: Cabbage
+          12_children:
+            name: Cauliflower
+          13_children:
+            name: Mustard Greens
+          14_children:
+            name: Arrowroot
+        2_children:
+          name: Not-Recommended (raw)
+          0_children:
+            name: Potato
+          1_children:
+            name: Cucumber
+          2_children:
+            name: Squashes
+          3_children:
+            name: Peas
+          4_children:
+            name: Green Beans
+          5_children:
+            name: Kale
+          6_children:
+            name: Collard
+          7_children:
+            name: Beets
+          8_children:
+            name: Brocolli
+          9_children:
+            name: Brussel Sprouts
+      5_children:
+        name: Nuts & Seeds
+        0_children:
+          name: Recommended
+          0_children:
+            name: None
+        1_children:
+          name: Occasional
+          0_children:
+            name: Sunflower Seed
+          1_children:
+            name: Pumpkin Seed
+          2_children:
+            name: Sesame Seed
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Walnut
+          1_children:
+            name: Cashew
+          2_children:
+            name: Chestnut
+          3_children:
+            name: Flaxseed
+          4_children:
+            name: Linseed
+          5_children:
+            name: Hazelnut
+          6_children:
+            name: Almonds
+          7_children:
+            name: Peanuts
+          8_children:
+            name: Coconut
+      6_children:
+        name: Fruits
+        0_children:
+          name: Recommended
+          0_children:
+            name: Raisins
+          1_children:
+            name: Tamarind
+          2_children:
+            name: Pomegranate
+        1_children:
+          name: Occasional
+          0_children:
+            name: Grapes
+          1_children:
+            name: Orange
+          2_children:
+            name: Lemon
+          3_children:
+            name: Lime
+          4_children:
+            name: Strawberry
+          5_children:
+            name: Pears
+          6_children:
+            name: Peaches
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Plums
+          1_children:
+            name: Apricots
+          2_children:
+            name: Blueberry
+          3_children:
+            name: Cherry
+          4_children:
+            name: Pineapple
+          5_children:
+            name: Melons
+          6_children:
+            name: Cantaloupe
+          7_children:
+            name: Banana
+      7_children:
+        name: Oils & Salt
+        0_children:
+          name: Recommended
+          0_children:
+            name: Safflower Oil
+          1_children:
+            name: Black Salt
+        1_children:
+          name: Occasional
+          0_children:
+            name: Peanut Oil
+          1_children:
+            name: Sesame Oil
+          2_children:
+            name: Sunflower Oil
+          3_children:
+            name: Tamari
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Corn Oil
+          1_children:
+            name: Olive Oil
+          2_children:
+            name: Mustard Oil
+          3_children:
+            name: Sea Salt
+          4_children:
+            name: Miso
+      8_children:
+        name: Herbs & Spices
+        0_children:
+          name: Recommended
+          0_children:
+            name: Asfoetida
+          1_children:
+            name: Ashwaganda
+          2_children:
+            name: Black Pepper
+          3_children:
+            name: Chili
+          4_children:
+            name: Cardamon
+          5_children:
+            name: Cinnamon
+          6_children:
+            name: Clove
+          7_children:
+            name: Cumin
+          8_children:
+            name: Fennel
+          9_children:
+            name: Fenugreek
+          10_children:
+            name: Garlic
+          11_children:
+            name: Ginger
+          12_children:
+            name: Licorice
+          13_children:
+            name: Sesame
+          14_children:
+            name: Raisins
+          15_children:
+            name: Pippali
+        1_children:
+          name: Occasional
+          0_children:
+            name: Tumeric
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: None
