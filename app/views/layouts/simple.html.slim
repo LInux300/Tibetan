@@ -1,16 +1,17 @@
 html.no-js lang="en"
   = render "/refinery/html_tag"
-  - site_bar = render('/refinery/site_bar', :head => true)
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title == content_for?(:title) ? yield(:title) : "Tibetan"
+    title == content_for?(:title) ? yield(:title) : t('title')
     = stylesheet_link_tag "application"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tag
     = render "/refinery/head"
     
   body id="<%= canonical_id @page %>"
+    br
+    br
     .row
       .medium-6.medium-centered.large-4.large-centered.columns
         h1 = t('title')
@@ -29,7 +30,6 @@ html.no-js lang="en"
       .medium-6.medium-centered.large-4.large-centered.columns
         == yield
 
-    .row
-      p
-    footer.footer
-      = render "/welcome/footer"
+    br
+    = render "/welcome/footer"
+    = javascript_include_tag '/assets/custom'

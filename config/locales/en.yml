@@ -24,7 +24,7 @@ en:
       message: Message
       send: Send
     index:
-      1_p: We are happy to see you here. We present the way how you can help yourself or your family, friends and others people.
+      1_p: 'We are happy to see you here. We present the way how you can help yourself or your family, friends and others people. The best six doctors: Sunshine, Water, Rest, Air, Exercise & Diet. Tibetan Medicine can help you with it too. TM, called "Sowa Rigpa" in Tibetan, means the science and knowledge of healing.'
       2_p: Main topics are
       1_row:
         title: TIBETAN MEDICINE
@@ -60,7 +60,7 @@ en:
             <li>Sharp: localized pain</li>
           </ul>"
       5_row:
-        3_title: Wather characteristics
+        3_title: Water characteristics
         3_body: "<strong>Blunt, Cold, Heavy, Stable, Smooth, Sticky</strong>.
           <br>
           <ul style='color:blue'>
@@ -81,13 +81,14 @@ en:
       8_row:
         1_body: "<strong>TB is base on the Five Elements, the Three Nepas, the Twenty Attributes and the Seven Tissues.</strong>"
         2_body: "The body is complex composition of what the Eastern Medical Systems call \
-        <strong>The Five Elements</strong>. Each element have a distinct function in the body. \
+        <strong title='Space, Air, Fire, Earth, Water'>The Five Elements</strong>. Each element have a distinct function in the body. \
         The Earth element provides stability and structure. Water provides smoothness and moisture. \
         Fire element is connected with growth, development and the assimilation adn absorption of food. \
         Because of the Air Element we are able to move our joints and muscles and to circulate blood and fluids. \
         The Space element allows the other elements exist."
     first_topic:
       body: Tibetan medicine is primarily a form of Ayurveda, which was not only the traditional natural healing system of India but through history influenced surrounding cultures from Greece to China.
+      p2: Tibetan Site is a place where people can come together to protect our health for generations to come.
       button: The TM
       header: The Tibetan Medicine
       href: '/medicine/tibetan-medicine'
@@ -128,18 +129,19 @@ en:
       header: Dashboard
       short_body: Overview over your examinations, Nutrition, Diet
       href: '/dashboard'
+      no_records: There are no records, please do examinations first.
       1_subtopic:
         title: Last Result
         info: Your last Examination check
       2_subtopic:
-        title: Top 20
-        info: Twenty Latest Results
+        title: All Results
+        info: All Your Results
       3_subtopic:
         title: To Small
-        info: This Element needs to be Expanded
+        info: This Element needs to be Expanded (counts from all results)
       4_subtopic:
         title: To Big
-        info: This Element needs to be Compressed
+        info: This Element needs to be Compressed (counts from all results)
       5_subtopic:
         title: TimeLine
         info: Results over period of time
@@ -149,6 +151,16 @@ en:
       7_subtopic:
         title: Nutrition
         info: What kind of <strong>Food, Herbs, Exercises</strong> is good for You
+        accordion:
+          1_section:
+            name: Meat
+            p:
+          2_section:
+            name: Products from Animals
+            p:
+          3_section:
+            name: Vegetables, Fruits, Nuts, Oils ...
+            p:
       8_subtopic:
         title: Your Attribute
         info: Preferred attributes for You
@@ -399,21 +411,21 @@ en:
         title: External Links
         1_h:
           title: External Links
-          1_p: '<a href="https://en.wikipedia.org/wiki/Bon">Bon</a>'
-          2_p: '<a href="https://en.wikipedia.org/wiki/Bon">Bon</a>'
-          3_p: '<a href="https://en.wikipedia.org/wiki/Bon">Bon</a>'
+          1_p: '<a href="https://en.wikipedia.org/wiki/Bon" title="is a Tibetan religious tradition or sect, being distinct from Buddhist ones in its particular myths, although many of its teachings, terminology and rituals resemble Tibetan Buddhism">Bon</a>'
+          2_p: '<a href="http://www.ligmincha.org/index.php/en/" title="Preserving Bön Buddhist Wisdom in the World">Ligmincha International</a>'
+          3_p: '<a href="https://en.wikipedia.org/wiki/Traditional_Tibetan_medicine" title="Traditional Tibetan medicine (Tibetan: བོད་ཀྱི་གསོ་བ་རིག་པ་, Wylie: Ggso ba rig pa), also known as Sowa-Rigpa medicine, is a centuries-old traditional medical system that employs a complex approach to diagnosis, incorporating techniques such as pulse analysis and urinalysis, and utilizes behavior and dietary modification, medicines composed of natural materials (e.g., herbs and minerals) and physical therapies (e.g. Tibetan acupuncture, moxabustion, etc.) to treat illness.">Traditional Tibetan medicine</a>'
         2_h:
           title: Events
-          1_p: Make it simpler, but not simple
-          2_p: Openness and Responsiveness
-          3_p: Connections
+          1_p: '<a href="http://www.ligmincha.org/index.php/en/programs/teachings-schedule-by-date.html" title="Teaching schedule by date">Ligmincha International Teachings</a>'
+          2_p: '<a href="http://www.bonfoundation.org/menrinews.html" title="News From The Yungdrung Bon Monastic Center">News from Menri Monastery</a>'
+          3_p: '<a href="http://www.dalailama.com/teachings/schedule" title="Schedule | The Office of His Holiness The Dalai Lama">Schedule of His Holiness The Dalai Lama</a>'
       faq:
         title: FAQ
         1_h:
           title: FAQ
           1_p: '<strong>Why are there the Examinations?</strong> Only for diagnostic of your Typology.'
-          2_p: '<strong>Why are there the Examinations?</strong> Only for diagnostic of your Typology.'
-          3_p: '<strong>Why are there the Examinations?</strong> Only for diagnostic of your Typology.'
+          2_p: '<strong>What is Nutritions?</strong> Food divided into three groups, zoomable'
+          3_p: '<strong>What is Dashboard?</strong> Application to "Be FIT"'
         2_h:
           title: Help
           1_p: We give donations to Tibetan People
@@ -423,14 +435,14 @@ en:
         title: Info
         1_h:
           title: Info
-          1_p: Examinations
-          2_p: Nutritions & Attributes
-          3_p: Be Fit
+          1_p: In the future we add more functionality
+          2_p: Get info how to work with us
+          3_p: Please write us for additional info
         2_h:
           title: Tools
           1_p: '<a href="/examination">Examinations</a>.'
-          2_p: '<a href="/nutrition">Nutritions, Attributes/<a>'
-          3_p: '<a href="/dashboard">Be Fit</a>'
+          2_p: '<a href="/nutrition">Nutritions/a>'
+          3_p: '<a href="/dashboard">Dashboard & Be Fit</a>'
       how_we_work:
         title: How We Work
         1_h:
@@ -571,7 +583,7 @@ en:
       2_type_x: Fire
       3_data_content_label: Water - Bagan
       3_color: 008CBA
-      3_type_x: Fire
+      3_type_x: Water
     1_question:
       title: How old are you?
       name: 1
@@ -582,18 +594,18 @@ en:
       2_choice_text: 25-60
       3_choice_value: 3
       3_choice_text: 60+
-      4_choice_value: N
+      4_choice_value: 100
       4_choice_text: 0-5
     2_question:
       title: Which body type fits you most closely?
       name: 2
       otherText: 1
       1_choice_value: 1
-      1_choice_text: Ectomorph
+      1_choice_text: Narrow hips and clavicles, Thin build, Long limbs, Stringy muscle bellies
       2_choice_value: 2
-      2_choice_text: Mesomorph
+      2_choice_text: Wide clavicles, Thinner joints, Round and long muscle bellies
       3_choice_value: 3
-      3_choice_text: Endomorph
+      3_choice_text: Blocky, Wide/thicker joints. Shorter limbs
     3_question:
       title: Which of the following climates generally does not agree with your health?
       name: 3
@@ -1608,7 +1620,7 @@ en:
           1_children:
             name: Cow Butter
           2_children:
-            name: New Butter
+            name: Fresh Butter
         2_children:
           name: Not-Recommended
           0_children:
@@ -1856,7 +1868,7 @@ en:
         0_children:
           name: Recommended
           0_children:
-            name: Fresh Butter
+            name: Salt
           1_children:
             name: Ghee
         1_children:

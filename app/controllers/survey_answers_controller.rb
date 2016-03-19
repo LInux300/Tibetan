@@ -1,4 +1,5 @@
 class SurveyAnswersController < ApplicationController
+  before_filter :authenticate_admin!
   before_action :set_survey_answer, only: [:show, :edit, :update, :destroy]
 
   # GET /survey_answers
@@ -38,8 +39,9 @@ class SurveyAnswersController < ApplicationController
       last = JSON.parse(last_answer.counter_all.to_s)
       current = JSON.parse(params['counter'])
 
+      Rails.logger.debug(current)
       (current).each do |key, value|
-        last[key] = value + last[key]
+        last[key]? last[key] = value + last[key] : last[key] = value
       end
 
       db_string = "{\"1\":#{last["1"]},\"2\":#{last["2"]},\"3\":#{last["3"]}}"

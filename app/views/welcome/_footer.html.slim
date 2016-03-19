@@ -10,9 +10,9 @@
     h2
       i.fi-address-book
       = t('view.footer.external_links.2_h.title')
-    p = t('view.footer.external_links.2_h.1_p')
-    p = t('view.footer.external_links.2_h.2_p')
-    p = t('view.footer.external_links.2_h.3_p')
+    p = t('view.footer.external_links.2_h.1_p').html_safe
+    p = t('view.footer.external_links.2_h.2_p').html_safe
+    p = t('view.footer.external_links.2_h.3_p').html_safe
   hr
 
 #faq.row style="display: none;"
@@ -86,7 +86,7 @@ footer.footer2
       p
         i = t('title')
       p.footer2-links
-        a href="#" = t('view.home')
+        a href="/" = t('view.home')
         a href="#external_links" id="f_external_links" = t('view.footer.external_links.title')
         a href="#faq" id="f_faq" = t('view.footer.faq.title')
         a href="#info" id="f_info" = t('view.footer.info.title')

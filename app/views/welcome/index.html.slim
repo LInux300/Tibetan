@@ -1,12 +1,13 @@
-hr/
+hr
 
 #1_row.row
   .medium-4.columns
     img alt=t('title')  src="http://placehold.it/450x183&text=LOGO" /
   .medium-8.columns
-    img alt=t('title') src=("http://placehold.it/900x175&text=Hello, Our Examination and Nutrition/333") /
+    / img alt=t('title') src=("http://placehold.it/900x175&text=Hello, Our Examination and Nutrition/333") /
+    img alt=t('title') src=("/assets/index_900x175.jpg") /
 
-hr/
+hr
 
 #3_row.row.column
   h4.text-center style=("margin: 0;") = t('view.index.1_row.title')
@@ -16,41 +17,28 @@ hr
   .medium-12.columns
     h4 = t('view.index.8_row.1_body').html_safe
     br
-    h4 = t('view.index.8_row.2_body').html_safe
+    p = t('view.index.8_row.2_body').html_safe
 
-  #23_row.row
-    .medium-12.columns
-      ul.steps.expanded.even-4
-        li
-          a href=t('view.fourth_topic.href') = t('view.fourth_topic.button')
-        li.active
-          a href=t('view.5_topic.href') = t('view.5_topic.button')
-        li
-          a href=t('view.7_topic.href') = t('view.7_topic.button')
-        li.active
-          a href=t('view.6_topic.href') = t('view.6_topic.button')
+  / #23_row.row
+  /   .medium-12.columns
+  /     ul.steps.expanded.even-4
+  /       li
+  /         a href=t('view.fourth_topic.href') = t('view.fourth_topic.button')
+  /       li.active
+  /         a href=t('view.5_topic.href') = t('view.5_topic.button')
+  /       li
+  /         a href=t('view.7_topic.href') = t('view.7_topic.button')
+  /       li.active
+  /         a href=t('view.6_topic.href') = t('view.6_topic.button')
 
-#24_row.row.column
-  hr/
+/ #24_row.row.column
+/   hr/
+br
 
 #5_row.row.column
   .callout.primary
     h3 = t('view.index.7_row.title')
 
-hr
-
-#20_row.row
-  .large-12.columns
-    .expanded.button-group
-      a.button.first_color href="#8_row" = t('attributes.1_header')
-      a.button.second_color href="#9_row" = t('attributes.2_header')
-      a.button.third_color href="#10_row" = t('attributes.3_header')
-    / .sections
-    /   section#first data-magellan-target="first"  First Section
-    /   section#second data-magellan-target="second"  Second Section
-    /   section#third data-magellan-target="third"  Third Section
-
-hr
 
 #2_row.row.small-up-1.medium-up-2.large-up-3
   .column
@@ -62,42 +50,54 @@ hr
   .column
     .callout
       p
-        img.thumbnail alt=t('view.index.2_row.2_lead') src=("/assets/element-fire-ram.jpg") width="100%"
+        img.thumbnail alt=t('view.index.2_row.2_lead') src=("/assets/element-fire-ram-4.jpg") width="100%"
       p.lead = t('view.index.2_row.2_lead')
       p.subheader = t('view.index.2_row.2_subheader')
   .column
     .callout
       p
-        img.thumbnail alt=t('view.index.2_row.3_lead') src=("/assets/element-earth-kham.jpg") width="100%"
+        img.thumbnail alt=t('view.index.2_row.3_lead') src=("/assets/element-water.jpg") width="100%"
       p.lead = t('view.index.2_row.3_lead')
       p.subheader = t('view.index.2_row.3_subheader')
 
-#7_row.row.column
-  hr/
+/ #7_row.row.column
+/   hr
+br
 
-  #8_row.row
-    .medium-6.columns.medium-push-6
-      / img.thumbnail src="http://placehold.it/750x350" /
-      img.thumbnail alt=t('view.index.3_row.1_lead') src=("/assets/element-air-yang.jpg")  width="100%"
-    .medium-6.columns.medium-pull-6
-      h2 = t('view.index.3_row.1_title')
-      p = t('view.index.3_row.1_body').html_safe
+#20_row.row
+  .large-12.columns
+    .expanded.button-group
+      a.button.first_color href="#8_row" = t('view.attributes.1_header')
+      a.button.second_color href="#9_row" = t('view.attributes.2_header')
+      a.button.third_color href="#10_row" = t('view.attributes.3_header')
+    / .sections
+    /   section#first data-magellan-target="first"  First Section
+    /   section#second data-magellan-target="second"  Second Section
+    /   section#third data-magellan-target="third"  Third Section
 
-  #9_row.row
-    .medium-6.columns.medium-push-6
-      h2 = t('view.index.4_row.2_title')
-      p = t('view.index.4_row.2_body').html_safe
-    .medium-6.columns.medium-pull-6
-      / img alt=t('view.index.4_row.2_lead') src=("/assets/element-fire-ram.jpg") width="100%"
-      img.thumbnail src="http://placehold.it/750x350" /
+  / hr 
+br
 
-  #10_row.row
-    .medium-6.columns.medium-push-6
-      / img alt=t('view.index.5_row.3_lead') src=("/assets/element-earth-kham.jpg") width="100%"
-      img.thumbnail src="http://placehold.it/750x350" /
-    .medium-6.columns.medium-pull-6
-      h2 = t('view.index.5_row.3_title')
-      p = t('view.index.5_row.3_body').html_safe
+#8_row.row
+  .medium-6.columns.medium-push-6
+    img.thumbnail alt=t('view.index.3_row.1_lead') src=("/assets/element-air-yang.jpg")  width="100%"
+  .medium-6.columns.medium-pull-6
+    h2 = t('view.index.3_row.1_title')
+    p = t('view.index.3_row.1_body').html_safe
+
+#9_row.row
+  .medium-6.columns.medium-push-6
+    h2 = t('view.index.4_row.2_title')
+    p = t('view.index.4_row.2_body').html_safe
+  .medium-6.columns.medium-pull-6
+    img.thumbnail alt=t('view.index.4_row.2_lead') src=("/assets/element-fire-ram-4.jpg") width="100%"
+
+#10_row.row
+  .medium-6.columns.medium-push-6
+    img.thumbnail alt=t('view.index.5_row.3_lead') src=("/assets/element-water.jpg") width="100%"
+  .medium-6.columns.medium-pull-6
+    h2 = t('view.index.5_row.3_title')
+    p = t('view.index.5_row.3_body').html_safe
 
 
 .callout.large
@@ -107,45 +107,46 @@ hr
     a.button.large href=t('view.fourth_topic.href') = t('view.index.6_row.1_button')
     a.button.large.hollow href=t('view.5_topic.href') = t('view.index.6_row.2_button')
 
-hr
+.row.column
+  p = t('view.index.1_p')
 
-  #twenty_attributes.row.column
-    .callout.primary
-      h3 = t('view.attributes.title')
-    h3 = t('view.attributes.subtitle')
+#twenty_attributes.row.column
+  .callout.primary
+    h3 = t('view.attributes.title')
+  h3 = t('view.attributes.subtitle')
 
-    - if user_signed_in?
-      - n = 19
-    - else
-      - n = 5
-      p =t('view.attributes.log_in_msg').html_safe
-    
-    .expanded.button-group
-      a.button.button_group_0.hollow style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.0_header')
-      a.button.button_group_0.first_color style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.1_header')
-      a.button.button_group_0.second_color style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.2_header')
-      a.button.button_group_0.third_color style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.3_header')
-    - for i in 0..n
-      .expanded.button-group.button-row-body style='font-size: 16px'
-        a.button.hollow = t("view.attributes.#{i}_atr.name")
-        a.button.first_color href="#8_row"
-          - if t("view.attributes.#{i}_atr.1_movement") == 'Increasing'
-            i.fi-arrow-up
-          - else
-            i.fi-arrow-down
-          = ' ' + t("view.attributes.#{i}_atr.1_effect")
-        a.button.second_color href="#9_row"
-          - if t("view.attributes.#{i}_atr.2_movement") == 'Increasing'
-            i.fi-arrow-up
-          - else
-            i.fi-arrow-down
-          = ' ' + t("view.attributes.#{i}_atr.2_effect")
-        a.button.third_color href="#10_row"
-          - if t("view.attributes.#{i}_atr.3_movement") == 'Increasing'
-            i.fi-arrow-up
-          - else
-            i.fi-arrow-down
-          = ' ' + t("view.attributes.#{i}_atr.3_effect")
+  - if user_signed_in?
+    - n = 19
+  - else
+    - n = 5
+    p =t('view.attributes.log_in_msg').html_safe
+
+  .expanded.button-group
+    a.button.button_group_0.hollow style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.0_header')
+    a.button.button_group_0.first_color style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.1_header')
+    a.button.button_group_0.second_color style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.2_header')
+    a.button.button_group_0.third_color style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.3_header')
+  - for i in 0..n
+    .expanded.button-group.button-row-body style='font-size: 16px'
+      a.button.hollow = t("view.attributes.#{i}_atr.name")
+      a.button.first_color href="#8_row"
+        - if t("view.attributes.#{i}_atr.1_movement") == 'Increasing'
+          i.fi-arrow-up
+        - else
+          i.fi-arrow-down
+        = ' ' + t("view.attributes.#{i}_atr.1_effect")
+      a.button.second_color href="#9_row"
+        - if t("view.attributes.#{i}_atr.2_movement") == 'Increasing'
+          i.fi-arrow-up
+        - else
+          i.fi-arrow-down
+        = ' ' + t("view.attributes.#{i}_atr.2_effect")
+      a.button.third_color href="#10_row"
+        - if t("view.attributes.#{i}_atr.3_movement") == 'Increasing'
+          i.fi-arrow-up
+        - else
+          i.fi-arrow-down
+        = ' ' + t("view.attributes.#{i}_atr.3_effect")
 
     /
     / .sections

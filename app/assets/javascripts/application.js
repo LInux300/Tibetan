@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require i18n/translations
 //= require foundation/js/foundation.min
@@ -23,6 +24,7 @@
 //= require_tree .
 
 $(document).ready(function() {
+  // $(document).tooltip();
 
   // $("#contact_us_submit").click(function(){
   //     console.log('fsdfs');
@@ -61,5 +63,4 @@ $(document).ready(function() {
 });
 
 // $(document).foundation();
-// $(document).foundation()
 // $(function(){ $(document).foundation(); });

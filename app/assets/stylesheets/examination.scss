@@ -1,7 +1,3 @@
-// Place all the styles related to the examination controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 $blue: #008CBA;
 $grey: #f7f7f7;
 $green: #009A31;
@@ -9,7 +5,6 @@ $green: #009A31;
 // ----------------------------------------------------------------------------
 //  questions
 // ----------------------------------------------------------------------------
-
 .sv_qcbc {
 }
 
@@ -19,7 +14,6 @@ $green: #009A31;
   border: none;
   border-left: 6px solid $blue;
   padding-left: 10px;
-  // box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
   -webkit-box-shadow: 10px 10px 14px -8px rgba(0,0,0,0.43);
   -moz-box-shadow: 10px 10px 14px -8px rgba(0,0,0,0.43);
   box-shadow: 10px 10px 14px -8px rgba(0,0,0,0.43);
@@ -38,7 +32,7 @@ $green: #009A31;
   padding-top: 10px;
 }
 
-.tab-content input[type=checkbox], .tab-content input[type=radio] {
+.tab-content input[type=checkbox], .tab-content input[type=radio], input[type=checkbox], input[type=radio] {
   -ms-transform: scale(2); /* IE */
   -moz-transform: scale(2); /* FF */
   -webkit-transform: scale(2); /* Safari and Chrome */
@@ -86,26 +80,12 @@ $green: #009A31;
 // ----------------------------------------------------------------------------
 //  type divs
 // ----------------------------------------------------------------------------
-
 .type_divs {
   margin: 10px;
 }
 // ----------------------------------------------------------------------------
-// General Main
-// ----------------------------------------------------------------------------
-// * {
-//   padding: 5;
-//   margin: 0;
-//   list-style: none;
-//   box-sizing: border-box;
-//   outline: none;
-//   font-weight: normal;
-// }
-
-// ----------------------------------------------------------------------------
 // Tabs
 // ----------------------------------------------------------------------------
-
 .tabs {
   border: none !important;
   background: #fff;

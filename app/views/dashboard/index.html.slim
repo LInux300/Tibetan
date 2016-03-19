@@ -13,7 +13,8 @@
         = t('view.6_topic.1_subtopic.title').html_safe
       p = t('view.6_topic.1_subtopic.info').html_safe
       / p = @last_answer.answer
-      #1_be_fit data-counter_last="#{}"
+      #1_be_fit
+
   .small-12.medium-6.medium-pull-6.columns
     h3
       i.fi-graph-trend
@@ -77,13 +78,55 @@
       i.fi-trees
       = t('view.6_topic.7_subtopic.title').html_safe
     p = t('view.6_topic.7_subtopic.info').html_safe
-    #7_be_fit data-counter_last="#{}"
+    #7_be_fit
+
+    p
+      #accordion
+        h3 = t('view.6_topic.7_subtopic.accordion.1_section.name')
+        #accordion-1
+        h3 = t('view.6_topic.7_subtopic.accordion.2_section.name')
+        #accordion-2
+        h3 = t('view.6_topic.7_subtopic.accordion.3_section.name')
+        #accordion-3
+
   .small-12.medium-6.medium-pull-6.columns
     h3
       i.fi-results
       = t('view.6_topic.8_subtopic.title').html_safe
     p = t('view.6_topic.8_subtopic.info').html_safe
-    #8_be_fit data-counter_last="#{}"
+    #8_be_fit
+    
+    p
+      #tabs-1
+        ul
+          li
+            a href="#tabs-2"  Tab 1
+          li
+            a href="#tabs-3"  Tab 2
+          li
+            a href="#tabs-4"  Tab 3
+        #tabs-2
+          p
+            | Food good for you:
+
+        #tabs-3
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            | nisi ut aliquip ex ea commodo consequat.
+        #tabs-4
+          p
+            | ed ut perspiciatis unde omnis iste natus error sit
+            | voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            | eaque ipsa quae ab illo inventore veritatis et quasi architecto
+            | beatae vitae dicta sunt explicabo.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            | nisi ut aliquip ex ea commodo consequat.
+
 .row
   .small-12.medium-6.medium-push-6.columns
     hr

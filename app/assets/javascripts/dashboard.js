@@ -1,12 +1,73 @@
 $(window).ready(function() {
-    // donutChart('1_be_fit', JSON.parse(gon.last_answer_counter), 250, 400);
 });
 
+var green = '#009A31',
+    red = '#E8110F',
+    blue = '#008CBA';
+    green_dark = '#0A803B';
+    green_light = '#8CC63F';
+    red_dark = '#BF1E2D';
+    red_light = '#FF3333';
+    blue_dark = '#1EA8CF';
+    blue_light = '#227FB0';
+
+// -----------------------------------------------------------------------------
+//  Iterate over json data
+// -----------------------------------------------------------------------------
+
+function recommended(child_2, type_of_food) {
+  type_of_food += '<ul> <strong>' + child_2.name + '</strong><li>'
+  $.each(child_2.children, function(i_3, child_3) {
+    if (child_3.name == 'Recommended') {
+      // console.log(child_3.name); // Recommended Occasional ...
+      $.each(child_3.children, function(i_4, child_4) {
+        // console.log(child_4.name); // Recommended Occasional ...
+        type_of_food += child_4.name + ','
+      });
+    };
+  });
+  type_of_food += '</li></ul>';
+  console.log(type_of_food);
+  return type_of_food
+};
+
+function nutrition(type) {
+  var food = '',
+      meat = '',
+      animalProducts = '';
+  if (typeof dendrogram_data !== 'undefined') {
+    $.each(dendrogram_data.children, function(i_1, child_1) {
+      if (child_1.name == type) {
+        console.log(child_1.name); // Water, Fire, Air
+        $.each(child_1.children, function(i_2, child_2) {
+          console.log(child_2.name); // Nuts & Seeds, Vegetables ...
+          if (child_2.name == 'Meat') {
+            meat = recommended(child_2, meat);
+          } else if (child_2.name == 'From Animals') {
+            animalProducts = recommended(child_2, animalProducts);
+          } else {
+            food = recommended(child_2, food);
+          };
+        });
+      };
+    });
+  };
+  return {
+    meat: meat,
+    animalProducts: animalProducts,
+    food: food
+  };
+};
 
 // -----------------------------------------------------------------------------
 //  Tasks
 // -----------------------------------------------------------------------------
-
+$(function() {
+   $("#tabs-1").tabs();
+   $( "#accordion" ).accordion({
+    heightStyle: "content"
+   });
+});
 
 // -----------------------------------------------------------------------------
 //  Show Charts
@@ -42,10 +103,23 @@ function showCharts(counter_all) {
   donutChart('2_be_fit', counter_all, 250, 400);
 };
 
-function typeToSmall(counter_all_min_max) {
+function getGraphColor (type_x) {
+  if (type_x == 'Fire') {
+    color = red
+  } else if (type_x == 'Air') {
+    color = green
+  } else if (type_x == 'Water') {
+    color = blue
+  };
+  return color
+};
+
+function typeToSmall(counter_all_max_min) {
   // min value
-  pieChartSingle('3_be_fit', counter_all_min_max[2], 230, 200);
-  dec_inc = decreaseIncrease(getJsonFromAttributes(), counter_all_min_max[2].type_x);
+  var last = $(counter_all_max_min).last()[0];
+  color = getGraphColor(last.type_x)
+  pieChartSingle('3_be_fit', last, 230, 200, color);
+  dec_inc = decreaseIncrease(getJsonFromAttributes(), last.type_x);
 
   var inner_html = '<p><strong>'
                    + I18n.t('view.attributes.helps_to_increase')
@@ -55,13 +129,17 @@ function typeToSmall(counter_all_min_max) {
     inner_html += '<li>' + attribute.name + ' - ' + attribute.effect + ' effect</li>'
   });
   inner_html += '</ul></p>'
-  $( "#3_be_fit_a" ).append(inner_html);
+  $("#3_be_fit_a").append(inner_html);
+  return last
 };
 
-function typeToBig(counter_all_min_max) {
+function typeToBig(counter_all_max_min) {
   // max value
-  pieChartSingle('4_be_fit', counter_all_min_max[0], 230, 200);
-  dec_inc = decreaseIncrease(getJsonFromAttributes(), counter_all_min_max[0].type_x);
+  var first = $(counter_all_max_min).first()[0];
+  color = getGraphColor(first.type_x)
+  pieChartSingle('4_be_fit',first, 230, 200, color);
+  dec_inc = decreaseIncrease(getJsonFromAttributes(), first.type_x);
+
   var inner_html = '<p><strong>'
                    + I18n.t('view.attributes.helps_to_decrease')
                    + '</strong><ul>'
@@ -75,6 +153,7 @@ function typeToBig(counter_all_min_max) {
   });
   inner_html += '</ul></p>'
   $( "#4_be_fit_a" ).append(inner_html);
+  return first
 };
 
 if (typeof donutChart !== 'undefined' && $.isFunction(donutChart)) {
@@ -82,17 +161,27 @@ if (typeof donutChart !== 'undefined' && $.isFunction(donutChart)) {
 
   showCharts(counter_all);
 
-  var counter_all_min_max = couter_all_to_json_sort(counter_all);
-  typeToSmall(counter_all_min_max);
-  typeToBig(counter_all_min_max);
+  // for new user without records
+  if ( gon.last_answer_counter_all == '{"1":0,"2":0,"3":0}' ) {
+    $( "#3_be_fit_a" ).append(I18n.t('view.6_topic.no_records'));
+    $( "#4_be_fit_a" ).append(I18n.t('view.6_topic.no_records'));
+  }
+  else {
+    var counter_all_max_min = couter_all_to_json_sort(counter_all);
+    to_small = typeToSmall(counter_all_max_min);
+    to_big = typeToBig(counter_all_max_min);
+    console.log(to_small);
+
+    food_for_you = nutrition(to_small.type_x)
+    $("#accordion-1").append(food_for_you.meat);
+    $("#accordion-2").append(food_for_you.animalProducts);
+    $("#accordion-3").append(food_for_you.food);
+  }
 
   donutChart('5_be_fit', counter_all, 250, 400);
   donutChart('6_be_fit', counter_all, 250, 400);
   donutChart('7_be_fit', counter_all, 250, 400);
   pieChart('8_be_fit', counter_all, 250, 400);
-
-
-
 }
 
 // -----------------------------------------------------------------------------

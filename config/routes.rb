@@ -14,10 +14,9 @@ Rails.application.routes.draw do
   # get 'nutrition/index'
   # get 'examination/index'
 
-  # match '/contacts',     to: 'contacts#new',             via: 'get'
-  # resources "contacts", only: [:new, :create]
+  # devise_for :admins
+  devise_for :admins, controllers: { registrations: "registrations"}
 
-  devise_for :admins
   devise_for :users
   #devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
 
@@ -28,12 +27,6 @@ Rails.application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, at: Refinery::Core.mounted_path
-
-
-  # get 'welcome/index'
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'

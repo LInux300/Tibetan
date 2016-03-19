@@ -17,7 +17,7 @@ class DashboardController < ApplicationController
 
     last_answer = SurveyAnswer.where(:user_id => user_id).last
     if last_answer == nil
-      last_answer_counter = {"1":1,"2":1,"3":1}
+      last_answer_counter = '{"1":0,"2":0,"3":0}'
       last_answer_counter_all = last_answer_counter
     else
       last_answer_counter = last_answer.counter

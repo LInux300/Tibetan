@@ -116,7 +116,7 @@ $.each(surveys, function(i, survey) {
 });
 
 function createSurvey(survey, index, questions_from_to) {
-  var question_ids = new Array,
+  var question_ids = [],
       survey_from = questions_from_to[0],
       survey_to = questions_from_to[1],
       div_id = survey + '_' + index;
@@ -380,7 +380,7 @@ function surveyOnSendResult(survey) {
 // 	});
 // });
 
-function pieChartSingle(div_id, single, canvasHeight, canvasWidth) {
+function pieChartSingle(div_id, single, canvasHeight, canvasWidth, color) {
   var pie = new d3pie(div_id, {
     header: {
       title: {
@@ -392,7 +392,8 @@ function pieChartSingle(div_id, single, canvasHeight, canvasWidth) {
         {
           label: I18n.t('survey.0_answers_0.'+single['type']+'_data_content_label'),
           value: single['value'],
-          color: I18n.t('survey.0_answers_0.'+single['type']+'_color')
+          // color: I18n.t('survey.0_answers_0.'+single['type']+'_color')
+          color: color
         }
       ]
     },
