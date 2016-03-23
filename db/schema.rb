@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311095955) do
+ActiveRecord::Schema.define(version: 20160322105239) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -39,6 +39,23 @@ ActiveRecord::Schema.define(version: 20160311095955) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
   add_index "admins", ["unlock_token"], name: "index_admins_on_unlock_token", unique: true, using: :btree
+
+  create_table "contact_us", force: :cascade do |t|
+    t.string   "email",      limit: 255
+    t.string   "type",       limit: 255
+    t.string   "name",       limit: 255
+    t.string   "subject",    limit: 255
+    t.string   "message",    limit: 255
+    t.integer  "user_id",    limit: 4
+    t.boolean  "answered"
+    t.string   "answer",     limit: 255
+    t.string   "text",       limit: 255
+    t.string   "parent_id",  limit: 255
+    t.string   "integer",    limit: 255
+    t.string   "child_id",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", limit: 4,   null: false

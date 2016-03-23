@@ -1,0 +1,45 @@
+p#notice = notice
+
+p
+  strong Email:
+  = @contact_u.email
+p
+  strong Type:
+  = @contact_u.type
+p
+  strong Name:
+  = @contact_u.name
+p
+  strong Subject:
+  = @contact_u.subject
+p
+  strong Message:
+  = @contact_u.message
+p
+  strong User:
+  = @contact_u.user_id
+p
+  strong Answered:
+  = @contact_u.answered
+p
+  strong Answer:
+  = @contact_u.answer
+p
+  strong Text:
+  = @contact_u.text
+p
+  strong Parent:
+  = @contact_u.parent_id
+p
+  strong Integer:
+  = @contact_u.integer
+p
+  strong Child:
+  = @contact_u.child_id
+p
+  strong Integer:
+  = @contact_u.integer
+
+= link_to 'Edit', edit_contact_u_path(@contact_u)
+'|
+= link_to 'Back', contact_us_path

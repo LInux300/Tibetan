@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
 
+  match '/imagination',     to: 'imagination#index', via: 'post'
+  resources "imagination", only: [:index]
+
+  resources :contact_us
   resources :survey_answers
-  match '/dashboard',     to: 'dashboard#index',             via: 'post'
+  match '/dashboard',     to: 'dashboard#index', via: 'post'
   resources "dashboard", only: [:index]
 
-  match '/examination',     to: 'examination#index',             via: 'post'
+  match '/examination',     to: 'examination#index', via: 'post'
   resources "examination", only: [:index]
 
-  match '/nutrition',     to: 'nutrition#index',             via: 'post'
+  match '/nutrition',     to: 'nutrition#index', via: 'post'
   resources "nutrition", only: [:index]
 
   # get 'dashboard/index'

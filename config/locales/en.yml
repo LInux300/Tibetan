@@ -23,6 +23,10 @@ en:
       email_address: Email Address
       message: Message
       send: Send
+      thank_you: Thank You for your message
+    seven:
+      title: Seven Tissues
+      1_p: 'There are 7 pathways through which the body receives nourishment. The Seven Tissues are: <strong> Plasma, Blood, Muscle, Fatty Tissue, Bone, Marrow and Regenerative Fluid </strong>'
     index:
       1_p: 'We are happy to see you here. We present the way how you can help yourself or your family, friends and others people. The best six doctors: Sunshine, Water, Rest, Air, Exercise & Diet. Tibetan Medicine can help you with it too. TM, called "Sowa Rigpa" in Tibetan, means the science and knowledge of healing.'
       2_p: Main topics are
@@ -40,36 +44,37 @@ en:
         1_body: "<strong>Cool, Dry, Hard, Light, Mobile, Subtle</strong>.\
           <br>\
           <ul style='color:green'>\
-            <li>Cool: chills</li>
-            <li>Dry: irritated skin, dry mouth</li>\
-            <li>Hard: stiff joints</li>\
-            <li>Light: forgetfulness, insomnia</li>\
-            <li>Mobile: hysteria, dizziness</li>\
-            <li>Subtle: blurred vision, ringing in the ears</li>\
+            <li><strong>Cool</strong> - chills</li>
+            <li><strong>Dry</strong> - irritated skin, dry mouth</li>\
+            <li><strong>Hard</strong> - stiff joints</li>\
+            <li><strong>Light</strong> - forgetfulness, insomnia</li>\
+            <li><strong>Mobile</strong> - hysteria, dizziness</li>\
+            <li><strong>Subtle</strong> - blurred vision, ringing in the ears</li>\
           </ul>"
+        2_p:
       4_row:
         2_title: Fire characteristics
         2_body: "<strong>Flowing, Hot, Malodorous, Oily, Purging, Sharp</strong>.
           <br>
           <ul style='color:red'>
-            <li>Flowing: diarrhea</li>
-            <li>Hot: thirst, overheating</li>
-            <li>Malodorous: body odor</li>
-            <li>Oily: oily complexion</li>
-            <li>Purging: excessive mucus</li>
-            <li>Sharp: localized pain</li>
+            <li><strong>Flowing</strong> - diarrhea</li>
+            <li><strong>Oily</strong> - oily complexion</li>
+            <li><strong>Hot</strong> - thirst, overheating</li>
+            <li><strong>Malodorous</strong> - body odor</li>
+            <li><strong>Purging</strong> - excessive mucus</li>
+            <li><strong>Sharp</strong> - localized pain</li>
           </ul>"
       5_row:
         3_title: Water characteristics
         3_body: "<strong>Blunt, Cold, Heavy, Stable, Smooth, Sticky</strong>.
           <br>
           <ul style='color:blue'>
-            <li>Blunt: slowly developing</li>
-            <li>Cold: low body temperature</li>
-            <li>Heavy: lethargy, sleepiness, slow recovery</li>
-            <li>Stable: unchanging</li>
-            <li>Smooth: dull pains</li>
-            <li>Sticky: cohesive urine</li>
+            <li><strong>Blunt</strong> - slowly developing</li>
+            <li><strong>Cold</strong> - low body temperature</li>
+            <li><strong>Heavy</strong> - lethargy, sleepiness, slow recovery</li>
+            <li><strong>Stable</strong> - unchanging</li>
+            <li><strong>Smooth:</strong> - dull pains</li>
+            <li><strong>Sticky</strong> - cohesive urine</li>
           </ul>"
       6_row:
         title: Changing the World Through Tibetan Medicine
@@ -80,8 +85,7 @@ en:
         title: Three Nepas
       8_row:
         1_body: "<strong>TB is base on the Five Elements, the Three Nepas, the Twenty Attributes and the Seven Tissues.</strong>"
-        2_body: "The body is complex composition of what the Eastern Medical Systems call \
-        <strong title='Space, Air, Fire, Earth, Water'>The Five Elements</strong>. Each element have a distinct function in the body. \
+        2_body: "The body is complex composition of <strong title='Space, Air, Fire, Earth, Water'>The Five Elements</strong>. Each element have a distinct function in the body. \
         The Earth element provides stability and structure. Water provides smoothness and moisture. \
         Fire element is connected with growth, development and the assimilation adn absorption of food. \
         Because of the Air Element we are able to move our joints and muscles and to circulate blood and fluids. \
@@ -97,7 +101,7 @@ en:
       body: Tibetan Prayers are prayers performed by monks.
       button: The TP
       header: The Tibetan Prayers
-      href: '/medicine/prayers'
+      href: '/imagination#tibetan_prayers'
       short_body: Tibetan Prayers are prayers performed by monks.
     third_topic:
       body: Informatic Tibetans ( IT ) are all kind of info about Worlds, Cultures and People.
@@ -112,17 +116,33 @@ en:
       header: Physical Examinations
       href: '/examination'
       short_body: Physical and mental checks
-      please_login: This is only one of many examinations, for all please login
+      please_login: 'Please <a href="/sign_in">Sign in</a> to see all'
     5_topic:
-      p1: 'For good health is important proper nutrition. It means knowing the type of
+      p1: 'For good health is important proper Nutrition. It means knowing the type of
         diet which is best for you. Based on your examinations, metabolic profile
         and immediate health profile you can choose healthy diet'
-      p2: 'We prepared Zoomable Nutrition according types. Please click on Zoomable
-        Nutrion, every circle shows different plunge'
+      p2: 'We prepared Zoomable Nutrition according types. Please go on
+        <a href="#zoom_circle">Zoomable Nutrion</a> and click on circles'
+      1_h: Behavior & Diet
+      2_h:
+        title: Wind Disorder
+        1_li: No - Tea, Coffe, Beverages with Gas
+        2_li: No - Asting, Excessive Talk, Lack of Sleep, Purgatives, Sexual Contact, Vomiting
+        3_li: No - Raw Vegetables, Bitter Salad
+      3_h:
+        title: Fire Disorder
+        1_li: No - Alcohol
+        2_li: No - Heavy Physical or Mental Work
+        3_li: No - Hot, Fatty or Spicy Food, Meat
+      4_h:
+        title: Water Disorder
+        1_li: No - Milk
+        2_li: No - Sleep furing the day, Lack of Movement
+        3_li: No - Raw Vegetables, Sweets, Overeating
       button: Nutrition
       header: Nutrition
       href: '/nutrition'
-      short_body: For good health is important proper nutrition.
+      short_body: For good health is important proper Nutrition.
     6_topic:
       body: Overview over your examinations
       button: Dashboard
@@ -170,6 +190,62 @@ en:
       header: Attributes
       short_body: Overview over your examinations
       href: '/#twenty_attributes'
+      info: What kind of <strong>Food, Herbs, Exercises</strong> is good for You
+    8_topic:
+      button: Creative Imagination
+      href: '/imagination'
+      1_p: The most important component for the healing is the power of creative imagination
+      1_h: The Mind Series
+      1_subtopic:
+        title: Tibetan Prayers
+        1_p: 'Tibetan Prayers are very beneficial for you or for your relatives, friends. You can choose from the list. Prayers are done by monks.'
+        2_p: '<a href="/sign_in">Sign In</a> for more info'
+        2_p: 'Please choose how much money in form of <strong>DONATION</strong> you want to give. Send us your proposal and we inform you with more details, send you additional <strong>text, mantras, pictures & info.</strong>'
+        0_prayer: '<strong>Tse Dup</strong> - Soul Healing Long Life Prayer'
+        1_prayer: '<strong>Sherab Chamma</strong> - Loving Mother Prayer'
+        2_prayer: '<strong>Sung Ma Thrin Chol</strong> - Accumulating merit and fortune'
+        3_prayer: '<strong>Choe me</strong> - Releasing the struggle with darkness'
+        4_prayer: '<strong>Doo Dok</strong> - Cleansing of obstacles'
+        5_prayer: '<strong>Nam Jom</strong> - Expelling demonic nightmares'
+        6_prayer: '<strong>Chung Mar</strong> - Banishing Nagas'
+        7_prayer: '<strong>Phowa</strong></strong> - Prayer for the Deceased'
+        8_prayer: '<strong>Prayer on request</strong>'
+        9_prayer: '<strong>Simple Prayer</strong>'
+      2_subtopic:
+        title: Medicine Buddha
+        1_p: 'Men Lha, the Medicine Buddha, is a manifestation of Lord Buddha Tonpa Shenrab. With full knowledge of the suffering of sentient beings in the world, Lord Buddha Tonpa, the founder of the Bonpo tradition of Buddhism, and the first Buddha, gave his divine teaching to eliminate all suffering and to bring healing as well as purify people from their negative karma.'
+        2_p: 'Mantra<br><strong>OM NA MA SE LA AMITA SE GYER DUN PUNG OM A HUNG RAM DZA SAMAYA TITA LHEN</strong>'
+      3_subtopic:
+        title: OM MA TRI MU YE SA LE DU
+        subtitle: THE GREAT MANTRA OF THE BÖN TRADITION
+        1_p: "
+<br><strong>OM</strong> - Tonpa Shenrab (ston-pa gshen-rab) represents compassion (tabs) and blessing (tugs-rje).His color is like precious jewel (rinpoche).
+<br><strong>MA</strong> The great Mother Sherab Jamma (yum-chen shes-rab byams-ma) represents wisdom (sherab) and vast
+space (klong). Her color is red.
+
+<br><strong>TRI</strong> - represents Mucho Demdrug (Mmu-cho ldem-drug), transforms the seeds of the hell realm that is
+anger and hatred (zhe-dang) by means of great love and affection (byams-pa chen-po), thus dispelling the
+suffering of the hell realm. His color is blue and red.
+
+<br><strong>MU</strong> - represents Sangwa Ngangrig (gsang-ba ngang-ring), transforms desire and attachment (dod-chags) by
+means of great generosity (sbyin-pa chen-po), thus purifying the hunger and thurst of the Hungry ghost
+realm (yi-dags). His color is red.
+
+<br><strong>YE</strong> - represents Tisang Rangzhi (ti-sang rang-zhi), transforms ignorance (gti-mug) by means of great
+wisdom and awareness (ye-she chen-po), thus clarifying the misery of stupidity, dumbness and servitude of
+the animal realm (byol-song). His color is blue.
+
+<br><strong>SA</strong> - represents Drajin Pungpa (gra-byin spungs-pa), transforms envy or jealousy (phrag-dog) by means of
+spaciousness (yang-pa chen-po)2, thus satisfying the greediness of food and wealth in the human realm. His
+color is golden light.
+
+<br><strong>LE</strong> - represents Chegyal Parti (lche-gyal par-ti), transforms pride and arrogance (nga-rgyal) by means of
+great peacefulness (zi-wa chen-po),thus pacifies the fighting and disputes of the demi-god realm (lha-min).
+His color is light blue.
+
+<br><strong>Du</strong> - represents Yeshen Tsugpud (ye-gshen gtsug-pud), transforms laziness (le-lo) by means of great
+diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. His color is white."
+
     attributes:
       title: Twenty Attributes
       subtitle: Effect on the Three Nepas
@@ -441,7 +517,7 @@ en:
         2_h:
           title: Tools
           1_p: '<a href="/examination">Examinations</a>.'
-          2_p: '<a href="/nutrition">Nutritions/a>'
+          2_p: '<a href="/nutrition">Nutritions</a>'
           3_p: '<a href="/dashboard">Dashboard & Be Fit</a>'
       how_we_work:
         title: How We Work
@@ -1137,70 +1213,180 @@ en:
       3_choice_value: 3
       3_choice_text: Eyes are large and beautiful, moist, with long, thick oily lashes
     55_question:
-      title:
+      title: Which part of Body is the strongest?
       name: 55
-      otherText:
-      1_choice_value:
-      1_choice_text:
-      2_choice_value:
-      2_choice_text:
-      3_choice_value:
-      3_choice_text:
+      otherText: Humors - Body
+      1_choice_value: 1
+      1_choice_text: Lower Part
+      2_choice_value: 2
+      2_choice_text: Middle Part
+      3_choice_value: 3
+      3_choice_text: Head and the Upper Part of the Chest
     56_question:
-      title:
+      title: Front of the Body
       name: 56
-      otherText:
-      1_choice_value:
-      1_choice_text:
-      2_choice_value:
-      2_choice_text:
-      3_choice_value:
-      3_choice_text:
+      otherText: Humors - Front of the Body
+      1_choice_value: 1
+      1_choice_text: Chest / Above Diaphragm
+      2_choice_value: 2
+      2_choice_text: Middle Abdomen / Below Diaphragm
+      3_choice_value: 3
+      3_choice_text: Lower Abdomen / Below Navel
     57_question:
       title:
       name: 57
-      otherText:
-      1_choice_value:
-      1_choice_text:
-      2_choice_value:
-      2_choice_text:
-      3_choice_value:
-      3_choice_text:
+      otherText: Humors - Back Side
+      1_choice_value: 1
+      1_choice_text: Neck
+      2_choice_value: 2
+      2_choice_text: Middle Back
+      3_choice_value: 3
+      3_choice_text: Lower Back
     58_question:
       title:
       name: 58
-      otherText:
-      1_choice_value:
-      1_choice_text:
-      2_choice_value:
-      2_choice_text:
-      3_choice_value:
-      3_choice_text:
+      otherText: Humors - Face
+      1_choice_value: 1
+      1_choice_text: Lower part of Face
+      2_choice_value: 2
+      2_choice_text: Middle / Cheeks
+      3_choice_value: 3
+      3_choice_text: Forehead
     59_question:
       title:
       name: 59
-      otherText:
-      1_choice_value:
-      1_choice_text:
-      2_choice_value:
-      2_choice_text:
-      3_choice_value:
-      3_choice_text:
+      otherText: Humors - Sensory Organs
+      1_choice_value: 1
+      1_choice_text: Ears
+      2_choice_value: 2
+      2_choice_text: Eyes
+      3_choice_value: 3
+      3_choice_text: Tongue / Lips / Nose
     60_question:
       title:
       name: 60
+      otherText: Humors - Fingers
+      1_choice_value: 1
+      1_choice_text: Last Joint of the Finger
+      2_choice_value: 2
+      2_choice_text: Middle Joint
+      3_choice_value: 3
+      3_choice_text: First Joint
+    61_question:
+      title:
+      name: 61
+      otherText: Humors - Arms
+      1_choice_value: 1
+      1_choice_text: Hand
+      2_choice_value: 2
+      2_choice_text: Forearms
+      3_choice_value: 3
+      3_choice_text: Upperarms
+    62_question:
+      title:
+      name: 62
+      otherText: Humors - Legs
+      1_choice_value: 1
+      1_choice_text: Feet
+      2_choice_value: 2
+      2_choice_text: Legs
+      3_choice_value: 3
+      3_choice_text: Thigh
+    63_question:
+      title:
+      name: 63
+      otherText: Humors - Vertebrae
+      1_choice_value: 1
+      1_choice_text: Cervical
+      2_choice_value: 2
+      2_choice_text: Thorax
+      3_choice_value: 3
+      3_choice_text: Lumbar Vertebrae
+    64_question:
+      title:
+      name: 64
+      otherText: Humors - Vital Organs
+      1_choice_value: 1
+      1_choice_text: Lungs & Heart
+      2_choice_value: 2
+      2_choice_text: Liver
+      3_choice_value: 3
+      3_choice_text: Spleen / Kidneys
+    65_question:
+      title:
+      name: 65
+      otherText: Humors - Hollow Organs
+      1_choice_value: 1
+      1_choice_text: Colon
+      2_choice_value: 2
+      2_choice_text: Gall Bladder / Small Intestine
+      3_choice_value: 3
+      3_choice_text: Stomach / Urinary Bladder / Reproductive Organs
+    66_question:
+      title:
+      name: 66
+      otherText: Humors - Chakra
+      1_choice_value: 1
+      1_choice_text: Secret Chakra
+      2_choice_value: 2
+      2_choice_text: Heart Chakra
+      3_choice_value: 3
+      3_choice_text: Crown Chakra
+    67_question:
+      title:
+      name: 67
+      otherText: Humors - Digestion Stages
+      1_choice_value: 1
+      1_choice_text: Colon
+      2_choice_value: 2
+      2_choice_text: Small Intestine
+      3_choice_value: 3
+      3_choice_text: Stomach
+    68_question:
+      title:
+      name: 68
+      otherText: Humors - Waste Products
+      1_choice_value: 1
+      1_choice_text: Hairs & Nails
+      2_choice_value: 2
+      2_choice_text: Perspiration
+      3_choice_value: 3
+      3_choice_text: Urine & Stool
+    69_question:
+      title:
+      name: 69
+      otherText: Humors - Seven Body Constituents
+      1_choice_value: 1
+      1_choice_text: Bones, Skin
+      2_choice_value: 2
+      2_choice_text: Blood
+      3_choice_value: 3
+      3_choice_text: Bone Marrow, Chyle, Fat, Flesh, Reproductive fluids
+    70_question:
+      title:
+      name: 70
       otherText:
-      1_choice_value:
+      1_choice_value: 1
       1_choice_text:
-      2_choice_value:
+      2_choice_value: 2
       2_choice_text:
-      3_choice_value:
+      3_choice_value: 3
+      3_choice_text:
+    71_question:
+      title:
+      name: 71
+      otherText:
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
       3_choice_text:
   nutrition:
     name: Nutrition
     zoom: Zoomable Nutrition
     cyrcle: Cyrcle Nutrition
-    login: Sign In to see Your Nutrition
+    login: As User you can view your nutrition
     color: 'white'
     0_children:
       name: Air

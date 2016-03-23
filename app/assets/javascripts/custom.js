@@ -1,3 +1,31 @@
+
+// -----------------------------------------------------------------------------
+// contact us
+// -----------------------------------------------------------------------------
+$( "#contact_us_form" ).submit(function(event) {
+  // Stop form from submitting normally
+  event.preventDefault();
+
+  var $form = $(this),
+    // term = $form.find("input[name='email']").val(),
+    email = $form.find("input[id='email']").val(),
+    message = $form.find("textarea[id='message']").val(),
+    url = $form.attr("action");
+
+  // Send the data using post
+  if (!$.isEmptyObject(email)) {
+    var posting = $.post(url, {contact_u: {email: email, message: message}});
+
+    posting.done(function(data) {
+      $('#contact_us_form').hide();
+      // var content = $(data).find("#contact_response");
+      var content = I18n.t('view.coutact_us.thank_you');
+      $("#contact_response").empty().append(content);
+    });
+  }
+
+});
+
 // -----------------------------------------------------------------------------
 // foundation
 // -----------------------------------------------------------------------------

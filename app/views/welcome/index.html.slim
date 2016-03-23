@@ -1,13 +1,13 @@
 hr
 
-#1_row.row
-  .medium-4.columns
-    img alt=t('title')  src="http://placehold.it/450x183&text=LOGO" /
-  .medium-8.columns
-    / img alt=t('title') src=("http://placehold.it/900x175&text=Hello, Our Examination and Nutrition/333") /
-    img alt=t('title') src=("/assets/index_900x175.jpg") /
-
-hr
+/ #1_row.row
+/   .medium-4.columns
+/     img alt=t('title')  src="http://placehold.it/450x183&text=LOGO" /
+/   .medium-8.columns
+/     / img alt=t('title') src=("http://placehold.it/900x175&text=Hello, Our Examination and Nutrition/333") /
+/     img alt=t('title') src=("/assets/index_900x175.jpg") /
+/ 
+/ hr
 
 #3_row.row.column
   h4.text-center style=("margin: 0;") = t('view.index.1_row.title')
@@ -113,13 +113,12 @@ br
 #twenty_attributes.row.column
   .callout.primary
     h3 = t('view.attributes.title')
-  h3 = t('view.attributes.subtitle')
-
+    
   - if user_signed_in?
     - n = 19
   - else
     - n = 5
-    p =t('view.attributes.log_in_msg').html_safe
+    =t('view.attributes.log_in_msg').html_safe
 
   .expanded.button-group
     a.button.button_group_0.hollow style='font-size:22px;' href="#twenty_attributes" = t('view.attributes.0_header')
@@ -147,6 +146,8 @@ br
         - else
           i.fi-arrow-down
         = ' ' + t("view.attributes.#{i}_atr.3_effect")
+        
+  p = t('view.attributes.subtitle')
 
     /
     / .sections
@@ -245,5 +246,15 @@ hr
   /       a.button href="#{t('view.third_topic.href')}"
   /         = t('view.third_topic.button')
 
-#24_row.row.column
+.row.column
   hr/
+
+#seven_tissues.row.column
+  .callout.primary
+    h3 = t('view.seven.title')
+
+  p = t('view.seven.1_p').html_safe
+
+.row
+
+/ = javascript_include_tag '/assets/welcome'
