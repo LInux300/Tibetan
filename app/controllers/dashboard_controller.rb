@@ -24,33 +24,38 @@ class DashboardController < ApplicationController
       last_answer_counter_all = last_answer.counter_all
     end
 
-    last_x_records = SurveyAnswer
+    all_user_answers = SurveyAnswer
       .where(:user_id => user_id)
       .last(20)
 
-    last_24_hours = SurveyAnswer
-      .where("created_at > ?", Time.now-24.hours)
-      .where(:user_id => user_id)
+    # last_x_records = SurveyAnswer
+    #   .where(:user_id => user_id)
+    #   .last(20)
+
+    # last_24_hours = SurveyAnswer
+    #   .where("created_at > ?", Time.now-24.hours)
+    #   .where(:user_id => user_id)
+    # #
+    # last_week = SurveyAnswer
+    #   .where("created_at > ?", Time.now-7.days)
+    #   .where(:user_id => user_id)
     #
-    last_week = SurveyAnswer
-      .where("created_at > ?", Time.now-7.days)
-      .where(:user_id => user_id)
+    # two_weeks = SurveyAnswer
+    #   .where("created_at > ?", Time.now-14.days)
+    #   .where(:user_id => user_id)
+    #
+    # beginning_of_month = SurveyAnswer
+    #   .where("created_at > ?", Date.today.at_beginning_of_month)
+    #   .where(:user_id => user_id)
+    #
+    # three_months = SurveyAnswer
+    #   .where("created_at > ?", Date.today.at_beginning_of_month.last_month.last_month)
+    #   .where(:user_id => user_id)
+    #
+    # six_months = SurveyAnswer
+    #   .where("created_at > ?", Date.today.at_beginning_of_month.last_month.last_month.last_month.last_month.last_month)
+    #   .where(:user_id => user_id)
 
-    two_weeks = SurveyAnswer
-      .where("created_at > ?", Time.now-14.days)
-      .where(:user_id => user_id)
-
-    beginning_of_month = SurveyAnswer
-      .where("created_at > ?", Date.today.at_beginning_of_month)
-      .where(:user_id => user_id)
-
-    three_months = SurveyAnswer
-      .where("created_at > ?", Date.today.at_beginning_of_month.last_month.last_month)
-      .where(:user_id => user_id)
-
-    six_months = SurveyAnswer
-      .where("created_at > ?", Date.today.at_beginning_of_month.last_month.last_month.last_month.last_month.last_month)
-      .where(:user_id => user_id)
 
     # last_24_hours.each do |answer|
     #   # Rails.logger.debug("ruda #{answer.answer}")
@@ -70,6 +75,7 @@ class DashboardController < ApplicationController
      user_id: user_id,
      last_answer_counter: last_answer_counter,
      last_answer_counter_all: last_answer_counter_all,
+     all_user_answers: all_user_answers,
     #  last_24_hours: last_24_hours,
     #  last_week: last_week,
     #  two_weeks: two_weeks,

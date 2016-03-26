@@ -12,7 +12,7 @@ var green = '#009A31',
     blue_light = '#227FB0';
 
 // -----------------------------------------------------------------------------
-//  Iterate over json data
+//  Iterate over nutrition format var json
 // -----------------------------------------------------------------------------
 
 function recommended(child_2, type_of_food) {
@@ -27,20 +27,23 @@ function recommended(child_2, type_of_food) {
     };
   });
   type_of_food += '</li></ul>';
-  console.log(type_of_food);
+  // console.log(type_of_food);
   return type_of_food
 };
 
 function nutrition(type) {
-  var food = '',
+  var hints = '',
+      food = '',
       meat = '',
       animalProducts = '';
+  hints = type + I18n.t('view.6_topic.7_subtopic.1_section.to_small.1_p')
+    + I18n.t('view.6_topic.7_subtopic.1_section.to_small.'+type);
   if (typeof dendrogram_data !== 'undefined') {
     $.each(dendrogram_data.children, function(i_1, child_1) {
       if (child_1.name == type) {
-        console.log(child_1.name); // Water, Fire, Air
+        // console.log(child_1.name); // Water, Fire, Air
         $.each(child_1.children, function(i_2, child_2) {
-          console.log(child_2.name); // Nuts & Seeds, Vegetables ...
+          // console.log(child_2.name); // Nuts & Seeds, Vegetables ...
           if (child_2.name == 'Meat') {
             meat = recommended(child_2, meat);
           } else if (child_2.name == 'From Animals') {
@@ -53,6 +56,7 @@ function nutrition(type) {
     });
   };
   return {
+    hints: hints,
     meat: meat,
     animalProducts: animalProducts,
     food: food
@@ -68,6 +72,176 @@ $(function() {
     heightStyle: "content"
    });
 });
+
+// -----------------------------------------------------------------------------
+//  C3   bar chart all records  for user
+// -----------------------------------------------------------------------------
+// var data = JSON.parse(dataSource);
+// chart-percentage
+function c3_percentage(graph_data) {
+  var chart= c3.generate({
+    bindto: '#chart_percentage',
+    transition: {
+      duration: 500
+    },
+    data: {
+      x: 'time',
+      rows: graph_data,
+      names: {
+          data1: 'Air',
+          data2: 'Fire',
+          data3: 'Water',
+          time: 'Time'
+      },
+      hide: ['time','data4','data5', 'data6'],
+      show: ['data1', 'data2', 'data3'],
+      type: 'bar',
+      types: {
+          data1: 'area-spline',
+          data2: 'area-spline',
+          data3: 'area-spline',
+      },
+      groups: [
+          ['data1','data2', 'data3']
+      ],
+      colors: {
+        data1: green,
+        data2: red,
+        data3: blue,
+      }
+    },
+    axis: {
+        x: {
+            type: 'category' // this needed to load string x value
+        },
+        y: {
+          label: { // ADD
+            text: I18n.t('view.6_topic.6_subtopic.graph_y'),
+            position: 'outer-middle'
+           }
+        }
+    },
+    zoom: {
+        enabled: true,
+        extent: [1, 100]
+    },
+    legend: {
+        show: true
+    },
+    tooltip: {
+        contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+            return "<font color='" + blue + "'> Water: " + d[2].value + "</font>" +
+                "<br>" +
+                "<font color='" + red + "'> Fire: " + d[1].value + "</font>" +
+                "<br>" +
+                "<font color='" + green + "'> Air: " + d[0].value + "</font>";
+        }
+    }
+  });
+
+};
+
+function c3_bar(graph_data) {
+  console.log(graph_data);
+  // var graph_data = [
+  //     ['data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'x'],
+  //     [90, 120, 300, 90, 120, 300, '2013-01-22'],
+  //     [40, 160, 240, 40, 160, 240,'2013-02-12'],
+  //     [50, 200, 290, 50, 200, 290, '2013-03-02'],
+  //     [120, 160, 230, 120, 160, 230, '2013-03-15'],
+  //     [80, 130, 300, 80, 130, 300, '2013-04-02'],
+  //     [0, 220, 320, 0, 220, 320, '2013-04-12']
+  // ];
+  // console.log(graph_data);
+  var chart = c3.generate({
+    data: {
+      x: 'time',
+      rows: graph_data,
+      names: {
+          data1: 'Air',
+          data2: 'Fire',
+          data3: 'Water',
+          time: 'Time'
+      },
+      hide: ['time','data4','data5', 'data6'],
+      show: ['data1', 'data2', 'data3'],
+      type: 'bar',
+      types: {
+          data4: 'spline',
+          data5: 'spline',
+          data6: 'spline',
+      },
+      groups: [
+          ['data1','data2', 'data3'],
+          ['data4','data5', 'data6']
+      ],
+      // selection: {
+      //   enabled: true
+      // },
+      colors: {
+        data1: green,
+        data2: red,
+        data3: blue,
+        data4: green,
+        data5: red,
+        data6: blue,
+      }
+      // color: function (color, d) {
+      //   // d will be 'id' when called for legends
+      //   return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+      // }
+    },
+    axis: {
+        x: {
+            type: 'category' // this needed to load string x value
+        }
+    },
+    // axis: {
+    //     x: {
+    //         type: 'timeseries',
+    //         // max: 1,
+    //         // min: -10.
+    //         extent: [5, 10],
+    //         // if true, treat x value as localtime (Default)
+    //         // if false, convert to UTC internally
+    //         // localtime: false,
+    //         tick: {
+    //             // count: 5,
+    //             format: '%m-%d',
+    //             // fit: true,
+    //             // centered: true,
+    //             fit: true
+    //             // values: [1, 2, 4, 8, 16, 32, 40]
+    //             // culling: true,
+    //             // format: function (x) { return x.getFullYear(); }
+    //
+    //         }
+    //     }
+    // },
+    // grid: {
+    //     y: {
+    //         lines: [{value: 0}]
+    //     }
+    // },
+    zoom: {
+        enabled: true,
+        extent: [1, 100]
+    },
+    legend: {
+        show: true
+    },
+    tooltip: {
+        contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+            return "<font color='" + blue + "'> Water: " + d[2].value + "</font>" +
+                "<br>" +
+                "<font color='" + red + "'> Fire: " + d[1].value + "</font>" +
+                "<br>" +
+                "<font color='" + green + "'> Air: " + d[0].value + "</font>";
+        }
+    }
+  });
+  // chart.hide(['time']);
+};
 
 // -----------------------------------------------------------------------------
 //  Show Charts
@@ -156,8 +330,35 @@ function typeToBig(counter_all_max_min) {
   return first
 };
 
+function graphData(graph_data) {
+
+  return graph_data
+};
+
+
 if (typeof donutChart !== 'undefined' && $.isFunction(donutChart)) {
-  var counter_all = JSON.parse(gon.last_answer_counter_all)
+  var counter_all = JSON.parse(gon.last_answer_counter_all),
+      all_user_answers = gon.all_user_answers;
+
+
+  var graph_data = [];
+  graph_data.push(['data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'time'])
+  $.each(all_user_answers, function(i, user_answer) {
+    counter = JSON.parse(user_answer.counter);
+    counter['1']? counter['1'] = counter['1'] : counter['1'] = 0
+    counter['2']? counter['2'] = counter['2'] : counter['2'] = 0
+    counter['3']? counter['3'] = counter['3'] : counter['3'] = 0
+
+    // var graph_time = new Date(user_answer.created_at);
+    var graph_time = user_answer.created_at.substr(0,10);
+    graph_data.push([
+      counter['1'], counter['2'], counter['3'],
+      counter['1'], counter['2'], counter['3'],
+      graph_time
+    ]);
+  });
+  c3_percentage(graph_data);
+  c3_bar(graph_data);
 
   showCharts(counter_all);
 
@@ -170,18 +371,20 @@ if (typeof donutChart !== 'undefined' && $.isFunction(donutChart)) {
     var counter_all_max_min = couter_all_to_json_sort(counter_all);
     to_small = typeToSmall(counter_all_max_min);
     to_big = typeToBig(counter_all_max_min);
-    console.log(to_small);
+    // console.log(to_small);
 
-    food_for_you = nutrition(to_small.type_x)
-    $("#accordion-1").append(food_for_you.meat);
-    $("#accordion-2").append(food_for_you.animalProducts);
-    $("#accordion-3").append(food_for_you.food);
+    food_for_you = nutrition(to_small.type_x);
+    $("#accordion-1").append(food_for_you.hints);
+    $("#accordion-2").append(food_for_you.meat);
+    $("#accordion-3").append(food_for_you.animalProducts);
+    $("#accordion-4").append(food_for_you.food);
   }
 
-  donutChart('5_be_fit', counter_all, 250, 400);
-  donutChart('6_be_fit', counter_all, 250, 400);
-  donutChart('7_be_fit', counter_all, 250, 400);
-  pieChart('8_be_fit', counter_all, 250, 400);
+  // donutChart('5_be_fit', counter_all, 250, 400);
+  // d3.select('5_be_fit');
+  pieChart('8_be_fit', counter_all, 230, 200);
+  // donutChart('7_be_fit', counter_all, 250, 400);
+  // pieChart('8_be_fit', counter_all, 250, 400);
 }
 
 // -----------------------------------------------------------------------------

@@ -1,6 +1,8 @@
 // $blue: #2980b9;
 // $blue: #1B6AA5;
 $blue: #008CBA;
+$blue_light: #1EA8CF;
+$blue_dark: #227FB0;
 $royalblue: #1B6AA5;
 $green: #009A31;
 $red: #E8110F;
@@ -10,7 +12,6 @@ $white: white;
 $black: black;
 $grey: #f7f7f7;
 $lightgrey: #8f9296;
-
 hr { padding: 0px; }
 
 //------------------------------------------------------------------------------
@@ -115,18 +116,22 @@ hr { padding: 0px; }
 //------------------------------------------------------------------------------
 
 .footer2 {
-  background-color: #292c2f;
-  // background-color: $royalblue;
+  // background-color: #292c2f;
+  // background-color: #110d61;
+  background-color: $blue;
   text-align: center;
   font-size: 3rem;
-  color: $lightgrey;
+  // color: $lightgrey;
+  color: $yellow;
   padding: 1rem;
 
   .social a {
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    background-color: #292c2f;
+    // background-color: #292c2f;
+    // background-color: #110d61;
+    background-color: $blue;
     border-radius: 2px;
     font-size: 2rem;
     color: #fff;
@@ -136,7 +141,8 @@ hr { padding: 0px; }
   }
 
   .copywrite {
-    color: #8f9296;
+    // color: #8f9296;
+    color: $yellow;
     font-size: 1rem;
     margin: 1rem 0 1rem 0;
   }
@@ -144,15 +150,16 @@ hr { padding: 0px; }
   .footer2-form {
     textarea, input {
       border-radius: 3px;
-      background-color: #1f2022;
-      // background-color: $blue;
+      // background-color: #1f2022;
+      background-color: $yellow;
       box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
       border: none;
       resize: none;
       font: inherit;
       font-size: 0.875rem;
       font-weight: normal;
-      color: #d1d2d2;
+      // color: #d1d2d2;
+      color: black;
       padding: 1.3rem;
     }
 

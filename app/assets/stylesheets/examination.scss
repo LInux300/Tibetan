@@ -117,14 +117,14 @@ $green: #009A31;
 
 .tabs > span i,
 .tabs > span {
-  -webkit-transition: all .5s;
-     -moz-transition: all .5s;
-     -o-transition: all .5s;
-      transition: all .5s;
+  // -webkit-transition: all .5s;
+  //    -moz-transition: all .5s;
+  //    -o-transition: all .5s;
+  //     transition: all .5s;
 }
 
 .tabs > input:hover + span {
-  background: rgba(255,255,255,.1);
+  // background: rgba(255,255,255,.1);
 }
 
 .tabs > input:checked + span {
@@ -158,12 +158,12 @@ $green: #009A31;
 
 .tab-content {
   padding: 80px 0px 0px;
-  width: 100%;
+  // width: 100%;
   min-height: 340px;
 }
 
 .tab-content section {
-  width: 100%;
+  // width: 100%;
   display: none;
 }
 

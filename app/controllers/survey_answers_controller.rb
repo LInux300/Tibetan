@@ -1,5 +1,5 @@
 class SurveyAnswersController < ApplicationController
-  before_filter :authenticate_admin!
+  before_filter :authenticate_admin!, only: [:show, :edit, :update, :destroy, :index, :new]
   before_action :set_survey_answer, only: [:show, :edit, :update, :destroy]
 
   # GET /survey_answers
@@ -68,7 +68,7 @@ class SurveyAnswersController < ApplicationController
 
     respond_to do |format|
       if @survey_answer.save
-        format.html { redirect_to @survey_answer, notice: 'Survey answer was successfully created.' }
+        # format.html { redirect_to @survey_answer, notice: 'Survey answer was successfully created.' }
         format.json { render :show, status: :created, location: @survey_answer }
       else
         format.html { render :new }

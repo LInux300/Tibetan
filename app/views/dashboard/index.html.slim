@@ -3,7 +3,7 @@
 .row
   .small-12.columns
     h1 = t('view.6_topic.header')
-    p = t('view.6_topic.body')
+    p.text-right = t('view.6_topic.1_p').html_safe
   hr
   
 #results.row style="display: block;"
@@ -53,19 +53,29 @@
   .small-12.medium-6.medium-pull-6.columns
     hr
 
+/ 
+/ .row.small-12.medium
+/   div id="chart"
+
 #timeline.row style="display: block;"
   .small-12.medium-6.medium-push-6.columns
     h3
       i.fi-clock
       = t('view.6_topic.5_subtopic.title').html_safe
-    p = t('view.6_topic.5_subtopic.info').html_safe
-    #5_be_fit data-counter_last="#{}"
+    - if user_signed_in?
+      p = t('view.6_topic.5_subtopic.user')
+    - else
+      p = t('view.6_topic.5_subtopic.nonuser').html_safe
+    div id="chart"
+    / #5_be_fit
   .small-12.medium-6.medium-pull-6.columns
     h3
       i.fi-calendar
       = t('view.6_topic.6_subtopic.title').html_safe
     p = t('view.6_topic.6_subtopic.info').html_safe
-    #6_be_fit data-counter_last="#{}"
+    div id="chart_percentage"
+    / #6_be_fit
+
 .row
   .small-12.medium-6.medium-push-6.columns
     hr
@@ -78,59 +88,68 @@
       i.fi-trees
       = t('view.6_topic.7_subtopic.title').html_safe
     p = t('view.6_topic.7_subtopic.info').html_safe
-    #7_be_fit
+    / #7_be_fit
 
     p
       #accordion
-        h3 = t('view.6_topic.7_subtopic.accordion.1_section.name')
+        h3 = t('view.6_topic.7_subtopic.1_section.name')
         #accordion-1
-        h3 = t('view.6_topic.7_subtopic.accordion.2_section.name')
+        h3 = t('view.6_topic.7_subtopic.2_section.name')
         #accordion-2
-        h3 = t('view.6_topic.7_subtopic.accordion.3_section.name')
+        h3 = t('view.6_topic.7_subtopic.3_section.name')
         #accordion-3
+        h4 = t('view.6_topic.7_subtopic.4_section.name')
+        #accordion-4
 
   .small-12.medium-6.medium-pull-6.columns
     h3
       i.fi-results
       = t('view.6_topic.8_subtopic.title').html_safe
-    p = t('view.6_topic.8_subtopic.info').html_safe
-    #8_be_fit
-    
-    p
-      #tabs-1
-        ul
-          li
-            a href="#tabs-2"  Tab 1
-          li
-            a href="#tabs-3"  Tab 2
-          li
-            a href="#tabs-4"  Tab 3
-        #tabs-2
-          p
-            | Food good for you:
+    .small-12.medium-6.medium-push-6.columns
+      #8_be_fit
+    .small-12.medium-6.medium-pull-6.columns
+      p = t('view.6_topic.8_subtopic.info').html_safe
 
-        #tabs-3
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            | nisi ut aliquip ex ea commodo consequat.
-        #tabs-4
-          p
-            | ed ut perspiciatis unde omnis iste natus error sit
-            | voluptatem accusantium doloremque laudantium, totam rem aperiam,
-            | eaque ipsa quae ab illo inventore veritatis et quasi architecto
-            | beatae vitae dicta sunt explicabo.
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            | nisi ut aliquip ex ea commodo consequat.
+      p
+        #tabs-1
+          ul
+            li
+              a href="#tabs-third"  = t('view.6_topic.8_subtopic.third.name')
+            li
+              a href="#tabs-second"  = t('view.6_topic.8_subtopic.second.name')
+            li
+              a href="#tabs-first"  = t('view.6_topic.8_subtopic.first.name')
+          #tabs-second
+            ul
+              li = t('view.6_topic.8_subtopic.second.1_p')
+              li = t('view.6_topic.8_subtopic.second.2_p')
+              li = t('view.6_topic.8_subtopic.second.3_p')
+              li = t('view.6_topic.8_subtopic.second.4_p')
+              li = t('view.6_topic.8_subtopic.second.5_p')
+          #tabs-third
+            ul
+              li = t('view.6_topic.8_subtopic.third.1_p')
+              li = t('view.6_topic.8_subtopic.third.2_p')
+              li = t('view.6_topic.8_subtopic.third.3_p')
+              li = t('view.6_topic.8_subtopic.third.4_p')
+              li = t('view.6_topic.8_subtopic.third.5_p')
+          #tabs-first
+            ul
+              li = t('view.6_topic.8_subtopic.first.1_p')
+              li = t('view.6_topic.8_subtopic.first.2_p')
+              li = t('view.6_topic.8_subtopic.first.3_p')
+              li = t('view.6_topic.8_subtopic.first.4_p')
+              li = t('view.6_topic.8_subtopic.first.5_p')
 
 .row
   .small-12.medium-6.medium-push-6.columns
     hr
   .small-12.medium-6.medium-pull-6.columns
     hr
+
+.row
+  .small-12.columns
+    - if !user_signed_in?
+      p.text-right = t('view.6_topic.5_subtopic.nonuser').html_safe
 
 = javascript_include_tag '/assets/dashboard'

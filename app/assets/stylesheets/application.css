@@ -18,5 +18,6 @@
  *= require owl-carousel/owl-carousel/owl.carousel
  *= require owl-carousel/owl-carousel/owl.theme
  *= require library/foundation.min
+ *= require c3/c3.min
  *= require_self
  */

@@ -13,6 +13,9 @@ en:
   #           current_sign_in_ip: Current Sign In IP
   #           created_at: Created at
   #           updated_at: Updated at
+  time:
+   formats:
+    your_format: '%Y-%m-%d %H:%M:%S'
   view:
     email:
       title: Email
@@ -104,7 +107,7 @@ en:
       href: '/imagination#tibetan_prayers'
       short_body: Tibetan Prayers are prayers performed by monks.
     third_topic:
-      body: Informatic Tibetans ( IT ) are all kind of info about Worlds, Cultures and People.
+      body: Informatic Tibetans (IT) are all kind of info about Worlds, Cultures and People.
       button: The IT
       header: Informatic Tibetans
       href: '/medicine/tibetan-informatics'
@@ -115,11 +118,11 @@ en:
       button: Examination
       header: Physical Examinations
       href: '/examination'
-      short_body: Physical and mental checks
-      please_login: 'Please <a href="/sign_in">Sign in</a> to see all'
+      short_body: Physical and Mental Checks
+      please_login: 'Please <a href="/sign_in">Sign In</a> to see all'
     5_topic:
       p1: 'For good health is important proper Nutrition. It means knowing the type of
-        diet which is best for you. Based on your examinations, metabolic profile
+        diet which is best for you. Based on Your Examinations, metabolic profile
         and immediate health profile you can choose healthy diet'
       p2: 'We prepared Zoomable Nutrition according types. Please go on
         <a href="#zoom_circle">Zoomable Nutrion</a> and click on circles'
@@ -144,7 +147,10 @@ en:
       href: '/nutrition'
       short_body: For good health is important proper Nutrition.
     6_topic:
-      body: Overview over your examinations
+      1_p: '<a href="#results">Examinations</a> -
+            <a href="#results_elements">Tips</a> -
+            <a href="#timeline">Timeline</a> -
+            <a href="#hints">Nutrition</a>'
       button: Dashboard
       header: Dashboard
       short_body: Overview over your examinations, Nutrition, Diet
@@ -163,27 +169,66 @@ en:
         title: To Big
         info: This Element needs to be Compressed (counts from all results)
       5_subtopic:
-        title: TimeLine
-        info: Results over period of time
+        title: Timeline
+        info: Your Results
+        user: Your Results
+        nonuser: 'Please <a href="/sign_in">Sign In</a> to see Your Results'
       6_subtopic:
-        title: DateLine
-        info: Food, Exacise, Hints and Tips four <strong>Your Day</strong>
+        title: Percentage Line
+        info: '<strong>Your Equilibrium</strong>'
+        graph_y: Your Percentage
       7_subtopic:
         title: Nutrition
         info: What kind of <strong>Food, Herbs, Exercises</strong> is good for You
-        accordion:
-          1_section:
-            name: Meat
-            p:
-          2_section:
-            name: Products from Animals
-            p:
-          3_section:
-            name: Vegetables, Fruits, Nuts, Oils ...
-            p:
+        1_section:
+          name: Hints
+          to_small:
+            1_p: ' is to small. Listed Food - Meditation helps with it'
+            Air: '<ul>
+              <li>Soothing and Relaxing Meditation</li>
+              <li>Meditation that diminishes mental excitation</li>
+            <ul>'
+            Fire: '<ul>
+              <li>Clinically Proven Meditation</li>
+              <li>Meditation on Love</li>
+            <ul>'
+            Water: '<ul>
+              <li>Active and Externally focused Meditations</li>
+            <ul>'
+        2_section:
+          name: Meat
+          p:
+        3_section:
+          name: Products from Animals
+          p:
+        4_section:
+          name: Vegetables, Fruits, Nuts, Oils ...
+          p:
       8_subtopic:
-        title: Your Attribute
-        info: Preferred attributes for You
+        title: Your Hints
+        info: Good for
+        first:
+          name: Air
+          1_p: 8 Hours of Sleep
+          2_p: Light, Relaxing Exercises - Walking
+          3_p: Keep Your Home cozy, warm
+          4_p: Link up with like-minded people
+          5_p: Keep the skin healthy
+          6_p: Whole Body Massage
+        second:
+          name: Fire
+          1_p: Enyou the cooling breeze, baths, ocean
+          2_p: Exercise for Relaxation
+          3_p: Sleeping during nighttime
+          4_p: Light Massage
+          5_p: Light Mental Stress during Afternoon
+        third:
+          name: Water
+          1_p: Seek all types of Sensory Stimulation
+          2_p: Strenuous - Movement Oriented Exercises
+          3_p: Stay on Sun, get Heat
+          4_p: Deep Tissue Massage
+          5_p: 8 Hours of Sleep per Night
     7_topic:
       body: Attributes
       button: Attributes
@@ -499,8 +544,8 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
         title: FAQ
         1_h:
           title: FAQ
-          1_p: '<strong>Why are there the Examinations?</strong> Only for diagnostic of your Typology.'
-          2_p: '<strong>What is Nutritions?</strong> Food divided into three groups, zoomable'
+          1_p: '<strong>Why are there the Examinations?</strong> For diagnostic of Your Typology.'
+          2_p: '<strong>What is Nutritions?</strong> Food divided into Three Groups - zoomable'
           3_p: '<strong>What is Dashboard?</strong> Application to "Be FIT"'
         2_h:
           title: Help
@@ -527,7 +572,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
           2_p: We like to listen and understand first, and after we take an action
           3_p: We like to cooperate with you, we like to help
         2_h:
-          title: Our Methods
+          title: How We Work
           1_p: Make it simpler, but not simple
           2_p: Openness and Responsiveness
           3_p: Connections
@@ -592,12 +637,12 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       footer: Tibetan Medicine
       id: 7
     8_be_fit:
-      title: Your Element
+      title: Elements
       short_body_0:
-      topic: Your Element
-      topic_graph:  Your Element
-      subtitle: Your Element
-      footer: Tibetan Medicine
+      topic: Elements
+      topic_graph:  Elements
+      subtitle: Your Elements
+      footer: Your Elements
       id: 8
     0_survey_0:
       title: Typology Test
@@ -1386,7 +1431,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
     name: Nutrition
     zoom: Zoomable Nutrition
     cyrcle: Cyrcle Nutrition
-    login: As User you can view your nutrition
+    login: 'As <a href="/sign_in">User</a>, You can see Your Nutrition'
     color: 'white'
     0_children:
       name: Air

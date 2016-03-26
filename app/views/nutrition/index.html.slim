@@ -52,7 +52,7 @@ hr
 .row
   .small-12.columns
     -if !user_signed_in?
-      p = t('nutrition.login')
+      p.text-right = t('nutrition.login').html_safe
 
 
 / .row
