@@ -13,6 +13,7 @@ en:
   #           current_sign_in_ip: Current Sign In IP
   #           created_at: Created at
   #           updated_at: Updated at
+  give_it_try: “Give it a try. Email us by the end of the week if you find something broken.”
   time:
    formats:
     your_format: '%Y-%m-%d %H:%M:%S'
@@ -245,7 +246,7 @@ en:
         title: Tibetan Prayers
         1_p: 'Tibetan Prayers are very beneficial for you or for your relatives, friends. You can choose from the list. Prayers are done by monks.'
         2_p: '<a href="/sign_in">Sign In</a> for more info'
-        2_p: 'Please choose how much money in form of <strong>DONATION</strong> you want to give. Send us your proposal and we inform you with more details, send you additional <strong>text, mantras, pictures & info.</strong>'
+        3_p: 'Please choose how much money in form of <strong>DONATION</strong> you want to give. Send us your proposal and we inform you with more details, send you additional <strong>text, mantras, pictures & info.</strong>'
         0_prayer: '<strong>Tse Dup</strong> - Soul Healing Long Life Prayer'
         1_prayer: '<strong>Sherab Chamma</strong> - Loving Mother Prayer'
         2_prayer: '<strong>Sung Ma Thrin Chol</strong> - Accumulating merit and fortune'

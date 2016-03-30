@@ -441,6 +441,11 @@ function pieChart(div_id, counter, canvasHeight, canvasWidth) {
   		},
       onMouseoverSegment: function(info) {
   			console.log("mouseover:", info);
+        $('#tabs-first').removeClass('active');
+        $('#tabs-second').removeClass('active');
+        $('#tabs-third').removeClass('active');
+        // jQuery(this).addClass('active');
+        jQuery('#tabs-third').addClass('active');
   		},
   		onMouseoutSegment: function(info) {
   			console.log("mouseout:", info);
