@@ -97,10 +97,10 @@ en:
     first_topic:
       body: Tibetan medicine is primarily a form of Ayurveda, which was not only the traditional natural healing system of India but through history influenced surrounding cultures from Greece to China.
       p2: Tibetan Site is a place where people can come together to protect our health for generations to come.
-      button: The TM
-      header: The Tibetan Medicine
-      href: '/medicine/tibetan-medicine'
-      short_body: Tibetan medicine is also self healing.
+      button: The Examination
+      header: Your Type
+      href: '/examination'
+      short_body: Tibetan medicine is based on self healing and observation
     second_topic:
       body: Tibetan Prayers are prayers performed by monks.
       button: The TP
@@ -108,11 +108,11 @@ en:
       href: '/imagination#tibetan_prayers'
       short_body: Tibetan Prayers are prayers performed by monks.
     third_topic:
-      body: Informatic Tibetans (IT) are all kind of info about Worlds, Cultures and People.
-      button: The IT
+      body: Informatic Tibetans (IT)
+      button: Tibetan Nutrition
       header: Informatic Tibetans
-      href: '/medicine/tibetan-informatics'
-      short_body: The IT are all kind of infos about Worlds, Cultures and People.
+      href: '/nutrition'
+      short_body: The IT - Nutrition are all kind of info about incame habits.
     fourth_topic:
       body: You can examine your physical and mental state. There is a list of checks, you can fill in and you will find out what is your type according to Tibetan Medicine. Can be Air (lung), Fire (Tripa) or Water (Bagan). Also there is the approach how you can maintain or improve your general health.
       p1: You can answer any number of questions, if you answer all questions your Tibetan type is more accurate.
@@ -141,7 +141,7 @@ en:
       4_h:
         title: Water Disorder
         1_li: No - Milk
-        2_li: No - Sleep furing the day, Lack of Movement
+        2_li: No - Sleep during day, Lack of Movement
         3_li: No - Raw Vegetables, Sweets, Overeating
       button: Nutrition
       header: Nutrition

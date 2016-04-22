@@ -78,6 +78,16 @@ br
   / hr 
 br
 
+.callout.large
+  #11_row.row.column.text-center
+    h1 = t('view.index.6_row.title')
+    p.lead = t('view.index.6_row.body')
+    a.button.large href=t('view.fourth_topic.href') = t('view.index.6_row.1_button')
+    a.button.large.hollow href=t('view.5_topic.href') = t('view.index.6_row.2_button')
+
+.row.column
+  p = t('view.index.1_p')
+
 #8_row.row
   .medium-6.columns.medium-push-6
     img.thumbnail alt=t('view.index.3_row.1_title') src=("/assets/element-air-yang.jpg")  width="100%"
@@ -98,17 +108,6 @@ br
   .medium-6.columns.medium-pull-6
     h2 = t('view.index.5_row.3_title')
     p = t('view.index.5_row.3_body').html_safe
-
-
-.callout.large
-  #11_row.row.column.text-center
-    h1 = t('view.index.6_row.title')
-    p.lead = t('view.index.6_row.body')
-    a.button.large href=t('view.fourth_topic.href') = t('view.index.6_row.1_button')
-    a.button.large.hollow href=t('view.5_topic.href') = t('view.index.6_row.2_button')
-
-.row.column
-  p = t('view.index.1_p')
 
 #twenty_attributes.row.column
   .callout.primary
@@ -222,13 +221,13 @@ hr
 
 #22_row.row.text-center.max-height-multislider
   .small-4.columns
-    .image-wrapper.overlay-slide-in-left
-  /     img src="/assets/pattern_01.gif" /
-  /     .image-overlay-content
-  /       h2 =t('view.first_topic.header')
-  /       p.short_body =t('view.first_topic.short_body')
-  /       a.button href="#{t('view.first_topic.href')}"
-  /         = t('view.first_topic.button')
+    .image-wrapper.overlay-fade-in-new-background
+      img src="/assets/pattern_01.gif" /
+      .image-overlay-content
+        h2 =t('view.first_topic.header')
+        p.short_body =t('view.first_topic.short_body')
+        a.button href="#{t('view.first_topic.href')}"
+          = t('view.first_topic.button')
   .small-4.columns
     .image-wrapper.overlay-fade-in
       img src="/assets/pattern_02.jpg" /
@@ -238,13 +237,13 @@ hr
         a.button href="#{t('view.second_topic.href')}"
           = t('view.second_topic.button')
   .small-4.columns
-    .image-wrapper.overlay-fade-in-new-background
-  /     img src="/assets/pattern_03.jpg" /
-  /     .image-overlay-content
-  /       h2 =t('view.third_topic.header')
-  /       p.short_body =t('view.third_topic.short_body')
-  /       a.button href="#{t('view.third_topic.href')}"
-  /         = t('view.third_topic.button')
+    .image-wrapper.overlay-slide-in-left
+      img src="/assets/pattern_01.gif" /
+      .image-overlay-content
+        h2 =t('view.third_topic.header')
+        p.short_body =t('view.third_topic.short_body')
+        a.button href="#{t('view.third_topic.href')}"
+          = t('view.third_topic.button')
 
 .row.column
   hr/

@@ -19,7 +19,7 @@ hr { padding: 0px; }
 //------------------------------------------------------------------------------
 // Color text
 //------------------------------------------------------------------------------
-div {
+#topics, #external_links, #faq, #info, #how_we_work div {
   color: $blue_dark_2;
 }
 
@@ -125,14 +125,19 @@ div {
 // footer contact
 //------------------------------------------------------------------------------
 
+#contact_us_submit {
+  // background-color: $blue_dark_2;
+  // background-image: none;
+}
+
 .footer2 {
   // background-color: #292c2f;
   // background-color: #110d61;
-  background-color: $blue;
+  background-color: $blue_dark_2;
   text-align: center;
   font-size: 3rem;
   // color: $lightgrey;
-  color: $yellow;
+  color: $white !important;
   padding: 1rem;
 
   .social a {
@@ -141,7 +146,7 @@ div {
     height: 2rem;
     // background-color: #292c2f;
     // background-color: #110d61;
-    background-color: $blue;
+    background-color: $blue_dark_2;
     border-radius: 2px;
     font-size: 2rem;
     color: #fff;
@@ -152,7 +157,7 @@ div {
 
   .copywrite {
     // color: #8f9296;
-    color: $yellow;
+    color: $white;
     font-size: 1rem;
     margin: 1rem 0 1rem 0;
   }
@@ -161,7 +166,7 @@ div {
     textarea, input {
       border-radius: 3px;
       // background-color: #1f2022;
-      background-color: $yellow;
+      background-color: $white;
       box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
       border: none;
       resize: none;
