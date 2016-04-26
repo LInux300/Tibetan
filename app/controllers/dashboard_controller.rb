@@ -4,6 +4,32 @@ class DashboardController < ApplicationController
   def index
   end
 
+  def last_answer_counter
+    user_id = current_user ? current_user.id : nil
+
+    last_answer = SurveyAnswer.where(:user_id => user_id).last
+    if last_answer == nil
+      last_answer_counter = '{"1":0,"2":0,"3":0}'
+      last_answer_counter_all = last_answer_counter
+    else
+      last_answer_counter = last_answer.counter
+      last_answer_counter_all = last_answer.counter_all
+    end
+    all_user_answers = SurveyAnswer
+      .where(:user_id => user_id)
+      .last(20)
+
+    data = {
+      user_id: user_id,
+      last_answer_counter: last_answer_counter,
+      last_answer_counter_all: last_answer_counter_all,
+      all_user_answers: all_user_answers
+    }
+
+    # Rails.logger.debug(data)
+    render json: data, status: :ok
+  end
+
   protected
 
   def be_fit

@@ -34,6 +34,8 @@ module Tibetan
     config.assets.precompile += [
       'jquery/dist/jquery',
       'motion-ui/dist/motion-ui.js',
+      'foundation-icons.woff',
+      'foundation-icons.ttf',
       'foundation/js/foundation'
     ]
   end

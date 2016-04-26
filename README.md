@@ -37,3 +37,12 @@ sudo a2ensite tibetan
 sudo /etc/init.d/apache2 restart
 
 <!-- tail -200lf /var/log/apache2/error.log -->
+
+
+<!--  cmd-->
+RAILS_ENV=production rake db:migrate
+RAILS_ENV=production rake assets:clean assets:precompile
+
+RAILS_ENV=production rails s
+# or
+rails server -e production

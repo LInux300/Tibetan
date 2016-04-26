@@ -48,7 +48,7 @@ owl.owlCarousel({
 // -----------------------------------------------------------------------------
 $("#f_external_links").click(function(event) {
   $("#external_links").slideToggle("slow", "swing");
-  console.log('external_linkssdfsdf');
+  console.log('external_links');
 });
 $("#f_info").click(function(event) {
   $("#info").slideToggle("slow", "swing")

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   match '/nutrition',     to: 'nutrition#index', via: 'post'
   resources "nutrition", only: [:index]
 
+  match '/last_answer_counter',  to: 'dashboard#last_answer_counter', via: 'post'
+
   # get 'dashboard/index'
   # get 'nutrition/index'
   # get 'examination/index'

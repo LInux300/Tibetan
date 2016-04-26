@@ -142,7 +142,7 @@ function c3_percentage(graph_data) {
 };
 
 function c3_bar(graph_data) {
-  console.log(graph_data);
+  // console.log(graph_data);
   // var graph_data = [
   //     ['data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'x'],
   //     [90, 120, 300, 90, 120, 300, '2013-01-22'],
@@ -272,9 +272,9 @@ function couter_all_to_json_sort(counter_all) {
   return counter_all_array
 };
 
-function showCharts(counter_all) {
-  donutChart('1_be_fit', JSON.parse(gon.last_answer_counter), 250, 400);
-  donutChart('2_be_fit', counter_all, 250, 400);
+function showCharts(last_answer_counter_all, last_answer_counter) {
+  donutChart('1_be_fit', last_answer_counter, 250, 400);
+  donutChart('2_be_fit', last_answer_counter_all, 250, 400);
 };
 
 function getGraphColor (type_x) {
@@ -336,10 +336,22 @@ function graphData(graph_data) {
 };
 
 
-if (typeof donutChart !== 'undefined' && $.isFunction(donutChart)) {
-  var counter_all = JSON.parse(gon.last_answer_counter_all),
-      all_user_answers = gon.all_user_answers;
+function getCounterData() {
+  url = '/last_answer_counter';
+  $.ajax({
+    type: "POST",
+    url: url,
+  }).done(function(data) {
+    dashboardGraphs(data)
+  }).fail(function() {
+    alert('Error occured');
+  });
+}
 
+function dashboardGraphs(data) {
+  var last_answer_counter_all = JSON.parse(data.last_answer_counter_all),
+      last_answer_counter = JSON.parse(data.last_answer_counter),
+      all_user_answers = data.all_user_answers;
 
   var graph_data = [];
   graph_data.push(['data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'time'])
@@ -360,15 +372,15 @@ if (typeof donutChart !== 'undefined' && $.isFunction(donutChart)) {
   c3_percentage(graph_data);
   c3_bar(graph_data);
 
-  showCharts(counter_all);
+  showCharts(last_answer_counter_all, last_answer_counter);
 
   // for new user without records
-  if ( gon.last_answer_counter_all == '{"1":0,"2":0,"3":0}' ) {
+  if (data.last_answer_counter_all == '{"1":0,"2":0,"3":0}' ) {
     $( "#3_be_fit_a" ).append(I18n.t('view.6_topic.no_records'));
     $( "#4_be_fit_a" ).append(I18n.t('view.6_topic.no_records'));
   }
   else {
-    var counter_all_max_min = couter_all_to_json_sort(counter_all);
+    var counter_all_max_min = couter_all_to_json_sort(last_answer_counter_all);
     to_small = typeToSmall(counter_all_max_min);
     to_big = typeToBig(counter_all_max_min);
     // console.log(to_small);
@@ -382,9 +394,14 @@ if (typeof donutChart !== 'undefined' && $.isFunction(donutChart)) {
 
   // donutChart('5_be_fit', counter_all, 250, 400);
   // d3.select('5_be_fit');
-  pieChart('8_be_fit', counter_all, 230, 200);
+  pieChart('8_be_fit', last_answer_counter_all, 230, 200);
   // donutChart('7_be_fit', counter_all, 250, 400);
   // pieChart('8_be_fit', counter_all, 250, 400);
+}
+
+//  check for all divs should be more accurated
+if (typeof donutChart !== 'undefined' && $.isFunction(donutChart) && $("#8_be_fit").length > 0) {
+  getCounterData();
 }
 
 // -----------------------------------------------------------------------------
