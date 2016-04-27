@@ -84,4 +84,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+
+
+  # ruda add
+  #config.serve_static_assets = true  --> rename
+  # config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  # config.assets.serve_static_files = true
+  config.serve_static_files = true
 end

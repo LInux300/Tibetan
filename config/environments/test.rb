@@ -46,4 +46,14 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+
+  # ruda add
+  #config.serve_static_assets = true  --> rename
+  # config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  # config.assets.serve_static_files = true
+  config.serve_static_files = true
+
+  config.action_view.raise_on_missing_translations = true
+
 end

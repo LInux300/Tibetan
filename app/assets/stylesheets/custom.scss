@@ -1,2 +1,291 @@
-.top-bar-section {
+// $blue: #2980b9;
+// $blue: #1B6AA5;
+$blue: #008CBA;
+$blue_light: #1EA8CF;
+$blue_dark: #227FB0;
+$blue_dark_2: #110d61;
+$royalblue: #1B6AA5;
+$green: #009A31;
+$red: #E8110F;
+$yellow: #FBC723;
+$text-color: #fff;
+$white: white;
+$black: black;
+$grey: #f7f7f7;
+$lightgrey: #8f9296;
+hr { padding: 0px; }
+
+
+//------------------------------------------------------------------------------
+// Color text
+//------------------------------------------------------------------------------
+#topics, #external_links, #faq, #info, #how_we_work div {
+  color: $blue_dark_2;
 }
+
+
+//------------------------------------------------------------------------------
+// tooltip
+//------------------------------------------------------------------------------
+
+// label {
+//   display: inline-block;
+//   width: 10em;
+// }
+
+//------------------------------------------------------------------------------
+// navigation top
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// General
+//------------------------------------------------------------------------------
+* {
+  padding: 5;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  font-weight: normal;
+}
+//------------------------------------------------------------------------------
+// refinery
+//------------------------------------------------------------------------------
+#pagess {
+  margin-bottom: 0px !important;
+}
+
+#topics {
+  // background-image: url("pattern_01_over.gif") !important;
+  // background-repeat: repeat-x;
+}
+
+//------------------------------------------------------------------------------
+// header
+//------------------------------------------------------------------------------
+
+.top-bar-section, #header {
+  background-color: $grey;
+}
+
+.top-bar-section {
+  // background-color: $blue;
+}
+
+//------------------------------------------------------------------------------
+// body main
+//------------------------------------------------------------------------------
+.alert-box {
+  margin-top: 5px !important;
+  background: $grey !important;
+  color: black !important;
+  border: none;
+  border-left: 6px solid $blue !important;
+  box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+  &.success {
+    background: $grey;
+    color: black;
+  }
+  &.alert {
+    background: $grey;
+    color: black;
+  }
+  &.warning {
+    background: $grey;
+    color: black;
+  }
+  &.info {
+    background: $grey;
+    color: black;
+  }
+  &.small {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem;
+    .close {
+      font-size: 1.5rem;
+    }
+  }
+  &.large {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+
+    .close {
+      font-size: 3rem;
+    }
+  }
+  .close {
+    font-size: 2rem;
+    line-height: 1.25rem;
+  }
+}
+
+//------------------------------------------------------------------------------
+// footer contact
+//------------------------------------------------------------------------------
+
+#contact_us_submit {
+  // background-color: $blue_dark_2;
+  // background-image: none;
+}
+
+.footer2 {
+  // background-color: #292c2f;
+  // background-color: #110d61;
+  background-color: $blue_dark_2;
+  text-align: center;
+  font-size: 3rem;
+  // color: $lightgrey;
+  color: $white !important;
+  padding: 1rem;
+
+  .social a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    // background-color: #292c2f;
+    // background-color: #110d61;
+    background-color: $blue_dark_2;
+    border-radius: 2px;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    margin: 0 6px 0 0;
+  }
+
+  .copywrite {
+    // color: #8f9296;
+    color: $white;
+    font-size: 1rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .footer2-form {
+    textarea, input {
+      border-radius: 3px;
+      // background-color: #1f2022;
+      background-color: $white;
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+      border: none;
+      resize: none;
+      font: inherit;
+      font-size: 0.875rem;
+      font-weight: normal;
+      // color: #d1d2d2;
+      color: black;
+      padding: 1.3rem;
+    }
+
+    label {
+      text-align: left;
+      color: #fff;
+      font-size: 1.2rem;
+      margin: 0 0 1rem 0;
+      font-weight: bold;
+    }
+
+    .submit {
+      border-radius: 3px;
+      padding: 1rem 3.5rem;
+      font-weight: bold;
+      float: right;
+      margin: 0 1rem 2rem 0;
+    }
+  }
+
+  .footer2-links a {
+    list-style: none;
+    font-weight: normal;
+    color: #fff;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    font-size: 1rem;
+
+    &::after {
+      content: "•";
+      padding: 0 0.2rem 0 0.4rem;
+    }
+
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 40.063em) {
+    padding: 4rem;
+
+    p {
+      text-align: left;
+    }
+
+    .social {
+      text-align: left;
+      margin: 0;
+    }
+
+    .footer2-form {
+      .contact {
+        position: absolute;
+        left: -45%;
+        top: 10%;
+      }
+    }
+
+  }
+}
+
+//------------------------------------------------------------------------------
+// footer
+//------------------------------------------------------------------------------
+.footer {
+  background-color: $blue;
+  padding: 2rem 4rem;
+  text-align: center;
+  color: $text-color;
+  i {
+    font-size: 100px;
+  }
+}
+.footer {
+  h4 {
+    color: $text-color;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    margin-bottom: 10px;
+  }
+  p, a {
+    font-weight: 300;
+    font-size: .8em;
+    color: $text-color;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+.footer {
+  .columns:nth-child(n+2) {
+    border-left: 1px solid scale-color($text-color, $lightness: -30%);
+    min-height: 280px;
+  }
+ }
+}
+.footer-links {
+  list-style-type: none;
+  li {
+    margin-top: .5em;
+    color: $white;
+  }
+}
+
+.footer-links > li > a:hover,.footer-links > li > a:visited,.footer-links > li > a:active {
+  color: $white;
+}
+
+.footer-links > li > a:hover {
+  text-decoration: underline;
+}
+
+//------------------------------------------------------------------------------

@@ -1,0 +1,66 @@
+.row
+  .small-12.columns
+    h1 = t('view.5_topic.header')
+    p = t('view.5_topic.p1')
+    p = t('view.5_topic.p2').html_safe
+
+.row
+  .small-12.columns
+    h2 = t('view.5_topic.1_h')
+
+.row
+  .small-4.columns
+    h3 = t('view.5_topic.2_h.title')
+    p
+      ul
+        li = t('view.5_topic.2_h.1_li')
+        li = t('view.5_topic.2_h.2_li')
+        li = t('view.5_topic.2_h.3_li')
+  .small-4.columns
+    h3 = t('view.5_topic.3_h.title')
+    p
+      ul
+        li = t('view.5_topic.3_h.1_li')
+        li = t('view.5_topic.3_h.2_li')
+        li = t('view.5_topic.3_h.3_li')
+  .small-4.columns
+    h3 = t('view.5_topic.4_h.title')
+    p
+      ul
+        li = t('view.5_topic.4_h.1_li')
+        li = t('view.5_topic.4_h.2_li')
+        li = t('view.5_topic.4_h.3_li')
+
+/ .row
+/   div class="small-12 columns"
+/     a.button href="#dendrogram_cyrcle" onclick="$('#dendrogram_cyrcle').toggle();"
+/       = t('nutrition.cyrcle')
+/     a.button href="#zoom_circle" onclick="$('#zoom_circle').toggle();"
+/       = t('nutrition.zoom')
+/     / button onclick="treeStep('#tree_step')" Click me
+/   hr
+hr
+
+.row
+  .small-12.columns.text-right
+    h3 = t('nutrition.zoom')
+  #zoom_circle
+   .small-12.columns.text-center
+
+hr
+
+.row
+  .small-12.columns
+    -if !user_signed_in?
+      p.text-right = t('nutrition.login').html_safe
+
+
+/ .row
+/   div id="dendrogram_cyrcle"
+/     .small-12.columns.text-center
+
+/ .row
+/   .small-12.columns.text-center
+/     div id="tree_step"
+
+= javascript_include_tag '/assets/nutrition'

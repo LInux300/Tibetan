@@ -14,3 +14,7 @@ Rails.application.config.assets.version = '1.0'
 # add by
 # Rails.application.config.assets.precompile += %w( slider.js )
 #Rails.application.config.assets.precompile += %w( .js .css .scss .svg .eot .woff .ttf)
+
+#
+# Rails.application.config.assets.precompile += %w( d3pie/d3pie/d3pie.min.js )
+# Rails.application.config.assets.precompile += %w( foundation/js/foundation/foundation.equalizer.js)

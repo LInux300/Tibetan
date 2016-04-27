@@ -1,0 +1,94 @@
+.top-bar
+  .row
+    .top-bar-left
+      ul.dropdown.menu data-dropdown-menu="" 
+        li.menu-text
+          a href="/" = t('title')
+        li.has-submenu
+          a href=t('view.fourth_topic.href') = '☰ ' + t('view.fourth_topic.button')
+          ul.submenu.menu.vertical data-submenu="" 
+            li
+              a href="#"  One
+            li
+              a href="#"  Two
+            li
+              a href="#"  Three
+        li
+          a href=t('view.5_topic.href') = t('view.5_topic.button')
+        li
+          a href=t('view.6_topic.href') = t('view.6_topic.button')
+        li
+          a href=t('view.8_topic.href') = t('view.8_topic.button')
+    .top-bar-right
+      / ul.menu
+      /   li
+      /     input placeholder="Search" type="search" /
+      /   li
+      /     button.button type="button" =('search')
+      ul.dropdown.menu data-dropdown-menu=""
+        -if user_signed_in?
+          li.menu-text
+            a href="/dashboard" = current_user.email
+          li.menu-text
+            a href="/sign_out" = t('devise.sign_out')
+        -else
+          li.menu-text
+            a href="/sign_in" = t('devise.sign_in')
+
+.row
+    img alt=t('title') src=("/assets/main-6.jpg")
+    / img alt=t('title') src=("/assets/main.svg")
+
+/ #owl-example.owl-carousel
+/   div
+/     img src="/assets/slide1.jpg" alt=t('title') style="width:504px;height:328px;"
+/   div
+/     img src="/assets/slide2.jpg" alt=t('title') style="width:504px;height:328px;"
+/   div
+/     img src="/assets/slide3.jpg" alt=t('title') style="width:504px;height:328px;"
+/   div
+/     img src="/assets/slide4.jpg" alt=t('title') style="width:504px;height:328px;"
+/   div
+/     img src="/assets/slide5.jpg" alt=t('title') style="width:504px;height:328px;"
+/   div
+/     img src="/assets/slide6.jpg" alt=t('title') style="width:504px;height:328px;"
+/   div
+/     img src="/assets/slide7.png" alt=t('title') style="width:504px;height:328px;"
+/   div
+/     img src="/assets/slide8.jpg" alt=t('title') style="width:504px;height:328px;"
+
+
+/ .row.text-center.slick-multislider
+/   .large-4.small-12.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 1
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.small-12.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 2
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.small-12.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 3
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 4
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 5
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+/   .large-4.columns
+/     img alt="" src="http://placehold.it/700x300" /
+/     h5.h5-title-margin-top Image Title 6
+/     .title-blue-line-content
+/     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!
+
+/ .row
+/    = render "/refinery/header"

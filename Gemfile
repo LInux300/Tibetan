@@ -12,8 +12,6 @@ end
 gem 'mysql2', '~> 0.3.13'
 
 
-
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,6 +41,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Slim
 gem "slim-rails"
+
+# git: 'https://github.com/fnando/i18n-js.git'
+gem "i18n-js", ">= 3.0.0.rc11"
+
 # https://rubygems.org/gems/refinerycms
 gem 'refinerycms', '~> 3.0', '>= 3.0.1'
 
@@ -51,6 +53,10 @@ gem 'activemerchant', '~> 1.57'
 
 # Devise
 gem 'devise'
+
+# js variable
+gem 'gon'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

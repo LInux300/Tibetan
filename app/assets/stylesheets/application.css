@@ -14,11 +14,10 @@
  *= require refinery/formatting
  *= require refinery/theme
  *= require jquery-ui
- *= require foundation/scss/foundation
- *= require foundation/scss/normalize
- *= require slick-carousel/slick/slick
- *= require slick-carousel/slick/slick-theme
- *= require motion-ui/dist/motion-ui.css
- *= require slider
+ *= require foundation-icon-fonts/foundation-icons
+ *= require owl-carousel/owl-carousel/owl.carousel
+ *= require owl-carousel/owl-carousel/owl.theme
+ *= require library/foundation.min
+ *= require c3/c3.min
  *= require_self
  */

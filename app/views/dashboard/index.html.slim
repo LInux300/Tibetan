@@ -1,0 +1,154 @@
+= include_gon
+
+.row
+  .small-12.columns
+    h1 = t('view.6_topic.header')
+    p.text-right = t('view.6_topic.1_p').html_safe
+  hr
+  
+#results.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+      h3
+        i.fi-graph-bar
+        = t('view.6_topic.1_subtopic.title').html_safe
+      p = t('view.6_topic.1_subtopic.info').html_safe
+      / p = @last_answer.answer
+      #1_be_fit
+
+  .small-12.medium-6.medium-pull-6.columns
+    h3
+      i.fi-graph-trend
+      = t('view.6_topic.2_subtopic.title').html_safe
+    p = t('view.6_topic.2_subtopic.info').html_safe
+    #2_be_fit data-counter_last="#{}"
+.row
+  .small-12.medium-6.medium-push-6.columns
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    hr
+
+#results_elements.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+    .small-12.medium-6.medium-push-6.columns
+      #3_be_fit_a
+    .small-12.medium-6.medium-pull-6.columns
+      h3
+        i.fi-arrows-in
+        = t('view.6_topic.3_subtopic.title').html_safe
+      #3_be_fit data-counter_last="#{}"
+      / p = t('view.6_topic.3_subtopic.info').html_safe
+  .small-12.medium-6.medium-pull-6.columns
+    .small-12.medium-6.medium-push-6.columns
+      #4_be_fit_a
+    .small-12.medium-6.medium-pull-6.columns
+      h3
+        i.fi-arrows-out
+        = t('view.6_topic.4_subtopic.title').html_safe
+      #4_be_fit data-counter_last="#{}"
+      / p = t('view.6_topic.4_subtopic.info').html_safe
+.row
+  .small-12.medium-6.medium-push-6.columns
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    hr
+
+/ 
+/ .row.small-12.medium
+/   div id="chart"
+
+#timeline.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+    h3
+      i.fi-clock
+      = t('view.6_topic.5_subtopic.title').html_safe
+    - if user_signed_in?
+      p = t('view.6_topic.5_subtopic.user')
+    - else
+      p = t('view.6_topic.5_subtopic.nonuser').html_safe
+    div id="chart"
+    / #5_be_fit
+  .small-12.medium-6.medium-pull-6.columns
+    h3
+      i.fi-calendar
+      = t('view.6_topic.6_subtopic.title').html_safe
+    p = t('view.6_topic.6_subtopic.info').html_safe
+    div id="chart_percentage"
+    / #6_be_fit
+
+.row
+  .small-12.medium-6.medium-push-6.columns
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    hr
+
+#hints.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+    h3
+      i.fi-trees
+      = t('view.6_topic.7_subtopic.title').html_safe
+    p = t('view.6_topic.7_subtopic.info').html_safe
+    / #7_be_fit
+
+    p
+      #accordion
+        h3 = t('view.6_topic.7_subtopic.1_section.name')
+        #accordion-1
+        h3 = t('view.6_topic.7_subtopic.2_section.name')
+        #accordion-2
+        h3 = t('view.6_topic.7_subtopic.3_section.name')
+        #accordion-3
+        h4 = t('view.6_topic.7_subtopic.4_section.name')
+        #accordion-4
+
+  .small-12.medium-6.medium-pull-6.columns
+    h3
+      i.fi-results
+      = t('view.6_topic.8_subtopic.title').html_safe
+    .small-12.medium-6.medium-push-6.columns
+      #8_be_fit
+    .small-12.medium-6.medium-pull-6.columns
+      p = t('view.6_topic.8_subtopic.info').html_safe
+
+      p
+        #tabs-1
+          ul
+            li
+              a href="#tabs-third"  = t('view.6_topic.8_subtopic.third.name')
+            li
+              a href="#tabs-second"  = t('view.6_topic.8_subtopic.second.name')
+            li
+              a href="#tabs-first"  = t('view.6_topic.8_subtopic.first.name')
+          #tabs-second
+            ul
+              li = t('view.6_topic.8_subtopic.second.1_p')
+              li = t('view.6_topic.8_subtopic.second.2_p')
+              li = t('view.6_topic.8_subtopic.second.3_p')
+              li = t('view.6_topic.8_subtopic.second.4_p')
+              li = t('view.6_topic.8_subtopic.second.5_p')
+          #tabs-third
+            ul
+              li = t('view.6_topic.8_subtopic.third.1_p')
+              li = t('view.6_topic.8_subtopic.third.2_p')
+              li = t('view.6_topic.8_subtopic.third.3_p')
+              li = t('view.6_topic.8_subtopic.third.4_p')
+              li = t('view.6_topic.8_subtopic.third.5_p')
+          #tabs-first
+            ul
+              li = t('view.6_topic.8_subtopic.first.1_p')
+              li = t('view.6_topic.8_subtopic.first.2_p')
+              li = t('view.6_topic.8_subtopic.first.3_p')
+              li = t('view.6_topic.8_subtopic.first.4_p')
+              li = t('view.6_topic.8_subtopic.first.5_p')
+
+.row
+  .small-12.medium-6.medium-push-6.columns
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    hr
+
+.row
+  .small-12.columns
+    - if !user_signed_in?
+      p.text-right = t('view.6_topic.5_subtopic.nonuser').html_safe
+
+= javascript_include_tag '/assets/dashboard'

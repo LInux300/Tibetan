@@ -24,12 +24,18 @@ module Tibetan
     config.active_record.raise_in_transactional_callbacks = true
 
 
+    # add by
+    # for rake test and gem 'web-console'
+    # config.web_console.development_only = false
+
     # bower js library
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
 
     config.assets.precompile += [
       'jquery/dist/jquery',
       'motion-ui/dist/motion-ui.js',
+      'foundation-icons.woff',
+      'foundation-icons.ttf',
       'foundation/js/foundation'
     ]
   end

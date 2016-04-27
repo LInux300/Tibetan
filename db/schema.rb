@@ -11,7 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160226141541) do
+ActiveRecord::Schema.define(version: 20160322105239) do
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "confirmation_token",     limit: 255
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email",      limit: 255
+    t.integer  "failed_attempts",        limit: 4,   default: 0,  null: false
+    t.string   "unlock_token",           limit: 255
+    t.datetime "locked_at"
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+  end
+
+  add_index "admins", ["confirmation_token"], name: "index_admins_on_confirmation_token", unique: true, using: :btree
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+  add_index "admins", ["unlock_token"], name: "index_admins_on_unlock_token", unique: true, using: :btree
+
+  create_table "contact_us", force: :cascade do |t|
+    t.string   "email",      limit: 255
+    t.string   "type",       limit: 255
+    t.string   "name",       limit: 255
+    t.string   "subject",    limit: 255
+    t.string   "message",    limit: 255
+    t.integer  "user_id",    limit: 4
+    t.boolean  "answered"
+    t.string   "answer",     limit: 255
+    t.string   "text",       limit: 255
+    t.string   "parent_id",  limit: 255
+    t.string   "integer",    limit: 255
+    t.string   "child_id",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", limit: 4,   null: false
@@ -134,6 +178,18 @@ ActiveRecord::Schema.define(version: 20160226141541) do
 
   add_index "seo_meta", ["id"], name: "index_seo_meta_on_id", using: :btree
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], name: "id_type_index_on_seo_meta", using: :btree
+
+  create_table "survey_answers", force: :cascade do |t|
+    t.string   "title",          limit: 255
+    t.string   "topic",          limit: 255
+    t.string   "counter",        limit: 255
+    t.string   "counter_all",    limit: 255
+    t.text     "answer",         limit: 65535
+    t.text     "type_questions", limit: 65535
+    t.integer  "user_id",        limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

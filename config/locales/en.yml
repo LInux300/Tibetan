@@ -1,36 +1,2535 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   title: Tibetan
-  hello: "Hello world"
+  copyright: ' %{year} %{title}'
+  search: Search
+  # activerecord:
+  #   models:
+  #       admin/user: User
+  #   attributes:
+  #       admin/user:
+  #           email: Email
+  #           last_sign_in_at: Last Sign In at
+  #           current_sign_in_at: Current_Sign In at
+  #           current_sign_in_ip: Current Sign In IP
+  #           created_at: Created at
+  #           updated_at: Updated at
+  give_it_try: “Give it a try. Email us by the end of the week if you find something broken.”
+  time:
+   formats:
+    your_format: '%Y-%m-%d %H:%M:%S'
   view:
-    main:
-      medicine:
-        header: The Tibetan Medicine
-        body: Tibetan medicine is primarily a form of Ayurveda, which was not only the traditional natural healing system of India but through history influenced surrounding cultures from Greece to China.
-        link:
-          text: Tibetan Medicine
-      prayers:
-        header: The Tibetan Prayers
-        body: Tibetan Prayers are
-        link:
-          text: Tibetan Prayers
+    email:
+      title: Email
+      email_from: info@
+    home: Home
+    coutact_us:
+      title: Contact Us
+      email_address: Email Address
+      message: Message
+      send: Send
+      thank_you: Thank You for your message
+    seven:
+      title: Seven Tissues
+      1_p: 'There are 7 pathways through which the body receives nourishment. The Seven Tissues are: <strong> Plasma, Blood, Muscle, Fatty Tissue, Bone, Marrow and Regenerative Fluid </strong>'
+    index:
+      1_p: 'We are happy to see you here. We present the way how you can help yourself or your family, friends and others people. The best six doctors: Sunshine, Water, Rest, Air, Exercise & Diet. Tibetan Medicine can help you with it too. TM, called "Sowa Rigpa" in Tibetan, means the science and knowledge of healing.'
+      2_p: Main topics are
+      1_row:
+        title: TIBETAN MEDICINE
+      2_row:
+        1_lead: Symptoms of Air disorder
+        2_lead: Symptoms of Fire disorder
+        3_lead: Symptoms of Water disorder
+        1_subheader: Frequent sighing, mental wandering distraction, dizziness, ringing in the ears, diffused pain, muscular tension, poor circulation, cold extremities, tremors, chills, stiffness and difficulty in movement, lethargy, pain in the joints, frequent pins and needles sensation, starry eyes, goose pimples, insomnia or disturbed sleep and dreams, pains in either the lower skull, chest or jaws, dry heaves, gas or a rumbling sound in the abdomen, and constipation.
+        2_subheader: Diarrhea, vomiting, itchy skin, intense thirst, bitter taste in the mouth,fever, sleeplessness, strong odor of the urine and stool, headaches, nausea, and discomfort in the liver and gail bladder regions.
+        3_subheader: pale complexion and gums, excess mucus, lethargy, poor appetite, low body temperature, indigestion, slow digestion, dicomfort in the lower back or kidney region, fluid retentiion and puffiness, sleepiness, and poor memory and dullness.
+      3_row:
+        1_title: Air Characteristics
+        1_body: "<strong>Cool, Dry, Hard, Light, Mobile, Subtle</strong>.\
+          <br>\
+          <ul style='color:green'>\
+            <li><strong>Cool</strong> - chills</li>
+            <li><strong>Dry</strong> - irritated skin, dry mouth</li>\
+            <li><strong>Hard</strong> - stiff joints</li>\
+            <li><strong>Light</strong> - forgetfulness, insomnia</li>\
+            <li><strong>Mobile</strong> - hysteria, dizziness</li>\
+            <li><strong>Subtle</strong> - blurred vision, ringing in the ears</li>\
+          </ul>"
+        2_p:
+      4_row:
+        2_title: Fire characteristics
+        2_body: "<strong>Flowing, Hot, Malodorous, Oily, Purging, Sharp</strong>.
+          <br>
+          <ul style='color:red'>
+            <li><strong>Flowing</strong> - diarrhea</li>
+            <li><strong>Oily</strong> - oily complexion</li>
+            <li><strong>Hot</strong> - thirst, overheating</li>
+            <li><strong>Malodorous</strong> - body odor</li>
+            <li><strong>Purging</strong> - excessive mucus</li>
+            <li><strong>Sharp</strong> - localized pain</li>
+          </ul>"
+      5_row:
+        3_title: Water characteristics
+        3_body: "<strong>Blunt, Cold, Heavy, Stable, Smooth, Sticky</strong>.
+          <br>
+          <ul style='color:blue'>
+            <li><strong>Blunt</strong> - slowly developing</li>
+            <li><strong>Cold</strong> - low body temperature</li>
+            <li><strong>Heavy</strong> - lethargy, sleepiness, slow recovery</li>
+            <li><strong>Stable</strong> - unchanging</li>
+            <li><strong>Smooth:</strong> - dull pains</li>
+            <li><strong>Sticky</strong> - cohesive urine</li>
+          </ul>"
+      6_row:
+        title: Changing the World Through Tibetan Medicine
+        body: TM Is rich and complex and fundamental principles can be quickly understood.
+        1_button: Test Your type
+        2_button: Nutrition
+      7_row:
+        title: Three Nepas
+      8_row:
+        1_body: "<strong>TB is base on the Five Elements, the Three Nepas, the Twenty Attributes and the Seven Tissues.</strong>"
+        2_body: "The body is complex composition of <strong title='Space, Air, Fire, Earth, Water'>The Five Elements</strong>. Each element have a distinct function in the body. \
+        The Earth element provides stability and structure. Water provides smoothness and moisture. \
+        Fire element is connected with growth, development and the assimilation adn absorption of food. \
+        Because of the Air Element we are able to move our joints and muscles and to circulate blood and fluids. \
+        The Space element allows the other elements exist."
+    first_topic:
+      body: Tibetan medicine is primarily a form of Ayurveda, which was not only the traditional natural healing system of India but through history influenced surrounding cultures from Greece to China.
+      p2: Tibetan Site is a place where people can come together to protect our health for generations to come.
+      button: The Examination
+      header: Your Type
+      href: '/examination'
+      short_body: Tibetan medicine is based on self healing and observation
+    second_topic:
+      body: Tibetan Prayers are prayers performed by monks.
+      button: The TP
+      header: The Tibetan Prayers
+      href: '/imagination#tibetan_prayers'
+      short_body: Tibetan Prayers are prayers performed by monks.
+    third_topic:
+      body: Informatic Tibetans (IT)
+      button: Tibetan Nutrition
+      header: Informatic Tibetans
+      href: '/nutrition'
+      short_body: The IT - Nutrition are all kind of info about incame habits.
+    fourth_topic:
+      body: You can examine your physical and mental state. There is a list of checks, you can fill in and you will find out what is your type according to Tibetan Medicine. Can be Air (lung), Fire (Tripa) or Water (Bagan). Also there is the approach how you can maintain or improve your general health.
+      p1: You can answer any number of questions, if you answer all questions your Tibetan type is more accurate.
+      button: Examination
+      header: Physical Examinations
+      href: '/examination'
+      short_body: Physical and Mental Checks
+      please_login: 'Please <a href="/sign_in">Sign In</a> to see all'
+    5_topic:
+      p1: 'For good health is important proper Nutrition. It means knowing the type of
+        diet which is best for you. Based on Your Examinations, metabolic profile
+        and immediate health profile you can choose healthy diet'
+      p2: 'We prepared Zoomable Nutrition according types. Please go on
+        <a href="#zoom_circle">Zoomable Nutrion</a> and click on circles'
+      1_h: Behavior & Diet
+      2_h:
+        title: Wind Disorder
+        1_li: No - Tea, Coffe, Beverages with Gas
+        2_li: No - Asting, Excessive Talk, Lack of Sleep, Purgatives, Sexual Contact, Vomiting
+        3_li: No - Raw Vegetables, Bitter Salad
+      3_h:
+        title: Fire Disorder
+        1_li: No - Alcohol
+        2_li: No - Heavy Physical or Mental Work
+        3_li: No - Hot, Fatty or Spicy Food, Meat
+      4_h:
+        title: Water Disorder
+        1_li: No - Milk
+        2_li: No - Sleep during day, Lack of Movement
+        3_li: No - Raw Vegetables, Sweets, Overeating
+      button: Nutrition
+      header: Nutrition
+      href: '/nutrition'
+      short_body: For good health is important proper Nutrition.
+    6_topic:
+      1_p: '<a href="#results">Examinations</a> -
+            <a href="#results_elements">Tips</a> -
+            <a href="#timeline">Timeline</a> -
+            <a href="#hints">Nutrition</a>'
+      button: Dashboard
+      header: Dashboard
+      short_body: Overview over your examinations, Nutrition, Diet
+      href: '/dashboard'
+      no_records: There are no records, please do examinations first.
+      1_subtopic:
+        title: Last Result
+        info: Your last Examination check
+      2_subtopic:
+        title: All Results
+        info: All Your Results
+      3_subtopic:
+        title: To Small
+        info: This Element needs to be Expanded (counts from all results)
+      4_subtopic:
+        title: To Big
+        info: This Element needs to be Compressed (counts from all results)
+      5_subtopic:
+        title: Timeline
+        info: Your Results
+        user: Your Results
+        nonuser: 'Please <a href="/sign_in">Sign In</a> to see Your Results'
+      6_subtopic:
+        title: Percentage Line
+        info: '<strong>Your Equilibrium</strong>'
+        graph_y: Your Percentage
+      7_subtopic:
+        title: Nutrition
+        info: What kind of <strong>Food, Herbs, Exercises</strong> is good for You
+        1_section:
+          name: Hints
+          to_small:
+            1_p: ' is to small. Listed Food - Meditation helps with it'
+            Air: '<ul>
+              <li>Soothing and Relaxing Meditation</li>
+              <li>Meditation that diminishes mental excitation</li>
+            <ul>'
+            Fire: '<ul>
+              <li>Clinically Proven Meditation</li>
+              <li>Meditation on Love</li>
+            <ul>'
+            Water: '<ul>
+              <li>Active and Externally focused Meditations</li>
+            <ul>'
+        2_section:
+          name: Meat
+          p:
+        3_section:
+          name: Products from Animals
+          p:
+        4_section:
+          name: Vegetables, Fruits, Nuts, Oils ...
+          p:
+      8_subtopic:
+        title: Your Hints
+        info: Good for
+        first:
+          name: Air
+          1_p: 8 Hours of Sleep
+          2_p: Light, Relaxing Exercises - Walking
+          3_p: Keep Your Home cozy, warm
+          4_p: Link up with like-minded people
+          5_p: Keep the skin healthy
+          6_p: Whole Body Massage
+        second:
+          name: Fire
+          1_p: Enyou the cooling breeze, baths, ocean
+          2_p: Exercise for Relaxation
+          3_p: Sleeping during nighttime
+          4_p: Light Massage
+          5_p: Light Mental Stress during Afternoon
+        third:
+          name: Water
+          1_p: Seek all types of Sensory Stimulation
+          2_p: Strenuous - Movement Oriented Exercises
+          3_p: Stay on Sun, get Heat
+          4_p: Deep Tissue Massage
+          5_p: 8 Hours of Sleep per Night
+    7_topic:
+      body: Attributes
+      button: Attributes
+      header: Attributes
+      short_body: Overview over your examinations
+      href: '/#twenty_attributes'
+      info: What kind of <strong>Food, Herbs, Exercises</strong> is good for You
+    8_topic:
+      button: Creative Imagination
+      href: '/imagination'
+      1_p: The most important component for the healing is the power of creative imagination
+      1_h: The Mind Series
+      1_subtopic:
+        title: Tibetan Prayers
+        1_p: 'Tibetan Prayers are very beneficial for you or for your relatives, friends. You can choose from the list. Prayers are done by monks.'
+        2_p: '<a href="/sign_in">Sign In</a> for more info'
+        3_p: 'Please choose how much money in form of <strong>DONATION</strong> you want to give. Send us your proposal and we inform you with more details, send you additional <strong>text, mantras, pictures & info.</strong>'
+        0_prayer: '<strong>Tse Dup</strong> - Soul Healing Long Life Prayer'
+        1_prayer: '<strong>Sherab Chamma</strong> - Loving Mother Prayer'
+        2_prayer: '<strong>Sung Ma Thrin Chol</strong> - Accumulating merit and fortune'
+        3_prayer: '<strong>Choe me</strong> - Releasing the struggle with darkness'
+        4_prayer: '<strong>Doo Dok</strong> - Cleansing of obstacles'
+        5_prayer: '<strong>Nam Jom</strong> - Expelling demonic nightmares'
+        6_prayer: '<strong>Chung Mar</strong> - Banishing Nagas'
+        7_prayer: '<strong>Phowa</strong></strong> - Prayer for the Deceased'
+        8_prayer: '<strong>Prayer on request</strong>'
+        9_prayer: '<strong>Simple Prayer</strong>'
+      2_subtopic:
+        title: Medicine Buddha
+        1_p: 'Men Lha, the Medicine Buddha, is a manifestation of Lord Buddha Tonpa Shenrab. With full knowledge of the suffering of sentient beings in the world, Lord Buddha Tonpa, the founder of the Bonpo tradition of Buddhism, and the first Buddha, gave his divine teaching to eliminate all suffering and to bring healing as well as purify people from their negative karma.'
+        2_p: 'Mantra<br><strong>OM NA MA SE LA AMITA SE GYER DUN PUNG OM A HUNG RAM DZA SAMAYA TITA LHEN</strong>'
+      3_subtopic:
+        title: OM MA TRI MU YE SA LE DU
+        subtitle: THE GREAT MANTRA OF THE BÖN TRADITION
+        1_p: "
+<br><strong>OM</strong> - Tonpa Shenrab (ston-pa gshen-rab) represents compassion (tabs) and blessing (tugs-rje).His color is like precious jewel (rinpoche).
+<br><strong>MA</strong> The great Mother Sherab Jamma (yum-chen shes-rab byams-ma) represents wisdom (sherab) and vast
+space (klong). Her color is red.
+
+<br><strong>TRI</strong> - represents Mucho Demdrug (Mmu-cho ldem-drug), transforms the seeds of the hell realm that is
+anger and hatred (zhe-dang) by means of great love and affection (byams-pa chen-po), thus dispelling the
+suffering of the hell realm. His color is blue and red.
+
+<br><strong>MU</strong> - represents Sangwa Ngangrig (gsang-ba ngang-ring), transforms desire and attachment (dod-chags) by
+means of great generosity (sbyin-pa chen-po), thus purifying the hunger and thurst of the Hungry ghost
+realm (yi-dags). His color is red.
+
+<br><strong>YE</strong> - represents Tisang Rangzhi (ti-sang rang-zhi), transforms ignorance (gti-mug) by means of great
+wisdom and awareness (ye-she chen-po), thus clarifying the misery of stupidity, dumbness and servitude of
+the animal realm (byol-song). His color is blue.
+
+<br><strong>SA</strong> - represents Drajin Pungpa (gra-byin spungs-pa), transforms envy or jealousy (phrag-dog) by means of
+spaciousness (yang-pa chen-po)2, thus satisfying the greediness of food and wealth in the human realm. His
+color is golden light.
+
+<br><strong>LE</strong> - represents Chegyal Parti (lche-gyal par-ti), transforms pride and arrogance (nga-rgyal) by means of
+great peacefulness (zi-wa chen-po),thus pacifies the fighting and disputes of the demi-god realm (lha-min).
+His color is light blue.
+
+<br><strong>Du</strong> - represents Yeshen Tsugpud (ye-gshen gtsug-pud), transforms laziness (le-lo) by means of great
+diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. His color is white."
+
+    attributes:
+      title: Twenty Attributes
+      subtitle: Effect on the Three Nepas
+      log_in_msg: "All Twenty Attributes are visible for Users. <a href='/sign_in' style='font-size: 20px'>Sign In</a>."
+      p: Efect can be "Very Litte", "Secondary", "Main"
+      0_header: Attribute
+      1_header: Air
+      2_header: Fire
+      3_header: Water
+      helps_to_increase: 'Icreasing with:'
+      helps_to_decrease: 'Decreasing with:'
+      0_atr:
+        name: Hot
+        1_element: Air
+        1_effect: Secondary
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Very Little
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Decreasing
+      1_atr:
+        name: Cold
+        1_element: Air
+        1_effect: Secondary
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Very Little
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Increasing
+      2_atr:
+        name: Wet
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      3_atr:
+        name: Dry
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Decreasing
+      4_atr:
+        name: Light
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Litte
+        3_movement: Decreasing
+      5_atr:
+        name: Heavy
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      6_atr:
+        name: Mass
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Litte
+        3_movement: Increasing
+      7_atr:
+        name: Subtle
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Litte
+        3_movement: Decreasing
+      8_atr:
+        name: Dense
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      9_atr:
+        name: Flowing
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Very Little
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Secondary
+        3_movement: Decreasing
+      10_atr:
+        name: Mobile
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Decreasing
+      11_atr:
+        name: Static
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very little
+        3_movement: Increasing
+      12_atr:
+        name: Dullness
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      13_atr:
+        name: Sharp
+        1_element: Air
+        1_effect: Secondary
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Main
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very little
+        3_movement: Decreasing
+      14_atr:
+        name: Smooth
+        1_element: Air
+        1_effect: Very little
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Increasing
+      15_atr:
+        name: Rough
+        1_element: Air
+        1_effect: Very Litte
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Decreasing
+      16_atr:
+        name: Clear
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Decreasing
+      17_atr:
+        name: Cloudy
+        1_element: Air
+        1_effect: Main
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Very Little
+        3_movement: Increasing
+      18_atr:
+        name: Soft
+        1_element: Air
+        1_effect: Very Litte
+        1_movement: Decreasing
+        2_element: Fire
+        2_effect: Secondary
+        2_movement: Increasing
+        3_element: Water
+        3_effect: Main
+        3_movement: Increasing
+      19_atr:
+        name: Hard
+        1_element: Air
+        1_effect: Main
+        1_movement: Increasing
+        2_element: Fire
+        2_effect: Very Litte
+        2_movement: Decreasing
+        3_element: Water
+        3_effect: Secondary
+        3_movement: Decreasing
+    footer:
+      1_paragraph: For other contact information, see the %{title} contact page.
+      2_paragraph: If you would like to receive tips as soon as they're announced, subscribe to the %{title}-announce mailing list in dashboard.
+      follow_us: Follow Us
+      contact_us: Contact Us
+      events: Events
+      external_links:
+        title: External Links
+        1_h:
+          title: External Links
+          1_p: '<a href="https://en.wikipedia.org/wiki/Bon" title="is a Tibetan religious tradition or sect, being distinct from Buddhist ones in its particular myths, although many of its teachings, terminology and rituals resemble Tibetan Buddhism">Bon</a>'
+          2_p: '<a href="http://www.ligmincha.org/index.php/en/" title="Preserving Bön Buddhist Wisdom in the World">Ligmincha International</a>'
+          3_p: '<a href="https://en.wikipedia.org/wiki/Traditional_Tibetan_medicine" title="Traditional Tibetan medicine (Tibetan: བོད་ཀྱི་གསོ་བ་རིག་པ་, Wylie: Ggso ba rig pa), also known as Sowa-Rigpa medicine, is a centuries-old traditional medical system that employs a complex approach to diagnosis, incorporating techniques such as pulse analysis and urinalysis, and utilizes behavior and dietary modification, medicines composed of natural materials (e.g., herbs and minerals) and physical therapies (e.g. Tibetan acupuncture, moxabustion, etc.) to treat illness.">Traditional Tibetan medicine</a>'
+        2_h:
+          title: Events
+          1_p: '<a href="http://www.ligmincha.org/index.php/en/programs/teachings-schedule-by-date.html" title="Teaching schedule by date">Ligmincha International Teachings</a>'
+          2_p: '<a href="http://www.bonfoundation.org/menrinews.html" title="News From The Yungdrung Bon Monastic Center">News from Menri Monastery</a>'
+          3_p: '<a href="http://www.dalailama.com/teachings/schedule" title="Schedule | The Office of His Holiness The Dalai Lama">Schedule of His Holiness The Dalai Lama</a>'
+      faq:
+        title: FAQ
+        1_h:
+          title: FAQ
+          1_p: '<strong>Why are there the Examinations?</strong> For diagnostic of Your Typology.'
+          2_p: '<strong>What is Nutritions?</strong> Food divided into Three Groups - zoomable'
+          3_p: '<strong>What is Dashboard?</strong> Application to "Be FIT"'
+        2_h:
+          title: Help
+          1_p: We give donations to Tibetan People
+          2_p: We support Monks
+          3_p: We help people in need
+      info:
+        title: Info
+        1_h:
+          title: Info
+          1_p: In the future we add more functionality
+          2_p: Get info how to work with us
+          3_p: Please write us for additional info
+        2_h:
+          title: Tools
+          1_p: '<a href="/examination">Examinations</a>.'
+          2_p: '<a href="/nutrition">Nutritions</a>'
+          3_p: '<a href="/dashboard">Dashboard & Be Fit</a>'
+      how_we_work:
+        title: How We Work
+        1_h:
+          title: Our Way
+          1_p: We like a feeling of One Big Family
+          2_p: We like to listen and understand first, and after we take an action
+          3_p: We like to cooperate with you, we like to help
+        2_h:
+          title: How We Work
+          1_p: Make it simpler, but not simple
+          2_p: Openness and Responsiveness
+          3_p: Connections
+      work_with_us: Work with Us
+  survey:
+    result: The Survey Result
+    please_answer_questions: Please answer the questions
+    1_be_fit:
+      title: Last Examination
+      short_body_0:
+      topic:  Last Examination
+      topic_graph:  Last Examination
+      subtitle: Your Typology
+      footer: Tibetan Medicin
+      id: 1
+    2_be_fit:
+      title: All Examinations
+      short_body_0:
+      topic: Your Type
+      topic_graph:  All Examinations
+      subtitle: Your Typology
+      footer: Statistic from all your examinations
+      id: 2
+    3_be_fit:
+      title: Make it Bigger
+      short_body_0:
+      topic: Make it Bigger
+      topic_graph: Make it Bigger
+      subtitle: Please make this element Bigger in your life
+      footer: Tibetan Medicine
+      id: 3
+    4_be_fit:
+      title: Make it Smaller
+      short_body_0:
+      topic: Make it Smaller
+      topic_graph:  Make it Smaller
+      subtitle: Please make this element Smaller in your life
+      footer: Tibetan Medicine
+      id: 4
+    5_be_fit:
+      title: Time Plan
+      short_body_0:
+      topic: Time
+      topic_graph: Time Plan
+      subtitle: Hours, Minutes - Tips, Hints, Tricks
+      footer: Tibetan Medicine
+      id: 5
+    6_be_fit:
+      title: Date Plan
+      short_body_0:
+      topic: Date Plan
+      topic_graph:  Date Plan
+      subtitle: Days, Weeks, Months - Tips, Hints, Tricks
+      footer: Tibetan Medicine
+      id: 6
+    7_be_fit:
+      title: Nutrition
+      short_body_0:
+      topic: Nutrition
+      topic_graph:  Nutrition
+      subtitle: Please make this element Bigger in your life
+      footer: Tibetan Medicine
+      id: 7
+    8_be_fit:
+      title: Elements
+      short_body_0:
+      topic: Elements
+      topic_graph:  Elements
+      subtitle: Your Elements
+      footer: Your Elements
+      id: 8
+    0_survey_0:
+      title: Typology Test
+      short_body_0: The Tibetan Constitutional Typology Test
+      topic: Typology Test
+      topic_graph: Typology Test Result
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
+      id: 1
+    1_survey_0:
+      title: Constitutional Typology
+      short_body_0: Constitutional Typology
+      topic: Constitutional Typology
+      topic_graph: Constitutional Typology Result
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
+      id: 2
+    2_survey_0:
+      title: Physical
+      short_body_0: Physical examinations contain more checks, you can answer one or more.
+      topic: Urina Check
+      topic_graph: Urina Check Result
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
+    2_survey_1:
+      topic: Tongue Check
+      topic_graph: Tongue Check Result
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
+    2_survey_2:
+      topic: Eyes Check
+      topic_graph: Eyes Check Result
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
+      id: 3
+    3_survey_0:
+      title: Psychological
+      topic: Psychological
+      topic_graph: Psychological Result
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
+      short_body_0: Psychological diagnose
+      id: 4
+    4_survey_0:
+      title: Food
+      topic: Food
+      topic_graph: Food Result
+      subtitle: Your Typology according Tibetan Medicin
+      footer: Tibetan Medicin
+      short_body_0: Food check
+      id: 5
+    repeat_survey: Repeat survey
+    0_answers_0:
+      1_data_content_label: Air - Lung
+      1_color: 009A31
+      1_type_x: Air
+      2_data_content_label: Fire - Tripa
+      2_color: E8110F
+      2_type_x: Fire
+      3_data_content_label: Water - Bagan
+      3_color: 008CBA
+      3_type_x: Water
+    1_question:
+      title: How old are you?
+      name: 1
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: 5-25
+      2_choice_value: 2
+      2_choice_text: 25-60
+      3_choice_value: 3
+      3_choice_text: 60+
+      4_choice_value: 100
+      4_choice_text: 0-5
+    2_question:
+      title: Which body type fits you most closely?
+      name: 2
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Narrow hips and clavicles, Thin build, Long limbs, Stringy muscle bellies
+      2_choice_value: 2
+      2_choice_text: Wide clavicles, Thinner joints, Round and long muscle bellies
+      3_choice_value: 3
+      3_choice_text: Blocky, Wide/thicker joints. Shorter limbs
+    3_question:
+      title: Which of the following climates generally does not agree with your health?
+      name: 3
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Cool and Dry
+      2_choice_value: 2
+      2_choice_text: Hot and Dry
+      3_choice_value: 3
+      3_choice_text: Cold and Wet
+    4_question:
+      title: Which of the following environments or climates agrees with your health?
+      name: 4
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Hot and Moderately Dry
+      2_choice_value: 2
+      2_choice_text: Cold and Wet
+      3_choice_value: 3
+      3_choice_text: Cool and Dry
+    5_question:
+      title: Which of the following seasons agrees with your health?
+      name: 5
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Autumn
+      2_choice_value: 2
+      2_choice_text: Winter and Spring
+      3_choice_value: 3
+      3_choice_text: Summer
+    6_question:
+      title: Which of the following does not agree with your health?
+      name: 6
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Summer
+      2_choice_value: 2
+      2_choice_text: Autumn
+      3_choice_value: 3
+      3_choice_text: Winter and Spring
+    7_question:
+      title: During which part of the day do you feel best with your body, mind and energy?
+      name: 7
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Noon - 3pm and Midnight - 2am
+      2_choice_value: 2
+      2_choice_text: 8-11am and 8pm - Midnight
+      3_choice_value: 3
+      3_choice_text: Before 7am and 5-8pm
+    8_question:
+      title: During which part of a day do you not feel good?
+      name: 8
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Before 7am and 5-8pm
+      2_choice_value: 2
+      2_choice_text: Afternoon - 3pm and Mignight - 2am
+      3_choice_value: 3
+      3_choice_text: 8-11am and 8pm - Midnight
+    9_question:
+      title: When do you generally feel better?
+      name: 9
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Immediately after eating
+      2_choice_value: 2
+      2_choice_text: From two to four hours after eating normal meal
+      3_choice_value: 3
+      3_choice_text: On an empty stomach and after eating very small or light meals
+    10_question:
+      title: When do you generally feel worse?
+      name: 10
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: On an empty stomach
+      2_choice_value: 2
+      2_choice_text: From two to four hours after eating normal meal
+      3_choice_value: 3
+      3_choice_text: Immediately after eating
+    11_question:
+      title: Which part of your body feels weakest?
+      name: 11
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Lower part ( below the navel )
+      2_choice_value: 2
+      2_choice_text: Middle part ( between heart and navel )
+      3_choice_value: 3
+      3_choice_text: Upper part ( above the heart )
+    12_question:
+      title: Which part of your body is healthiest?
+      name: 12
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Middle part
+      2_choice_value: 2
+      2_choice_text: Upper part
+      3_choice_value: 3
+      3_choice_text: Lower part
+    13_question:
+      title: What type of exercise and how often do you exercise?
+      name: 13
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Light exercise, not done regularly
+      2_choice_value: 2
+      2_choice_text: Competitive and strenuous exercise, done reqularly
+      3_choice_value: 3
+      3_choice_text: None or very little
+    14_question:
+      title: What is your sleeping pattern like?
+      name: 14
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Disturbed sleep
+      2_choice_value: 2
+      2_choice_text: Need little sleep
+      3_choice_value: 3
+      3_choice_text: Heavy and prolonged
+    15_question:
+      title: Under stress, which of the following symptoms do you tend to experience?
+      name: 15
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Muscular tension, tension headache, ringing in ears, hyperventilation, gas, constipation
+      2_choice_value: 2
+      2_choice_text: Localized pain, migraine, nausea, heat in body, acidity, diarrhea
+      3_choice_value: 3
+      3_choice_text: Dullness & heaviness, sleepiness, cold hands & feet, sluggishness, fullness in stomach, poor digestion
+    16_question:
+      title: Which of the following prychological symptoms do you generally experience under stress?
+      name: 16
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Nervousness, restlessness, constant worry / brooding, thinking too much, grieving, easily upset, mood swings
+      2_choice_value: 2
+      2_choice_text: Anger, aggression, irritability, harsh, violent, high-strung, jealous
+      3_choice_value: 3
+      3_choice_text: Resustabcem denial, procrastination, withdrawn, silent, closed-minded, confused, forgetful
+    17_question:
+      title: Emotional symptoms you generally experience
+      name: 17
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Excitement, greed, pretension
+      2_choice_value: 2
+      2_choice_text: Aggression, vengeance, envy
+      3_choice_value: 3
+      3_choice_text: Stable and sedating, concealment, indifference
+    18_question:
+      title: Which of the belief systems do you generally follow?
+      name: 18
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Abstract, emotional and intense
+      2_choice_value: 2
+      2_choice_text: Concrete, materially oriented
+      3_choice_value: 3
+      3_choice_text: Generic or none
+    19_question:
+      title: How are your concentration skills?
+      name: 19
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Easily distracted and cannot concentrate on an object for a long time
+      2_choice_value: 2
+      2_choice_text: Focused, good concentration, primarily on materially oriented objects and goals
+      3_choice_value: 3
+      3_choice_text: Poor concentration due to dullness and indifference
+    20_question:
+      title: What is your spiritual practice?
+      name: 20
+      otherText: 1
+      1_choice_value: 1
+      1_choice_text: Very important to you
+      2_choice_value: 2
+      2_choice_text: Not absolutely essential
+      3_choice_value: 3
+      3_choice_text: You recognize its importance but don't really practice
+    21_question:
+      title: How does your body looks like?
+      name: 21
+      otherText: 2
+      1_choice_value: 1
+      1_choice_text: Tall, lean physique with a short trunk, long extremities
+      2_choice_value: 2
+      2_choice_text: Strong and muscular, medium height
+      3_choice_value: 3
+      3_choice_text: Weak muscles, strong bones of medium tone, short physique tending to retain fluid and fat
+    22_question:
+      title: How does your face looks like?
+      name: 22
+      otherText: 2
+      1_choice_value: 1
+      1_choice_text: Small, elongated skull, narrow forehead, sharp nose , thin and soft hair
+      2_choice_value: 2
+      2_choice_text: Short skull with wide forehead, round nose, coarse hair, protruding eyebrows
+      3_choice_value: 3
+      3_choice_text: Large, elongated head with narrow forehead, small eyes, thick eyelids, wide nose and thick lips, short and heavy neck
+    23_question:
+      title: How does your chest looks like?
+      name: 23
+      otherText: 2
+      1_choice_value: 1
+      1_choice_text: Narrow and drooping shoulders, narrow depressed chest with prominent scapulae
+      2_choice_value: 2
+      2_choice_text: Well developed and proportioned
+      3_choice_value: 3
+      3_choice_text: Round and soft shoulders
+    24_question:
+      title: How does your abdomen looks like?
+      name: 24
+      otherText: 2
+      1_choice_value: 1
+      1_choice_text: Small, flat and hard
+      2_choice_value: 2
+      2_choice_text: Small and muscular
+      3_choice_value: 3
+      3_choice_text: Large and soft
+    25_question:
+      title: How does your extremities look like?
+      name: 25
+      otherText: 2
+      1_choice_value: 1
+      1_choice_text: Long and thin
+      2_choice_value: 2
+      2_choice_text: Proportioned and strong
+      3_choice_value: 3
+      3_choice_text: Thick and short
+    26_question:
+      title: How does your genitals look like?
+      name: 26
+      otherText: 2
+      1_choice_value: 1
+      1_choice_text: Long, thin penis and elongated scrotum, poorly developed vagina, small breasts, irregular and prolonged menstrual problems
+      2_choice_value: 2
+      2_choice_text: Thick and developed penis, contracted and hard scrotum, female organs are strong and of medium size
+      3_choice_value: 3
+      3_choice_text: Thick and short penis, heavy and thick scrotum, female organs are well developed, tendency to heavy menstruation
+    27_question:
+      title: How does your muscles look like?
+      name: 27
+      otherText: 2
+      1_choice_value: 1
+      1_choice_text: Generally weak, with poor circulation
+      2_choice_value: 2
+      2_choice_text: Compact and strong, with good circulation
+      3_choice_value: 3
+      3_choice_text: Soft and flabby, with poor circulation
+    28_question:
+      title: How does your skin looks like?
+      name: 28
+      otherText: 2
+      1_choice_value: 1
+      1_choice_text: Drym rough and discolored
+      2_choice_value: 2
+      2_choice_text: Elastic, thick and of olive complexion
+      3_choice_value: 3
+      3_choice_text: Pale and soft
+    29_question:
+      title: How does your body functions look like?
+      name: 29
+      otherText: 2
+      1_choice_value: 1
+      1_choice_text: Sensory responses to stimulation are rapid but short-lived; The body is prone to rapid exhaustion and low resistance.
+      2_choice_value: 2
+      2_choice_text: Sensory responses to stimulation are rapid and lasting; Resisance is good.
+      3_choice_value: 3
+      3_choice_text: Sensory responses to stimulation are slow and lethargic; Resistance is moderate.
+    30_question:
+      title: What is your mood?
+      name: 30
+      otherText: 4
+      1_choice_value: 1
+      1_choice_text: Depressive, anxious, moods change from one side to another, from love to hate
+      2_choice_value: 2
+      2_choice_text: Impulsive, materialistic, practical, aggressive
+      3_choice_value: 3
+      3_choice_text: Stable, easy-going, carefree, warm-hearted
+    31_question:
+      title: What is your will?
+      name: 31
+      otherText: 4
+      1_choice_value: 1
+      1_choice_text: Rarely carries a task to completion, often because of a lack of confidence. Emotionally unstable
+      2_choice_value: 2
+      2_choice_text: Optimistic, Strong will, controlling the situations
+      3_choice_value: 3
+      3_choice_text: Weak and leisure-oriented, resistant to change ideas into action
+    32_question:
+      title: What is your ego?
+      name: 32
+      otherText: 4
+      1_choice_value: 1
+      1_choice_text: Often feature of psychological make-up, to protect against threat from others, whom he she or he may envy and considered stronger and more mature
+      2_choice_value: 2
+      2_choice_text: Strong sense of the self which is fortified by power, sex and wealth. Avoids spiritual issues or dismisses them as silly.
+      3_choice_value: 3
+      3_choice_text: No dominant features, self in comfort and peaceful surroundings
+    33_question:
+      title: What is your intelligence?
+      name: 33
+      otherText: 4
+      1_choice_value: 1
+      1_choice_text: Quick to learn, highly intelligent, but impractical
+      2_choice_value: 2
+      2_choice_text: Scheming and compulsive, thinks in terms of ends and means. Constantly searching for a model, a point of reference to measure against as well as to reassure
+      3_choice_value: 3
+      3_choice_text: Average, lacks great aspirations
+    34_question:
+      title: What is your emotion?
+      name: 34
+      otherText: 4
+      1_choice_value: 1
+      1_choice_text: Desirous and grasping, often frustration or fear. Pleasure and pain are the chief sensation preoccupations
+      2_choice_value: 2
+      2_choice_text: Envy and jealousy are deep-rooted. A poor loser can manifest aggressive bahavior when her or his view is threatened.
+      3_choice_value: 3
+      3_choice_text: Resistant to any major change in life situation.
+    35_question:
+      title: What is your deviations?
+      name: 35
+      otherText: 4
+      1_choice_value: 1
+      1_choice_text: Fear and complexes about sex and the opposite sex. often resulting in deviations. Women usually lack maternal feeling.
+      2_choice_value: 2
+      2_choice_text: Sadistic, raging narcissism, self-centered behavior
+      3_choice_value: 3
+      3_choice_text: Fun and pleasure, over-indulgence in food, most minimal sexual deviations
+    36_question:
+      title: Examination of the five sensory organs
+      name: 36
+      otherText: 3
+      1_choice_value: Tongue
+      1_choice_text: Tongue
+      2_choice_value: Eyes
+      2_choice_text: Eyes
+      3_choice_value: Ears
+      3_choice_text: Ears
+      04_choice_value: Nose and lips
+      04_choice_text: Nose and lips
+      05_choice_value: Skin
+      05_choice_text: Skin
+    37_question:
+      title: Functional relationship between fhte five sense and their objects
+      name: 37
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Taste
+      2_choice_value: 2
+      2_choice_text: Shapes and colors
+      3_choice_value: 3
+      3_choice_text: Sounds
+      4_choice_value: 4
+      4_choice_text: Odors
+      5_choice_value: 5
+      5_choice_text: Sensations
+    38_question:
+      title: Examination of the five excretory matters
+      name: 38
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Sputum
+      2_choice_value: 2
+      2_choice_text: Vomit
+      3_choice_value: 3
+      3_choice_text: Urine
+      4_choice_value: 4
+      4_choice_text: Blood composition
+      5_choice_value: 5
+      5_choice_text: Feces
+    39_question:
+      title: Examination of the abdomen and acupressure points
+      name: 39
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Palpating the abdomen
+      2_choice_value: 2
+      2_choice_text: Feeling acupressure points
+    40_question:
+      title: Which kind of food do you eat often?
+      name: 40
+      otherText: 5
+      1_choice_value: 1
+      1_choice_text: Light, mobile, dry and bitter tasting foods
+      2_choice_value: 2
+      2_choice_text: Heavy, wet, stagnating, sweet foods
+      3_choice_value: 3
+      3_choice_text: Hot, oily, sharp, sour, acidic, fermented foods
+    41_question:
+      title: What is color of your urine?
+      name: 41
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Bluish water, transparent
+      2_choice_value: 2
+      2_choice_text: Yellow, orangeish, reddish and turbid
+      3_choice_value: 3
+      3_choice_text: White
+    42_question:
+      title: What is odor of your urine?
+      name: 42
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Minimal or none
+      2_choice_value: 2
+      2_choice_text: Malodorous, pungent, foul
+      3_choice_value: 3
+      3_choice_text: Minimal or none
+    43_question:
+      title: What are the bubbles of your urine?
+      name: 43
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Large, appearing erratically on the surface of the urine
+      2_choice_value: 2
+      2_choice_text: Small bubbles that disappear instantly after stirring
+      3_choice_value: 3
+      3_choice_text: Small, congested, profuse, sticky, standing for a long time after stirring
+    44_question:
+      title: Do your urine forms cloudy formation?
+      name: 44
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: None
+      2_choice_value: 2
+      2_choice_text: Thick, abundant
+      3_choice_value: 3
+      3_choice_text: Minimal or none
+    45_question:
+      title: Do your urine forms stringy formation?
+      name: 45
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Minimal, thin, or oily cream. None at all on the surface ot the urine
+      2_choice_value: 2
+      2_choice_text: Thick, single units in the center and on the surface of the urine
+      3_choice_value: 3
+      3_choice_text: Minimal or none
+    46_question:
+      title: What is the rate of disoloration of your urine?
+      name: 46
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: After urine cools. it dilutes and turns watery
+      2_choice_value: 2
+      2_choice_text: Before urine turns cold
+      3_choice_value: 3
+      3_choice_text: Much after urine is cold
+    47_question:
+      title: What kind of way change takes place?
+      name: 47
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Erratic and irregular
+      2_choice_value: 2
+      2_choice_text: From the lower level towards the surface
+      3_choice_value: 3
+      3_choice_text: From the outside towards the center
+    48_question:
+      title: What is the characteristics of your urine when is cold?
+      name: 48
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Diluted and watery, with large bubbles that disappear slowly
+      2_choice_value: 2
+      2_choice_text: Turbid and reddish-yellow, with small bubbles that disappear instantly after stirring
+      3_choice_value: 3
+      3_choice_text: White, generally clear, congested, with increasing bubbles that persist or surface
+    49_question:
+      title: Does your Urine contains sediments?
+      name: 49
+      otherText: 3
+      1_choice_value: 1
+      1_choice_text: Minimal to moderate deposits, shaped like strands of hair
+      2_choice_value: 2
+      2_choice_text: Urine is murky, turbid and often has a cloudy deposit
+      3_choice_value: 3
+      3_choice_text: Minimal or sometimes sand-like in kidney or metabolic disorders
+    50_question:
+      title: What is color of your tongue?
+      name: 50
+      otherText: Examination of your Tongue
+      1_choice_value: 1
+      1_choice_text: Reddish
+      2_choice_value: 2
+      2_choice_text: Yellowish (especially the fur)
+      3_choice_value: 3
+      3_choice_text: White, pale
+    51_question:
+      title: Are ther deposits of fur or coating on your Tongue?
+      name: 51
+      otherText: Examination of your Tongue
+      1_choice_value: 1
+      1_choice_text: Normally clear, sometimes a little fur near the back ot the tongue
+      2_choice_value: 2
+      2_choice_text: Yellowish, thick fur over most of the tongue
+      3_choice_value: 3
+      3_choice_text: Thick white fur
+    52_question:
+      title: What is dryness of your tongue?
+      name: 52
+      otherText: Examination of your Tongue
+      1_choice_value: 1
+      1_choice_text: Dry and rough
+      2_choice_value: 2
+      2_choice_text: Dry
+      3_choice_value: 3
+      3_choice_text: Moist and smooth
+    53_question:
+      title: Is there presence of pips or pimple-like dots on your tongue?
+      name: 53
+      otherText: Examination of your Tongue
+      1_choice_value: 1
+      1_choice_text: None
+      2_choice_value: 2
+      2_choice_text: Occasional pips on the sides of the tongue, but generally clear
+      3_choice_value: 3
+      3_choice_text: None
+    54_question:
+      title: What are your eyes?
+      name: 54
+      otherText: Examination of your Eyes
+      1_choice_value: 1
+      1_choice_text: Eyes tend to be small, with a dry look, especially the eyelashes, which are usuallyscanty
+      2_choice_value: 2
+      2_choice_text: Eyes are generally moderate in size, sharp and lustrous. The lashes are scanty but oily. The black part of the eye may be yellowish
+      3_choice_value: 3
+      3_choice_text: Eyes are large and beautiful, moist, with long, thick oily lashes
+    55_question:
+      title: Which part of Body is the strongest?
+      name: 55
+      otherText: Humors - Body
+      1_choice_value: 1
+      1_choice_text: Lower Part
+      2_choice_value: 2
+      2_choice_text: Middle Part
+      3_choice_value: 3
+      3_choice_text: Head and the Upper Part of the Chest
+    56_question:
+      title: Front of the Body
+      name: 56
+      otherText: Humors - Front of the Body
+      1_choice_value: 1
+      1_choice_text: Chest / Above Diaphragm
+      2_choice_value: 2
+      2_choice_text: Middle Abdomen / Below Diaphragm
+      3_choice_value: 3
+      3_choice_text: Lower Abdomen / Below Navel
+    57_question:
+      title:
+      name: 57
+      otherText: Humors - Back Side
+      1_choice_value: 1
+      1_choice_text: Neck
+      2_choice_value: 2
+      2_choice_text: Middle Back
+      3_choice_value: 3
+      3_choice_text: Lower Back
+    58_question:
+      title:
+      name: 58
+      otherText: Humors - Face
+      1_choice_value: 1
+      1_choice_text: Lower part of Face
+      2_choice_value: 2
+      2_choice_text: Middle / Cheeks
+      3_choice_value: 3
+      3_choice_text: Forehead
+    59_question:
+      title:
+      name: 59
+      otherText: Humors - Sensory Organs
+      1_choice_value: 1
+      1_choice_text: Ears
+      2_choice_value: 2
+      2_choice_text: Eyes
+      3_choice_value: 3
+      3_choice_text: Tongue / Lips / Nose
+    60_question:
+      title:
+      name: 60
+      otherText: Humors - Fingers
+      1_choice_value: 1
+      1_choice_text: Last Joint of the Finger
+      2_choice_value: 2
+      2_choice_text: Middle Joint
+      3_choice_value: 3
+      3_choice_text: First Joint
+    61_question:
+      title:
+      name: 61
+      otherText: Humors - Arms
+      1_choice_value: 1
+      1_choice_text: Hand
+      2_choice_value: 2
+      2_choice_text: Forearms
+      3_choice_value: 3
+      3_choice_text: Upperarms
+    62_question:
+      title:
+      name: 62
+      otherText: Humors - Legs
+      1_choice_value: 1
+      1_choice_text: Feet
+      2_choice_value: 2
+      2_choice_text: Legs
+      3_choice_value: 3
+      3_choice_text: Thigh
+    63_question:
+      title:
+      name: 63
+      otherText: Humors - Vertebrae
+      1_choice_value: 1
+      1_choice_text: Cervical
+      2_choice_value: 2
+      2_choice_text: Thorax
+      3_choice_value: 3
+      3_choice_text: Lumbar Vertebrae
+    64_question:
+      title:
+      name: 64
+      otherText: Humors - Vital Organs
+      1_choice_value: 1
+      1_choice_text: Lungs & Heart
+      2_choice_value: 2
+      2_choice_text: Liver
+      3_choice_value: 3
+      3_choice_text: Spleen / Kidneys
+    65_question:
+      title:
+      name: 65
+      otherText: Humors - Hollow Organs
+      1_choice_value: 1
+      1_choice_text: Colon
+      2_choice_value: 2
+      2_choice_text: Gall Bladder / Small Intestine
+      3_choice_value: 3
+      3_choice_text: Stomach / Urinary Bladder / Reproductive Organs
+    66_question:
+      title:
+      name: 66
+      otherText: Humors - Chakra
+      1_choice_value: 1
+      1_choice_text: Secret Chakra
+      2_choice_value: 2
+      2_choice_text: Heart Chakra
+      3_choice_value: 3
+      3_choice_text: Crown Chakra
+    67_question:
+      title:
+      name: 67
+      otherText: Humors - Digestion Stages
+      1_choice_value: 1
+      1_choice_text: Colon
+      2_choice_value: 2
+      2_choice_text: Small Intestine
+      3_choice_value: 3
+      3_choice_text: Stomach
+    68_question:
+      title:
+      name: 68
+      otherText: Humors - Waste Products
+      1_choice_value: 1
+      1_choice_text: Hairs & Nails
+      2_choice_value: 2
+      2_choice_text: Perspiration
+      3_choice_value: 3
+      3_choice_text: Urine & Stool
+    69_question:
+      title:
+      name: 69
+      otherText: Humors - Seven Body Constituents
+      1_choice_value: 1
+      1_choice_text: Bones, Skin
+      2_choice_value: 2
+      2_choice_text: Blood
+      3_choice_value: 3
+      3_choice_text: Bone Marrow, Chyle, Fat, Flesh, Reproductive fluids
+    70_question:
+      title:
+      name: 70
+      otherText:
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+    71_question:
+      title:
+      name: 71
+      otherText:
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+  nutrition:
+    name: Nutrition
+    zoom: Zoomable Nutrition
+    cyrcle: Cyrcle Nutrition
+    login: 'As <a href="/sign_in">User</a>, You can see Your Nutrition'
+    color: 'white'
+    0_children:
+      name: Air
+      color: '#009A31'
+      0_children:
+        name: Meat
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Fish
+          1_children:
+            name: Kidney
+          2_children:
+            name: Poultry
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Beef
+          1_children:
+            name: Duck
+          2_children:
+            name: Mutton
+          3_children:
+            name: Rabbit
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: Pork
+          1_children:
+            name: Goat
+      1_children:
+        name: From Animals
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Cow's cheese
+          1_children:
+            name: Eggs
+          2_children:
+            name: Old Cow's Butter
+          3_children:
+            name: Old Ghee
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Cow's milk
+          1_children:
+            name: Yogurt
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+      2_children:
+        name: Grains
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Amaranth
+          1_children:
+            name: Basmati
+          2_children:
+            name: Barley
+          3_children:
+            name: Brown Rice
+          4_children:
+            name: Cooked Oats
+          5_children:
+            name: Millet
+          6_children:
+            name: Quinoa
+          7_children:
+            name: Wheat
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Corn
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: Dry Oats
+          1_children:
+            name: Buckwheat
+          2_children:
+            name: White Rice
+          3_children:
+            name: White Bread
+      3_children:
+        name: Legumes
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Aduki
+          1_children:
+            name: Black Beans
+          2_children:
+            name: Dahl
+          3_children:
+            name: Garbanzo Beans
+          4_children:
+            name: Lima
+          5_children:
+            name: Mung
+          6_children:
+            name: Soy Beans
+          7_children:
+            name: Tempeh
+          8_children:
+            name: Tofu
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: None
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: Red Lentils
+          1_children:
+            name: Split Peas
+      4_children:
+        name: Vegetables
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Arrowroot
+          1_children:
+            name: Artichoke
+          2_children:
+            name: Brocolli
+          3_children:
+            name: Carrots
+          4_children:
+            name: Cilantro
+          5_children:
+            name: Corn
+          6_children:
+            name: Onios
+          7_children:
+            name: Peas
+          8_children:
+            name: Potatoes
+          9_children:
+            name: Red Cabbage
+          10_children:
+            name: Sea Vegetables
+          11_children:
+            name: Spinach
+          12_children:
+            name: Tomato
+          13_children:
+            name: Winter Squashes
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Lettuce
+          1_children:
+            name: Green Pepper
+          2_children:
+            name: Eggplants
+          3_children:
+            name: Mushrooms
+          4_children:
+            name: Leaf Cabbage
+          5_children:
+            name: Turnips
+          6_children:
+            name: Collard Greens
+          7_children:
+            name: Ginger
+          8_children:
+            name: Parsnips
+          9_children:
+            name: Beets
+          10_children:
+            name: Brussel Sprouts
+          11_children:
+            name: Mustard Greens
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+      5_children:
+        name: Nuts & Seeds
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Linseeds
+          1_children:
+            name: Walnuts
+          2_children:
+            name: Sesame
+          3_children:
+            name: Sun Flower
+          4_children:
+            name: Flaxseed
+          5_children:
+            name: Cashew
+          6_children:
+            name: Pumpkin
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Coconut
+          1_children:
+            name: Almond
+          2_children:
+            name: Hazelnut
+          3_children:
+            name: Chestnuts
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+      6_children:
+        name: Fruits
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Bananas
+          1_children:
+            name: Oranges
+          2_children:
+            name: Grapefruits
+          3_children:
+            name: Apples
+          4_children:
+            name: Pineapples
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Peaches
+          1_children:
+            name: Plums
+          2_children:
+            name: Grapes
+          3_children:
+            name: Strawberry
+          4_children:
+            name: Pears
+          5_children:
+            name: Blueberry
+          6_children:
+            name: Cherry
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: Cranberry
+          1_children:
+            name: Lemon
+          2_children:
+            name: Dried Fruits
+          3_children:
+            name: Watermelon
+          4_children:
+            name: Cantaloupe
+          5_children:
+            name: Apricot
+      7_children:
+        name: Oils & Salts
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Sesame Oil
+          1_children:
+            name: Peanut Oil
+          2_children:
+            name: Olive Oil
+          3_children:
+            name: Miso
+          4_children:
+            name: Tamari
+          5_children:
+            name: Salt
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Sunflower Oil
+          1_children:
+            name: Corn Oil
+          2_children:
+            name: Safflower Oil
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+      8_children:
+        name: Herbs & Spices
+        color: '#8CC63F'
+        0_children:
+          name: Recommended
+          color: '#0A803B'
+          0_children:
+            name: Anise
+          1_children:
+            name: Asfoetida
+          2_children:
+            name: Cardamon
+          3_children:
+            name: Cinnamon
+          4_children:
+            name: Fenugreek
+          5_children:
+            name: Clove
+          6_children:
+            name: Cumin
+          7_children:
+            name: Fennel
+          8_children:
+            name: Garlic (heat)
+          9_children:
+            name: Ginger
+          10_children:
+            name: Jaggery
+          11_children:
+            name: Nutmeg
+          12_children:
+            name: Onion
+          13_children:
+            name: Sesame
+          14_children:
+            name: Solomon Seal
+          15_children:
+            name: Chebula
+          16_children:
+            name: Terminalia
+        1_children:
+          name: Occasional
+          color: '#0A803B'
+          0_children:
+            name: Chili
+          1_children:
+            name: Coriander
+          2_children:
+            name: Shataveri
+          3_children:
+            name: Pippali
+        2_children:
+          name: Not-Recommended
+          color: '#0A803B'
+          0_children:
+            name: None
+
+
+    1_children:
+      name: Fire
+      0_children:
+        name: Meat
+        0_children:
+          name: Recommended
+          0_children:
+            name: Rabbit
+          1_children:
+            name: Herbivorous Animals
+        1_children:
+          name: Occasional
+          0_children:
+            name: Pork
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Beef
+          1_children:
+            name: Fish
+          2_children:
+            name: Lamb
+          3_children:
+            name: Mutton
+          4_children:
+            name: Poultry
+          5_children:
+            name: Shellfish
+      1_children:
+        name: From Animals
+        0_children:
+          name: Recommended
+          0_children:
+            name: Cow's Milk
+          1_children:
+            name: Goat's Milk
+          2_children:
+            name: Fresh Ghee
+        1_children:
+          name: Occasional
+          0_children:
+            name: Goat Butter
+          1_children:
+            name: Cow Butter
+          2_children:
+            name: Fresh Butter
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: None
+      2_children:
+        name: Grains
+        0_children:
+          name: Recommended
+          0_children:
+            name: Corn
+          1_children:
+            name: White Basmati
+          2_children:
+            name: Noodles
+          3_children:
+            name: Millet
+          4_children:
+            name: Wheat
+          5_children:
+            name: White Rice
+          6_children:
+            name: Buckwheat
+          7_children:
+            name: Guinoa
+        1_children:
+          name: Occasional
+          0_children:
+            name: Toasted Barley
+          1_children:
+            name: Oats
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Rye
+          1_children:
+            name: Amaranth
+          2_children:
+            name: Brown Rice
+      3_children:
+        name: Legumes
+        0_children:
+          name: Recommended
+          0_children:
+            name: Adzukis Beans
+          1_children:
+            name: Black Beans
+          2_children:
+            name: Brown Lentils
+          3_children:
+            name: Dahl
+          4_children:
+            name: Mung
+          5_children:
+            name: Garbanzos
+          6_children:
+            name: Anasazi Beans
+        1_children:
+          name: Occasional
+          0_children:
+            name: Tofu
+          1_children:
+            name: Chickpea - chana
+          2_children:
+            name: Lima Bean - Butter Bean
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Chinese Red Beans
+          1_children:
+            name: Red Lentils
+          2_children:
+            name: Soy Beans
+          3_children:
+            name: Tempeh
+      4_children:
+        name: Vegetables
+        0_children:
+          name: Recommended
+          0_children:
+            name: Zucchini
+          1_children:
+            name: Yam Potatoe
+          2_children:
+            name: Cucumber
+          3_children:
+            name: Brocolli
+          4_children:
+            name: Cabbage
+          5_children:
+            name: Cauliflower
+          6_children:
+            name: Lettuce
+          7_children:
+            name: Celery
+          8_children:
+            name: Burdock
+          9_children:
+            name: Peas
+          10_children:
+            name: Green Beans
+          11_children:
+            name: Asparagus
+          12_children:
+            name: Carrot
+          13_children:
+            name: Potatoes
+          14_children:
+            name: Spinach
+          15_children:
+            name: Red Cabbage
+          16_children:
+            name: Parsley
+          17_children:
+            name: Winter Squashes
+          18_children:
+            name: Brussel Sprouts
+        1_children:
+          name: Occasional
+          0_children:
+            name: Raw Spinach
+          1_children:
+            name: Sea Vegetables
+          2_children:
+            name: Chard
+          3_children:
+            name: Bell Pepper
+          4_children:
+            name: Potatoes
+          5_children:
+            name: Sweet Corn
+          6_children:
+            name: Cilantro
+          7_children:
+            name: Beets
+          8_children:
+            name: Artichokes
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Ginger
+          1_children:
+            name: Radish
+          2_children:
+            name: Avocado
+          3_children:
+            name: Garlic
+          4_children:
+            name: Tomato
+          5_children:
+            name: Eggplant
+          6_children:
+            name: Chilis
+          7_children:
+            name: Hot Peppers
+          8_children:
+            name: Onions
+          9_children:
+            name: Mustard greens
+          10_children:
+            name: Sauerkraut
+          11_children:
+            name: Bamboo Shoots
+          12_children:
+            name: Mushrooms
+          13_children:
+            name: Turnip
+      5_children:
+        name: Nuts & Seeds
+        0_children:
+          name: Recommended
+          0_children:
+            name: None
+        1_children:
+          name: Occasional
+          0_children:
+            name: Pumpkin Seeds
+          1_children:
+            name: Sunflower Seeds
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Hazelnut
+          1_children:
+            name: Walnut
+          2_children:
+            name: Chestnut
+          3_children:
+            name: Flax Seed
+          4_children:
+            name: Sesame Seed
+          5_children:
+            name: Peanuts
+          6_children:
+            name: Almonds
+          7_children:
+            name: Coconut
+      6_children:
+        name: Fruits
+        0_children:
+          name: Recommended
+          0_children:
+            name: Melons
+          1_children:
+            name: Cantaloupe - Muskmelon
+          2_children:
+            name: Berberries
+          3_children:
+            name: Pears
+          4_children:
+            name: Peaches
+        1_children:
+          name: Occasional
+          0_children:
+            name: Grapefruits
+          1_children:
+            name: Grapes
+          2_children:
+            name: Apples
+          3_children:
+            name: Pineapple
+          4_children:
+            name: Strawberry
+          5_children:
+            name: Plums
+          6_children:
+            name: Raisins
+          7_children:
+            name: Blueberry
+          8_children:
+            name: Cherry
+          9_children:
+            name: Banana
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Lemon
+          1_children:
+            name: Lime
+          2_children:
+            name: Apricot
+          3_children:
+            name: Cranberry
+      7_children:
+        name: Oils & Condiments
+        0_children:
+          name: Recommended
+          0_children:
+            name: Salt
+          1_children:
+            name: Ghee
+        1_children:
+          name: Occasional
+          0_children:
+            name: Sunflower Oil
+          1_children:
+            name: Corn Oil
+          2_children:
+            name: Safflower Oil
+          3_children:
+            name: Sea Salt
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Miso
+          1_children:
+            name: Temari
+          2_children:
+            name: Black Salt
+          3_children:
+            name: Olive Oil
+          4_children:
+            name: Peanut Oil
+          5_children:
+            name: Sesame Oil
+          6_children:
+            name: Mustard Oil
+          7_children:
+            name: Butter
+      8_children:
+        name: Herbs & Spices
+        0_children:
+          name: Recommended
+          0_children:
+            name: Cucumber Seeds
+          1_children:
+            name: Dandelion
+          2_children:
+            name: Gentian
+          3_children:
+            name: Gotu Kola
+          4_children:
+            name: Guggul
+          5_children:
+            name: Licorice
+          6_children:
+            name: Hibiscus
+          7_children:
+            name: Sandalwood
+          8_children:
+            name: Safflower
+          9_children:
+            name: Raisings
+          10_children:
+            name: Rhododendron
+          11_children:
+            name: Terminalia Belerica
+          12_children:
+            name: Terminalia Chebula
+          13_children:
+            name: Curcuma
+          14_children:
+            name: Saffron
+        1_children:
+          name: Occasional
+          0_children:
+            name: Coriander
+          1_children:
+            name: Cinnamon
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: None
+
+
+
+
+
+
+    2_children:
+      name: Water
+      0_children:
+        name: Meat
+        0_children:
+          name: Recommended
+          0_children:
+            name: Rabbit
+          1_children:
+            name: Fish
+          2_children:
+            name: Poultry
+          3_children:
+            name: Sheep
+          4_children:
+            name: Herbivorous Animals
+        1_children:
+          name: Occasional
+          0_children:
+            name: Mutton
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Beef
+          1_children:
+            name: Goat
+          2_children:
+            name: Frozen, uncooked Meat
+          3_children:
+            name: Pork
+      1_children:
+        name: From Animals
+        0_children:
+          name: Recommended
+          0_children:
+            name: Cow's Cheese
+          1_children:
+            name: Cow's Butter
+          2_children:
+            name: Goat's Butter
+          3_children:
+            name: Sheep's Butter
+        1_children:
+          name: Occasional
+          0_children:
+            name: Yogurt
+          1_children:
+            name: Fresh Cheese
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: None
+      2_children:
+        name: Grains
+        0_children:
+          name: Recommended
+          0_children:
+            name: White Basmati
+          1_children:
+            name: Cooked Oats
+          2_children:
+            name: Dry Oats
+          3_children:
+            name: Toasted Barley
+          4_children:
+            name: Cooked Barley
+        1_children:
+          name: Occasional
+          0_children:
+            name: Wheat
+          1_children:
+            name: Brown Rice with ginger
+          2_children:
+            name: White Rice
+          3_children:
+            name: Toasted Millet
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Buckwheat
+          1_children:
+            name: Corn
+      3_children:
+        name: Legumes
+        0_children:
+          name: Recommended
+          0_children:
+            name: Peas
+          1_children:
+            name: Dahl
+        1_children:
+          name: Occasional
+          0_children:
+            name: Mung
+          1_children:
+            name: Brown Lentils
+          2_children:
+            name: Chana
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Tofu
+          1_children:
+            name: Kidney Bean
+          2_children:
+            name: Soy Bean
+          3_children:
+            name: Aduki
+          4_children:
+            name: Anasazi
+          5_children:
+            name: Lima
+          6_children:
+            name: Red Lentils
+      4_children:
+        name: Vegetables
+        0_children:
+          name: Recommended (cooked)
+          0_children:
+            name: Onion
+          1_children:
+            name: Garlic
+          2_children:
+            name: Radish
+          3_children:
+            name: Daikon
+          4_children:
+            name: Mushrooms
+          5_children:
+            name: Tomato
+          6_children:
+            name: Green Pepper
+          7_children:
+            name: Chili's
+          8_children:
+            name: Turnips
+          9_children:
+            name: Rutabaga
+          10_children:
+            name: Sorrel Leaves
+          11_children:
+            name: Rhubard
+          12_children:
+            name: Bamboo Shoots
+          13_children:
+            name: Celery
+        1_children:
+          name: Occasional (cooked)
+          0_children:
+            name: Eggplant
+          1_children:
+            name: Sauerkraut
+          2_children:
+            name: Water Chestnut
+          3_children:
+            name: Lettuce
+          4_children:
+            name: Spinach
+          5_children:
+            name: Artichoke
+          6_children:
+            name: Cilantro
+          7_children:
+            name: Burdock
+          8_children:
+            name: Dandelion
+          9_children:
+            name: Parsnips
+          10_children:
+            name: Bok Choy
+          11_children:
+            name: Cabbage
+          12_children:
+            name: Cauliflower
+          13_children:
+            name: Mustard Greens
+          14_children:
+            name: Arrowroot
+        2_children:
+          name: Not-Recommended (raw)
+          0_children:
+            name: Potato
+          1_children:
+            name: Cucumber
+          2_children:
+            name: Squashes
+          3_children:
+            name: Peas
+          4_children:
+            name: Green Beans
+          5_children:
+            name: Kale
+          6_children:
+            name: Collard
+          7_children:
+            name: Beets
+          8_children:
+            name: Brocolli
+          9_children:
+            name: Brussel Sprouts
+      5_children:
+        name: Nuts & Seeds
+        0_children:
+          name: Recommended
+          0_children:
+            name: None
+        1_children:
+          name: Occasional
+          0_children:
+            name: Sunflower Seed
+          1_children:
+            name: Pumpkin Seed
+          2_children:
+            name: Sesame Seed
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Walnut
+          1_children:
+            name: Cashew
+          2_children:
+            name: Chestnut
+          3_children:
+            name: Flaxseed
+          4_children:
+            name: Linseed
+          5_children:
+            name: Hazelnut
+          6_children:
+            name: Almonds
+          7_children:
+            name: Peanuts
+          8_children:
+            name: Coconut
+      6_children:
+        name: Fruits
+        0_children:
+          name: Recommended
+          0_children:
+            name: Raisins
+          1_children:
+            name: Tamarind
+          2_children:
+            name: Pomegranate
+        1_children:
+          name: Occasional
+          0_children:
+            name: Grapes
+          1_children:
+            name: Orange
+          2_children:
+            name: Lemon
+          3_children:
+            name: Lime
+          4_children:
+            name: Strawberry
+          5_children:
+            name: Pears
+          6_children:
+            name: Peaches
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Plums
+          1_children:
+            name: Apricots
+          2_children:
+            name: Blueberry
+          3_children:
+            name: Cherry
+          4_children:
+            name: Pineapple
+          5_children:
+            name: Melons
+          6_children:
+            name: Cantaloupe
+          7_children:
+            name: Banana
+      7_children:
+        name: Oils & Salt
+        0_children:
+          name: Recommended
+          0_children:
+            name: Safflower Oil
+          1_children:
+            name: Black Salt
+        1_children:
+          name: Occasional
+          0_children:
+            name: Peanut Oil
+          1_children:
+            name: Sesame Oil
+          2_children:
+            name: Sunflower Oil
+          3_children:
+            name: Tamari
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: Corn Oil
+          1_children:
+            name: Olive Oil
+          2_children:
+            name: Mustard Oil
+          3_children:
+            name: Sea Salt
+          4_children:
+            name: Miso
+      8_children:
+        name: Herbs & Spices
+        0_children:
+          name: Recommended
+          0_children:
+            name: Asfoetida
+          1_children:
+            name: Ashwaganda
+          2_children:
+            name: Black Pepper
+          3_children:
+            name: Chili
+          4_children:
+            name: Cardamon
+          5_children:
+            name: Cinnamon
+          6_children:
+            name: Clove
+          7_children:
+            name: Cumin
+          8_children:
+            name: Fennel
+          9_children:
+            name: Fenugreek
+          10_children:
+            name: Garlic
+          11_children:
+            name: Ginger
+          12_children:
+            name: Licorice
+          13_children:
+            name: Sesame
+          14_children:
+            name: Raisins
+          15_children:
+            name: Pippali
+        1_children:
+          name: Occasional
+          0_children:
+            name: Tumeric
+        2_children:
+          name: Not-Recommended
+          0_children:
+            name: None

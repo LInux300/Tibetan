@@ -1,0 +1,69 @@
+// ----------------------------------------------------------------------------
+// Basic >Circle
+// ----------------------------------------------------------------------------
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 8px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+// #tree_step > svg > g > g:nth-child(14) > text.name {
+#tree_step > svg > g > g > text.name {
+  font-size: 100% !important;
+}
+
+// ----------------------------------------------------------------------------
+// zoom circle
+// ----------------------------------------------------------------------------
+// circle {
+//   fill: rgb(31, 119, 180);
+//   fill-opacity: .25;
+//   stroke: rgb(31, 119, 180);
+//   stroke-width: 1px;
+// }
+//
+// .leaf circle {
+//   fill: #ff7f0e;
+//   fill-opacity: 1;
+// }
+
+
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node--leaf {
+  fill: white;
+}
+
+.label {
+  font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.label,
+.node--root,
+.node--leaf {
+  pointer-events: none;
+}

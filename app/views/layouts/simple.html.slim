@@ -1,0 +1,35 @@
+html.no-js lang="en"
+  = render "/refinery/html_tag"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title == content_for?(:title) ? yield(:title) : t('title')
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tag
+    = render "/refinery/head"
+    
+  body id="<%= canonical_id @page %>"
+    br
+    br
+    .row
+      .medium-6.medium-centered.large-4.large-centered.columns
+        h1 = t('title')
+    .row
+      .medium-6.medium-centered.large-4.large-centered.columns
+        -if notice.present?
+          .row
+            .alert-box.notice.radius 
+              = notice
+              a href="#" class="close" &times;
+        -if alert.present?
+          .row
+            .alert-box.alert.radius = alert
+              a href="#" class="close" &times;
+    .row
+      .medium-6.medium-centered.large-4.large-centered.columns
+        == yield
+
+    br
+    = render "/welcome/footer"
+    = javascript_include_tag '/assets/custom'

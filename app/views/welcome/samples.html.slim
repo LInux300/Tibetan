@@ -1,0 +1,214 @@
+.row.column
+  hr/
+
+.row
+  .medium-4.columns
+    img alt=("company logo") src="http://placehold.it/450x183&text=LOGO" /
+  .medium-8.columns
+    img alt=("advertisement for deep fried Twinkies") src=("http://placehold.it/900x175&text=Responsive Ads - ZURB Playground/333") /
+
+.row.column
+  hr
+
+  .row
+    .medium-8.columns
+      p
+        img alt=("main article image") src=("http://placehold.it/900x450&text=Promoted Article") /
+    .medium-4.columns
+      p
+        img alt=("advertisement for deep fried Twinkies") src=("http://placehold.it/400x200&text=Other cool article") /
+      p
+        img alt=("article promo image") src=("http://placehold.it/400x200&text=Other cool article") /
+  hr/
+  .row.column
+    h4.text-center style=("margin: 0;")  BREAKING NEWS
+  hr
+
+.row.column
+  .callout.primary
+    h3 Really big special this week on items.
+
+.row.small-up-1.medium-up-2.large-up-3
+  .column
+    .callout
+      p Pegasi B
+      p
+        img alt=("image of a planet called Pegasi B") src=("http://placehold.it/400x370&text=Pegasi B") /
+      p.lead Copernican Revolution caused an uproar
+      p.subheader Find Earth-like planets life outside the Solar System
+  .column
+    .callout
+      p Pegasi B
+      p
+        img alt=("image of a planet called Pegasi B") src=("http://placehold.it/400x370&text=Pegasi B") /
+      p.lead Copernican Revolution caused an uproar
+      p.subheader Find Earth-like planets life outside the Solar System
+  .column
+    .callout
+      p Pegasi B
+      p
+        img alt=("image of a planet called Pegasi B") src=("http://placehold.it/400x370&text=Pegasi B") /
+      p.lead Copernican Revolution caused an uproar
+      p.subheader Find Earth-like planets life outside the Solar System
+
+.row.column
+  hr/
+
+.callout.large
+  .row.column.text-center
+    h1 Changing the World Through Design
+    p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+    a.button.large href="#"  Learn More
+    a.button.large.hollow href="#"  Learn Less
+
+.row
+  .medium-6.columns
+    img.thumbnail src="http://placehold.it/650x350" /
+    .row.small-up-4
+      .column
+        img.thumbnail src="http://placehold.it/250x200" /
+      .column
+        img.thumbnail src="http://placehold.it/250x200" /
+      .column
+        img.thumbnail src="http://placehold.it/250x200" /
+      .column
+        img.thumbnail src="http://placehold.it/250x200" /
+  .medium-6.large-5.columns
+    h3 My Awesome Product
+    p Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in.
+    label
+      | Size
+      select
+        option value="husker"  Small
+        option value="starbuck"  Medium
+        option value="hotdog"  Large
+        option value="apollo"  Yeti
+    .row
+      .small-3.columns
+        label.middle for="middle-label"  Quantity
+      .small-9.columns
+        input#middle-label placeholder=("One fish two fish") type="text" /
+    a.button.large.expanded href="#"  Buy Now
+    .small.secondary.expanded.button-group
+      a.button Facebook
+      a.button Twitter
+      a.button Yo
+
+.row.column
+  hr/
+
+.row
+  .medium-7.large-6.columns
+    h1 Close Your Eyes and Open Your Mind
+    p.subheader There is beauty in space, and it is orderly. There is no weather, and there is regularity. It is predictable. Everything in space obeys the laws of physics. If you know these laws, and obey them, space will treat you kindly.
+    button.button Take a Tour
+    button.button Start a free trial
+  .show-for-large.large-3.columns
+    img alt=("picture of space") src=("http://placehold.it/400x370&text=PSR1257 + 12 C") /
+  .medium-5.large-3.columns
+    .callout.secondary
+      form
+        .row
+          .small-12.columns
+            label
+              | Find Your Dream Planet
+              input placeholder=("Search destinations") type="text" /
+          .small-12.columns
+            label
+              | Number of Moons
+              input placeholder=("Moons required") type="number" /
+            button.button type="submit"  Search Now!
+
+.row.column
+  hr/
+
+section id="contact"
+  .row
+    .large-12.columns
+      .expanded.button-group
+        a.button href="#first" Expanded
+        a.button href="#second" Button
+        a.button href="#third" Group
+      .sections
+        section#first data-magellan-target="first"  First Section
+        section#second data-magellan-target="second"  Second Section
+        section#third data-magellan-target="third"  Third Section
+
+.row.column
+  hr/
+
+.row.text-center.max-height-multislider
+  .small-4.columns
+    .image-wrapper.overlay-slide-in-left
+  /     img src="/assets/pattern_01.gif" /
+  /     .image-overlay-content
+  /       h2 =t('view.first_topic.header')
+  /       p.short_body =t('view.first_topic.short_body')
+  /       a.button href="#{t('view.first_topic.href')}"
+  /         = t('view.first_topic.button')
+  .small-4.columns
+    .image-wrapper.overlay-fade-in
+      img src="/assets/pattern_02.jpg" /
+      .image-overlay-content
+        h2 =t('view.second_topic.header')
+        p.short_body =t('view.second_topic.short_body')
+        a.button href="#{t('view.second_topic.href')}"
+          = t('view.second_topic.button')
+  .small-4.columns
+    .image-wrapper.overlay-fade-in-new-background
+  /     img src="/assets/pattern_03.jpg" /
+  /     .image-overlay-content
+  /       h2 =t('view.third_topic.header')
+  /       p.short_body =t('view.third_topic.short_body')
+  /       a.button href="#{t('view.third_topic.href')}"
+  /         = t('view.third_topic.button')
+
+.row.column
+  hr/
+
+.row
+  div class="small-12 columns"
+    h1 = t('title')
+    / h1 =link_to Refinery::Core.site_name, refinery.root_path
+    p = t('view.index.p1')
+    p = t('view.index.p2')
+
+    div class="row"
+      div class="medium-8 medium-push-4 columns"
+        = link_to image_tag( "" ),
+          refinery.root_path, 
+          width: 100,
+          height: 75,
+          alt: t('view.main.medicine.header')
+      div class="medium-4 medium-pull-8 columns"
+        select id="transitionList"
+          option value="slide-in-up" slide-in-up
+          option value="slide-in-right" slide-in-right
+          opption value="slide-in-down" slide-in-down
+          option value="slide-in-left" slide-in-left
+          / <option value="fade-in">fade-in
+          / <option value="spin-in">spin-in</option>
+          / <option value="spin-in-ccw">spin-in-ccw</option>
+          / <option value="scale-in-up">scale-in-up</option>
+          / <option value="scale-in-down">scale-in-down</option>
+          / <option value="hinge-in-from-top">hinge-in-from-top</option>
+          / <option value="hinge-in-from-right">hinge-in-from-right</option>
+          / <option value="hinge-in-from-bottom">hinge-in-from-bottom</option>
+          / <option value="hinge-in-from-left">hinge-in-from-left</option>
+          / <option value="hinge-in-from-middle-x">hinge-in-from-middle-x</option>
+          / <option value="hinge-in-from-middle-y">hinge-in-from-middle-y</option>
+
+        button id="transitioner" Transition!
+
+        hr
+
+        section
+          h4 = t('view.main.medicine.header')
+          p = t('view.main.medicine.body')
+          a href='medicine/' = t('view.main.medicine.button')
+          
+        hr
+
+        section
+          h4 =t('view.main.prayers.header')
+          p =t('view.main.prayers.body')

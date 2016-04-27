@@ -1,34 +1,47 @@
 html.no-js lang="en"
   = render "/refinery/html_tag"
-  - site_bar = render('/refinery/site_bar', :head => true)
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title == content_for?(:title) ? yield(:title) : "Tibetan"
+    title == content_for?(:title) ? yield(:title) : t('title')
+    / = include_gon
     = stylesheet_link_tag "application"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tag
-    = render "/refinery/head"
-    
+    / = render "/refinery/head"
+
   body id="<%= canonical_id @page %>"
-    = site_bar
-    br
+    -if admin_signed_in?
+      - site_bar = render('/refinery/site_bar', :head => true)
+      = site_bar
+      .row.large-12.columns
+         = link_to 'Sign out', destroy_admin_session_path, method: :delete
     div id="page_container"
-      = render "welcome/slider_top"
       header id="header"
-        = render "/refinery/header"
-      section id="pagess"
-        p class="notice" = notice
-        p class="alert" = alert  
-        - if @page 
-          div class="row"
-            div class="large-3 columns"
+        = render "welcome/header"
+
+      .row
+        div class="large-12 columns"
+          -if notice.present?
+            .alert-box = notice
+              a href="#" class="close" &times;
+          -if alert.present?
+            .alert-box = alert
+              a href="#" class="close" &times;
+      - if @page
+        section id="pagess"
+          .row
+            div class="large-6 columns"
               = raw @page.content_for(:side_body)
-            div class="large-9 columns"
+            div class="large-6 columns"
               = raw @page.content_for(:body)
-        - else      
+      - else
+        section id="topics"
           == yield
-      footer
-        = render "/refinery/footer"
-    
-    = render "/refinery/javascripts"
+      .row
+        div class="small-12 columns"
+      hr
+
+      = render "/welcome/footer"          
+
+  = javascript_include_tag '/assets/custom'

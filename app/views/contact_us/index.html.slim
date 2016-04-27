@@ -1,0 +1,45 @@
+h1 Listing contact_us
+
+table
+  thead
+    tr
+      th Email
+      th Type
+      th Name
+      th Subject
+      th Message
+      th User
+      th Answered
+      th Answer
+      th Text
+      th Parent
+      th Integer
+      th Child
+      th Integer
+      th
+      th
+      th
+
+  tbody
+    - @contact_us.each do |contact_u|
+      tr
+        td = contact_u.email
+        td = contact_u.type
+        td = contact_u.name
+        td = contact_u.subject
+        td = contact_u.message
+        td = contact_u.user_id
+        td = contact_u.answered
+        td = contact_u.answer
+        td = contact_u.text
+        td = contact_u.parent_id
+        td = contact_u.integer
+        td = contact_u.child_id
+        td = contact_u.integer
+        td = link_to 'Show', contact_u
+        td = link_to 'Edit', edit_contact_u_path(contact_u)
+        td = link_to 'Destroy', contact_u, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Contact u', new_contact_u_path

@@ -1,0 +1,51 @@
+.row
+  div class="small-12 columns"
+    h1 = t('view.fourth_topic.header')
+    p = t('view.fourth_topic.body')
+    p = t('view.fourth_topic.p1')
+
+.row
+  div class="small-12 columns"
+    .tabs.effect-1
+      input#tab-1 checked="checked" name="tab" type="radio" /
+      span href="#tab-item-1"  = t('survey.0_survey_0.title')
+      input#tab-2 name="tab" type="radio" /
+      span href="#tab-item-2"   = t('survey.1_survey_0.title')
+      input#tab-3 name="tab" type="radio" /
+      span href="#tab-item-3"   = t('survey.2_survey_0.title')
+      input#tab-4 name="tab" type="radio" /
+      span href="#tab-item-4"   = t('survey.3_survey_0.title')
+      input#tab-5 name="tab" type="radio" /
+      span href="#tab-item-5"   = t('survey.4_survey_0.title')
+      .tab-content
+       hr
+       section#tab-item-1
+         h2  = t('survey.0_survey_0.topic')
+         div id="0_survey_0"
+       section#tab-item-2
+         h2  = t('survey.1_survey_0.topic')
+         div id="1_survey_0"
+       section#tab-item-3
+         - if user_signed_in?
+           p = t('survey.2_survey_0.short_body_0')
+           h2  = t('survey.2_survey_0.topic')
+           div id="2_survey_0"
+           hr
+           h2  = t('survey.2_survey_1.topic')
+           div id="2_survey_1"
+           hr
+           h2  = t('survey.2_survey_2.topic')
+           div id="2_survey_2"
+       section#tab-item-4
+         - if user_signed_in?
+           h2  = t('survey.3_survey_0.topic')
+           div id="3_survey_0"
+       section#tab-item-5
+         - if user_signed_in?
+           h2  = t('survey.4_survey_0.topic')
+           div id="4_survey_0"
+
+    - if !user_signed_in?
+      p.text-right =t('view.fourth_topic.please_login').html_safe
+
+= javascript_include_tag '/assets/examination'

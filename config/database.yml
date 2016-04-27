@@ -17,6 +17,6 @@ test: &test
 production: &production
   adapter: mysql2
   host: localhost
+  username: root
+  password: root
   database: <%= Rails.application.engine_name.gsub(/_application/,'').downcase %>_production
-  username: your_production_database_login
-  password: your_production_database_password

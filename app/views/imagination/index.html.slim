@@ -1,0 +1,30 @@
+.row.small-12.columns
+    h1 = t('view.8_topic.button')
+    p = t('view.8_topic.1_p').html_safe
+
+
+#tibetan_prayers.row
+  .small-12.medium-6.medium-push-6.columns
+    h3 = t('view.8_topic.1_subtopic.title')
+    ul
+      - for i in 0..9
+        li = t("view.8_topic.1_subtopic.#{i}_prayer").html_safe
+    p = t('view.8_topic.1_subtopic.1_p').html_safe
+    - if !user_signed_in?
+      p = t('view.8_topic.1_subtopic.2_p').html_safe
+    - else
+      p = t('view.8_topic.1_subtopic.3_p').html_safe
+  .small-12.medium-6.medium-pull-6.columns
+    h3 = t('view.8_topic.2_subtopic.title')
+    p = t('view.8_topic.2_subtopic.1_p').html_safe
+    p = t('view.8_topic.2_subtopic.2_p').html_safe
+
+.callout.medium
+  .row.small-12.columns
+    h2 = t('view.8_topic.1_h')
+    img alt=t('title') src=("/assets/main.jpg")
+
+.row.small-12.columns
+  h3 = t('view.8_topic.3_subtopic.title')
+  p = t('view.8_topic.3_subtopic.subtitle').html_safe
+  p = t('view.8_topic.3_subtopic.1_p').html_safe
