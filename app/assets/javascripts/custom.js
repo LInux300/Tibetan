@@ -2,7 +2,7 @@
 // -----------------------------------------------------------------------------
 // contact us
 // -----------------------------------------------------------------------------
-$( "#contact_us_form" ).submit(function(event) {
+$("#contact_us_form").submit(function(event) {
   // Stop form from submitting normally
   event.preventDefault();
 

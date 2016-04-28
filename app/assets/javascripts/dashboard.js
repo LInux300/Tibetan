@@ -18,7 +18,7 @@ var green = '#009A31',
 function recommended(child_2, type_of_food) {
   type_of_food += '<ul> <strong>' + child_2.name + '</strong><li>'
   $.each(child_2.children, function(i_3, child_3) {
-    if (child_3.name == 'Recommended') {
+    if (child_3.x_recommended == '0') {
       // console.log(child_3.name); // Recommended Occasional ...
       $.each(child_3.children, function(i_4, child_4) {
         // console.log(child_4.name); // Recommended Occasional ...
@@ -44,9 +44,9 @@ function nutrition(type) {
         // console.log(child_1.name); // Water, Fire, Air
         $.each(child_1.children, function(i_2, child_2) {
           // console.log(child_2.name); // Nuts & Seeds, Vegetables ...
-          if (child_2.name == 'Meat') {
+          if (child_2.x_type == 'M') {
             meat = recommended(child_2, meat);
-          } else if (child_2.name == 'From Animals') {
+          } else if (child_2.x_type == 'A') {
             animalProducts = recommended(child_2, animalProducts);
           } else {
             food = recommended(child_2, food);
@@ -88,26 +88,29 @@ function c3_percentage(graph_data) {
       x: 'time',
       rows: graph_data,
       names: {
-          data1: 'Air',
-          data2: 'Fire',
-          data3: 'Water',
-          time: 'Time'
+        data1: 'Air',
+        data2: 'Fire',
+        data3: 'Water',
+        data4: 'Air',
+        data5: 'Fire',
+        data6: 'Water',
+        time: 'Time'
       },
-      hide: ['time','data4','data5', 'data6'],
-      show: ['data1', 'data2', 'data3'],
+      show: ['data4', 'data5', 'data6'],
+      hide: ['time','data1','data2', 'data3'],
       type: 'bar',
       types: {
-          data1: 'area-spline',
-          data2: 'area-spline',
-          data3: 'area-spline',
+          data4: 'area-spline',
+          data5: 'area-spline',
+          data6: 'area-spline',
       },
       groups: [
-          ['data1','data2', 'data3']
+        ['data4','data5', 'data6']
       ],
       colors: {
-        data1: green,
-        data2: red,
-        data3: blue,
+        data4: green,
+        data5: red,
+        data6: blue,
       }
     },
     axis: {
@@ -115,8 +118,10 @@ function c3_percentage(graph_data) {
             type: 'category' // this needed to load string x value
         },
         y: {
+          max: 100,
+          padding: {top: 0, bottom: 0},
           label: { // ADD
-            text: I18n.t('view.6_topic.6_subtopic.graph_y'),
+            text: I18n.t('view.6_topic.6_subtopic.graph_y_title'),
             position: 'outer-middle'
            }
         }
@@ -130,11 +135,11 @@ function c3_percentage(graph_data) {
     },
     tooltip: {
         contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-            return "<font color='" + blue + "'> Water: " + d[2].value + "</font>" +
+            return "<font color='" + green + "'> Air: " + d[0].value + "</font>" +
                 "<br>" +
                 "<font color='" + red + "'> Fire: " + d[1].value + "</font>" +
                 "<br>" +
-                "<font color='" + green + "'> Air: " + d[0].value + "</font>";
+                "<font color='" + blue + "'> Water: " + d[2].value + "</font>";
         }
     }
   });
@@ -161,6 +166,9 @@ function c3_bar(graph_data) {
           data1: 'Air',
           data2: 'Fire',
           data3: 'Water',
+          data4: 'Air',
+          data5: 'Fire',
+          data6: 'Water',
           time: 'Time'
       },
       hide: ['time','data4','data5', 'data6'],
@@ -194,6 +202,12 @@ function c3_bar(graph_data) {
     axis: {
         x: {
             type: 'category' // this needed to load string x value
+        },
+        y: {
+          label: { // ADD
+            text: I18n.t('view.6_topic.6_subtopic.graph_y_title_2'),
+            position: 'outer-middle'
+           }
         }
     },
     // axis: {
@@ -232,11 +246,11 @@ function c3_bar(graph_data) {
     },
     tooltip: {
         contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-            return "<font color='" + blue + "'> Water: " + d[2].value + "</font>" +
+            return "<font color='" + green + "'> Air: " + d[0].value + "</font>" +
                 "<br>" +
                 "<font color='" + red + "'> Fire: " + d[1].value + "</font>" +
                 "<br>" +
-                "<font color='" + green + "'> Air: " + d[0].value + "</font>";
+                "<font color='" + blue + "'> Water: " + d[2].value + "</font>";
         }
     }
   });
@@ -308,7 +322,7 @@ function typeToSmall(counter_all_max_min) {
 };
 
 function typeToBig(counter_all_max_min) {
-  // max value
+  // first value is the biggest one
   var first = $(counter_all_max_min).first()[0];
   color = getGraphColor(first.type_x)
   pieChartSingle('4_be_fit',first, 230, 200, color);
@@ -317,7 +331,7 @@ function typeToBig(counter_all_max_min) {
   var inner_html = '<p><strong>'
                    + I18n.t('view.attributes.helps_to_decrease')
                    + '</strong><ul>'
-  $.each(dec_inc.increase, function(i2, attribute) {
+  $.each(dec_inc.decrease, function(i2, attribute) {
     // console.log(attribute.name + ': ' + attribute.effect)
     inner_html += '<li>'
       + attribute.name
@@ -331,12 +345,10 @@ function typeToBig(counter_all_max_min) {
 };
 
 function graphData(graph_data) {
-
   return graph_data
 };
 
-
-function getCounterData() {
+function getLastAnswerCounter() {
   url = '/last_answer_counter';
   $.ajax({
     type: "POST",
@@ -356,19 +368,27 @@ function dashboardGraphs(data) {
   var graph_data = [];
   graph_data.push(['data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'time'])
   $.each(all_user_answers, function(i, user_answer) {
-    counter = JSON.parse(user_answer.counter);
+    var counter = JSON.parse(user_answer.counter);
     counter['1']? counter['1'] = counter['1'] : counter['1'] = 0
     counter['2']? counter['2'] = counter['2'] : counter['2'] = 0
     counter['3']? counter['3'] = counter['3'] : counter['3'] = 0
 
-    // var graph_time = new Date(user_answer.created_at);
-    var graph_time = user_answer.created_at.substr(0,10);
+    var counter_all = counter['1'] + counter['2'] + counter['3']
+    counter['4'] = (counter['1'] / counter_all * 100).toFixed(2)
+    counter['5'] = (counter['2'] / counter_all * 100).toFixed(2)
+    counter['6'] = (counter['3'] / counter_all * 100).toFixed(2)
+
+    // format 2016-01-01
+    // var graph_time = user_answer.created_at.substr(0,10);
+    // format 01-01
+    var graph_time = user_answer.created_at.substr(5,5);
     graph_data.push([
-      counter['1'], counter['2'], counter['3'],
-      counter['1'], counter['2'], counter['3'],
+      counter['1'], counter['2'], counter['3'], counter['4'], counter['5'], counter['6'],
       graph_time
     ]);
   });
+
+  // console.log(graph_data);
   c3_percentage(graph_data);
   c3_bar(graph_data);
 
@@ -384,7 +404,7 @@ function dashboardGraphs(data) {
     to_small = typeToSmall(counter_all_max_min);
     to_big = typeToBig(counter_all_max_min);
     // console.log(to_small);
-
+    // do now only for recommended food
     food_for_you = nutrition(to_small.type_x);
     $("#accordion-1").append(food_for_you.hints);
     $("#accordion-2").append(food_for_you.meat);
@@ -394,40 +414,43 @@ function dashboardGraphs(data) {
 
   // donutChart('5_be_fit', counter_all, 250, 400);
   // d3.select('5_be_fit');
-  pieChart('8_be_fit', last_answer_counter_all, 230, 200);
+  pieChart('8_be_fit', last_answer_counter_all, 210, 260);
   // donutChart('7_be_fit', counter_all, 250, 400);
   // pieChart('8_be_fit', counter_all, 250, 400);
 }
 
-//  check for all divs should be more accurated
+//  TODO check for all divs whitch contain data from last answer counter
 if (typeof donutChart !== 'undefined' && $.isFunction(donutChart) && $("#8_be_fit").length > 0) {
-  getCounterData();
+  getLastAnswerCounter();
 }
 
 // -----------------------------------------------------------------------------
 //  View Attributes
 // -----------------------------------------------------------------------------
 function getJsonFromAttributes() {
-  var attributes = [];
+  var twenty_attributes = [];
   for (i = 0; i < 20; i++) {
-    attributes.push(
+    twenty_attributes.push(
       {
         "name" : I18n.t('view.attributes.'+ i +'_atr.name'),
         'effects': [
           {"element": I18n.t('view.attributes.'+ i +'_atr.1_element'),
           "effect": I18n.t('view.attributes.'+ i +'_atr.1_effect'),
+          "type_x": I18n.t('view.attributes.'+ i +'_atr.1_type_x'),
           'movement': I18n.t('view.attributes.'+ i +'_atr.1_movement')},
           {"element": I18n.t('view.attributes.'+ i +'_atr.2_element'),
           "effect": I18n.t('view.attributes.'+ i +'_atr.2_effect'),
+          "type_x": I18n.t('view.attributes.'+ i +'_atr.2_type_x'),
           'movement': I18n.t('view.attributes.'+ i +'_atr.2_movement')},
           {"element": I18n.t('view.attributes.'+ i +'_atr.3_element'),
           "effect": I18n.t('view.attributes.'+ i +'_atr.3_effect'),
+          "type_x": I18n.t('view.attributes.'+ i +'_atr.3_type_x'),
           'movement': I18n.t('view.attributes.'+ i +'_atr.3_movement')},
         ]
       }
     )
   };
-  return attributes
+  return twenty_attributes
 };
 
 function decreaseIncrease(twenty_attributes, element) {
@@ -439,18 +462,17 @@ function decreaseIncrease(twenty_attributes, element) {
     $.each(attribute.effects, function(i2, effect) {
       // console.log(effect.element);
       // for strong element --> needs to be smaller
-      if (effect.element == element && effect.movement == 'Decreasing') {
-        //  console.log( attribute.name + " helps to decrease");
-         decrease.push({'name':attribute.name, 'effect': effect.effect});
+      if (effect.element == element && effect.type_x == 'D') {
+        // console.log( attribute.name + " helps to decrease");
+        decrease.push({'name':attribute.name, 'effect': effect.effect});
       };
 
-      if (effect.element == element && effect.movement == 'Increasing') {
+      if (effect.element == element && effect.type_x == 'I') {
         //  console.log( attribute.name + " helps to increase");
          increase.push({'name':attribute.name, 'effect': effect.effect});
       };
     });
   });
-
   // console.log("Helps to Increase")
   // $.each(increase, function(i, attribute) {
   //   console.log(attribute.name + ': ' + attribute.effect)

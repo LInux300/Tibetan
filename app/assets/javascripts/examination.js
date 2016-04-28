@@ -434,6 +434,11 @@ function pieChart(div_id, counter, canvasHeight, canvasWidth) {
       canvasHeight: canvasHeight,
       canvasWidth: canvasWidth
     },
+    labels: {
+      outer: {
+        pieDistance: 14
+      }
+    },
   	callbacks: {
   		onClickSegment: function(a) {
   			alert("Segment clicked! See the console for all data passed to the click handler.");

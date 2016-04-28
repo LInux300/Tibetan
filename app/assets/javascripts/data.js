@@ -21,6 +21,7 @@ var dendrogram_data = {
       "color": green_light,
       "children": [{
         "name": I18n.t('nutrition.0_children.0_children.0_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.0_children.0_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.0_children.0_children.0_children.name'), "size": 100},
@@ -29,6 +30,7 @@ var dendrogram_data = {
         ]
         },{
         "name": I18n.t('nutrition.0_children.0_children.1_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.0_children.1_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.0_children.1_children.0_children.name'), "size": 50},
@@ -38,6 +40,7 @@ var dendrogram_data = {
          ]
         },{
         "name": I18n.t('nutrition.0_children.0_children.2_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.0_children.2_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.0_children.2_children.0_children.name'), "size": 10},
@@ -49,6 +52,7 @@ var dendrogram_data = {
       "color": green_light,
       "children": [{
         "name": I18n.t('nutrition.0_children.1_children.0_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.1_children.0_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.1_children.0_children.0_children.name'), "size": 100},
@@ -58,6 +62,7 @@ var dendrogram_data = {
         ]
         },{
         "name": I18n.t('nutrition.0_children.1_children.1_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.1_children.1_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.1_children.1_children.0_children.name'), "size": 50},
@@ -65,6 +70,7 @@ var dendrogram_data = {
          ]
         },{
         "name": I18n.t('nutrition.0_children.1_children.2_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.1_children.2_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.1_children.2_children.0_children.name'), "size": 10},
@@ -75,6 +81,7 @@ var dendrogram_data = {
       "color": green_light,
       "children": [{
         "name": I18n.t('nutrition.0_children.2_children.0_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.2_children.0_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.2_children.0_children.0_children.name'), "size": 100},
@@ -88,12 +95,14 @@ var dendrogram_data = {
         ]
         },{
         "name": I18n.t('nutrition.0_children.2_children.1_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.2_children.1_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.2_children.1_children.0_children.name'), "size": 50},
          ]
         },{
         "name": I18n.t('nutrition.0_children.2_children.2_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.2_children.2_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.2_children.2_children.0_children.name'), "size": 10},
@@ -107,6 +116,7 @@ var dendrogram_data = {
       "color": green_light,
       "children": [{
         "name": I18n.t('nutrition.0_children.3_children.0_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.3_children.0_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.3_children.0_children.0_children.name'), "size": 100},
@@ -121,12 +131,14 @@ var dendrogram_data = {
         ]
         },{
         "name": I18n.t('nutrition.0_children.3_children.1_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.3_children.1_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.3_children.1_children.0_children.name'), "size": 50},
          ]
         },{
         "name": I18n.t('nutrition.0_children.3_children.2_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.3_children.2_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.3_children.2_children.0_children.name'), "size": 10},
@@ -138,6 +150,7 @@ var dendrogram_data = {
       "color": green_light,
       "children": [{
         "name": I18n.t('nutrition.0_children.4_children.0_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.4_children.0_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.4_children.0_children.0_children.name'), "size": 100},
@@ -157,6 +170,7 @@ var dendrogram_data = {
         ]
         },{
         "name": I18n.t('nutrition.0_children.4_children.1_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.4_children.1_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.4_children.1_children.0_children.name'), "size": 50},
@@ -174,6 +188,7 @@ var dendrogram_data = {
          ]
         },{
         "name": I18n.t('nutrition.0_children.4_children.2_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.4_children.2_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.4_children.2_children.0_children.name'), "size": 10},
@@ -184,6 +199,7 @@ var dendrogram_data = {
       "color": green_light,
       "children": [{
         "name": I18n.t('nutrition.0_children.5_children.0_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.5_children.0_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.5_children.0_children.0_children.name'), "size": 100},
@@ -196,6 +212,7 @@ var dendrogram_data = {
         ]
         },{
         "name": I18n.t('nutrition.0_children.1_children.1_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.1_children.1_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.5_children.1_children.0_children.name'), "size": 50},
@@ -205,6 +222,7 @@ var dendrogram_data = {
          ]
         },{
         "name": I18n.t('nutrition.0_children.5_children.2_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.5_children.2_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.5_children.2_children.0_children.name'), "size": 10},
@@ -215,6 +233,7 @@ var dendrogram_data = {
       "color": green_light,
       "children": [{
         "name": I18n.t('nutrition.0_children.6_children.0_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.6_children.0_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.6_children.0_children.0_children.name'), "size": 100},
@@ -225,6 +244,7 @@ var dendrogram_data = {
         ]
         },{
         "name": I18n.t('nutrition.0_children.1_children.1_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.1_children.1_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.6_children.1_children.0_children.name'), "size": 50},
@@ -237,6 +257,7 @@ var dendrogram_data = {
          ]
         },{
         "name": I18n.t('nutrition.0_children.6_children.2_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.6_children.2_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.6_children.2_children.0_children.name'), "size": 10},
@@ -252,6 +273,7 @@ var dendrogram_data = {
       "color": green_light,
       "children": [{
         "name": I18n.t('nutrition.0_children.7_children.0_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.7_children.0_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.7_children.0_children.0_children.name'), "size": 100},
@@ -263,6 +285,7 @@ var dendrogram_data = {
         ]
         },{
         "name": I18n.t('nutrition.0_children.7_children.1_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.7_children.1_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.7_children.1_children.0_children.name'), "size": 50},
@@ -271,6 +294,7 @@ var dendrogram_data = {
          ]
         },{
         "name": I18n.t('nutrition.0_children.6_children.2_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.6_children.2_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.7_children.2_children.0_children.name'), "size": 10},
@@ -281,6 +305,7 @@ var dendrogram_data = {
       "color": green_light,
       "children": [{
         "name": I18n.t('nutrition.0_children.8_children.0_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.8_children.0_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.8_children.0_children.0_children.name'), "size": 100},
@@ -303,6 +328,7 @@ var dendrogram_data = {
         ]
         },{
         "name": I18n.t('nutrition.0_children.8_children.1_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.8_children.1_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.8_children.1_children.0_children.name'), "size": 50},
@@ -312,6 +338,7 @@ var dendrogram_data = {
          ]
         },{
         "name": I18n.t('nutrition.0_children.8_children.2_children.name'),
+        "x_recommended": I18n.t('nutrition.0_children.8_children.2_children.x_recommended'),
         "color": green_dark,
         "children": [
           {"name": I18n.t('nutrition.0_children.8_children.2_children.0_children.name'), "size": 10},
@@ -329,9 +356,11 @@ var dendrogram_data = {
     "color": red,
     "children": [{
        "name": I18n.t('nutrition.1_children.0_children.name'),
+       "x_type": I18n.t('nutrition.1_children.0_children.x_type'),
        "color": red_light,
        "children": [{
          "name": I18n.t('nutrition.1_children.0_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.0_children.0_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.0_children.0_children.0_children.name'), "size": 100},
@@ -339,12 +368,14 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.1_children.0_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.0_children.1_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.0_children.1_children.0_children.name'), "size": 50},
           ]
          },{
          "name": I18n.t('nutrition.1_children.0_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.0_children.2_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.0_children.2_children.0_children.name'), "size": 10},
@@ -357,9 +388,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.1_children.1_children.name'),
+       "x_type": I18n.t('nutrition.1_children.1_children.x_type'),
        "color": red_light,
        "children": [{
          "name": I18n.t('nutrition.1_children.1_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.1_children.0_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.1_children.0_children.0_children.name'), "size": 100},
@@ -368,6 +401,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.1_children.1_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.1_children.1_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.1_children.1_children.0_children.name'), "size": 50},
@@ -376,6 +410,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.1_children.1_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.1_children.2_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.1_children.2_children.0_children.name'), "size": 10},
@@ -383,9 +418,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.1_children.2_children.name'),
+       "x_type": I18n.t('nutrition.1_children.2_children.x_type'),
        "color": red_light,
        "children": [{
          "name": I18n.t('nutrition.1_children.2_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.2_children.0_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.2_children.0_children.0_children.name'), "size": 100},
@@ -399,6 +436,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.1_children.1_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.1_children.1_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.2_children.1_children.0_children.name'), "size": 50},
@@ -406,6 +444,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.1_children.2_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.2_children.2_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.2_children.2_children.0_children.name'), "size": 10},
@@ -415,9 +454,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.1_children.3_children.name'),
+       "x_type": I18n.t('nutrition.1_children.3_children.x_type'),
        "color": red_light,
        "children": [{
          "name": I18n.t('nutrition.1_children.3_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.3_children.0_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.3_children.0_children.0_children.name'), "size": 100},
@@ -430,6 +471,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.1_children.3_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.3_children.1_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.3_children.1_children.0_children.name'), "size": 50},
@@ -438,6 +480,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.1_children.2_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.2_children.2_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.3_children.2_children.0_children.name'), "size": 10},
@@ -448,9 +491,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.1_children.4_children.name'),
+       "x_type": I18n.t('nutrition.1_children.4_children.x_type'),
        "color": red_light,
        "children": [{
          "name": I18n.t('nutrition.1_children.4_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.4_children.0_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.4_children.0_children.0_children.name'), "size": 100},
@@ -475,6 +520,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.1_children.4_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.4_children.1_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.4_children.1_children.0_children.name'), "size": 50},
@@ -489,6 +535,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.1_children.2_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.2_children.2_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.4_children.2_children.0_children.name'), "size": 10},
@@ -509,15 +556,18 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.1_children.5_children.name'),
+       "x_type": I18n.t('nutrition.1_children.5_children.x_type'),
        "color": red_light,
        "children": [{
          "name": I18n.t('nutrition.1_children.5_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.5_children.0_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.5_children.0_children.0_children.name'), "size": 100},
          ]
          },{
          "name": I18n.t('nutrition.1_children.5_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.5_children.1_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.5_children.1_children.0_children.name'), "size": 50},
@@ -525,6 +575,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.1_children.5_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.5_children.2_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.5_children.2_children.0_children.name'), "size": 10},
@@ -539,9 +590,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.1_children.6_children.name'),
+       "x_type": I18n.t('nutrition.1_children.6_children.x_type'),
        "color": red_light,
        "children": [{
          "name": I18n.t('nutrition.1_children.6_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.6_children.0_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.6_children.0_children.0_children.name'), "size": 100},
@@ -552,6 +605,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.1_children.6_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.6_children.1_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.6_children.1_children.0_children.name'), "size": 50},
@@ -567,6 +621,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.1_children.6_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.6_children.2_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.6_children.2_children.0_children.name'), "size": 10},
@@ -575,9 +630,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.1_children.7_children.name'),
+       "x_type": I18n.t('nutrition.1_children.7_children.x_type'),
        "color": red_light,
        "children": [{
          "name": I18n.t('nutrition.1_children.7_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.7_children.0_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.7_children.0_children.0_children.name'), "size": 100},
@@ -585,6 +642,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.1_children.7_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.7_children.1_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.7_children.1_children.0_children.name'), "size": 50},
@@ -594,6 +652,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.1_children.6_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.6_children.2_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.7_children.2_children.0_children.name'), "size": 10},
@@ -608,9 +667,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.1_children.8_children.name'),
+       "x_type": I18n.t('nutrition.1_children.8_children.x_type'),
        "color": red_light,
        "children": [{
          "name": I18n.t('nutrition.1_children.8_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.8_children.0_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.8_children.0_children.0_children.name'), "size": 100},
@@ -631,6 +692,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.1_children.7_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.7_children.1_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.8_children.1_children.0_children.name'), "size": 50},
@@ -638,6 +700,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.1_children.6_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.1_children.6_children.2_children.x_recommended'),
          "color": red_dark,
          "children": [
            {"name": I18n.t('nutrition.1_children.8_children.2_children.0_children.name'), "size": 10},
@@ -654,9 +717,11 @@ var dendrogram_data = {
     "color": blue,
     "children": [{
        "name": I18n.t('nutrition.2_children.0_children.name'),
+       "x_type": I18n.t('nutrition.2_children.0_children.x_type'),
        "color": blue_light,
        "children": [{
          "name": I18n.t('nutrition.2_children.0_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.0_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.0_children.0_children.0_children.name'), "size": 100},
@@ -667,12 +732,14 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.2_children.0_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.0_children.1_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.0_children.1_children.0_children.name'), "size": 50},
           ]
          },{
          "name": I18n.t('nutrition.2_children.0_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.0_children.2_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.0_children.2_children.0_children.name'), "size": 10},
@@ -683,9 +750,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.2_children.1_children.name'),
+       "x_type": I18n.t('nutrition.2_children.1_children.x_type'),
        "color": blue_light,
        "children": [{
          "name": I18n.t('nutrition.2_children.1_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.1_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.1_children.0_children.0_children.name'), "size": 100},
@@ -695,6 +764,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.2_children.1_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.1_children.1_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.1_children.1_children.0_children.name'), "size": 50},
@@ -702,6 +772,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.2_children.1_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.1_children.2_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.1_children.2_children.0_children.name'), "size": 10},
@@ -709,9 +780,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.2_children.2_children.name'),
+       "x_type": I18n.t('nutrition.2_children.2_children.x_type'),
        "color": blue_light,
        "children": [{
          "name": I18n.t('nutrition.2_children.2_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.2_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.2_children.0_children.0_children.name'), "size": 100},
@@ -722,6 +795,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.2_children.2_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.2_children.1_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.2_children.1_children.0_children.name'), "size": 50},
@@ -731,6 +805,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.2_children.2_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.2_children.2_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.2_children.2_children.0_children.name'), "size": 10},
@@ -739,9 +814,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.2_children.3_children.name'),
+       "x_type": I18n.t('nutrition.2_children.3_children.x_type'),
        "color": blue_light,
        "children": [{
          "name": I18n.t('nutrition.2_children.3_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.3_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.3_children.0_children.0_children.name'), "size": 100},
@@ -749,6 +826,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.2_children.2_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.2_children.1_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.3_children.1_children.0_children.name'), "size": 50},
@@ -757,6 +835,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.2_children.2_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.2_children.2_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.3_children.2_children.0_children.name'), "size": 10},
@@ -770,9 +849,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.2_children.4_children.name'),
+       "x_type": I18n.t('nutrition.2_children.4_children.x_type'),
        "color": blue_light,
        "children": [{
          "name": I18n.t('nutrition.2_children.4_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.4_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.4_children.0_children.0_children.name'), "size": 100},
@@ -792,6 +873,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.2_children.2_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.4_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.4_children.1_children.0_children.name'), "size": 50},
@@ -812,6 +894,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.2_children.2_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.4_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.4_children.2_children.0_children.name'), "size": 10},
@@ -828,15 +911,18 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.2_children.5_children.name'),
+       "x_type": I18n.t('nutrition.2_children.5_children.x_type'),
        "color": blue_light,
        "children": [{
          "name": I18n.t('nutrition.2_children.5_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.5_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.5_children.0_children.0_children.name'), "size": 100},
          ]
          },{
          "name": I18n.t('nutrition.2_children.5_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.5_children.1_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.5_children.1_children.0_children.name'), "size": 50},
@@ -845,6 +931,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.2_children.5_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.5_children.2_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.5_children.2_children.0_children.name'), "size": 10},
@@ -860,9 +947,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.2_children.6_children.name'),
+       "x_type": I18n.t('nutrition.2_children.6_children.x_type'),
        "color": blue_light,
        "children": [{
          "name": I18n.t('nutrition.2_children.6_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.6_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.6_children.0_children.0_children.name'), "size": 100},
@@ -871,6 +960,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.2_children.6_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.6_children.1_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.6_children.1_children.0_children.name'), "size": 50},
@@ -883,6 +973,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.2_children.5_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.5_children.2_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.6_children.2_children.0_children.name'), "size": 10},
@@ -897,9 +988,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.2_children.7_children.name'),
+       "x_type": I18n.t('nutrition.2_children.7_children.x_type'),
        "color": blue_light,
        "children": [{
          "name": I18n.t('nutrition.2_children.7_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.7_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.7_children.0_children.0_children.name'), "size": 100},
@@ -907,6 +1000,7 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.2_children.7_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.7_children.1_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.7_children.1_children.0_children.name'), "size": 50},
@@ -916,6 +1010,7 @@ var dendrogram_data = {
           ]
          },{
          "name": I18n.t('nutrition.2_children.7_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.7_children.2_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.7_children.2_children.0_children.name'), "size": 10},
@@ -927,9 +1022,11 @@ var dendrogram_data = {
         }]
      },{
        "name": I18n.t('nutrition.2_children.8_children.name'),
+       "x_type": I18n.t('nutrition.2_children.8_children.x_type'),
        "color": blue_light,
        "children": [{
          "name": I18n.t('nutrition.2_children.8_children.0_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.8_children.0_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.8_children.0_children.0_children.name'), "size": 100},
@@ -951,12 +1048,14 @@ var dendrogram_data = {
          ]
          },{
          "name": I18n.t('nutrition.2_children.7_children.1_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.7_children.1_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.8_children.1_children.0_children.name'), "size": 50},
           ]
          },{
          "name": I18n.t('nutrition.2_children.8_children.2_children.name'),
+         "x_recommended": I18n.t('nutrition.2_children.8_children.2_children.x_recommended'),
          "color": blue_dark,
          "children": [
            {"name": I18n.t('nutrition.2_children.8_children.2_children.0_children.name'), "size": 10},
