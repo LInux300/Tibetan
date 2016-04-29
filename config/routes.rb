@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources "nutrition", only: [:index]
 
   match '/last_answer_counter',  to: 'dashboard#last_answer_counter', via: 'post'
+  match '/get_user_info',  to: 'application#get_user_info', via: 'post'
 
   # get 'dashboard/index'
   # get 'nutrition/index'
@@ -24,6 +25,9 @@ Rails.application.routes.draw do
   devise_for :admins, controllers: { registrations: "registrations"}
 
   devise_for :users
+  # devise_for :users, :controllers => { registrations: 'registrations' }
+  # resources :users, :only => [:show]
+
   #devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
 
   # This line mounts Refinery's routes at the root of your application.

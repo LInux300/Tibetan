@@ -1,5 +1,32 @@
 
 // -----------------------------------------------------------------------------
+// header
+// -----------------------------------------------------------------------------
+
+$("#h_user_account").click(function(event) {
+  var current_user = getUserInfo();
+});
+
+function getUserInfo() {
+  url = '/get_user_info';
+  $.ajax({
+    type: "post",
+    url: url,
+  }).done(function(current_user) {
+    console.log(current_user)
+    $("#user_account_created_at").html("<b>" + current_user.created_at + "</b>");
+    $("#user_account_updated_at").html("<b>" + current_user.updated_at + "</b>");
+    $("#user_account_email").html("<b>" + current_user.email + "</b>");
+    $("#user_account_sign_in_count").html("<b>" + current_user.sign_in_count + "</b>");
+    $("#user_account_current_sign_in_at").html("<b>" + current_user.current_sign_in_at + "</b>");
+    $("#user_account_last_sign_in_at").html("<b>" + current_user.last_sign_in_at + "</b>");
+    $("#user_account").slideToggle("slow", "swing");
+  }).fail(function() {
+    alert('Error occured');
+  });
+}
+
+// -----------------------------------------------------------------------------
 // contact us
 // -----------------------------------------------------------------------------
 $("#contact_us_form").submit(function(event) {
@@ -48,7 +75,7 @@ owl.owlCarousel({
 // -----------------------------------------------------------------------------
 $("#f_external_links").click(function(event) {
   $("#external_links").slideToggle("slow", "swing");
-  console.log('external_links');
+  // console.log('external_links');
 });
 $("#f_info").click(function(event) {
   $("#info").slideToggle("slow", "swing")
