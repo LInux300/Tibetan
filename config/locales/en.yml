@@ -28,6 +28,17 @@ en:
       message: Message
       send: Send
       thank_you: Thank You for your message
+    user_account:
+      user_account: User account
+      info: ''
+      email: Email
+      sign_in_count: Sign in Count
+      current_sign_in_at: Current Sign In at
+      last_sign_in_at: Last Sign In at
+      current_sign_in_ip: Current Sign In IP
+      last_sign_in_ip: Last Sign In IP
+      created_at: Created at
+      updated_at: Updated at
     seven:
       title: Seven Tissues
       1_p: 'There are 7 pathways through which the body receives nourishment. The Seven Tissues are: <strong> Plasma, Blood, Muscle, Fatty Tissue, Bone, Marrow and Regenerative Fluid </strong>'

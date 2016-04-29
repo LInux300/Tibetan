@@ -359,6 +359,7 @@ function getLastAnswerCounter() {
     alert('Error occured');
   });
 }
+// TODO
 
 function dashboardGraphs(data) {
   var last_answer_counter_all = JSON.parse(data.last_answer_counter_all),

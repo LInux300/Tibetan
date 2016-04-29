@@ -19,7 +19,6 @@ html.no-js lang="en"
     div id="page_container"
       header id="header"
         = render "welcome/header"
-
       .row
         div class="large-12 columns"
           -if notice.present?
@@ -28,6 +27,34 @@ html.no-js lang="en"
           -if alert.present?
             .alert-box = alert
               a href="#" class="close" &times;
+      -if user_signed_in?
+        #user_account.row style="display: none;"
+          hr
+          .small-12.medium-6.medium-push-6.columns
+            h2
+              i.fi-torsos-female-male
+              = t('view.user_account.info')
+            p
+              = t('view.user_account.sign_in_count').html_safe
+              span id='user_account_sign_in_count'
+            p
+              = t('view.user_account.created_at').html_safe
+              span id='user_account_created_at'
+            p
+              = t('view.user_account.updated_at').html_safe
+              span id='user_account_updated_at'
+          .small-12.medium-6.medium-pull-6.columns
+            h2
+              i.fi-page-multiple
+              = t('view.user_account.user_account')
+            p
+              = t('view.user_account.email').html_safe
+              span id='user_account_email'
+            p = t('view.user_account.current_sign_in_at').html_safe
+              span id='user_account_current_sign_in_at'
+            p = t('view.user_account.last_sign_in_at').html_safe
+              span id='user_account_last_sign_in_at'
+          hr
       - if @page
         section id="pagess"
           .row
