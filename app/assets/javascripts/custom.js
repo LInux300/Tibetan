@@ -4,6 +4,7 @@
 // -----------------------------------------------------------------------------
 
 $("#h_user_account").click(function(event) {
+  $(".alert-box").remove();
   var current_user = getUserInfo();
 });
 

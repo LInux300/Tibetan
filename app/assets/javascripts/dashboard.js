@@ -10,6 +10,7 @@ var green = '#009A31',
     red_light = '#FF3333';
     blue_dark = '#1EA8CF';
     blue_light = '#227FB0';
+    yellow = 'edc21b';
 
 // -----------------------------------------------------------------------------
 //  Iterate over nutrition format var json
@@ -88,13 +89,13 @@ function c3_percentage(graph_data) {
       x: 'time',
       rows: graph_data,
       names: {
-        data1: 'Air',
-        data2: 'Fire',
-        data3: 'Water',
-        data4: 'Air',
-        data5: 'Fire',
-        data6: 'Water',
-        time: 'Time'
+        data1: I18n.t('view.6_topic.type_1'),
+        data2: I18n.t('view.6_topic.type_2'),
+        data3: I18n.t('view.6_topic.type_3'),
+        data4: I18n.t('view.6_topic.type_1'),
+        data5: I18n.t('view.6_topic.type_2'),
+        data6: I18n.t('view.6_topic.type_3'),
+        time: I18n.t('view.6_topic.time')
       },
       show: ['data4', 'data5', 'data6'],
       hide: ['time','data1','data2', 'data3'],

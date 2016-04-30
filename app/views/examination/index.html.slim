@@ -1,8 +1,9 @@
 .row
   div class="small-12 columns"
     h1 = t('view.fourth_topic.header')
-    p = t('view.fourth_topic.body')
-    p = t('view.fourth_topic.p1')
+    p = t('view.fourth_topic.body').html_safe
+    - if !user_signed_in?
+      p = t('view.fourth_topic.p1').html_safe
 
 .row
   div class="small-12 columns"
@@ -22,9 +23,16 @@
        section#tab-item-1
          h2  = t('survey.0_survey_0.topic')
          div id="0_survey_0"
+         hr
+         h2  = t('survey.0_survey_1.topic')
+         div id="0_survey_1"
+         hr
+         h2  = t('survey.0_survey_2.topic')
+         div id="0_survey_2"
        section#tab-item-2
-         h2  = t('survey.1_survey_0.topic')
-         div id="1_survey_0"
+         - if user_signed_in?
+           h2  = t('survey.1_survey_0.topic')
+           div id="1_survey_0"
        section#tab-item-3
          - if user_signed_in?
            p = t('survey.2_survey_0.short_body_0')
@@ -44,6 +52,9 @@
          - if user_signed_in?
            h2  = t('survey.4_survey_0.topic')
            div id="4_survey_0"
+           hr
+           h2  = t('survey.4_survey_1.topic')
+           div id="4_survey_1"
 
     - if !user_signed_in?
       p.text-right =t('view.fourth_topic.please_login').html_safe

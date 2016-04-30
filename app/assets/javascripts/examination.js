@@ -89,13 +89,21 @@
 
 var green = '#009A31',
     red = '#E8110F',
+    yellow = '#edc21b',
     blue = '#008CBA';
-
 
 //  TODO questions 36-39
 var surveys = [
-  ['0_survey', [[2, 20]], [I18n.t('survey.0_survey_0.title')]],
-  ['1_survey', [[21, 29]], [I18n.t('survey.1_survey_0.title')]],
+  ['0_survey', [
+                [2, 8],
+                [9, 20],
+                [21, 29]
+               ],[
+                 I18n.t('survey.0_survey_0.title'),
+                 I18n.t('survey.0_survey_1.title'),
+                 I18n.t('survey.0_survey_2.title')
+  ]],
+  ['1_survey', [[55, 69]], [I18n.t('survey.1_survey_0.title')]],
   ['2_survey', [
                  [41, 49],
                  [50, 53],
@@ -105,8 +113,18 @@ var surveys = [
                  I18n.t('survey.2_survey_1.title'),
                  I18n.t('survey.2_survey_2.title')
   ]],
-  ['3_survey', [[30, 35]], [I18n.t('survey.3_survey_0.title')]],
-  ['4_survey', [[40, 40]], [I18n.t('survey.4_survey_0.title')]]
+  ['3_survey', [
+                 [30, 35]
+               ],[
+                 I18n.t('survey.3_survey_0.title'),
+  ]],
+  ['4_survey', [
+                 [40, 40],
+                 [71, 77],
+               ],[
+                 I18n.t('survey.4_survey_0.title'),
+                 I18n.t('survey.4_survey_1.title')
+  ]]
 ];
 
 $.each(surveys, function(i, survey) {
@@ -334,8 +352,15 @@ function addSurveyMenu(div_id, types_with_questions_ids) {
     //            + '" onclick="repeatSurvey('
     //            + div_id
     //            +')">';
+    inner_html += '<input type="button" style="background:'
+               + yellow
+               + '" onclick="dashboard()" value="Dashboard"/>'
     div.innerHTML = inner_html;
     document.getElementById(div_id).appendChild(div);
+}
+
+function dashboard() {
+  window.location.href = "/dashboard";
 }
 
 function removeSurveyMenu(input) {
@@ -441,8 +466,8 @@ function pieChart(div_id, counter, canvasHeight, canvasWidth) {
     },
   	callbacks: {
   		onClickSegment: function(a) {
-  			alert("Segment clicked! See the console for all data passed to the click handler.");
-  			console.log(a);
+        // alert("Segment clicked! See the console for all data passed to the click handler.");
+        console.log(a);
   		},
       onMouseoverSegment: function(info) {
   			console.log("mouseover:", info);
