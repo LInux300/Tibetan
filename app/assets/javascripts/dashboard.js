@@ -10,6 +10,7 @@ var green = '#009A31',
     red_light = '#FF3333';
     blue_dark = '#1EA8CF';
     blue_light = '#227FB0';
+    yellow = 'edc21b';
 
 // -----------------------------------------------------------------------------
 //  Iterate over nutrition format var json
