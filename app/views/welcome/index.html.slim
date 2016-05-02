@@ -10,7 +10,7 @@ hr
 / hr
 
 #3_row.row.column
-  h4.text-center style=("margin: 0;") = t('view.index.1_row.title')
+  h1.text-center style=("margin: 0;") = t('view.index.1_row.title')
 hr
 
 #4_row.row
@@ -36,25 +36,21 @@ hr
 br
 
 #5_row.row.column
-  .callout.primary
-    h3 = t('view.index.7_row.title')
+  h2 = t('view.index.7_row.title')
 
 
 #2_row.row.small-up-1.medium-up-2.large-up-3
   .column
-    .callout
       p
         img.thumbnail alt=t('view.index.2_row.1_lead') src=("/assets/element-air-yang.jpg")  width="100%"
       p.lead = t('view.index.2_row.1_lead')
       p.subheader = t('view.index.2_row.1_subheader')
   .column
-    .callout
       p
         img.thumbnail alt=t('view.index.2_row.2_lead') src=("/assets/element-fire-ram-4.jpg") width="100%"
       p.lead = t('view.index.2_row.2_lead')
       p.subheader = t('view.index.2_row.2_subheader')
   .column
-    .callout
       p
         img.thumbnail alt=t('view.index.2_row.3_lead') src=("/assets/element-water.jpg") width="100%"
       p.lead = t('view.index.2_row.3_lead')
@@ -92,8 +88,8 @@ br
   .medium-6.columns.medium-push-6
     img.thumbnail alt=t('view.index.3_row.1_title') src=("/assets/element-air-yang.jpg")  width="100%"
   .medium-6.columns.medium-pull-6
-    h2 = t('view.index.3_row.1_title')
-    p = t('view.index.3_row.1_body').html_safe
+      h2 = t('view.index.3_row.1_title')
+      p = t('view.index.3_row.1_body').html_safe
 
 #9_row.row
   .medium-6.columns.medium-push-6
@@ -109,9 +105,38 @@ br
     h2 = t('view.index.5_row.3_title')
     p = t('view.index.5_row.3_body').html_safe
 
+br
+
+#22_row.row.text-center.max-height-multislider
+  .small-4.columns
+    .image-wrapper.overlay-fade-in-new-background
+      img src="/assets/pattern_01.gif" /
+      .image-overlay-content
+        h2 =t('view.first_topic.header')
+        p.short_body =t('view.first_topic.short_body')
+        a.button href="#{t('view.first_topic.href')}"
+          = t('view.first_topic.button')
+  .small-4.columns
+    .image-wrapper.overlay-fade-in
+      img src="/assets/pattern_02.jpg" /
+      .image-overlay-content
+        h2 =t('view.second_topic.header')
+        p.short_body =t('view.second_topic.short_body')
+        a.button href="#{t('view.second_topic.href')}"
+          = t('view.second_topic.button')
+  .small-4.columns
+    .image-wrapper.overlay-slide-in-left
+      img src="/assets/pattern_01.gif" /
+      .image-overlay-content
+        h2 =t('view.third_topic.header')
+        p.short_body =t('view.third_topic.short_body')
+        a.button href="#{t('view.third_topic.href')}"
+          = t('view.third_topic.button')
+
+br
+
 #twenty_attributes.row.column
-  .callout.primary
-    h3 = t('view.attributes.title')
+  h2 = t('view.attributes.title')
     
   - if user_signed_in?
     - n = 19
@@ -146,14 +171,13 @@ br
           i.fi-arrow-down
         = ' ' + t("view.attributes.#{i}_atr.3_effect")
         
-  p = t('view.attributes.subtitle')
+  p style='text-align: right;' = t('view.attributes.subtitle')
 
     /
     / .sections
     /   section#first data-magellan-target="first"  First Section
     /   section#second data-magellan-target="second"  Second Section
     /   section#third data-magellan-target="third"  Third Section
-hr
 
 /   #13_row.row
 /     .medium-6.columns
@@ -216,41 +240,10 @@ hr
 / #19_row.row.column
 /   hr/
 
-#21_row.row.column
-  hr/
 
-#22_row.row.text-center.max-height-multislider
-  .small-4.columns
-    .image-wrapper.overlay-fade-in-new-background
-      img src="/assets/pattern_01.gif" /
-      .image-overlay-content
-        h2 =t('view.first_topic.header')
-        p.short_body =t('view.first_topic.short_body')
-        a.button href="#{t('view.first_topic.href')}"
-          = t('view.first_topic.button')
-  .small-4.columns
-    .image-wrapper.overlay-fade-in
-      img src="/assets/pattern_02.jpg" /
-      .image-overlay-content
-        h2 =t('view.second_topic.header')
-        p.short_body =t('view.second_topic.short_body')
-        a.button href="#{t('view.second_topic.href')}"
-          = t('view.second_topic.button')
-  .small-4.columns
-    .image-wrapper.overlay-slide-in-left
-      img src="/assets/pattern_01.gif" /
-      .image-overlay-content
-        h2 =t('view.third_topic.header')
-        p.short_body =t('view.third_topic.short_body')
-        a.button href="#{t('view.third_topic.href')}"
-          = t('view.third_topic.button')
-
-.row.column
-  hr/
 
 #seven_tissues.row.column
-  .callout.primary
-    h3 = t('view.seven.title')
+  h2 = t('view.seven.title')
 
   p = t('view.seven.1_p').html_safe
 

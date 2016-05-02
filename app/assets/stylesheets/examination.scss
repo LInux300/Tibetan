@@ -1,7 +1,8 @@
 $blue: #008CBA;
 $grey: #f7f7f7;
 $green: #009A31;
-
+$yellow: #FBC723;
+$blue_dark_2: #110d61;
 // ----------------------------------------------------------------------------
 //  questions
 // ----------------------------------------------------------------------------
@@ -32,7 +33,7 @@ $green: #009A31;
   padding-top: 10px;
 }
 
-.tab-content input[type=checkbox], .tab-content input[type=radio], input[type=checkbox], input[type=radio] {
+.tab-content input[type=checkbox], .tab-content input[type=radio], #user_remember_me {
   -ms-transform: scale(2); /* IE */
   -moz-transform: scale(2); /* FF */
   -webkit-transform: scale(2); /* Safari and Chrome */
@@ -117,23 +118,24 @@ $green: #009A31;
 
 .tabs > span i,
 .tabs > span {
-  // -webkit-transition: all .5s;
-  //    -moz-transition: all .5s;
-  //    -o-transition: all .5s;
-  //     transition: all .5s;
+  -webkit-transition: all .5s;
+     -moz-transition: all .5s;
+     -o-transition: all .5s;
+      transition: all .5s;
 }
 
 .tabs > input:hover + span {
-  // background: rgba(255,255,255,.1);
+  background: $yellow;
 }
 
 .tabs > input:checked + span {
-  background: #fff;
+  background: $blue_dark_2;
 }
 
 .tabs > input:checked + span,
 .tabs > input:hover + span {
-  color: #3498DB;
+  // color: #3498DB;
+  color: white;
 }
 
 #tab-1, #tab-1 + span {

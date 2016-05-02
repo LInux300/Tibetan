@@ -24,10 +24,21 @@ en:
     home: Home
     coutact_us:
       title: Contact Us
-      email_address: Email Address
+      email_address: 'Email Address'
       message: Message
       send: Send
       thank_you: Thank You for your message
+    user_account:
+      user_account: User account
+      info: ''
+      email: Email
+      sign_in_count: 'Sign in Count:'
+      current_sign_in_at: 'Current Sign In at:'
+      last_sign_in_at: 'Last Sign In at:'
+      current_sign_in_ip: 'Current Sign In IP:'
+      last_sign_in_ip: 'Last Sign In IP:'
+      created_at: 'Created at:'
+      updated_at: 'Updated at:'
     seven:
       title: Seven Tissues
       1_p: 'There are 7 pathways through which the body receives nourishment. The Seven Tissues are: <strong> Plasma, Blood, Muscle, Fatty Tissue, Bone, Marrow and Regenerative Fluid </strong>'
@@ -45,16 +56,16 @@ en:
         3_subheader: pale complexion and gums, excess mucus, lethargy, poor appetite, low body temperature, indigestion, slow digestion, dicomfort in the lower back or kidney region, fluid retentiion and puffiness, sleepiness, and poor memory and dullness.
       3_row:
         1_title: Air Characteristics
-        1_body: "<strong>Cool, Dry, Hard, Light, Mobile, Subtle</strong>.\
-          <br>\
-          <ul style='color:green'>\
+        1_body: '<strong>Cool, Dry, Hard, Light, Mobile, Subtle</strong>.
+          <br>
+          <ul style="color:green">
             <li><strong>Cool</strong> - chills</li>
-            <li><strong>Dry</strong> - irritated skin, dry mouth</li>\
-            <li><strong>Hard</strong> - stiff joints</li>\
-            <li><strong>Light</strong> - forgetfulness, insomnia</li>\
-            <li><strong>Mobile</strong> - hysteria, dizziness</li>\
-            <li><strong>Subtle</strong> - blurred vision, ringing in the ears</li>\
-          </ul>"
+            <li><strong>Dry</strong> - irritated skin, dry mouth</li>
+            <li><strong>Hard</strong> - stiff joints</li>
+            <li><strong>Light</strong> - forgetfulness, insomnia</li>
+            <li><strong>Mobile</strong> - hysteria, dizziness</li>
+            <li><strong>Subtle</strong> - blurred vision, ringing in the ears</li>
+          </ul>'
         2_p:
       4_row:
         2_title: Fire characteristics
@@ -108,16 +119,16 @@ en:
       href: '/imagination#tibetan_prayers'
       short_body: Tibetan Prayers are prayers performed by monks.
     third_topic:
-      body: Informatic Tibetans (IT)
-      button: Tibetan Nutrition
-      header: Informatic Tibetans
-      href: '/nutrition'
-      short_body: The IT - Nutrition are all kind of info about incame habits.
+      body: Tibetan Dashboard
+      button: Tibetan Dashboard
+      header: Tibetan Dashboard
+      href: '/dashboard'
+      short_body: Dashboard be Fit with Tibetan Medicine
     fourth_topic:
-      body: You can examine your physical and mental state. There is a list of checks, you can fill in and you will find out what is your type according to Tibetan Medicine. Can be Air (lung), Fire (Tripa) or Water (Bagan). Also there is the approach how you can maintain or improve your general health.
-      p1: You can answer any number of questions, if you answer all questions your Tibetan type is more accurate.
+      body: 'You can examine your physical and mental state. There is a list of checks, you can find out what is your type according to Tibetan Medicine. Can be Air (lung), Fire (Tripa) or Water (Bagan). You can answer any number of questions, if you answer all questions your Tibetan type is more accurate.'
+      p1: 'As user you can see all your examination in <strong><a href="/dashboard">Tibetan Dashboard</a></strong>. You can see your progress, you can check your diet, what to eat, what kind of physical exercise is good for you. Please <a href="/sign_in">log in</a>.'
       button: Examination
-      header: Physical Examinations
+      header: Examinations
       href: '/examination'
       short_body: Physical and Mental Checks
       please_login: 'Please <a href="/sign_in">Sign In</a> to see all'
@@ -154,6 +165,10 @@ en:
             <a href="#hints">Nutrition</a>'
       button: Dashboard
       header: Dashboard
+      type_1: Air
+      type_2: Fire
+      type_3: Water
+      time: Time
       short_body: Overview over your examinations, Nutrition, Diet
       href: '/dashboard'
       no_records: There are no records, please do examinations first.
@@ -177,7 +192,8 @@ en:
       6_subtopic:
         title: Percentage Line
         info: '<strong>Your Equilibrium</strong>'
-        graph_y: Your Percentage
+        graph_y_title: '%'
+        graph_y_title_2: 'Number of answered questions'
       7_subtopic:
         title: Nutrition
         info: What kind of <strong>Food, Herbs, Exercises</strong> is good for You
@@ -294,7 +310,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
 
     attributes:
       title: Twenty Attributes
-      subtitle: Effect on the Three Nepas
+      subtitle: '* Effect on the Three Nepas'
       log_in_msg: "All Twenty Attributes are visible for Users. <a href='/sign_in' style='font-size: 20px'>Sign In</a>."
       p: Efect can be "Very Litte", "Secondary", "Main"
       0_header: Attribute
@@ -308,221 +324,281 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
         1_element: Air
         1_effect: Secondary
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Very Little
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Main
         3_movement: Decreasing
+        3_type_x: D
       1_atr:
         name: Cold
         1_element: Air
         1_effect: Secondary
         1_movement: Increasing
+        1_type_x: I
         2_element: Fire
         2_effect: Very Little
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Main
         3_movement: Increasing
+        3_type_x: I
       2_atr:
         name: Wet
         1_element: Air
         1_effect: Main
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Secondary
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Very Little
         3_movement: Increasing
+        3_type_x: I
       3_atr:
         name: Dry
         1_element: Air
         1_effect: Main
         1_movement: Increasing
+        1_type_x: I
         2_element: Fire
         2_effect: Secondary
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Very Little
         3_movement: Decreasing
+        3_type_x: D
       4_atr:
         name: Light
         1_element: Air
         1_effect: Main
         1_movement: Increasing
+        1_type_x: I
         2_element: Fire
         2_effect: Secondary
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Very Litte
         3_movement: Decreasing
+        3_type_x: D
       5_atr:
         name: Heavy
         1_element: Air
         1_effect: Main
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Secondary
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Very Little
         3_movement: Increasing
+        3_type_x: I
       6_atr:
         name: Mass
         1_element: Air
         1_effect: Main
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Secondary
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Very Litte
         3_movement: Increasing
+        3_type_x: I
       7_atr:
         name: Subtle
         1_element: Air
         1_effect: Main
         1_movement: Increasing
+        1_type_x: I
         2_element: Fire
         2_effect: Secondary
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Very Litte
         3_movement: Decreasing
+        3_type_x: D
       8_atr:
         name: Dense
         1_element: Air
         1_effect: Main
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Secondary
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Very Little
         3_movement: Increasing
+        3_type_x: I
       9_atr:
         name: Flowing
         1_element: Air
         1_effect: Main
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Very Little
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Secondary
         3_movement: Decreasing
+        3_type_x: D
       10_atr:
         name: Mobile
         1_element: Air
         1_effect: Main
         1_movement: Increasing
+        1_type_x: I
         2_element: Fire
         2_effect: Secondary
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Very Little
         3_movement: Decreasing
+        3_type_x: D
       11_atr:
         name: Static
         1_element: Air
         1_effect: Main
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Secondary
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Very little
         3_movement: Increasing
+        3_type_x: I
       12_atr:
         name: Dullness
         1_element: Air
         1_effect: Main
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Secondary
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Very Little
         3_movement: Increasing
+        3_type_x: I
       13_atr:
         name: Sharp
         1_element: Air
         1_effect: Secondary
         1_movement: Increasing
+        1_type_x: I
         2_element: Fire
         2_effect: Main
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Very little
         3_movement: Decreasing
+        3_type_x: D
       14_atr:
         name: Smooth
         1_element: Air
         1_effect: Very little
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Secondary
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Main
         3_movement: Increasing
+        3_type_x: I
       15_atr:
         name: Rough
         1_element: Air
         1_effect: Very Litte
         1_movement: Increasing
+        1_type_x: I
         2_element: Fire
         2_effect: Secondary
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Main
         3_movement: Decreasing
+        3_type_x: D
       16_atr:
         name: Clear
         1_element: Air
         1_effect: Main
         1_movement: Increasing
+        1_type_x: I
         2_element: Fire
         2_effect: Secondary
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Very Little
         3_movement: Decreasing
+        3_type_x: D
       17_atr:
         name: Cloudy
         1_element: Air
         1_effect: Main
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Secondary
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Very Little
         3_movement: Increasing
+        3_type_x: I
       18_atr:
         name: Soft
         1_element: Air
         1_effect: Very Litte
         1_movement: Decreasing
+        1_type_x: D
         2_element: Fire
         2_effect: Secondary
         2_movement: Increasing
+        2_type_x: I
         3_element: Water
         3_effect: Main
         3_movement: Increasing
+        3_type_x: I
       19_atr:
         name: Hard
         1_element: Air
         1_effect: Main
         1_movement: Increasing
+        1_type_x: I
         2_element: Fire
         2_effect: Very Litte
         2_movement: Decreasing
+        2_type_x: D
         3_element: Water
         3_effect: Secondary
         3_movement: Decreasing
+        3_type_x: D
     footer:
       1_paragraph: For other contact information, see the %{title} contact page.
       2_paragraph: If you would like to receive tips as soon as they're announced, subscribe to the %{title}-announce mailing list in dashboard.
@@ -648,53 +724,74 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
     0_survey_0:
       title: Typology Test
       short_body_0: The Tibetan Constitutional Typology Test
-      topic: Typology Test
+      topic: Typology Test 1
       topic_graph: Typology Test Result
-      subtitle: Your Typology according Tibetan Medicin
+      subtitle: Your Typology according Tibetan Medicine
       footer: Tibetan Medicin
       id: 1
-    1_survey_0:
+    0_survey_1:
+      title: Typology Test 2
+      short_body_0: The Tibetan Constitutional Typology Test
+      topic: Typology Test 2
+      topic_graph: Typology Test Result
+      subtitle: Your Typology according Tibetan Medicine
+      footer: Tibetan Medicin
+    0_survey_2:
       title: Constitutional Typology
-      short_body_0: Constitutional Typology
+      short_body_0: The Tibetan Constitutional Typology Test
       topic: Constitutional Typology
-      topic_graph: Constitutional Typology Result
-      subtitle: Your Typology according Tibetan Medicin
+      topic_graph: Typology Test Result
+      subtitle: Your Typology according Tibetan Medicine
+      footer: Tibetan Medicin
+    1_survey_0:
+      title: Your Style
+      short_body_0: Your Style
+      topic: Your Style
+      topic_graph: Your look & style result
+      subtitle: Your Style according Tibetan Medicine
       footer: Tibetan Medicin
       id: 2
     2_survey_0:
       title: Physical
-      short_body_0: Physical examinations contain more checks, you can answer one or more.
-      topic: Urina Check
-      topic_graph: Urina Check Result
-      subtitle: Your Typology according Tibetan Medicin
+      short_body_0: Sensory and Urine checks
+      topic: Urine Check
+      topic_graph: Urine Check Result
+      subtitle: Your Urine state according Tibetan Medicine
       footer: Tibetan Medicin
     2_survey_1:
       topic: Tongue Check
       topic_graph: Tongue Check Result
-      subtitle: Your Typology according Tibetan Medicin
+      subtitle: Your Tongue Check according Tibetan Medicine
       footer: Tibetan Medicin
     2_survey_2:
       topic: Eyes Check
       topic_graph: Eyes Check Result
-      subtitle: Your Typology according Tibetan Medicin
+      subtitle: Your Eyes according Tibetan Medicine
       footer: Tibetan Medicin
       id: 3
     3_survey_0:
       title: Psychological
       topic: Psychological
       topic_graph: Psychological Result
-      subtitle: Your Typology according Tibetan Medicin
+      subtitle: Your Psychical state according Tibetan Medicine
       footer: Tibetan Medicin
       short_body_0: Psychological diagnose
       id: 4
     4_survey_0:
-      title: Food
+      title: Food & Drink
       topic: Food
       topic_graph: Food Result
-      subtitle: Your Typology according Tibetan Medicin
+      subtitle: Your Typology according Tibetan Medicine
       footer: Tibetan Medicin
       short_body_0: Food check
       id: 5
+    4_survey_1:
+      title: Food & Drink
+      topic: Drink
+      topic_graph: Drink Result
+      subtitle: Your Typology according Tibetan Medicine
+      footer: Tibetan Medicin
+      short_body_0: Food & Drink result
     repeat_survey: Repeat survey
     0_answers_0:
       1_data_content_label: Air - Lung
@@ -1269,7 +1366,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Head and the Upper Part of the Chest
     56_question:
-      title: Front of the Body
+      title:  Front of the Body - what is the most developed?
       name: 56
       otherText: Humors - Front of the Body
       1_choice_value: 1
@@ -1279,7 +1376,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Lower Abdomen / Below Navel
     57_question:
-      title:
+      title:  Qhat is the most developed from back?
       name: 57
       otherText: Humors - Back Side
       1_choice_value: 1
@@ -1289,7 +1386,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Lower Back
     58_question:
-      title:
+      title: Which part of face is the strongest?
       name: 58
       otherText: Humors - Face
       1_choice_value: 1
@@ -1299,7 +1396,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Forehead
     59_question:
-      title:
+      title: Which are your favorite sensory organs?
       name: 59
       otherText: Humors - Sensory Organs
       1_choice_value: 1
@@ -1309,7 +1406,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Tongue / Lips / Nose
     60_question:
-      title:
+      title: Your dominant finger is
       name: 60
       otherText: Humors - Fingers
       1_choice_value: 1
@@ -1319,7 +1416,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: First Joint
     61_question:
-      title:
+      title: Wich part of your arms is the strongest
       name: 61
       otherText: Humors - Arms
       1_choice_value: 1
@@ -1329,7 +1426,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Upperarms
     62_question:
-      title:
+      title: Wich part of your legs is the strongest
       name: 62
       otherText: Humors - Legs
       1_choice_value: 1
@@ -1339,7 +1436,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Thigh
     63_question:
-      title:
+      title: Strongest part of your backbone
       name: 63
       otherText: Humors - Vertebrae
       1_choice_value: 1
@@ -1349,7 +1446,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Lumbar Vertebrae
     64_question:
-      title:
+      title: Your dominant vital organ
       name: 64
       otherText: Humors - Vital Organs
       1_choice_value: 1
@@ -1359,7 +1456,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Spleen / Kidneys
     65_question:
-      title:
+      title:  Your dominant hollow organ
       name: 65
       otherText: Humors - Hollow Organs
       1_choice_value: 1
@@ -1369,7 +1466,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Stomach / Urinary Bladder / Reproductive Organs
     66_question:
-      title:
+      title:  Your dominant chakra
       name: 66
       otherText: Humors - Chakra
       1_choice_value: 1
@@ -1379,7 +1476,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Crown Chakra
     67_question:
-      title:
+      title: Your strong Digestion is in
       name: 67
       otherText: Humors - Digestion Stages
       1_choice_value: 1
@@ -1389,7 +1486,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Stomach
     68_question:
-      title:
+      title: Waste products of your body are in good shape?
       name: 68
       otherText: Humors - Waste Products
       1_choice_value: 1
@@ -1399,7 +1496,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Urine & Stool
     69_question:
-      title:
+      title: Strongest part of you
       name: 69
       otherText: Humors - Seven Body Constituents
       1_choice_value: 1
@@ -1409,8 +1506,158 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_value: 3
       3_choice_text: Bone Marrow, Chyle, Fat, Flesh, Reproductive fluids
     70_question:
-      title:
+      title: You like
       name: 70
+      otherText: Food in general
+      1_choice_value: 1
+      1_choice_text: Hot, nutritious, fatty foods
+      2_choice_value: 2
+      2_choice_text: Fresh, cooling dishes
+      3_choice_value: 3
+      3_choice_text: Head, sharp and light meals
+    71_question:
+      title: Which water do you like?
+      name: 71
+      otherText: Drinks
+      1_choice_value: 1
+      1_choice_text: hot water
+      2_choice_value: 2
+      2_choice_text: Cooked and cooled water or fresh water
+      3_choice_value: 3
+      3_choice_text: hot water
+    72_question:
+      title: Your favorite Tea
+      name: 72
+      otherText: Drinks
+      1_choice_value: 1
+      1_choice_text: Camomile Tea
+      2_choice_value: 2
+      2_choice_text: Black Tea
+      3_choice_value: 3
+      3_choice_text: Green Tea
+    73_question:
+      title:
+      name: 73 What alcohol do you like?
+      otherText: Drinks
+      1_choice_value: 1
+      1_choice_text: Red Wine
+      2_choice_value: 2
+      2_choice_text: Beer
+      3_choice_value: 3
+      3_choice_text: Small amount of Strong Alcohol
+    74_question:
+      title: What do you like to drink?
+      name: 74
+      otherText: Drinks
+      1_choice_value: 1
+      1_choice_text: Milk
+      2_choice_value: 2
+      2_choice_text: Fresh fruit Juice
+      3_choice_value: 3
+      3_choice_text: Coffee
+    75_question:
+      title:
+      name: 75
+      otherText: Drinks
+      1_choice_value: 1
+      1_choice_text: cow milk
+      2_choice_value: 2
+      2_choice_text: Skimmed milk
+      3_choice_value: 3
+      3_choice_text: Whey
+    76_question:
+      title:
+      name: 76
+      otherText: Drinks
+      1_choice_value: 1
+      1_choice_text: Yoghurt
+      2_choice_value: 2
+      2_choice_text: Kefir
+      3_choice_value: 3
+      3_choice_text: Buttermilk
+    77_question:
+      title: Which Oil do you use?
+      name: 77
+      otherText: Drinks
+      1_choice_value: 1
+      1_choice_text: sesame oil
+      2_choice_value: 2
+      2_choice_text: almond, coconut and olive oil
+      3_choice_value: 3
+      3_choice_text: coconut, olive and sesame oil
+    78_question:
+      title: Favorite sposts are
+      name: 78
+      otherText: Lifestyle
+      1_choice_value: 1
+      1_choice_text: Warm and Cozy
+      2_choice_value: 2
+      2_choice_text: Cool and Shaded
+      3_choice_value: 3
+      3_choice_text: Warm, Drought and Bright
+    79_question:
+      title: Work schedule
+      name: 79
+      otherText: Lifestyle
+      1_choice_value: 1
+      1_choice_text: 6-7 (physical or mental)
+      2_choice_value: 2
+      2_choice_text: 7-8 (physical or mental)
+      3_choice_value: 3
+      3_choice_text: 8-9 (rather physical)
+    80_question:
+      title: What sport do you do?
+      name: 80
+      otherText: Lifestyle
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+    81_question:
+      title: What is good for you?
+      name: 81
+      otherText: Lifestyle
+      1_choice_value: 1
+      1_choice_text: Be with friends, family
+      2_choice_value: 2
+      2_choice_text: Relaxing, reading
+      3_choice_value: 3
+      3_choice_text:
+    82_question:
+      title:
+      name: 80
+      otherText: Lifestyle
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+    83_question:
+      title:
+      name: 83
+      otherText: Lifestyle
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+    84_question:
+      title:
+      name: 84
+      otherText: Lifestyle
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+    85_question:
+      title:
+      name: 85
       otherText:
       1_choice_value: 1
       1_choice_text:
@@ -1418,9 +1665,49 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       2_choice_text:
       3_choice_value: 3
       3_choice_text:
-    71_question:
+    86_question:
       title:
-      name: 71
+      name: 86
+      otherText:
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+    87_question:
+      title:
+      name: 87
+      otherText:
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+    88_question:
+      title:
+      name: 88
+      otherText:
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+    89_question:
+      title:
+      name: 89
+      otherText:
+      1_choice_value: 1
+      1_choice_text:
+      2_choice_value: 2
+      2_choice_text:
+      3_choice_value: 3
+      3_choice_text:
+    90_question:
+      title:
+      name: 90
       otherText:
       1_choice_value: 1
       1_choice_text:
@@ -1430,7 +1717,9 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       3_choice_text:
   nutrition:
     name: Nutrition
-    zoom: Zoomable Nutrition
+    zoom:
+      title: Zoomable Nutrition
+      tip: '* Please, click the circles, every size of circle shows different nutrition'
     cyrcle: Cyrcle Nutrition
     login: 'As <a href="/sign_in">User</a>, You can see Your Nutrition'
     color: 'white'
@@ -1439,9 +1728,11 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       color: '#009A31'
       0_children:
         name: Meat
+        x_type: M
         color: '#8CC63F'
         0_children:
           name: Recommended
+          x_recommended: 0
           color: '#0A803B'
           0_children:
             name: Fish
@@ -1451,6 +1742,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Poultry
         1_children:
           name: Occasional
+          x_recommended: 1
           color: '#0A803B'
           0_children:
             name: Beef
@@ -1462,6 +1754,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Rabbit
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           color: '#0A803B'
           0_children:
             name: Pork
@@ -1469,9 +1762,11 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Goat
       1_children:
         name: From Animals
+        x_type: A
         color: '#8CC63F'
         0_children:
           name: Recommended
+          x_recommended: 0
           color: '#0A803B'
           0_children:
             name: Cow's cheese
@@ -1483,6 +1778,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Old Ghee
         1_children:
           name: Occasional
+          x_recommended: 1
           color: '#0A803B'
           0_children:
             name: Cow's milk
@@ -1490,14 +1786,17 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Yogurt
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           color: '#0A803B'
           0_children:
             name: None
       2_children:
         name: Grains
+        x_type: G
         color: '#8CC63F'
         0_children:
           name: Recommended
+          x_recommended: 0
           color: '#0A803B'
           0_children:
             name: Amaranth
@@ -1517,11 +1816,13 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Wheat
         1_children:
           name: Occasional
+          x_recommended: 1
           color: '#0A803B'
           0_children:
             name: Corn
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           color: '#0A803B'
           0_children:
             name: Dry Oats
@@ -1533,9 +1834,11 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: White Bread
       3_children:
         name: Legumes
+        x_type: L
         color: '#8CC63F'
         0_children:
           name: Recommended
+          x_recommended: 0
           color: '#0A803B'
           0_children:
             name: Aduki
@@ -1557,11 +1860,13 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Tofu
         1_children:
           name: Occasional
+          x_recommended: 1
           color: '#0A803B'
           0_children:
             name: None
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           color: '#0A803B'
           0_children:
             name: Red Lentils
@@ -1569,9 +1874,11 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Split Peas
       4_children:
         name: Vegetables
+        x_type: V
         color: '#8CC63F'
         0_children:
           name: Recommended
+          x_recommended: 0
           color: '#0A803B'
           0_children:
             name: Arrowroot
@@ -1603,6 +1910,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Winter Squashes
         1_children:
           name: Occasional
+          x_recommended: 1
           color: '#0A803B'
           0_children:
             name: Lettuce
@@ -1630,14 +1938,17 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Mustard Greens
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           color: '#0A803B'
           0_children:
             name: None
       5_children:
         name: Nuts & Seeds
+        x_type: N
         color: '#8CC63F'
         0_children:
           name: Recommended
+          x_recommended: 0
           color: '#0A803B'
           0_children:
             name: Linseeds
@@ -1655,6 +1966,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Pumpkin
         1_children:
           name: Occasional
+          x_recommended: 1
           color: '#0A803B'
           0_children:
             name: Coconut
@@ -1666,14 +1978,17 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Chestnuts
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           color: '#0A803B'
           0_children:
             name: None
       6_children:
         name: Fruits
+        x_type: F
         color: '#8CC63F'
         0_children:
           name: Recommended
+          x_recommended: 0
           color: '#0A803B'
           0_children:
             name: Bananas
@@ -1687,6 +2002,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Pineapples
         1_children:
           name: Occasional
+          x_recommended: 1
           color: '#0A803B'
           0_children:
             name: Peaches
@@ -1704,6 +2020,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Cherry
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           color: '#0A803B'
           0_children:
             name: Cranberry
@@ -1720,8 +2037,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       7_children:
         name: Oils & Salts
         color: '#8CC63F'
+        x_type: O
         0_children:
           name: Recommended
+          x_recommended: 0
           color: '#0A803B'
           0_children:
             name: Sesame Oil
@@ -1737,6 +2056,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Salt
         1_children:
           name: Occasional
+          x_recommended: 1
           color: '#0A803B'
           0_children:
             name: Sunflower Oil
@@ -1746,14 +2066,17 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Safflower Oil
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           color: '#0A803B'
           0_children:
             name: None
       8_children:
         name: Herbs & Spices
+        x_type: H
         color: '#8CC63F'
         0_children:
           name: Recommended
+          x_recommended: 0
           color: '#0A803B'
           0_children:
             name: Anise
@@ -1791,6 +2114,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Terminalia
         1_children:
           name: Occasional
+          x_recommended: 1
           color: '#0A803B'
           0_children:
             name: Chili
@@ -1802,6 +2126,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Pippali
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           color: '#0A803B'
           0_children:
             name: None
@@ -1811,18 +2136,22 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
       name: Fire
       0_children:
         name: Meat
+        x_type: M
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Rabbit
           1_children:
             name: Herbivorous Animals
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Pork
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Beef
           1_children:
@@ -1837,8 +2166,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Shellfish
       1_children:
         name: From Animals
+        x_type: A
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Cow's Milk
           1_children:
@@ -1847,6 +2178,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Fresh Ghee
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Goat Butter
           1_children:
@@ -1855,12 +2187,15 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Fresh Butter
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: None
       2_children:
         name: Grains
+        x_type: G
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Corn
           1_children:
@@ -1879,12 +2214,14 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Guinoa
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Toasted Barley
           1_children:
             name: Oats
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Rye
           1_children:
@@ -1893,8 +2230,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Brown Rice
       3_children:
         name: Legumes
+        x_type: L
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Adzukis Beans
           1_children:
@@ -1911,6 +2250,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Anasazi Beans
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Tofu
           1_children:
@@ -1919,6 +2259,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Lima Bean - Butter Bean
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Chinese Red Beans
           1_children:
@@ -1929,8 +2270,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Tempeh
       4_children:
         name: Vegetables
+        x_type: V
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Zucchini
           1_children:
@@ -1971,6 +2314,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Brussel Sprouts
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Raw Spinach
           1_children:
@@ -1991,6 +2335,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Artichokes
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Ginger
           1_children:
@@ -2021,18 +2366,22 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Turnip
       5_children:
         name: Nuts & Seeds
+        x_type: N
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: None
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Pumpkin Seeds
           1_children:
             name: Sunflower Seeds
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Hazelnut
           1_children:
@@ -2051,8 +2400,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Coconut
       6_children:
         name: Fruits
+        x_type: F
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Melons
           1_children:
@@ -2065,6 +2416,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Peaches
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Grapefruits
           1_children:
@@ -2087,6 +2439,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Banana
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Lemon
           1_children:
@@ -2097,14 +2450,17 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Cranberry
       7_children:
         name: Oils & Condiments
+        x_type: O
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Salt
           1_children:
             name: Ghee
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Sunflower Oil
           1_children:
@@ -2115,6 +2471,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Sea Salt
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Miso
           1_children:
@@ -2133,8 +2490,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Butter
       8_children:
         name: Herbs & Spices
+        x_type: H
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Cucumber Seeds
           1_children:
@@ -2167,26 +2526,24 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Saffron
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Coriander
           1_children:
             name: Cinnamon
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: None
-
-
-
-
-
-
     2_children:
       name: Water
       0_children:
         name: Meat
+        x_type: M
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Rabbit
           1_children:
@@ -2199,10 +2556,12 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Herbivorous Animals
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Mutton
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Beef
           1_children:
@@ -2213,8 +2572,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Pork
       1_children:
         name: From Animals
+        x_type: A
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Cow's Cheese
           1_children:
@@ -2225,18 +2586,22 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Sheep's Butter
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Yogurt
           1_children:
             name: Fresh Cheese
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: None
       2_children:
         name: Grains
+        x_type: G
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: White Basmati
           1_children:
@@ -2249,6 +2614,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Cooked Barley
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Wheat
           1_children:
@@ -2259,20 +2625,24 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Toasted Millet
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Buckwheat
           1_children:
             name: Corn
       3_children:
         name: Legumes
+        x_type: L
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Peas
           1_children:
             name: Dahl
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Mung
           1_children:
@@ -2281,6 +2651,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Chana
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Tofu
           1_children:
@@ -2297,8 +2668,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Red Lentils
       4_children:
         name: Vegetables
+        x_type: V
         0_children:
           name: Recommended (cooked)
+          x_recommended: 0
           0_children:
             name: Onion
           1_children:
@@ -2329,6 +2702,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Celery
         1_children:
           name: Occasional (cooked)
+          x_recommended: 1
           0_children:
             name: Eggplant
           1_children:
@@ -2361,6 +2735,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Arrowroot
         2_children:
           name: Not-Recommended (raw)
+          x_recommended: 2
           0_children:
             name: Potato
           1_children:
@@ -2383,12 +2758,15 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Brussel Sprouts
       5_children:
         name: Nuts & Seeds
+        x_type: N
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: None
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Sunflower Seed
           1_children:
@@ -2397,6 +2775,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Sesame Seed
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Walnut
           1_children:
@@ -2417,8 +2796,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Coconut
       6_children:
         name: Fruits
+        x_type: F
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Raisins
           1_children:
@@ -2427,6 +2808,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Pomegranate
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Grapes
           1_children:
@@ -2443,6 +2825,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Peaches
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Plums
           1_children:
@@ -2461,14 +2844,17 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Banana
       7_children:
         name: Oils & Salt
+        x_type: O
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Safflower Oil
           1_children:
             name: Black Salt
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Peanut Oil
           1_children:
@@ -2479,6 +2865,7 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Tamari
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: Corn Oil
           1_children:
@@ -2491,8 +2878,10 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Miso
       8_children:
         name: Herbs & Spices
+        x_type: H
         0_children:
           name: Recommended
+          x_recommended: 0
           0_children:
             name: Asfoetida
           1_children:
@@ -2527,9 +2916,11 @@ diligence and perseverance (brstun-grus chen_po), thus purifying the God realm. 
             name: Pippali
         1_children:
           name: Occasional
+          x_recommended: 1
           0_children:
             name: Tumeric
         2_children:
           name: Not-Recommended
+          x_recommended: 2
           0_children:
             name: None
