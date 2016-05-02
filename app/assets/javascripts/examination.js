@@ -233,7 +233,7 @@ function surveyOnComplete(survey, div_id) {
       // pieChart(div_id, JSON.stringify(s.data));
       donutChart(div_id, count_answers.counter, 450, 875);
       addSurveyMenu(div_id, count_answers.types_with_questions_ids);
-      createTypeDivs(count_answers.types_with_questions_ids, div_id);
+      createTypeDivs(count_answers.types_with_questions_ids, div_id, 'none');
 
       // s.sendResult(multi_answers);
       sendResult(
@@ -297,13 +297,13 @@ function countAnswers(multi_answers) {
   };
 };
 
-function createTypeDivs(types_with_questions_ids, div_id) {
+function createTypeDivs(types_with_questions_ids, div_id, display) {
   $.each(types_with_questions_ids, function(answer_type, question_ids) {
     var typeDiv = div_id + '_' + answer_type;
     var div = document.createElement('ul');
     div.id = typeDiv;
     div.className = 'type_divs';
-    div.style = 'display: none;';
+    div.style = 'display: '+ display +';';
     var inner_html = '';
     $.each(question_ids.split(','), function(i, question_id) {
       // inner_html += '<p  style="display: none;">'
@@ -614,7 +614,6 @@ function toggleAnswerTypeDivs(type_div) {
     e.style.display = 'block';
   }
 };
-
 
 function repeatSurvey(div_id) {
   console.log(div_id);

@@ -11,18 +11,21 @@ class DashboardController < ApplicationController
     if last_answer == nil
       last_answer_counter = '{"1":0,"2":0,"3":0}'
       last_answer_counter_all = last_answer_counter
+      last_type_questions = '{"1":"0","2":"0","3":"0"}'
     else
       last_answer_counter = last_answer.counter
       last_answer_counter_all = last_answer.counter_all
+      last_type_questions = last_answer.type_questions
     end
     all_user_answers = SurveyAnswer
       .where(:user_id => user_id)
-      .last(20)
+      .last(10)
 
     data = {
       user_id: user_id,
       last_answer_counter: last_answer_counter,
       last_answer_counter_all: last_answer_counter_all,
+      last_type_questions: last_type_questions,
       all_user_answers: all_user_answers
     }
 
@@ -52,7 +55,7 @@ class DashboardController < ApplicationController
 
     all_user_answers = SurveyAnswer
       .where(:user_id => user_id)
-      .last(20)
+      .last(10)
 
     # last_x_records = SurveyAnswer
     #   .where(:user_id => user_id)

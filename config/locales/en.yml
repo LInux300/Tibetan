@@ -169,11 +169,12 @@ en:
       type_2: Fire
       type_3: Water
       time: Time
+      answered_questions: Answered Questions
       short_body: Overview over your examinations, Nutrition, Diet
       href: '/dashboard'
       no_records: There are no records, please do examinations first.
       1_subtopic:
-        title: Last Result
+        title: Last Examination
         info: Your last Examination check
       2_subtopic:
         title: All Results

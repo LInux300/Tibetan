@@ -136,11 +136,11 @@ function c3_percentage(graph_data) {
     },
     tooltip: {
         contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-            return "<font color='" + green + "'> Air: " + d[0].value + "</font>" +
+            return "<font color='" + green + "'> Air: " + d[0].value + "% </font>" +
                 "<br>" +
-                "<font color='" + red + "'> Fire: " + d[1].value + "</font>" +
+                "<font color='" + red + "'> Fire: " + d[1].value + "% </font>" +
                 "<br>" +
-                "<font color='" + blue + "'> Water: " + d[2].value + "</font>";
+                "<font color='" + blue + "'> Water: " + d[2].value + "% </font>";
         }
     }
   });
@@ -164,13 +164,13 @@ function c3_bar(graph_data) {
       x: 'time',
       rows: graph_data,
       names: {
-          data1: 'Air',
-          data2: 'Fire',
-          data3: 'Water',
-          data4: 'Air',
-          data5: 'Fire',
-          data6: 'Water',
-          time: 'Time'
+        data1: I18n.t('view.6_topic.type_1'),
+        data2: I18n.t('view.6_topic.type_2'),
+        data3: I18n.t('view.6_topic.type_3'),
+        data4: I18n.t('view.6_topic.type_1'),
+        data5: I18n.t('view.6_topic.type_2'),
+        data6: I18n.t('view.6_topic.type_3'),
+        time: I18n.t('view.6_topic.time')
       },
       hide: ['time','data4','data5', 'data6'],
       show: ['data1', 'data2', 'data3'],
@@ -202,14 +202,22 @@ function c3_bar(graph_data) {
     },
     axis: {
         x: {
-            type: 'category' // this needed to load string x value
+            // localtime: true,
+            type: 'category', // this needed to load string x value
+            tick: {
+              outer: false,
+              rotate: 60
+              // culling: {
+              //   max: 10
+              // }
+            }
+          }
         },
         y: {
           label: { // ADD
             text: I18n.t('view.6_topic.6_subtopic.graph_y_title_2'),
             position: 'outer-middle'
-           }
-        }
+          }
     },
     // axis: {
     //     x: {
@@ -246,14 +254,27 @@ function c3_bar(graph_data) {
         show: true
     },
     tooltip: {
-        contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-            return "<font color='" + green + "'> Air: " + d[0].value + "</font>" +
-                "<br>" +
-                "<font color='" + red + "'> Fire: " + d[1].value + "</font>" +
-                "<br>" +
-                "<font color='" + blue + "'> Water: " + d[2].value + "</font>";
+        format: {
+            title: function (d) {
+              d = d + 1;
+              return 'Examination ' + d;
+            },
+            value: function (value, ratio, id) {
+                var format = id === 'data1' ? d3.format(',') : d3.format('');
+                return format(value);
+            }
+//            value: d3.format(',') // apply this format to both y and y2
         }
     }
+    // tooltip: {
+    //     contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+    //         return "<font color='" + green + "'> Air: " + d[0].value + "</font>" +
+    //             "<br>" +
+    //             "<font color='" + red + "'> Fire: " + d[1].value + "</font>" +
+    //             "<br>" +
+    //             "<font color='" + blue + "'> Water: " + d[2].value + "</font>";
+    //     }
+    // }
   });
   // chart.hide(['time']);
 };
@@ -355,12 +376,16 @@ function getLastAnswerCounter() {
     type: "POST",
     url: url,
   }).done(function(data) {
-    dashboardGraphs(data)
+    dashboardGraphs(data);
   }).fail(function() {
     alert('Error occured');
   });
-}
-// TODO
+};
+
+function getAnsweredQuestions(data) {
+  var last_type_questions = JSON.parse(data.last_type_questions)
+  createTypeDivs(last_type_questions, 'answer_1', 'block');
+};
 
 function dashboardGraphs(data) {
   var last_answer_counter_all = JSON.parse(data.last_answer_counter_all),
@@ -390,14 +415,13 @@ function dashboardGraphs(data) {
     ]);
   });
 
-  // console.log(graph_data);
-  c3_percentage(graph_data);
-  c3_bar(graph_data);
-
+  // Last Result, All Results
   showCharts(last_answer_counter_all, last_answer_counter);
+  getAnsweredQuestions(data);
 
-  // for new user without records
+  // To Big, To Small
   if (data.last_answer_counter_all == '{"1":0,"2":0,"3":0}' ) {
+    // for new user without records
     $( "#3_be_fit_a" ).append(I18n.t('view.6_topic.no_records'));
     $( "#4_be_fit_a" ).append(I18n.t('view.6_topic.no_records'));
   }
@@ -405,8 +429,8 @@ function dashboardGraphs(data) {
     var counter_all_max_min = couter_all_to_json_sort(last_answer_counter_all);
     to_small = typeToSmall(counter_all_max_min);
     to_big = typeToBig(counter_all_max_min);
-    // console.log(to_small);
-    // do now only for recommended food
+
+    // now only for recommended food  TODO: for occasional
     food_for_you = nutrition(to_small.type_x);
     $("#accordion-1").append(food_for_you.hints);
     $("#accordion-2").append(food_for_you.meat);
@@ -414,11 +438,12 @@ function dashboardGraphs(data) {
     $("#accordion-4").append(food_for_you.food);
   }
 
-  // donutChart('5_be_fit', counter_all, 250, 400);
-  // d3.select('5_be_fit');
+  // Percentage, Timeline
+  c3_percentage(graph_data);
+  c3_bar(graph_data);
+
+  // Your Hints
   pieChart('8_be_fit', last_answer_counter_all, 210, 260);
-  // donutChart('7_be_fit', counter_all, 250, 400);
-  // pieChart('8_be_fit', counter_all, 250, 400);
 }
 
 //  TODO check for all divs whitch contain data from last answer counter

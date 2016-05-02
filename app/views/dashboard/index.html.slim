@@ -11,8 +11,11 @@
       h3
         i.fi-graph-bar
         = t('view.6_topic.1_subtopic.title').html_safe
-      p = t('view.6_topic.1_subtopic.info').html_safe
-      / p = @last_answer.answer
+      p
+        / = t('view.6_topic.1_subtopic.info').html_safe
+        / input type="button" style="background: #edc21b; color: white;" onclick="toggleAnswerTypeDivs(this)" value= t('view.6_topic.answered_questions') data-answer-type="answer_1" class="button small"
+        button onclick="toggleAnswerTypeDivs(this)" data-answer-type="answer_1" class="button custom" =t('view.6_topic.answered_questions')
+
       #1_be_fit
 
   .small-12.medium-6.medium-pull-6.columns
@@ -21,11 +24,19 @@
       = t('view.6_topic.2_subtopic.title').html_safe
     p = t('view.6_topic.2_subtopic.info').html_safe
     #2_be_fit data-counter_last="#{}"
+
+#results_answers.row
+  .small-12.medium-6.medium-push-6.columns
+    div id="answer_1" style="display: none;"
+  .small-12.medium-6.medium-pull-6.columns
+    br
+
 .row
   .small-12.medium-6.medium-push-6.columns
     hr
   .small-12.medium-6.medium-pull-6.columns
     hr
+
 
 #results_elements.row style="display: block;"
   .small-12.medium-6.medium-push-6.columns
