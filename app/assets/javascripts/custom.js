@@ -18,6 +18,10 @@ function getUserInfo() {
     $("#user_account_created_at").html("<b>" + current_user.created_at + "</b>");
     $("#user_account_updated_at").html("<b>" + current_user.updated_at + "</b>");
     $("#user_account_email").html("<b>" + current_user.email + "</b>");
+    $("#user_account_first_name").html("<b>" + current_user.first_name + "</b>");
+    $("#user_account_last_name").html("<b>" + current_user.last_name + "</b>");
+    $("#user_account_encrypted_password").html("<b>" + current_user.encrypted_password + "</b>");
+    $("#user_account_subscribed").html("<b>" + current_user.subscribed + "</b>");
     $("#user_account_sign_in_count").html("<b>" + current_user.sign_in_count + "</b>");
     $("#user_account_current_sign_in_at").html("<b>" + current_user.current_sign_in_at + "</b>");
     $("#user_account_last_sign_in_at").html("<b>" + current_user.last_sign_in_at + "</b>");
@@ -25,6 +29,16 @@ function getUserInfo() {
   }).fail(function() {
     alert('Error occured');
   });
+}
+
+// -----------------------------------------------------------------------------
+// user_account
+// -----------------------------------------------------------------------------
+function userAccountEdit() {
+  window.location.href = '/users/edit';
+}
+function userAccountSubscribe() {
+  window.location.href = '/subscribers/new';
 }
 
 // -----------------------------------------------------------------------------
