@@ -18,6 +18,11 @@ en:
    formats:
     your_format: '%Y-%m-%d %H:%M:%S'
   view:
+    stripe:
+      final_signup_step: Final Signup Step
+      final_step_p: This is the final step to give you full access to
+      month_subscription: "A month's subscription"
+      fee_cancel_any_time: '3 per month, cancel at any time.'
     email:
       title: Email
       email_from: info@

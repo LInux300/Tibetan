@@ -54,6 +54,9 @@ gem 'activemerchant', '~> 1.57'
 # Devise
 gem 'devise'
 
+# https://stripe.com/docs/checkout/rails
+gem 'stripe'
+
 # js variable
 gem 'gon'
 
