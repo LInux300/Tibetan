@@ -14,9 +14,11 @@ test: &test
   password: root
   database: <%= Rails.application.engine_name.gsub(/_application/,'').downcase %>_test
 
-production: &production
-  adapter: mysql2
-  host: localhost
-  username: root
-  password: root
+production:
+  adapter: postgresql
+  encoding: unicode
   database: <%= Rails.application.engine_name.gsub(/_application/,'').downcase %>_production
+  pool: 5
+  username: postgres
+  password: postgres
+  min_messages: warning
