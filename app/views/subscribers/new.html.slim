@@ -1,0 +1,10 @@
+
+.row
+  .small-12.columns
+    - if current_user.subscribed
+      h1 = t('view.subscribe.title')
+      p = t('view.subscribe.p')
+    - else
+      h1 = t('view.stripe.final_signup_step')
+      p = t('view.stripe.fee_cancel_any_time')
+      = render partial: "form"

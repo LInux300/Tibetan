@@ -1,0 +1,42 @@
+#user_account.row style="display: none;"
+  hr
+  .small-12.medium-6.medium-push-6.columns
+    h2
+      br
+      / i.fi-torsos-female-male
+      / = t('view.user_account.info')
+    p
+      = t('view.user_account.sign_in_count').html_safe
+      span id='user_account_sign_in_count'
+    p
+      = t('view.user_account.current_sign_in_at').html_safe
+      span id='user_account_current_sign_in_at'
+    p
+      = t('view.user_account.last_sign_in_at').html_safe
+      span id='user_account_last_sign_in_at'
+    p
+      = t('view.user_account.created_at').html_safe
+      span id='user_account_created_at'
+    p
+      = t('view.user_account.updated_at').html_safe
+      span id='user_account_updated_at'
+  .small-12.medium-6.medium-pull-6.columns
+    h2
+      i.fi-torsos-male-female
+      = t('view.user_account.user_account')
+    p
+      = t('view.user_account.email').html_safe
+      span id='user_account_email'
+    p
+      = t('view.user_account.first_name').html_safe
+      span id='user_account_first_name' onclick="user_edit"
+    p
+      = t('view.user_account.last_name').html_safe
+      span id='user_account_last_name'
+    p
+      = t('view.user_account.subscribed').html_safe
+      span id='user_account_subscribed'
+    button id="user_account_edit" onclick="userAccountEdit()" class="button custom" = t('view.user_account.edit.edit')
+    button id="user_account_subscribe" onclick="userAccountSubscribe()" class="button custom" = t('view.user_account.subscribe')
+
+  hr

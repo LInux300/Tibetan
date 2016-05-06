@@ -24,11 +24,14 @@ Rails.application.routes.draw do
   # devise_for :admins
   devise_for :admins, controllers: { registrations: "registrations"}
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations"}
   # devise_for :users, :controllers => { registrations: 'registrations' }
   # resources :users, :only => [:show]
 
   #devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
+
+
+  resources :subscribers
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.

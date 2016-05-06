@@ -14,7 +14,9 @@ html.no-js lang="en"
     br
     .row
       .medium-6.medium-centered.large-4.large-centered.columns
-        h1 = t('title')
+        h1 align="right"
+          img src="/assets/medicine.jpg" alt=t('title') style="width:75px;height:75px;"
+          = t('title')
     .row
       .medium-6.medium-centered.large-4.large-centered.columns
         -if notice.present?

@@ -7,9 +7,11 @@ gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
+  gem 'mysql2', '~> 0.3.13'
 end
 # Mysql
-gem 'mysql2', '~> 0.3.13'
+
+gem 'pg'
 
 
 # Use SCSS for stylesheets
@@ -54,9 +56,21 @@ gem 'activemerchant', '~> 1.57'
 # Devise
 gem 'devise'
 
+# https://stripe.com/docs/checkout/rails
+gem 'stripe'
+
 # js variable
 gem 'gon'
 
+
+# to deploy
+# https://rubygems.org/search?utf8=%E2%9C%93&query=capistrano
+group :development do
+  gem 'capistrano', '~> 3.5.0'
+  gem 'capistrano-rails', '~> 1.1.6'
+  gem 'capistrano-rbenv'
+  # gem 'capistrano-rvm'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

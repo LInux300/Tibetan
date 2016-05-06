@@ -8,6 +8,7 @@ $royalblue: #1B6AA5;
 $green: #009A31;
 $red: #E8110F;
 $yellow: #FBC723;
+$yellow_over: #FDD017;
 $text-color: #fff;
 $white: white;
 $black: black;
@@ -294,3 +295,13 @@ hr { padding: 0px; }
 }
 
 //------------------------------------------------------------------------------
+
+.button.custom {
+    background-color: $yellow;
+    color: $white;
+}
+.button.custom:hover,
+.button.custom:focus {
+    background-color: $yellow_over;
+    color: $blue_dark_2;
+}
