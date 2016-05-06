@@ -8,6 +8,14 @@ $("#h_user_account").click(function(event) {
   var current_user = getUserInfo();
 });
 
+$("#user_account_edit_back").click(function(event) {
+  window.location.href = '/';
+  // $(".alert-box").remove();
+  // var current_user = getUserInfo();
+  // $('#user_account').addClass('show');
+});
+
+
 function getUserInfo() {
   url = '/get_user_info';
   $.ajax({
@@ -50,8 +58,8 @@ $("#contact_us_form").submit(function(event) {
 
   var $form = $(this),
     // term = $form.find("input[name='email']").val(),
-    email = $form.find("input[id='email']").val(),
-    message = $form.find("textarea[id='message']").val(),
+    email = $form.find("input[id='contact_us_email']").val(),
+    message = $form.find("textarea[id='contact_us_message']").val(),
     url = $form.attr("action");
 
   // Send the data using post
@@ -100,6 +108,16 @@ $("#f_how_we_work").click(function(event) {
 });
 $("#f_faq").click(function(event) {
   $("#faq").slideToggle("slow", "swing")
+});
+
+
+
+// -----------------------------------------------------------------------------
+//  user edit
+// -----------------------------------------------------------------------------
+
+$("#f_user_account_cancel_my_accout").click(function(event) {
+  $("#user_account_cancel_my_accout").slideToggle("slow", "swing")
 });
 
 // -----------------------------------------------------------------------------

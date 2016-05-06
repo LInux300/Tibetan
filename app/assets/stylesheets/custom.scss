@@ -17,6 +17,10 @@ $lightgrey: #8f9296;
 hr { padding: 0px; }
 
 
+.font-size-small {
+  font-size: 0.8rem;
+}
+
 //------------------------------------------------------------------------------
 // Color text
 //------------------------------------------------------------------------------
@@ -26,7 +30,11 @@ hr { padding: 0px; }
 
 #user_account {
   color: $blue_dark_2;
-  background-color: $yellow;
+  // background-color: $yellow;
+  // filter: alpha(opacity=50); /* internet explorer */
+  // -khtml-opacity: 0.5;      /* khtml, old safari */
+  // -moz-opacity: 0.5;       /* mozilla, netscape */
+  // opacity: 0.5;           /* fx, safari, opera */
 }
 
 
@@ -83,10 +91,11 @@ hr { padding: 0px; }
 //------------------------------------------------------------------------------
 .alert-box {
   margin-top: 5px !important;
+  padding-left: 0.5rem;
   background: $grey !important;
   color: black !important;
   border: none;
-  border-left: 6px solid $blue !important;
+  border-left: 6px solid $blue_dark_2 !important;
   box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
   &.success {
     background: $grey;
@@ -134,6 +143,10 @@ hr { padding: 0px; }
 #contact_us_submit {
   // background-color: $blue_dark_2;
   // background-image: none;
+}
+
+#contact_us_email {
+  padding: 0rem 0rem 0rem 1.3rem;
 }
 
 .footer2 {

@@ -70,15 +70,9 @@ footer.footer2
   .row
     .small-12.medium-6.medium-push-6.columns
       form.footer2-form action='/contact_us'  method="post" id="contact_us_form"
-        .row
           label = t('view.coutact_us.title')
-        .row
-          p
-        .row
-          input#email placeholder="#{t('view.coutact_us.email_address')}" type="email" name="email"/
-        .row
-          textarea#message placeholder="#{t('view.coutact_us.message')}" rows="5"
-        .row
+          input#contact_us_email placeholder="#{t('view.coutact_us.email_address')}" type="email"
+          textarea#contact_us_message placeholder="#{t('view.coutact_us.message')}" rows="5"
           button.submit id="contact_us_submit" type="submit" value="Submit"  class="button custom" = t('view.coutact_us.send')
       div
         p id="contact_response"

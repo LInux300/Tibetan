@@ -1,5 +1,5 @@
 en:
-  title: Tibetan
+  title: Tibetan Medicine
   copyright: ' %{year} %{title}'
   search: Search
   # activerecord:
@@ -39,11 +39,11 @@ en:
     user_account:
       user_account: User account
       info: ''
-      email: Email
-      first_name: First name
-      last_name: Last name
-      encrypted_password: Password
-      subscribed: Subscribed
+      email: 'Email:'
+      first_name: 'First name:'
+      last_name: 'Last name:'
+      encrypted_password: 'Password:'
+      subscribed: 'Subscribed:'
       sign_in_count: 'Sign in Count:'
       current_sign_in_at: 'Current Sign In at:'
       last_sign_in_at: 'Last Sign In at:'
@@ -52,10 +52,15 @@ en:
       created_at: 'Created at:'
       updated_at: 'Updated at:'
       edit:
+        are_you_sure: 'Are you sure?'
+        unhappy: 'Uphappy?'
         edit: Edit User Account
         cancel_my_accout: Cancel my account
+        leave_blank:  "(leave blank if you don't want to change it)"
+        need_current_password: '(your current password to confirm your changes)'
+        update: Update
+        back: Back
       subscribe: Subscribe
-      subscribed: Subscribed
     seven:
       title: Seven Tissues
       1_p: 'There are 7 pathways through which the body receives nourishment. The Seven Tissues are: <strong> Plasma, Blood, Muscle, Fatty Tissue, Bone, Marrow and Regenerative Fluid </strong>'
@@ -208,7 +213,7 @@ en:
         user: Your Results
         nonuser: 'Please <a href="/sign_in">Sign In</a> to see Your Results'
       6_subtopic:
-        title: Percentage Line
+        title: Percentage
         info: '<strong>Your Equilibrium</strong>'
         graph_y_title: '%'
         graph_y_title_2: 'Number of answered questions'

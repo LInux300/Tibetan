@@ -37,61 +37,6 @@
   .small-12.medium-6.medium-pull-6.columns
     hr
 
-
-#results_elements.row style="display: block;"
-  .small-12.medium-6.medium-push-6.columns
-    .small-12.medium-6.medium-push-6.columns
-      #3_be_fit_a
-    .small-12.medium-6.medium-pull-6.columns
-      h3
-        i.fi-arrows-in
-        = t('view.6_topic.3_subtopic.title').html_safe
-      #3_be_fit data-counter_last="#{}"
-      / p = t('view.6_topic.3_subtopic.info').html_safe
-  .small-12.medium-6.medium-pull-6.columns
-    .small-12.medium-6.medium-push-6.columns
-      #4_be_fit_a
-    .small-12.medium-6.medium-pull-6.columns
-      h3
-        i.fi-arrows-out
-        = t('view.6_topic.4_subtopic.title').html_safe
-      #4_be_fit data-counter_last="#{}"
-      / p = t('view.6_topic.4_subtopic.info').html_safe
-.row
-  .small-12.medium-6.medium-push-6.columns
-    hr
-  .small-12.medium-6.medium-pull-6.columns
-    hr
-
-/ 
-/ .row.small-12.medium
-/   div id="chart"
-
-#timeline.row style="display: block;"
-  .small-12.medium-6.medium-push-6.columns
-    h3
-      i.fi-clock
-      = t('view.6_topic.5_subtopic.title').html_safe
-    - if user_signed_in?
-      p = t('view.6_topic.5_subtopic.user')
-    - else
-      p = t('view.6_topic.5_subtopic.nonuser').html_safe
-    div id="chart"
-    / #5_be_fit
-  .small-12.medium-6.medium-pull-6.columns
-    h3
-      i.fi-calendar
-      = t('view.6_topic.6_subtopic.title').html_safe
-    p = t('view.6_topic.6_subtopic.info').html_safe
-    div id="chart_percentage"
-    / #6_be_fit
-
-.row
-  .small-12.medium-6.medium-push-6.columns
-    hr
-  .small-12.medium-6.medium-pull-6.columns
-    hr
-
 #hints.row style="display: block;"
   .small-12.medium-6.medium-push-6.columns
     h3
@@ -149,6 +94,60 @@
               li = t('view.6_topic.8_subtopic.first.3_p')
               li = t('view.6_topic.8_subtopic.first.4_p')
               li = t('view.6_topic.8_subtopic.first.5_p')
+
+.row
+  .small-12.medium-6.medium-push-6.columns
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    hr
+
+#results_elements.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+    .small-12.medium-6.medium-push-6.columns
+      #3_be_fit_a
+    .small-12.medium-6.medium-pull-6.columns
+      h3
+        i.fi-arrows-in
+        = t('view.6_topic.3_subtopic.title').html_safe
+      #3_be_fit data-counter_last="#{}"
+      / p = t('view.6_topic.3_subtopic.info').html_safe
+  .small-12.medium-6.medium-pull-6.columns
+    .small-12.medium-6.medium-push-6.columns
+      #4_be_fit_a
+    .small-12.medium-6.medium-pull-6.columns
+      h3
+        i.fi-arrows-out
+        = t('view.6_topic.4_subtopic.title').html_safe
+      #4_be_fit data-counter_last="#{}"
+      / p = t('view.6_topic.4_subtopic.info').html_safe
+.row
+  .small-12.medium-6.medium-push-6.columns
+    hr
+  .small-12.medium-6.medium-pull-6.columns
+    hr
+
+/ 
+/ .row.small-12.medium
+/   div id="chart"
+
+#timeline.row style="display: block;"
+  .small-12.medium-6.medium-push-6.columns
+    h3
+      i.fi-clock
+      = t('view.6_topic.5_subtopic.title').html_safe
+    - if user_signed_in?
+      p = t('view.6_topic.5_subtopic.user')
+    - else
+      p = t('view.6_topic.5_subtopic.nonuser').html_safe
+    div id="chart"
+    / #5_be_fit
+  .small-12.medium-6.medium-pull-6.columns
+    h3
+      i.fi-calendar
+      = t('view.6_topic.6_subtopic.title').html_safe
+    p = t('view.6_topic.6_subtopic.info').html_safe
+    div id="chart_percentage"
+    / #6_be_fit
 
 .row
   .small-12.medium-6.medium-push-6.columns

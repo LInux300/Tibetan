@@ -1,5 +1,4 @@
 #user_account.row style="display: none;"
-  hr
   .small-12.medium-6.medium-push-6.columns
     h2
       br
@@ -21,7 +20,7 @@
       = t('view.user_account.updated_at').html_safe
       span id='user_account_updated_at'
   .small-12.medium-6.medium-pull-6.columns
-    h2
+    h1
       i.fi-torsos-male-female
       = t('view.user_account.user_account')
     p
@@ -39,4 +38,6 @@
     button id="user_account_edit" onclick="userAccountEdit()" class="button custom" = t('view.user_account.edit.edit')
     button id="user_account_subscribe" onclick="userAccountSubscribe()" class="button custom" = t('view.user_account.subscribe')
 
-  hr
+  .small-12.medium.columns
+    br
+    hr

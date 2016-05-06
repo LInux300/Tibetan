@@ -13,12 +13,12 @@ html.no-js lang="en"
     br
     br
     .row
-      .medium-6.medium-centered.large-4.large-centered.columns
+      .medium-6.medium-centered.large-6.large-centered.columns
         h1 align="right"
           img src="/assets/medicine.jpg" alt=t('title') style="width:75px;height:75px;"
           = t('title')
     .row
-      .medium-6.medium-centered.large-4.large-centered.columns
+      .medium-6.medium-centered.large-6.large-centered.columns
         -if notice.present?
           .row
             .alert-box.notice.radius 
@@ -29,7 +29,7 @@ html.no-js lang="en"
             .alert-box.alert.radius = alert
               a href="#" class="close" &times;
     .row
-      .medium-6.medium-centered.large-4.large-centered.columns
+      .medium-6.medium-centered.large-6.large-centered.columns
         == yield
 
     br

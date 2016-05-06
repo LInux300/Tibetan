@@ -1,51 +1,91 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="row" style="display: block;">
+  <h3><%= t('view.user_account.edit.edit') %></h3>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true %>
+<div class="row">
+  <div class="small-4 columns">
+    <%= f.label :email, :class => 'right inline' %>
   </div>
+  <div class="small-8 columns">
+    <%= f.email_field :email, :autofocus => true %>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, autofocus: true %>
+<div class="row">
+  <div class="small-4 columns">
+    <%= f.label :first_name, :class => 'right inline' %>
   </div>
+  <div class="small-8 columns">
+    <%= f.text_field :first_name%>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name, autofocus: true %>
+
+<div class="row">
+  <div class="small-4 columns">
+    <%= f.label :last_name, :class => 'right inline' %>
   </div>
+  <div class="small-8 columns">
+    <%= f.text_field :last_name%>
+  </div>
+</div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+<div class="row">
+  <div class="small-4 columns">
+    <%= f.label :password, :class => 'right inline' %>
   </div>
+  <div class="small-8 columns">
+    <%= f.password_field :password, :autocomplete => "off", class:"font-size-small", :placeholder => t('view.user_account.edit.leave_blank') %>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+<div class="row">
+  <div class="small-4 columns">
+    <%= f.label :password_confirmation, :class => 'right inline' %>
   </div>
+  <div class="small-8 columns">
+    <%= f.password_field :password_confirmation, class:"font-size-small" %>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+<div class="row">
+  <div class="small-4 columns">
+    <%= f.label :current_password, :class => 'right inline' %>
   </div>
+  <div class="small-8 columns">
+    <%= f.password_field :current_password, class:"font-size-small", :placeholder => t('view.user_account.edit.need_current_password') %>
+  </div>
+</div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit t('view.user_account.edit.update') %>
+    <a id="user_account_edit_back"><%= t('view.user_account.edit.back') %></a>
   </div>
 <% end %>
 
 <br>
 
-<h3><%= t('view.user_account.edit.cancel_my_accout') %></h3>
+<div class="text-right">
+  <a href="#user_account_cancel_my_accout" id="f_user_account_cancel_my_accout"><%= t('view.user_account.edit.cancel_my_accout') %><a>
+</div>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<div id="user_account_cancel_my_accout" clase="row" style="display: none;">
+  <h3><%#= t('view.user_account.edit.cancel_my_accout') %></h3>
+  <div class="row">
+    <div class="small-4 columns">
+      <label class="right inline"><%=t('view.user_account.edit.unhappy')%></label>
+    </div> <div class="small-8 columns">
+    <%= button_to "#{t('view.user_account.edit.cancel_my_accout')}",
+      registration_path(resource_name),
+      :data => { :confirm => t('view.user_account.edit.are_you_sure') },
+      :method => :delete, :class => 'button alert'
+    %>
+  </div> </div>
+</div>

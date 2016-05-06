@@ -500,13 +500,13 @@ function donutChart(div_id, counter, canvasHeight, canvasWidth) {
       },
       "titleSubtitlePadding": 6
     },
-    "footer": {
-      "text":  I18n.t('survey.'+div_id+'.footer'),
-      "color": "#999999",
-      "fontSize": 12,
-      "font": "open sans",
-      "location": "bottom-center"
-    },
+    // "footer": {
+    //   "text":  I18n.t('survey.'+div_id+'.footer'),
+    //   "color": "#999999",
+    //   "fontSize": 12,
+    //   "font": "open sans",
+    //   "location": "bottom-center"
+    // },
     "size": {
       "canvasHeight": canvasHeight,
       "canvasWidth": canvasWidth,

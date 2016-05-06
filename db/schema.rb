@@ -13,26 +13,29 @@
 
 ActiveRecord::Schema.define(version: 20160503204836) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.string   "confirmation_token",     limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email",      limit: 255
-    t.integer  "failed_attempts",        limit: 4,   default: 0,  null: false
-    t.string   "unlock_token",           limit: 255
+    t.string   "unconfirmed_email"
+    t.integer  "failed_attempts",        default: 0,  null: false
+    t.string   "unlock_token"
     t.datetime "locked_at"
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   add_index "admins", ["confirmation_token"], name: "index_admins_on_confirmation_token", unique: true, using: :btree
@@ -41,101 +44,101 @@ ActiveRecord::Schema.define(version: 20160503204836) do
   add_index "admins", ["unlock_token"], name: "index_admins_on_unlock_token", unique: true, using: :btree
 
   create_table "contact_us", force: :cascade do |t|
-    t.string   "email",      limit: 255
-    t.string   "type",       limit: 255
-    t.string   "name",       limit: 255
-    t.string   "subject",    limit: 255
-    t.string   "message",    limit: 255
-    t.integer  "user_id",    limit: 4
+    t.string   "email"
+    t.string   "type"
+    t.string   "name"
+    t.string   "subject"
+    t.string   "message"
+    t.integer  "user_id"
     t.boolean  "answered"
-    t.string   "answer",     limit: 255
-    t.string   "text",       limit: 255
-    t.string   "parent_id",  limit: 255
-    t.string   "integer",    limit: 255
-    t.string   "child_id",   limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "answer"
+    t.string   "text"
+    t.string   "parent_id"
+    t.string   "integer"
+    t.string   "child_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "refinery_image_translations", force: :cascade do |t|
-    t.integer  "refinery_image_id", limit: 4,   null: false
-    t.string   "locale",            limit: 255, null: false
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.string   "image_alt",         limit: 255
-    t.string   "image_title",       limit: 255
+    t.integer  "refinery_image_id", null: false
+    t.string   "locale",            null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "image_alt"
+    t.string   "image_title"
   end
 
   add_index "refinery_image_translations", ["locale"], name: "index_refinery_image_translations_on_locale", using: :btree
   add_index "refinery_image_translations", ["refinery_image_id"], name: "index_refinery_image_translations_on_refinery_image_id", using: :btree
 
   create_table "refinery_images", force: :cascade do |t|
-    t.string   "image_mime_type", limit: 255
-    t.string   "image_name",      limit: 255
-    t.integer  "image_size",      limit: 4
-    t.integer  "image_width",     limit: 4
-    t.integer  "image_height",    limit: 4
-    t.string   "image_uid",       limit: 255
+    t.string   "image_mime_type"
+    t.string   "image_name"
+    t.integer  "image_size"
+    t.integer  "image_width"
+    t.integer  "image_height"
+    t.string   "image_uid"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_title",     limit: 255
-    t.string   "image_alt",       limit: 255
+    t.string   "image_title"
+    t.string   "image_alt"
   end
 
   create_table "refinery_page_part_translations", force: :cascade do |t|
-    t.integer  "refinery_page_part_id", limit: 4,     null: false
-    t.string   "locale",                limit: 255,   null: false
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.text     "body",                  limit: 65535
+    t.integer  "refinery_page_part_id", null: false
+    t.string   "locale",                null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.text     "body"
   end
 
   add_index "refinery_page_part_translations", ["locale"], name: "index_refinery_page_part_translations_on_locale", using: :btree
   add_index "refinery_page_part_translations", ["refinery_page_part_id"], name: "index_refinery_page_part_translations_on_refinery_page_part_id", using: :btree
 
   create_table "refinery_page_parts", force: :cascade do |t|
-    t.integer  "refinery_page_id", limit: 4
-    t.string   "slug",             limit: 255
-    t.text     "body",             limit: 65535
-    t.integer  "position",         limit: 4
+    t.integer  "refinery_page_id"
+    t.string   "slug"
+    t.text     "body"
+    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",            limit: 255
+    t.string   "title"
   end
 
   add_index "refinery_page_parts", ["id"], name: "index_refinery_page_parts_on_id", using: :btree
   add_index "refinery_page_parts", ["refinery_page_id"], name: "index_refinery_page_parts_on_refinery_page_id", using: :btree
 
   create_table "refinery_page_translations", force: :cascade do |t|
-    t.integer  "refinery_page_id", limit: 4,   null: false
-    t.string   "locale",           limit: 255, null: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.string   "title",            limit: 255
-    t.string   "custom_slug",      limit: 255
-    t.string   "menu_title",       limit: 255
-    t.string   "slug",             limit: 255
+    t.integer  "refinery_page_id", null: false
+    t.string   "locale",           null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "title"
+    t.string   "custom_slug"
+    t.string   "menu_title"
+    t.string   "slug"
   end
 
   add_index "refinery_page_translations", ["locale"], name: "index_refinery_page_translations_on_locale", using: :btree
   add_index "refinery_page_translations", ["refinery_page_id"], name: "index_refinery_page_translations_on_refinery_page_id", using: :btree
 
   create_table "refinery_pages", force: :cascade do |t|
-    t.integer  "parent_id",           limit: 4
-    t.string   "path",                limit: 255
-    t.string   "slug",                limit: 255
-    t.string   "custom_slug",         limit: 255
-    t.boolean  "show_in_menu",                    default: true
-    t.string   "link_url",            limit: 255
-    t.string   "menu_match",          limit: 255
-    t.boolean  "deletable",                       default: true
-    t.boolean  "draft",                           default: false
-    t.boolean  "skip_to_first_child",             default: false
-    t.integer  "lft",                 limit: 4
-    t.integer  "rgt",                 limit: 4
-    t.integer  "depth",               limit: 4
-    t.string   "view_template",       limit: 255
-    t.string   "layout_template",     limit: 255
+    t.integer  "parent_id"
+    t.string   "path"
+    t.string   "slug"
+    t.string   "custom_slug"
+    t.boolean  "show_in_menu",        default: true
+    t.string   "link_url"
+    t.string   "menu_match"
+    t.boolean  "deletable",           default: true
+    t.boolean  "draft",               default: false
+    t.boolean  "skip_to_first_child", default: false
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+    t.string   "view_template"
+    t.string   "layout_template"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -147,31 +150,31 @@ ActiveRecord::Schema.define(version: 20160503204836) do
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt", using: :btree
 
   create_table "refinery_resource_translations", force: :cascade do |t|
-    t.integer  "refinery_resource_id", limit: 4,   null: false
-    t.string   "locale",               limit: 255, null: false
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.string   "resource_title",       limit: 255
+    t.integer  "refinery_resource_id", null: false
+    t.string   "locale",               null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "resource_title"
   end
 
   add_index "refinery_resource_translations", ["locale"], name: "index_refinery_resource_translations_on_locale", using: :btree
   add_index "refinery_resource_translations", ["refinery_resource_id"], name: "index_refinery_resource_translations_on_refinery_resource_id", using: :btree
 
   create_table "refinery_resources", force: :cascade do |t|
-    t.string   "file_mime_type", limit: 255
-    t.string   "file_name",      limit: 255
-    t.integer  "file_size",      limit: 4
-    t.string   "file_uid",       limit: 255
-    t.string   "file_ext",       limit: 255
+    t.string   "file_mime_type"
+    t.string   "file_name"
+    t.integer  "file_size"
+    t.string   "file_uid"
+    t.string   "file_ext"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "seo_meta", force: :cascade do |t|
-    t.integer  "seo_meta_id",      limit: 4
-    t.string   "seo_meta_type",    limit: 255
-    t.string   "browser_title",    limit: 255
-    t.text     "meta_description", limit: 65535
+    t.integer  "seo_meta_id"
+    t.string   "seo_meta_type"
+    t.string   "browser_title"
+    t.text     "meta_description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -180,34 +183,34 @@ ActiveRecord::Schema.define(version: 20160503204836) do
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], name: "id_type_index_on_seo_meta", using: :btree
 
   create_table "survey_answers", force: :cascade do |t|
-    t.string   "title",          limit: 255
-    t.string   "topic",          limit: 255
-    t.string   "counter",        limit: 255
-    t.string   "counter_all",    limit: 255
-    t.text     "answer",         limit: 65535
-    t.text     "type_questions", limit: 65535
-    t.integer  "user_id",        limit: 4
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "title"
+    t.string   "topic"
+    t.string   "counter"
+    t.string   "counter_all"
+    t.text     "answer"
+    t.text     "type_questions"
+    t.integer  "user_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.boolean  "subscribed"
-    t.string   "stripeid",               limit: 255
-    t.string   "first_name",             limit: 255
-    t.string   "last_name",              limit: 255
+    t.string   "stripeid"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

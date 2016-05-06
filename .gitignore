@@ -31,6 +31,10 @@ config/database.yml
 *.bowerrc
 bower.json
 
+# environment-variables
+# http://railsapps.github.io/rails-environment-variables.html
+/config/local_env.yml
+
 # Ignore pow environment settings
 .powenv
 # Rails
