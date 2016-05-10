@@ -15,13 +15,14 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   # add by Refinery
-  if config.respond_to?(:action_mailer)
-  if config.respond_to?(:action_mailer)
-  if config.respond_to?(:action_mailer)
-        config.action_mailer.raise_delivery_errors = false
-  end
-  end
-  end
+  # if config.respond_to?(:action_mailer)
+  # if config.respond_to?(:action_mailer)
+  # if config.respond_to?(:action_mailer)
+  #       config.action_mailer.raise_delivery_errors = false
+  # end
+  # end
+  # end
+
 
   # # ? testing
   # config.action_mailer.default_url_options = { :host => 'localhost:3000'}
@@ -59,4 +60,25 @@ Rails.application.configure do
   # add by
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_view.raise_on_missing_translations = true
+
+
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default :charset => "utf-8"
+
+  # SMTP settings for mailgun
+  config.action_mailer.smtp_settings = {
+    :address        => "smtp.mailgun.org",
+    :port           => 587,
+    :user_name      => ENV['dev_username'],
+    :password       => ENV['dev_password'],
+    :authentication => :plain, # Mandrill supports 'plain' or 'login'
+    :domain         => ENV['dev_domain'],
+    # :enable_starttls_auto => true, # detects and uses STARTTLS
+  }
+
+  # this will show up in oor urls in the emails
+  # default_url_options
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

@@ -4,10 +4,15 @@ lock '3.5.0'
 set :application, 'tibetan'
 set :repo_url, 'git@github.com:rudolfvavra/tibetan.git'
 
+set :server_name, "www.tibetanmedicine.eu tibetanmedicine.eu"
+
 set :passenger_restart_with_touch, true
 
 set :deploy_user, "deploy"
 # set :rbenv_ruby, "2.3.0"
+
+# for sudo cmds
+set :pty, true
 
 set :deploy_to, '/home/deploy/tibetan'
 
@@ -67,20 +72,21 @@ set :keep_releases, 3
 
 
 namespace :deploy do
+  # #
+  # # desc "reload the database with seed data"
+  # # task :seed do
+  # #   # run "cd #{current_path}; rake db:seed RAILS_ENV=#{rails_env}"
+  # #   run("cd #{deploy_to}/current; /usr/bin/env bundle exec rake #{ENV['db:seed']} RAILS_ENV=#{rails_env}")
+  # # end
   #
-  # desc "reload the database with seed data"
-  # task :seed do
-  #   # run "cd #{current_path}; rake db:seed RAILS_ENV=#{rails_env}"
-  #   run("cd #{deploy_to}/current; /usr/bin/env bundle exec rake #{ENV['db:seed']} RAILS_ENV=#{rails_env}")
+  # after :restart, :clear_cache do
+  #   on roles(:web), in: :groups, limit: 3, wait: 10 do
+  #     # Here we can do anything such as:
+  #     # within release_path do
+  #     #   execute :rake, 'cache:clear'
+  #     # end
+  #
+  #   end
   # end
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
 
 end

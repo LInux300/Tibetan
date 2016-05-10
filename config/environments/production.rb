@@ -64,13 +64,13 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # add by Refinery
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  if config.respond_to?(:action_mailer)
-  if config.respond_to?(:action_mailer)
-  if config.respond_to?(:action_mailer)
-        # config.action_mailer.raise_delivery_errors = false
-  end
-  end
-  end
+  # if config.respond_to?(:action_mailer)
+  # if config.respond_to?(:action_mailer)
+  # if config.respond_to?(:action_mailer)
+  #       # config.action_mailer.raise_delivery_errors = false
+  # end
+  # end
+  # end
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -92,4 +92,19 @@ Rails.application.configure do
   # config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
   # config.assets.serve_static_files = true
   config.serve_static_files = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default :charset => "utf-8"
+
+  # SMTP settings for mailgun
+  config.action_mailer.smtp_settings = {
+    :address        => "smtp.mailgun.org",
+    :port           => 587,
+    :user_name      => ENV['dev_username'],
+    :password       => ENV['dev_password'],
+    :authentication => :plain, # Mandrill supports 'plain' or 'login'
+    # :domain         => ENV['dev_domain'],
+    # :enable_starttls_auto => true, # detects and uses STARTTLS
+  }
+  config.action_mailer.default_url_options = { :host => '81.2.254.221' }
 end

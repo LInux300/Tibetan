@@ -28,6 +28,8 @@ class ContactUsController < ApplicationController
     params['contact_u']['user_id'] =  current_user ? current_user.id : nil
     @contact_u = ContactU.new(contact_u_params)
 
+    #ContactUsMailer.new_contact_us(@contact_u).deliver_now
+
     respond_to do |format|
       if @contact_u.save
         # format.html { redirect_to @contact_u, notice: 'Contact u was successfully created.' }

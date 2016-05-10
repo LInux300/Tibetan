@@ -17,6 +17,19 @@ en:
   time:
    formats:
     your_format: '%Y-%m-%d %H:%M:%S'
+  email:
+    from: 'info@81.2.254.221'
+    thanks_for: 'Thanks for messaging and have a great day!'
+    login_site: 'To login to the site, just follow this link: '
+    home_page_link: '81.2.254.221'
+    host: '81.2.254.221'
+    contact_us:
+      welcome: 'Welcome here '
+      title: 'Your Message'
+      subject: 'Thank you for your message'
+      new_line: "\n"
+      url: 'tibetanmedicine.eu'
+      successfully-send: 'You have successfully send your message to '
   view:
     stripe:
       final_signup_step: Final Signup Step
@@ -279,7 +292,7 @@ en:
     8_topic:
       button: Imagination
       href: '/imagination'
-      1_p: The most important component for the healing is the power of creative imagination
+      1_p: One of the most important components for the healing is the power of creative imagination
       1_h: The Mind Series
       1_subtopic:
         title: Tibetan Prayers

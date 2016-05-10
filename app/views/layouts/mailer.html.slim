@@ -1,0 +1,11 @@
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+  body
+    ==yield
+
+    p = I18n.t('email.thanks_for')
+
+    p
+      = I18n.t('email.login_site')
+      a href="#{I18n.t('email.home_page_link')}" = I18n.t('email.home_page_link')
